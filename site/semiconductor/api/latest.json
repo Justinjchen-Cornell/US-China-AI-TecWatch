@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-24",
+  "index": 44.32,
+  "mc_mean": 44.29,
+  "mc_std": 0.49,
+  "ci_low": 43.81,
+  "ci_high": 44.79,
+  "data_confidence": 74.63,
+  "n_indicators": 18,
+  "dimensions": [
+    {
+      "id": "process_equip",
+      "name": "制程装备",
+      "weight": 1.2,
+      "score01": 0.2265,
+      "score100": 22.65,
+      "n": 3
+    },
+    {
+      "id": "manufacturing",
+      "name": "制造代工",
+      "weight": 1.1,
+      "score01": 0.6894,
+      "score100": 68.94,
+      "n": 3
+    },
+    {
+      "id": "memory_hbm",
+      "name": "存储/HBM",
+      "weight": 1.2,
+      "score01": 0.1293,
+      "score100": 12.93,
+      "n": 3
+    },
+    {
+      "id": "ai_chip",
+      "name": "AI芯片设计",
+      "weight": 1.3,
+      "score01": 0.4924,
+      "score100": 49.24,
+      "n": 3
+    },
+    {
+      "id": "advanced_packaging",
+      "name": "先进封装",
+      "weight": 1.1,
+      "score01": 0.3862,
+      "score100": 38.62,
+      "n": 3
+    },
+    {
+      "id": "future_paradigm",
+      "name": "未来范式",
+      "weight": 1.1,
+      "score01": 0.541,
+      "score100": 54.1,
+      "n": 3
+    }
+  ],
+  "dark_lines": [
+    {
+      "name": "能源/电力冗余(制造底座)",
+      "value": 68,
+      "weight": 0.5
+    },
+    {
+      "name": "人才流向(海外受训回流)",
+      "value": 48,
+      "weight": 0.4
+    },
+    {
+      "name": "开源生态地缘化(架构绕行)",
+      "value": 55,
+      "weight": 0.5
+    },
+    {
+      "name": "产业资本下场度",
+      "value": 52,
+      "weight": 0.4
+    },
+    {
+      "name": "地缘政治(出口管制约束反噬)",
+      "value": 60,
+      "weight": 0.6
+    }
+  ],
+  "public_companies": {
+    "schema_version": 1,
+    "updated": "2026-08-24",
+    "note": "市值/估值为公开资料趋势性参考，不构成投资建议。",
+    "china": [
+      {
+        "name": "北方华创",
+        "ticker": "002371.SZ",
+        "sector": "设备",
+        "market_cap_cn": "约1800亿",
+        "role": "国产半导体设备龙头",
+        "substitution": "成熟制程设备国产化主力"
+      },
+      {
+        "name": "中微公司",
+        "ticker": "688012.SH",
+        "sector": "设备",
+        "market_cap_cn": "约900亿",
+        "role": "刻蚀/薄膜设备突破者",
+        "substitution": "先进制程刻蚀设备国产替代"
+      },
+      {
+        "name": "中芯国际",
+        "ticker": "688981.SH",
+        "sector": "晶圆代工",
+        "market_cap_cn": "约4000亿",
+        "role": "大陆晶圆代工龙头",
+        "substitution": "成熟制程扩产，先进制程受限"
+      },
+      {
+        "name": "华虹半导体",
+        "ticker": "688709.SH",
+        "sector": "晶圆代工",
+        "market_cap_cn": "约700亿",
+        "role": "特色工艺/功率代工",
+        "substitution": "功率/模拟等特色工艺产能补充"
+      },
+      {
+        "name": "长电科技",
+        "ticker": "600584.SH",
+        "sector": "先进封装",
+        "market_cap_cn": "约600亿",
+        "role": "全球OSAT龙头之一",
+        "substitution": "先进封装国产主力"
+      },
+      {
+        "name": "通富微电",
+        "ticker": "002156.SZ",
+        "sector": "先进封装",
+        "market_cap_cn": "约400亿",
+        "role": "AMD核心封测伙伴",
+        "substitution": "高端封测国产替代"
+      },
+      {
+        "name": "寒武纪",
+        "ticker": "688256.SH",
+        "sector": "AI芯片",
+        "market_cap_cn": "约2000亿",
+        "role": "国产AI算力核心标的",
+        "substitution": "架构创新攻坚期，尚未稳定盈利"
+      },
+      {
+        "name": "海光信息",
+        "ticker": "688041.SH",
+        "sector": "CPU/AI芯片",
+        "market_cap_cn": "约2500亿",
+        "role": "国产x86 CPU+DCU",
+        "substitution": "信创/服务器国产替代主力"
+      },
+      {
+        "name": "龙芯中科",
+        "ticker": "688047.SH",
+        "sector": "CPU",
+        "market_cap_cn": "约500亿",
+        "role": "自主指令集LoongArch",
+        "substitution": "信创桌面/嵌入式CPU"
+      },
+      {
+        "name": "中际旭创",
+        "ticker": "300308.SZ",
+        "sector": "光模块/CPO",
+        "market_cap_cn": "约1500亿",
+        "role": "800G/1.6T光模块全球领先",
+        "substitution": "光电融合路径已兑现业绩"
+      },
+      {
+        "name": "新易盛",
+        "ticker": "300502.SZ",
+        "sector": "光模块/CPO",
+        "market_cap_cn": "约900亿",
+        "role": "高速光模块核心供应商",
+        "substitution": "1.6T光模块放量"
+      }
+    ],
+    "overseas": [
+      {
+        "name": "英伟达 NVIDIA",
+        "ticker": "NVDA.US",
+        "sector": "AI芯片",
+        "market_cap_cn": "约22万亿",
+        "role": "AI训练GPU绝对霸主",
+        "note": "CUDA生态+集群互联构筑护城河"
+      },
+      {
+        "name": "博通 Broadcom",
+        "ticker": "AVGO.US",
+        "sector": "ASIC/网络",
+        "market_cap_cn": "约12万亿",
+        "role": "推理ASIC+交换芯片",
+        "note": "定制芯片与交换机双轮驱动"
+      },
+      {
+        "name": "台积电 TSMC",
+        "ticker": "TSM.US",
+        "sector": "晶圆代工",
+        "market_cap_cn": "约10万亿",
+        "role": "先进制程代工垄断者",
+        "note": "2nm GAA量产领先"
+      },
+      {
+        "name": "ASML",
+        "ticker": "ASML.US",
+        "sector": "光刻设备",
+        "market_cap_cn": "约3万亿",
+        "role": "EUV/High-NA EUV唯一供应商",
+        "note": "先进制程物理极限守门员"
+      },
+      {
+        "name": "应用材料 AMAT",
+        "ticker": "AMAT.US",
+        "sector": "半导体设备",
+        "market_cap_cn": "约1.6万亿",
+        "role": "薄膜/刻蚀/量检测全栈",
+        "note": "设备国产化对标对象"
+      },
+      {
+        "name": "SK海力士",
+        "ticker": "000660.KS",
+        "sector": "存储/HBM",
+        "market_cap_cn": "约1.4万亿",
+        "role": "HBM3E量产领先",
+        "note": "英伟达HBM御用供应商"
+      },
+      {
+        "name": "三星电子",
+        "ticker": "005930.KS",
+        "sector": "存储/代工",
+        "market_cap_cn": "约2.4万亿",
+        "role": "DRAM/NAND+代工追赶",
+        "note": "HBM与2nm SF2追赶中"
+      },
+      {
+        "name": "美光 Micron",
+        "ticker": "MU.US",
+        "sector": "存储/HBM",
+        "market_cap_cn": "约1.2万亿",
+        "role": "美国本土存储龙头",
+        "note": "受益CHIPS法案，HBM追赶"
+      }
+    ]
+  },
+  "private_companies": {
+    "schema_version": 1,
+    "updated": "2026-08-24",
+    "note": "一级市场未上市标的，融资/估值来自公开报道，仅供趋势研究，不构成投资建议。",
+    "china": [
+      {
+        "name": "长江存储",
+        "track": "3D NAND存储",
+        "latest_round": "大基金+湖北国资(1600亿级)",
+        "valuation_cn": "约3000亿+",
+        "backers": [
+          "国家大基金",
+          "湖北国资",
+          "国投集团"
+        ],
+        "route": "国产存储备份"
+      },
+      {
+        "name": "长鑫科技",
+        "track": "DRAM/HBM",
+        "latest_round": "多轮战略融资",
+        "valuation_cn": "约1500亿+",
+        "backers": [
+          "国家大基金",
+          "安徽国资"
+        ],
+        "route": "DRAM/HBM国产突破"
+      },
+      {
+        "name": "昆仑芯科技",
+        "track": "AI推理芯片(百度系)",
+        "latest_round": "多轮战略融资",
+        "valuation_cn": "约300亿+",
+        "backers": [
+          "百度",
+          "国新基金",
+          "中信产业基金"
+        ],
+        "route": "软硬一体/低成本推理"
+      },
+      {
+        "name": "摩尔线程",
+        "track": "GPU",
+        "latest_round": "股改/辅导推进",
+        "valuation_cn": "约300亿+",
+        "backers": [
+          "红杉",
+          "招商局资本",
+          "奥飞数据"
+        ],
+        "route": "国产全功能GPU"
+      },
+      {
+        "name": "沐曦集成",
+        "track": "GPU",
+        "latest_round": "Pre-IPO轮",
+        "valuation_cn": "约200亿+",
+        "backers": [
+          "国调基金",
+          "中网投",
+          "浦东科创"
+        ],
+        "route": "国产高性能GPU"
+      },
+      {
+        "name": "燧原科技",
+        "track": "AI训练/推理芯片",
+        "latest_round": "F轮(数十亿元)",
+        "valuation_cn": "约200亿+",
+        "backers": [
+          "腾讯",
+          "武岳峰",
+          "中信证券投资"
+        ],
+        "route": "云端AI算力国产替代"
+      },
+      {
+        "name": "行云集成电路",
+        "track": "低成本大模型推理",
+        "latest_round": "Pre-A/Pre-A+(超4亿元)",
+        "valuation_cn": "约20亿+",
+        "backers": [
+          "五源资本",
+          "赛富",
+          "春华"
+        ],
+        "route": "去HBM化/LPDDR推理"
+      },
+      {
+        "name": "九天睿芯",
+        "track": "存算一体PIM",
+        "latest_round": "B+轮(元禾璞华领投)",
+        "valuation_cn": "约20亿+",
+        "backers": [
+          "元禾璞华",
+          "中芯聚源",
+          "深创投"
+        ],
+        "route": "存算一体/消灭存储墙"
+      },
+      {
+        "name": "奇异摩尔",
+        "track": "Chiplet互联/IP",
+        "latest_round": "B轮(数亿元)",
+        "valuation_cn": "约30亿+",
+        "backers": [
+          "国开科创",
+          "中芯聚源",
+          "武岳峰"
+        ],
+        "route": "Chiplet标准/系统级互联"
+      },
+      {
+        "name": "纵慧芯光",
+        "track": "VCSEL/光互连",
+        "latest_round": "战略融资",
+        "valuation_cn": "约30亿+",
+        "backers": [
+          "华为哈勃",
+          "小米"
+        ],
+        "route": "光电融合/光芯片"
+      },
+      {
+        "name": "中科卓尔",
+        "track": "空白掩模版/精密光学",
+        "latest_round": "B轮(数亿元)",
+        "valuation_cn": "约25亿+",
+        "backers": [
+          "中银国际投资"
+        ],
+        "route": "上游核心材料国产备份"
+      },
+      {
+        "name": "昉擎科技",
+        "track": "分离式AI架构",
+        "latest_round": "早期融资",
+        "valuation_cn": "约10亿+",
+        "backers": [
+          "产业资本"
+        ],
+        "route": "系统架构重构/分离式计算"
+      }
+    ],
+    "overseas": [
+      {
+        "name": "Groq",
+        "track": "LPU/AI推理芯片",
+        "latest_round": "C轮(~6.4亿美元)",
+        "valuation_cn": "约60亿美元",
+        "backers": [
+          "BlackRock",
+          "Neo",
+          "Tiger Global"
+        ],
+        "route": "Transformer专用推理"
+      },
+      {
+        "name": "Lightmatter",
+        "track": "光计算",
+        "latest_round": "C轮(~4亿美元)",
+        "valuation_cn": "约40亿美元",
+        "backers": [
+          "Google Ventures",
+          "Spark Capital",
+          "HPE"
+        ],
+        "route": "光子计算替代电子"
+      },
+      {
+        "name": "Ayar Labs",
+        "track": "光I/O(光互联)",
+        "latest_round": "C轮(~1.55亿美元)",
+        "valuation_cn": "约10亿美元+",
+        "backers": [
+          "Intel Capital",
+          "Board Capital",
+          "NVIDIA"
+        ],
+        "route": "用光互联替代电I/O"
+      },
+      {
+        "name": "Celestial AI",
+        "track": "光互连/存算",
+        "latest_round": "C轮(~2.5亿美元)",
+        "valuation_cn": "约15亿美元",
+        "backers": [
+          "AMD Ventures",
+          "Koch Disruptive"
+        ],
+        "route": "光子结构光互连"
+      },
+      {
+        "name": "Tenstorrent",
+        "track": "RISC-V AI芯片",
+        "latest_round": "战略融资(~3亿美元)",
+        "valuation_cn": "约26亿美元",
+        "backers": [
+          "现代汽车",
+          "三星",
+          "JFBR"
+        ],
+        "route": "开源RISC-V挑战ARM/x86"
+      },
+      {
+        "name": "SambaNova",
+        "track": "AI训练/推理系统",
+        "latest_round": "D轮(~6.76亿美元)",
+        "valuation_cn": "约50亿美元",
+        "backers": [
+          "Intel Capital",
+          "Google Ventures",
+          "SoftBank"
+        ],
+        "route": "可重构数据流架构"
+      },
+      {
+        "name": "Etched",
+        "track": "Transformer ASIC",
+        "latest_round": "A轮(~1.2亿美元)",
+        "valuation_cn": "约12亿美元",
+        "backers": [
+          "Primary Venture",
+          "Foundation Capital"
+        ],
+        "route": "只为Transformer设计的ASIC"
+      },
+      {
+        "name": "d-Matrix",
+        "track": "存算一体(数字PIM)",
+        "latest_round": "B轮(~1.1亿美元)",
+        "valuation_cn": "约11亿美元",
+        "backers": [
+          "Microsoft M12",
+          "Marvell",
+          "NVIDIA"
+        ],
+        "route": "数字存算一体推理"
+      },
+      {
+        "name": "Rebellions",
+        "track": "AI推理芯片",
+        "latest_round": "B轮(~1.24亿美元)",
+        "valuation_cn": "约7亿美元",
+        "backers": [
+          "KT Corp",
+          "Korea Development Bank"
+        ],
+        "route": "韩国国产AI芯片"
+      },
+      {
+        "name": "Rapidus",
+        "track": "先进制程备份(2nm)",
+        "latest_round": "日本政府+产业注资",
+        "valuation_cn": "国资主导",
+        "backers": [
+          "日本政府",
+          "丰田",
+          "索尼",
+          "NTT"
+        ],
+        "route": "美日同盟先进制程备胎"
+      },
+      {
+        "name": "Together AI",
+        "track": "GPU云/推理服务",
+        "latest_round": "B轮(~3.2亿美元)",
+        "valuation_cn": "约33亿美元",
+        "backers": [
+          "Prosperity7",
+          "Kleiner Perkins"
+        ],
+        "route": "开源模型+GPU算力服务"
+      },
+      {
+        "name": "Fireworks AI",
+        "track": "AI推理平台",
+        "latest_round": "B轮(~3.7亿美元)",
+        "valuation_cn": "约20亿美元",
+        "backers": [
+          "Sequoia",
+          "NVIDIA",
+          "AMD"
+        ],
+        "route": "高性能模型推理API"
+      }
+    ]
+  }
+}

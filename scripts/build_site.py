@@ -8,6 +8,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT,"site")
 API  = os.path.join(SITE,"api")
 
+# 行业专项注册表: (子目录, 中文名, 简述)
+INDUSTRIES = [
+    ("semiconductor", "半导体", "SemiCompete 综合指数"),
+    ("ai-models",     "AI模型", "ModelCompete 综合指数"),
+    ("quantum",       "量子计算", "QuantumCompete 综合指数"),
+    ("fusion",        "可控核聚变", "FusionCompete 综合指数"),
+    ("bio",           "AI生命科学", "BioCompete 综合指数"),
+    ("embodied",      "具身智能", "EmbodiedCompete 综合指数"),
+]
+
 def main():
     snap_dir = os.path.join(ROOT,"data","snapshots")
     files = sorted(glob.glob(os.path.join(snap_dir,"*.json")))
@@ -39,13 +49,31 @@ def main():
     print(f"[build_site] latest={res['index']} (95%区间 {res['index_low']}-{res['index_high']}, 置信度 {res['confidence']})")
     print(f"[build_site] 历史序列点数: {len(series)}")
 
+    # 行业专项: 读取各行业子站 latest.json (存在即上线)
+    industries = []
+    for sub, name, blurb in INDUSTRIES:
+        pj = os.path.join(SITE, sub, "api", "latest.json")
+        rec = {"sub": sub, "name": name, "blurb": blurb, "index": None,
+               "ci": None, "conf": None, "date": None}
+        if os.path.exists(pj):
+            try:
+                d = load_json(pj)
+                rec["index"] = d.get("index")
+                rec["ci"] = d.get("ci_low")
+                rec["ci2"] = d.get("ci_high")
+                rec["conf"] = d.get("data_confidence")
+                rec["date"] = d.get("updated") or d.get("snapshot_date")
+            except Exception:
+                pass
+        industries.append(rec)
+
     # 渲染 HTML
-    html = render_html(res, series, weights_cfg)
+    html = render_html(res, series, weights_cfg, industries)
     with open(os.path.join(SITE,"index.html"),"w",encoding="utf-8") as f:
         f.write(html)
     print(f"[build_site] 已生成 {os.path.join(SITE,'index.html')}")
 
-def render_html(res, series, weights_cfg):
+def render_html(res, series, weights_cfg, industries=None):
     dims = weights_cfg["dimensions"]
     dim_labels = json.dumps([dims[d]["label"] for d in dims], ensure_ascii=False)
     dim_label_map = dict((d, dims[d]["label"]) for d in dims)
@@ -83,6 +111,21 @@ def render_html(res, series, weights_cfg):
         dim_rows += ("<tr><td><span class='dot' style='background:" + dims[d]['color'] + "'></span>" + dims[d]['label'] + "</td>"
                      "<td class='num'>" + str(round(sc,3) if sc is not None else '—') + "</td>"
                      "<td class='num'>" + str(dims[d]['weight']) + "</td></tr>")
+
+    ind_rows = ""
+    for r in (industries or []):
+        if r.get("index") is not None:
+            ind_rows += (
+                "<tr><td><a href='" + r['sub'] + "/' style='color:var(--accent);text-decoration:none'>"
+                + r['name'] + "</a></td><td>" + r['blurb'] + "</td>"
+                "<td class='num'><b>" + str(r['index']) + "</b></td>"
+                "<td class='num'>" + str(r['ci']) + "–" + str(r['ci2']) + "</td>"
+                "<td class='num'>" + str(r['conf']) + "%</td>"
+                "<td class='src'>" + str(r['date'] or '') + "</td></tr>")
+        else:
+            ind_rows += (
+                "<tr><td>" + r['name'] + "</td><td>" + r['blurb'] + "</td>"
+                "<td class='num' colspan='4' style='color:var(--muted)'>待建中</td></tr>")
 
     tpl = Template("""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -124,6 +167,9 @@ td.src{color:var(--muted);font-size:12px}.dot{display:inline-block;width:9px;hei
   <canvas id="trendChart"></canvas></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">六维得分 (归一化几何平均，0-1)</div>
   <canvas id="dimChart"></canvas></div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">行业专项 · 六大硬科技 (点击进入子站)</div>
+  <table><thead><tr><th>行业</th><th>指数体系</th><th style="text-align:right">最新指数</th><th style="text-align:right">95% 区间</th><th style="text-align:right">置信度</th><th>数据截至</th></tr></thead>
+  <tbody>$ind_rows</tbody></table></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">五条暗线信号 (数据驱动/配置回退)</div>
   <table><thead><tr><th>暗线</th><th style="text-align:right">信号(0-1)</th><th style="text-align:right">权重</th><th style="text-align:right">可靠度</th></tr></thead>
   <tbody>$lat_rows</tbody></table></div>
@@ -149,7 +195,7 @@ new Chart(document.getElementById('trendChart'),{type:'line',data:{labels:sdates
         snapshot_date=res.get('snapshot_date',''),
         index=res['index'], index_low=res['index_low'], index_high=res['index_high'],
         conf_pct=int(res['confidence']*100), n_ind=len(res['indicators']),
-        dim_rows=dim_rows, lat_rows=lat_rows, indicator_rows=indicator_rows,
+        dim_rows=dim_rows, lat_rows=lat_rows, ind_rows=ind_rows, indicator_rows=indicator_rows,
         dim_labels=dim_labels, dim_scores_json=json.dumps(dim_scores), dim_colors=dim_colors,
         sdates=sdates, sidx=sidx, slow=slow, shigh=shigh)
 

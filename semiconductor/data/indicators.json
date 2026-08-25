@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-24",
+  "note": "数值为基于公开产业资料的趋势性基线（0-100），direction: china_benefit 表示该指标值越高越有利于中国。仅供趋势研究，不构成投资建议。",
+  "dimensions": [
+    {
+      "id": "process_equip",
+      "name": "制程装备",
+      "weight": 1.2,
+      "indicators": [
+        { "name": "国产半导体设备综合国产化率", "value": 22, "direction": "china_benefit", "source_reliability": 0.75, "desc": "刻蚀/薄膜/清洗等国产设备在大陆晶圆厂采购占比，越高代表设备自主可控越强。" },
+        { "name": "EUV光刻机获取受限度", "value": 88, "direction": "china_benefit", "source_reliability": 0.9, "desc": "反向指标：越接近100代表越难获取先进EUV，中国受制程度越高。" },
+        { "name": "上游核心材料国产化率(掩模版基板等)", "value": 6, "direction": "china_benefit", "source_reliability": 0.7, "desc": "空白掩模版/高端石英等材料国产化率，非线性增长，突破20%即标志备份体系成型。" }
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "name": "制造代工",
+      "weight": 1.1,
+      "indicators": [
+        { "name": "成熟制程产能自给率", "value": 78, "direction": "china_benefit", "source_reliability": 0.8, "desc": "中芯国际/华虹等在成熟制程产能对国内设计公司的供给保障度。" },
+        { "name": "先进制程(≤3nm)代差", "value": 70, "direction": "china_benefit", "source_reliability": 0.85, "desc": "反向指标：越接近100代表与台积电/三星在先进制程上差距越大。" },
+        { "name": "晶圆厂扩产资本开支增速", "value": 60, "direction": "china_benefit", "source_reliability": 0.7, "desc": "大陆晶圆厂年度资本开支同比增速，反映国产替代产能扩张力度。" }
+      ]
+    },
+    {
+      "id": "memory_hbm",
+      "name": "存储/HBM",
+      "weight": 1.2,
+      "indicators": [
+        { "name": "DRAM/NAND国产备份成熟度", "value": 30, "direction": "china_benefit", "source_reliability": 0.8, "desc": "长鑫(DRAM)/长江存储(NAND)量产成熟度，突破代表国产存储主权。" },
+        { "name": "HBM颗粒国产化率", "value": 4, "direction": "china_benefit", "source_reliability": 0.85, "desc": "当前极低(<5%)，一旦突破20%指数将显著上行。" },
+        { "name": "HBM-TSV封装技术储备", "value": 18, "direction": "china_benefit", "source_reliability": 0.65, "desc": "国产HBM所需TSV封装技术成熟度。" }
+      ]
+    },
+    {
+      "id": "ai_chip",
+      "name": "AI芯片设计",
+      "weight": 1.3,
+      "indicators": [
+        { "name": "国产AI芯片架构绕行活跃度", "value": 55, "direction": "china_benefit", "source_reliability": 0.75, "desc": "存算一体/分离式架构/去HBM化等绕行路线初创公司数量与融资活跃度。" },
+        { "name": "大模型推理降本路线成熟度", "value": 35, "direction": "china_benefit", "source_reliability": 0.7, "desc": "行云(去HBM)/九天睿芯(存算一体)等产品在低成本推理上的落地进度。" },
+        { "name": "华为昇腾体系全栈自主度", "value": 62, "direction": "china_benefit", "source_reliability": 0.8, "desc": "昇腾芯片→服务器→超节点→云服务→大模型的自主可控闭环程度。" }
+      ]
+    },
+    {
+      "id": "advanced_packaging",
+      "name": "先进封装",
+      "weight": 1.1,
+      "indicators": [
+        { "name": "先进封装(CoWoS级)国产化率", "value": 20, "direction": "china_benefit", "source_reliability": 0.7, "desc": "2.5D/3D先进封装产能与硅中介层技术自主度。" },
+        { "name": "Chiplet互联标准主导权(UCIe/D2D)", "value": 40, "direction": "china_benefit", "source_reliability": 0.7, "desc": ">50 代表中国在Chiplet互联标准上占据主导。" },
+        { "name": "OSAT封装测试全球份额", "value": 72, "direction": "china_benefit", "source_reliability": 0.8, "desc": "长电/通富/华天等在全球封装测试市场的合计份额。" }
+      ]
+    },
+    {
+      "id": "future_paradigm",
+      "name": "未来范式",
+      "weight": 1.1,
+      "indicators": [
+        { "name": "存算一体(PIM)竞争力", "value": 58, "direction": "china_benefit", "source_reliability": 0.7, "desc": "九天睿芯/后摩/知存等初创公司在存算一体赛道活跃度，中国接近海外。" },
+        { "name": "光电融合/CPO产业基础", "value": 65, "direction": "china_benefit", "source_reliability": 0.75, "desc": "中际旭创/新易盛等在光模块/CPO领域的全球领先地位兑现度。" },
+        { "name": "CFET/二维材料等下一代架构储备", "value": 42, "direction": "china_benefit", "source_reliability": 0.6, "desc": "面向0.3nm以下CFET/二维材料的研发跟进度。" }
+      ]
+    }
+  ],
+  "dark_lines": [
+    { "name": "能源/电力冗余(制造底座)", "value": 68, "direction": "china_benefit", "source_reliability": 0.75, "weight": 0.5, "desc": "特高压+绿电冗余为长期芯片制造提供低成本电力底座。" },
+    { "name": "人才流向(海外受训回流)", "value": 48, "direction": "china_benefit", "source_reliability": 0.7, "weight": 0.4, "desc": "海外受训AI/半导体人才回流趋势，回流率上升利好中国。" },
+    { "name": "开源生态地缘化(架构绕行)", "value": 55, "direction": "china_benefit", "source_reliability": 0.65, "weight": 0.5, "desc": "开源芯片架构/工具链在Global South的渗透，对冲闭源垄断。" },
+    { "name": "产业资本下场度", "value": 52, "direction": "china_benefit", "source_reliability": 0.7, "weight": 0.4, "desc": "北方华创/华为哈勃等产业龙头通过基金布局上下游的案例数。" },
+    { "name": "地缘政治(出口管制约束反噬)", "value": 60, "direction": "china_benefit", "source_reliability": 0.8, "weight": 0.6, "desc": "反向指标：管制越严越倒逼国产替代加速，短期承压长期利好。" }
+  ]
+}

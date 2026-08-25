@@ -23,16 +23,22 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate snapshot & compute index & build site
+      - name: Generate snapshots & compute indexes & build sites
         run: |
+          # 主项目（综合指数）
           python scripts/update_snapshot.py
+          python scripts/build_site.py
+          # 行业专项：半导体（输出到主站点 semiconductor/ 子目录）
+          python semiconductor/scripts/update_snapshot.py
+          python semiconductor/scripts/build_site.py --site-dir ../site/semiconductor
+          # 重新构建主站以刷新行业入口卡片
           python scripts/build_site.py
 
       - name: Commit updated data & site
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/snapshots site
+          git add data semiconductor/data site
           git diff --cached --quiet || git commit -m "chore: weekly snapshot & index rebuild [skip ci]"
 
       - name: Deploy to GitHub Pages

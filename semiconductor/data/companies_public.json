@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-24",
+  "note": "市值/估值为公开资料趋势性参考，不构成投资建议。",
+  "china": [
+    { "name": "北方华创", "ticker": "002371.SZ", "sector": "设备", "market_cap_cn": "约1800亿", "role": "国产半导体设备龙头", "substitution": "成熟制程设备国产化主力" },
+    { "name": "中微公司", "ticker": "688012.SH", "sector": "设备", "market_cap_cn": "约900亿", "role": "刻蚀/薄膜设备突破者", "substitution": "先进制程刻蚀设备国产替代" },
+    { "name": "中芯国际", "ticker": "688981.SH", "sector": "晶圆代工", "market_cap_cn": "约4000亿", "role": "大陆晶圆代工龙头", "substitution": "成熟制程扩产，先进制程受限" },
+    { "name": "华虹半导体", "ticker": "688709.SH", "sector": "晶圆代工", "market_cap_cn": "约700亿", "role": "特色工艺/功率代工", "substitution": "功率/模拟等特色工艺产能补充" },
+    { "name": "长电科技", "ticker": "600584.SH", "sector": "先进封装", "market_cap_cn": "约600亿", "role": "全球OSAT龙头之一", "substitution": "先进封装国产主力" },
+    { "name": "通富微电", "ticker": "002156.SZ", "sector": "先进封装", "market_cap_cn": "约400亿", "role": "AMD核心封测伙伴", "substitution": "高端封测国产替代" },
+    { "name": "寒武纪", "ticker": "688256.SH", "sector": "AI芯片", "market_cap_cn": "约2000亿", "role": "国产AI算力核心标的", "substitution": "架构创新攻坚期，尚未稳定盈利" },
+    { "name": "海光信息", "ticker": "688041.SH", "sector": "CPU/AI芯片", "market_cap_cn": "约2500亿", "role": "国产x86 CPU+DCU", "substitution": "信创/服务器国产替代主力" },
+    { "name": "龙芯中科", "ticker": "688047.SH", "sector": "CPU", "market_cap_cn": "约500亿", "role": "自主指令集LoongArch", "substitution": "信创桌面/嵌入式CPU" },
+    { "name": "中际旭创", "ticker": "300308.SZ", "sector": "光模块/CPO", "market_cap_cn": "约1500亿", "role": "800G/1.6T光模块全球领先", "substitution": "光电融合路径已兑现业绩" },
+    { "name": "新易盛", "ticker": "300502.SZ", "sector": "光模块/CPO", "market_cap_cn": "约900亿", "role": "高速光模块核心供应商", "substitution": "1.6T光模块放量" }
+  ],
+  "overseas": [
+    { "name": "英伟达 NVIDIA", "ticker": "NVDA.US", "sector": "AI芯片", "market_cap_cn": "约22万亿", "role": "AI训练GPU绝对霸主", "note": "CUDA生态+集群互联构筑护城河" },
+    { "name": "博通 Broadcom", "ticker": "AVGO.US", "sector": "ASIC/网络", "market_cap_cn": "约12万亿", "role": "推理ASIC+交换芯片", "note": "定制芯片与交换机双轮驱动" },
+    { "name": "台积电 TSMC", "ticker": "TSM.US", "sector": "晶圆代工", "market_cap_cn": "约10万亿", "role": "先进制程代工垄断者", "note": "2nm GAA量产领先" },
+    { "name": "ASML", "ticker": "ASML.US", "sector": "光刻设备", "market_cap_cn": "约3万亿", "role": "EUV/High-NA EUV唯一供应商", "note": "先进制程物理极限守门员" },
+    { "name": "应用材料 AMAT", "ticker": "AMAT.US", "sector": "半导体设备", "market_cap_cn": "约1.6万亿", "role": "薄膜/刻蚀/量检测全栈", "note": "设备国产化对标对象" },
+    { "name": "SK海力士", "ticker": "000660.KS", "sector": "存储/HBM", "market_cap_cn": "约1.4万亿", "role": "HBM3E量产领先", "note": "英伟达HBM御用供应商" },
+    { "name": "三星电子", "ticker": "005930.KS", "sector": "存储/代工", "market_cap_cn": "约2.4万亿", "role": "DRAM/NAND+代工追赶", "note": "HBM与2nm SF2追赶中" },
+    { "name": "美光 Micron", "ticker": "MU.US", "sector": "存储/HBM", "market_cap_cn": "约1.2万亿", "role": "美国本土存储龙头", "note": "受益CHIPS法案，HBM追赶" }
+  ]
+}
