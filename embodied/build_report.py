@@ -26,6 +26,7 @@ pot=[c for c in comps_sorted if c["score"]<6.5]
 os.makedirs(os.path.join(SITE_DIR, "api"), exist_ok=True)
 _json.dump({"generated_at":datetime.datetime.utcnow().isoformat()+"Z","as_of":"2026Q2",
   "composite":composite,"index":round(composite*10,1),
+  "index_note":"池内均分·全池公司六维加权均值(非竞争指数)",
   "index_scale":"0-100 (10x of internal 0-10 composite)","dim_means":MEANS,
   "tiers":{"领跑":[c["id"] for c in lead],"跟进":[c["id"] for c in follow],"潜力":[c["id"] for c in pot]},
   "ranking":[{"rank":i+1,"id":c["id"],"name":c["name"],"score":c["score"],"role":c["role"],"country":c["country"]} for i,c in enumerate(comps_sorted)]},

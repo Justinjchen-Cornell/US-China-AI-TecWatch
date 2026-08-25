@@ -28,6 +28,7 @@ companies = json.load(open(DATA / "companies.json", encoding="utf-8"))
 report = build_report(snapshot, companies)
 
 # latest.json
+report["index_note"] = "产业维度快照评估(技术/商业化/资本/路线/供应链/政策)"
 (OUT / "latest.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # series.json：跨期趋势（当前仅一期，预留结构）

@@ -22,6 +22,7 @@ def ser(s):
 latest = {
     "as_of": SNAP["as_of"], "note": SNAP["note"],
     "fusion_index": round(statistics.mean(s["score"] for s in SCORED), 1),
+    "index_note": "池内均分·全池公司六维加权均值(非竞争指数)",
     "n": len(SCORED),
     "companies": [ser(s) for s in SCORED],
 }

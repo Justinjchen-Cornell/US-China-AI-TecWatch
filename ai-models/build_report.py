@@ -28,7 +28,7 @@ def build():
     payload = {
         "period": a["period"],
         "index": round(sum(_cn) / len(_cn), 1) if _cn else None,
-        "index_note": "中国阵营公司综合得分均值 (0-100)",
+        "index_note": "池内均分·中国阵营公司得分均值(非竞争指数)",
         "camp_avg": {"中国": round(sum(_cn)/len(_cn), 1) if _cn else None,
                      "海外": round(sum(_us)/len(_us), 1) if _us else None},
         "dim_avg": a["dim_avg"],

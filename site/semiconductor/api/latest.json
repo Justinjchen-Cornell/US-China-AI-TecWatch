@@ -7,6 +7,7 @@
   "ci_low": 43.81,
   "ci_high": 44.79,
   "data_confidence": 74.63,
+  "index_note": "国家层客观指标(18项: 制程装备/制造/存储HBM/AI芯片/先进封装/未来范式)",
   "n_indicators": 18,
   "dimensions": [
     {

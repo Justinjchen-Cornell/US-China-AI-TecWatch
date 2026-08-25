@@ -38,6 +38,7 @@ latest = {
     "ci_low": res["ci_low"],
     "ci_high": res["ci_high"],
     "data_confidence": res["data_confidence"],
+    "index_note": "国家层客观指标(18项: 制程装备/制造/存储HBM/AI芯片/先进封装/未来范式)",
     "n_indicators": res["n_indicators"],
     "dimensions": res["dimensions"],
     "dark_lines": res["dark_lines"],

@@ -8,15 +8,21 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT,"site")
 API  = os.path.join(SITE,"api")
 
-# 行业专项注册表: (子目录, 中文名, 简述)
+# 行业专项注册表: (子目录, 中文名, 简述, 默认口径)
+# 口径(basis): objective=国家层客观硬指标 / dim=产业维度快照评估 / pool=公司池均分(非竞争指数)
 INDUSTRIES = [
-    ("semiconductor", "半导体", "SemiCompete 综合指数"),
-    ("ai-models",     "AI模型", "ModelCompete 综合指数"),
-    ("quantum",       "量子计算", "QuantumCompete 综合指数"),
-    ("fusion",        "可控核聚变", "FusionCompete 综合指数"),
-    ("bio",           "AI生命科学", "BioCompete 综合指数"),
-    ("embodied",      "具身智能", "EmbodiedCompete 综合指数"),
+    ("semiconductor", "半导体",     "SemiCompete 综合指数",  "objective"),
+    ("ai-models",     "AI模型",     "ModelCompete 综合指数", "pool"),
+    ("quantum",       "量子计算",   "QuantumCompete 综合指数","dim"),
+    ("fusion",        "可控核聚变", "FusionCompete 综合指数", "pool"),
+    ("bio",           "AI生命科学", "BioCompete 综合指数",   "pool"),
+    ("embodied",      "具身智能",   "EmbodiedCompete 综合指数","pool"),
 ]
+BASIS_LABEL = {
+    "objective": "国家层客观指标",
+    "dim":       "产业维度评估",
+    "pool":      "池内均分(非竞争指数)",
+}
 
 def main():
     snap_dir = os.path.join(ROOT,"data","snapshots")
@@ -51,10 +57,10 @@ def main():
 
     # 行业专项: 读取各行业子站 latest.json (存在即上线)
     industries = []
-    for sub, name, blurb in INDUSTRIES:
+    for sub, name, blurb, basis in INDUSTRIES:
         pj = os.path.join(SITE, sub, "api", "latest.json")
-        rec = {"sub": sub, "name": name, "blurb": blurb, "index": None,
-               "ci": None, "conf": None, "date": None}
+        rec = {"sub": sub, "name": name, "blurb": blurb, "basis": BASIS_LABEL[basis],
+               "index": None, "ci": None, "conf": None, "date": None}
         if os.path.exists(pj):
             try:
                 d = load_json(pj)
@@ -72,6 +78,8 @@ def main():
                 rec["conf"] = d.get("data_confidence")
                 rec["date"] = (d.get("updated") or d.get("snapshot_date")
                                or d.get("period") or d.get("date") or d.get("as_of"))
+                if d.get("index_note"):
+                    rec["basis"] = d["index_note"]
             except Exception:
                 pass
         industries.append(rec)
@@ -129,12 +137,16 @@ def render_html(res, series, weights_cfg, industries=None):
                   else "<td class='num' style='color:var(--muted)'>—</td>")
             conf = ("<td class='num'>" + str(r['conf']) + "%</td>"
                     if r.get("conf") is not None else "<td class='num' style='color:var(--muted)'>—</td>")
+            basis_cls = "src"
+            if "非竞争指数" in r.get('basis', '') or "池内均分" in r.get('basis', ''):
+                basis_cls = "src bad"
             ind_rows += (
                 "<tr><td><a href='" + r['sub'] + "/' style='color:var(--accent);text-decoration:none'>"
                 + r['name'] + "</a></td><td>" + r['blurb'] + "</td>"
                 "<td class='num'><b>" + str(r['index']) + "</b></td>"
                 + ci + conf +
-                "<td class='src'>" + str(r['date'] or '') + "</td></tr>")
+                "<td class='src'>" + str(r['date'] or '') + "</td>"
+                "<td class='" + basis_cls + "'>" + str(r.get('basis', '') or '') + "</td></tr>")
         else:
             ind_rows += (
                 "<tr><td>" + r['name'] + "</td><td>" + r['blurb'] + "</td>"
@@ -160,7 +172,7 @@ header h1{font-size:26px;margin:0 0 6px;letter-spacing:.3px}header p{color:var(-
 canvas{max-height:340px}
 table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
 th{color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card)}td.num{text-align:right;font-variant-numeric:tabular-nums}
-td.src{color:var(--muted);font-size:12px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
+td.src{color:var(--muted);font-size:12px}td.bad{color:var(--bad);font-size:12px;font-weight:600}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
 .legend{font-size:12px;color:var(--muted)}.foot{color:var(--muted);font-size:12px;margin-top:18px;line-height:1.6}
 @media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
 </style></head>
@@ -180,8 +192,8 @@ td.src{color:var(--muted);font-size:12px}.dot{display:inline-block;width:9px;hei
   <canvas id="trendChart"></canvas></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">六维得分 (归一化几何平均，0-1)</div>
   <canvas id="dimChart"></canvas></div>
- <div class="card"><div class="legend" style="margin-bottom:8px">行业专项 · 六大硬科技 (点击进入子站)</div>
-  <table><thead><tr><th>行业</th><th>指数体系</th><th style="text-align:right">最新指数</th><th style="text-align:right">95% 区间</th><th style="text-align:right">置信度</th><th>数据截至</th></tr></thead>
+ <div class="card"><div class="legend" style="margin-bottom:8px">行业专项 · 六大硬科技 (点击进入子站) — 口径说明：国家层客观指标 / 产业维度评估 / 池内均分(非竞争指数)</div>
+  <table><thead><tr><th>行业</th><th>指数体系</th><th style="text-align:right">最新指数</th><th style="text-align:right">95% 区间</th><th style="text-align:right">置信度</th><th>数据截至</th><th>指数口径</th></tr></thead>
   <tbody>$ind_rows</tbody></table></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">五条暗线信号 (数据驱动/配置回退)</div>
   <table><thead><tr><th>暗线</th><th style="text-align:right">信号(0-1)</th><th style="text-align:right">权重</th><th style="text-align:right">可靠度</th></tr></thead>

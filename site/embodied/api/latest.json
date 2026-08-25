@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-08-25T15:18:12.477666Z",
+  "generated_at": "2026-08-25T15:26:19.887190Z",
   "as_of": "2026Q2",
   "composite": 6.5,
   "index": 65.0,
+  "index_note": "池内均分·全池公司六维加权均值(非竞争指数)",
   "index_scale": "0-100 (10x of internal 0-10 composite)",
   "dim_means": {
     "mass": 6.0,

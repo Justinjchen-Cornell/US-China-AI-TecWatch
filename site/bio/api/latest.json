@@ -2,6 +2,7 @@
   "as_of": "2026-06-30",
   "note": "2026Q2 AI生命科学公开信息近似快照，指标原始值为主观近似整理，仅供趋势研究，不构成投资建议。",
   "life_index": 51.4,
+  "index_note": "池内均分·全池公司六维加权均值(非竞争指数)",
   "n": 25,
   "companies": [
     {
@@ -13,7 +14,7 @@
       "market": "港股(2228)",
       "tier": "领跑",
       "config": "核心仓(卖铲人/平台)",
-      "score": 65.2,
+      "score": 65.1,
       "lo": 63.1,
       "hi": 67.2,
       "dims": {
@@ -34,9 +35,9 @@
       "market": "港股(3696)",
       "tier": "领跑",
       "config": "管线期权仓(高赔率)",
-      "score": 62.8,
-      "lo": 60.8,
-      "hi": 64.8,
+      "score": 62.9,
+      "lo": 60.9,
+      "hi": 64.9,
       "dims": {
         "clinical": 58.0,
         "pipeline": 74.0,
@@ -55,9 +56,9 @@
       "market": "A股",
       "tier": "领跑",
       "config": "核心仓(卖铲人/平台)",
-      "score": 62.5,
-      "lo": 60.5,
-      "hi": 64.5,
+      "score": 62.6,
+      "lo": 60.6,
+      "hi": 64.6,
       "dims": {
         "clinical": 72.0,
         "pipeline": 80.0,
@@ -76,8 +77,8 @@
       "market": "一级(拟IPO)",
       "tier": "跟进",
       "config": "核心仓(卖铲人/平台)",
-      "score": 59.3,
-      "lo": 57.3,
+      "score": 59.4,
+      "lo": 57.4,
       "hi": 61.4,
       "dims": {
         "clinical": 42.0,
@@ -98,7 +99,7 @@
       "tier": "跟进",
       "config": "核心仓(卖铲人/平台)",
       "score": 55.8,
-      "lo": 53.7,
+      "lo": 53.8,
       "hi": 57.8,
       "dims": {
         "clinical": 34.0,
@@ -118,9 +119,9 @@
       "market": "一级",
       "tier": "跟进",
       "config": "信仰仓(远期)",
-      "score": 54.4,
-      "lo": 52.4,
-      "hi": 56.4,
+      "score": 54.5,
+      "lo": 52.5,
+      "hi": 56.5,
       "dims": {
         "clinical": 20.0,
         "pipeline": 66.0,
@@ -139,7 +140,7 @@
       "market": "美股",
       "tier": "跟进",
       "config": "管线期权仓(高赔率)",
-      "score": 54.3,
+      "score": 54.2,
       "lo": 52.2,
       "hi": 56.3,
       "dims": {
@@ -158,11 +159,11 @@
       "track": "AI制药-平台型",
       "role": "联邦学习/医院数据平台",
       "market": "一级",
-      "tier": "潜力",
+      "tier": "跟进",
       "config": "核心仓(卖铲人/平台)",
-      "score": 53.9,
-      "lo": 51.9,
-      "hi": 55.8,
+      "score": 54.0,
+      "lo": 52.0,
+      "hi": 56.0,
       "dims": {
         "clinical": 36.0,
         "pipeline": 54.0,
@@ -183,7 +184,7 @@
       "config": "核心仓(卖铲人/平台)",
       "score": 53.9,
       "lo": 51.9,
-      "hi": 56.0,
+      "hi": 55.9,
       "dims": {
         "clinical": 30.0,
         "pipeline": 44.0,
@@ -203,7 +204,7 @@
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
       "score": 53.1,
-      "lo": 51.1,
+      "lo": 51.0,
       "hi": 55.1,
       "dims": {
         "clinical": 40.0,
@@ -223,9 +224,9 @@
       "market": "港股",
       "tier": "潜力",
       "config": "路线/观察仓",
-      "score": 52.4,
-      "lo": 50.4,
-      "hi": 54.4,
+      "score": 52.5,
+      "lo": 50.5,
+      "hi": 54.5,
       "dims": {
         "clinical": 36.0,
         "pipeline": 58.0,
@@ -278,27 +279,6 @@
       }
     },
     {
-      "id": "synchron",
-      "name": "Synchron",
-      "country": "澳大利亚",
-      "track": "脑机接口-微创/血管介入",
-      "role": "微创路线(血管介入)",
-      "market": "一级",
-      "tier": "潜力",
-      "config": "路线/观察仓",
-      "score": 50.0,
-      "lo": 48.0,
-      "hi": 52.0,
-      "dims": {
-        "clinical": 40.0,
-        "pipeline": 50.0,
-        "platform": 28.0,
-        "tech": 68.0,
-        "capital": 58.0,
-        "policy": 46.0
-      }
-    },
-    {
       "id": "mjkl",
       "name": "镁伽科技",
       "country": "中国",
@@ -307,9 +287,9 @@
       "market": "一级",
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
-      "score": 50.0,
+      "score": 50.1,
       "lo": 48.1,
-      "hi": 52.0,
+      "hi": 52.2,
       "dims": {
         "clinical": 18.0,
         "pipeline": 40.0,
@@ -328,9 +308,9 @@
       "market": "一级",
       "tier": "潜力",
       "config": "信仰仓(远期)",
-      "score": 49.9,
-      "lo": 47.9,
-      "hi": 51.9,
+      "score": 49.8,
+      "lo": 47.8,
+      "hi": 51.8,
       "dims": {
         "clinical": 30.0,
         "pipeline": 48.0,
@@ -338,6 +318,27 @@
         "tech": 86.0,
         "capital": 80.0,
         "policy": 34.0
+      }
+    },
+    {
+      "id": "synchron",
+      "name": "Synchron",
+      "country": "澳大利亚",
+      "track": "脑机接口-微创/血管介入",
+      "role": "微创路线(血管介入)",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 49.8,
+      "lo": 47.8,
+      "hi": 51.9,
+      "dims": {
+        "clinical": 40.0,
+        "pipeline": 50.0,
+        "platform": 28.0,
+        "tech": 68.0,
+        "capital": 58.0,
+        "policy": 46.0
       }
     },
     {
@@ -349,9 +350,9 @@
       "market": "一级",
       "tier": "潜力",
       "config": "信仰仓(远期)",
-      "score": 48.3,
-      "lo": 46.3,
-      "hi": 50.3,
+      "score": 48.4,
+      "lo": 46.4,
+      "hi": 50.4,
       "dims": {
         "clinical": 14.0,
         "pipeline": 58.0,
@@ -371,7 +372,7 @@
       "tier": "潜力",
       "config": "路线/观察仓",
       "score": 47.3,
-      "lo": 45.4,
+      "lo": 45.3,
       "hi": 49.3,
       "dims": {
         "clinical": 38.0,
@@ -414,7 +415,7 @@
       "config": "核心仓(卖铲人/平台)",
       "score": 46.0,
       "lo": 44.0,
-      "hi": 47.9,
+      "hi": 48.1,
       "dims": {
         "clinical": 10.0,
         "pipeline": 44.0,
@@ -433,9 +434,9 @@
       "market": "A股",
       "tier": "观察",
       "config": "核心仓(卖铲人/平台)",
-      "score": 45.1,
-      "lo": 43.1,
-      "hi": 47.1,
+      "score": 45.0,
+      "lo": 42.9,
+      "hi": 47.0,
       "dims": {
         "clinical": 22.0,
         "pipeline": 36.0,
@@ -454,8 +455,8 @@
       "market": "一级",
       "tier": "观察",
       "config": "核心仓(卖铲人/平台)",
-      "score": 44.5,
-      "lo": 42.5,
+      "score": 44.4,
+      "lo": 42.4,
       "hi": 46.4,
       "dims": {
         "clinical": 10.0,
@@ -476,7 +477,7 @@
       "tier": "观察",
       "config": "路线/观察仓",
       "score": 43.5,
-      "lo": 41.6,
+      "lo": 41.5,
       "hi": 45.5,
       "dims": {
         "clinical": 26.0,
@@ -496,9 +497,9 @@
       "market": "一级",
       "tier": "观察",
       "config": "路线/观察仓",
-      "score": 43.0,
+      "score": 43.1,
       "lo": 41.1,
-      "hi": 45.0,
+      "hi": 45.1,
       "dims": {
         "clinical": 28.0,
         "pipeline": 46.0,
@@ -518,7 +519,7 @@
       "tier": "观察",
       "config": "路线/观察仓",
       "score": 40.7,
-      "lo": 38.6,
+      "lo": 38.7,
       "hi": 42.7,
       "dims": {
         "clinical": 24.0,
