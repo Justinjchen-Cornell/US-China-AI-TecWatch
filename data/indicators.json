@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-24",
+  "description": "中美AI全维竞争监测指标定义。value 为最新观测值；direction: 1=正向(越高越有利中国), -1=反向。source_reliability: 官方1.0/行业研究0.8/媒体0.6。",
+  "indicators": [
+    {"id":"model_gap_lmarena","name":"顶尖模型性能差距(LMArena Elo分差%)","dim":"intelligence","unit":"%","direction":-1,"source_reliability":0.9,"source":"Stanford AI Index 2026","value":2.7,"higher_better":false},
+    {"id":"open_source_hf_share","name":"中国开源模型HuggingFace下载份额(%)","dim":"intelligence","unit":"%","direction":1,"source_reliability":0.8,"source":"ATOM Report","value":40.0,"higher_better":true},
+    {"id":"open_router_cn_share","name":"OpenRouter中国开源厂商调用份额(%)","dim":"intelligence","unit":"%","direction":1,"source_reliability":0.8,"source":"OpenRouter","value":48.3,"higher_better":true},
+    {"id":"private_ai_invest_cn","name":"中国私人AI投资(亿美元)","dim":"compute","unit":"亿美元","direction":1,"source_reliability":0.9,"source":"Stanford AI Index 2026","value":124,"higher_better":true},
+    {"id":"private_ai_invest_us","name":"美国私人AI投资(亿美元)","dim":"compute","unit":"亿美元","direction":-1,"source_reliability":0.9,"source":"Stanford AI Index 2026","value":2859,"higher_better":false},
+    {"id":"advanced_training_compute_share_cn","name":"中国高端训练算力占比(%)","dim":"compute","unit":"%","direction":1,"source_reliability":0.7,"source":"行业测算","value":15,"higher_better":true},
+    {"id":"cn_cloud_capex_growth","name":"中国头部云厂商资本开支同比增速(%)","dim":"compute","unit":"%","direction":1,"source_reliability":0.8,"source":"中金研究","value":65.6,"higher_better":true},
+    {"id":"us_pjm_power_price_index","name":"美国PJM电力市场电价指数(相对基线)","dim":"energy","unit":"指数","direction":-1,"source_reliability":0.7,"source":"公开电力市场","value":135,"higher_better":false},
+    {"id":"cn_power_cost_ratio","name":"中美智算中心电价比(美/中)","dim":"energy","unit":"倍","direction":1,"source_reliability":0.6,"source":"行业研究","value":3.0,"higher_better":true},
+    {"id":"fusion_demo_progress","name":"聚变发电演示进度(0-100)","dim":"energy","unit":"进度","direction":1,"source_reliability":0.6,"source":"公开项目进展","value":42,"higher_better":true},
+    {"id":"stablecoin_us_market_cap","name":"全球美元稳定币市值(亿美元)","dim":"finance","unit":"亿美元","direction":-1,"source_reliability":0.9,"source":"CIFER","value":3200,"higher_better":false},
+    {"id":"digital_rmb_mbridge_volume","name":"数字人民币mBridge累计交易额(亿元)","dim":"finance","unit":"亿元","direction":1,"source_reliability":0.9,"source":"穆长春达沃斯","value":5000,"higher_better":true},
+    {"id":"ai_scholars_to_us_change","name":"移居美国AI学者数量较2017年变化(%)","dim":"talent","unit":"%","direction":-1,"source_reliability":0.9,"source":"Stanford AI Index 2026","value":-89,"higher_better":false},
+    {"id":"cn_neurips_first_author_share","name":"NeurIPS一作论文中国占比(%)","dim":"talent","unit":"%","direction":1,"source_reliability":0.8,"source":"行业研究","value":43.0,"higher_better":true},
+    {"id":"overseas_phd_return_rate","name":"海外受训AI博士回国率(%)","dim":"talent","unit":"%","direction":1,"source_reliability":0.7,"source":"WSJ","value":59,"higher_better":true},
+    {"id":"industrial_robot_cn_share","name":"中国工业机器人安装量全球占比(%)","dim":"life","unit":"%","direction":1,"source_reliability":0.8,"source":"公开统计","value":54,"higher_better":true},
+    {"id":"humanoid_robot_cn_share","name":"中国人形机器人出货量全球占比(%)","dim":"life","unit":"%","direction":1,"source_reliability":0.7,"source":"行业研究","value":88.7,"higher_better":true},
+    {"id":"token_daily_call_cn","name":"中国日均Token调用量(万亿)","dim":"intelligence","unit":"万亿","direction":1,"source_reliability":0.8,"source":"公开披露","value":140,"higher_better":true},
+    {"id":"uav_swarm_manufacturing_share","name":"中国无人/蜂群装备制造产能全球占比(%)","dim":"violence","unit":"%","direction":1,"source_reliability":0.7,"source":"行业研究(珠海航展/公开产能)","value":70,"higher_better":true}
+  ]
+}
