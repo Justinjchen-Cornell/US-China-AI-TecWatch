@@ -23,22 +23,32 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate snapshots & compute indexes & build sites
+      - name: Install sub-project dependencies
         run: |
-          # 主项目（综合指数）
+          pip install -e ai-models   # numpy/pandas/jinja2 来自 pyproject
+
+      - name: Build main index
+        run: |
           python scripts/update_snapshot.py
           python scripts/build_site.py
-          # 行业专项：半导体（输出到主站点 semiconductor/ 子目录）
+
+      - name: Build semiconductor sub-project
+        run: |
           python semiconductor/scripts/update_snapshot.py
           python semiconductor/scripts/build_site.py --site-dir ../site/semiconductor
-          # 重新构建主站以刷新行业入口卡片
-          python scripts/build_site.py
+
+      - name: Build ai-models sub-project
+        run: |
+          python ai-models/build_report.py --site-dir ../site/ai-models
+
+      - name: Rebuild main site (refresh industry cards)
+        run: python scripts/build_site.py
 
       - name: Commit updated data & site
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data semiconductor/data site
+          git add data semiconductor/data ai-models/data ai-models/site site
           git diff --cached --quiet || git commit -m "chore: weekly snapshot & index rebuild [skip ci]"
 
       - name: Deploy to GitHub Pages

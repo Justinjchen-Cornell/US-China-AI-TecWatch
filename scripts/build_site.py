@@ -62,7 +62,7 @@ def main():
                 rec["ci"] = d.get("ci_low")
                 rec["ci2"] = d.get("ci_high")
                 rec["conf"] = d.get("data_confidence")
-                rec["date"] = d.get("updated") or d.get("snapshot_date")
+                rec["date"] = d.get("updated") or d.get("snapshot_date") or d.get("period")
             except Exception:
                 pass
         industries.append(rec)
@@ -115,12 +115,16 @@ def render_html(res, series, weights_cfg, industries=None):
     ind_rows = ""
     for r in (industries or []):
         if r.get("index") is not None:
+            ci = ("<td class='num'>" + str(r['ci']) + "–" + str(r['ci2']) + "</td>"
+                  if r.get("ci") is not None and r.get("ci2") is not None
+                  else "<td class='num' style='color:var(--muted)'>—</td>")
+            conf = ("<td class='num'>" + str(r['conf']) + "%</td>"
+                    if r.get("conf") is not None else "<td class='num' style='color:var(--muted)'>—</td>")
             ind_rows += (
                 "<tr><td><a href='" + r['sub'] + "/' style='color:var(--accent);text-decoration:none'>"
                 + r['name'] + "</a></td><td>" + r['blurb'] + "</td>"
                 "<td class='num'><b>" + str(r['index']) + "</b></td>"
-                "<td class='num'>" + str(r['ci']) + "–" + str(r['ci2']) + "</td>"
-                "<td class='num'>" + str(r['conf']) + "%</td>"
+                + ci + conf +
                 "<td class='src'>" + str(r['date'] or '') + "</td></tr>")
         else:
             ind_rows += (

@@ -1,0 +1,576 @@
+{
+  "period": "2026Q2",
+  "dim_avg": {
+    "model_capability": 74.2,
+    "commercialization": 36.7,
+    "open_source": 28.9,
+    "compute_efficiency": 55.2,
+    "embodiment": 18.7
+  },
+  "tiers": {
+    "领跑梯队": [],
+    "跟进梯队": [
+      {
+        "id": "alibaba",
+        "name": "阿里巴巴",
+        "camp": "中国",
+        "sector": "云/通义",
+        "listed": true,
+        "valuation": 2800,
+        "arr": 0,
+        "score": 58.089396640332716,
+        "ci_low": 52.556275959083955,
+        "ci_high": 62.66535656348207,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7840580282247949,
+          "commercialization": 0.4201705462035028,
+          "open_source": 0.7034293022455846,
+          "compute_efficiency": 0.5824316265342757,
+          "embodiment": 0.2089967793563634
+        },
+        "tier": "跟进梯队"
+      },
+      {
+        "id": "google",
+        "name": "谷歌 Alphabet",
+        "camp": "海外",
+        "sector": "全栈四位一体",
+        "listed": true,
+        "valuation": 25000,
+        "arr": 0,
+        "score": 57.554603151673795,
+        "ci_low": 52.00920816834669,
+        "ci_high": 62.150908404778036,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.9646088741742651,
+          "commercialization": 0.4380360036185622,
+          "open_source": 0.12531603815608672,
+          "compute_efficiency": 0.6371384594584495,
+          "embodiment": 0.35910860555020263
+        },
+        "tier": "跟进梯队"
+      }
+    ],
+    "潜力梯队": [
+      {
+        "id": "anthropic",
+        "name": "Anthropic",
+        "camp": "海外",
+        "sector": "通用大模型",
+        "listed": false,
+        "valuation": 9650,
+        "arr": 47,
+        "score": 51.24234266421557,
+        "ci_low": 45.651015355482954,
+        "ci_high": 55.99962277619261,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.9061433817457507,
+          "commercialization": 0.7170401372357957,
+          "open_source": 0.13307398666227988,
+          "compute_efficiency": 0.3309561512632986,
+          "embodiment": 0.10890520975288731
+        },
+        "tier": "潜力梯队"
+      },
+      {
+        "id": "deepseek",
+        "name": "DeepSeek",
+        "camp": "中国",
+        "sector": "开源基座",
+        "listed": false,
+        "valuation": 500,
+        "arr": 2,
+        "score": 50.65005828593034,
+        "ci_low": 45.063627343757126,
+        "ci_high": 55.41484612572548,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7020889821350007,
+          "commercialization": 0.25640092908384027,
+          "open_source": 0.8089247038512779,
+          "compute_efficiency": 0.6570735692335403,
+          "embodiment": 0.07972045919096682
+        },
+        "tier": "潜力梯队"
+      },
+      {
+        "id": "microsoft",
+        "name": "微软",
+        "camp": "海外",
+        "sector": "云/AI投资",
+        "listed": true,
+        "valuation": 30000,
+        "arr": 0,
+        "score": 48.17490257041281,
+        "ci_low": 42.62566929771561,
+        "ci_high": 52.956708011517975,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.8304350578785482,
+          "commercialization": 0.4468161827303303,
+          "open_source": 0.10164015669058113,
+          "compute_efficiency": 0.5345365536473652,
+          "embodiment": 0.30907420809354824
+        },
+        "tier": "潜力梯队"
+      }
+    ],
+    "观察梯队": [
+      {
+        "id": "zhipu",
+        "name": "智谱 AI",
+        "camp": "中国",
+        "sector": "通用/开源",
+        "listed": true,
+        "valuation": 300,
+        "arr": 0.7,
+        "score": 43.763857967880725,
+        "ci_low": 38.346769323519624,
+        "ci_high": 48.517721568650394,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7578124618019486,
+          "commercialization": 0.1320403116480786,
+          "open_source": 0.6361042921017166,
+          "compute_efficiency": 0.5824316265342757,
+          "embodiment": 0.15895299381457906
+        },
+        "tier": "观察梯队"
+      },
+      {
+        "id": "openai",
+        "name": "OpenAI",
+        "camp": "海外",
+        "sector": "通用大模型",
+        "listed": false,
+        "valuation": 8520,
+        "arr": 50,
+        "score": 43.336070604747576,
+        "ci_low": 37.93621302861198,
+        "ci_high": 48.083197343273,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.8451381435987146,
+          "commercialization": 0.47107141480009473,
+          "open_source": 0.14839821495347438,
+          "compute_efficiency": 0.40076421639925086,
+          "embodiment": 0.15895299381457906
+        },
+        "tier": "观察梯队"
+      },
+      {
+        "id": "tencent",
+        "name": "腾讯",
+        "camp": "中国",
+        "sector": "生态/混元",
+        "listed": true,
+        "valuation": 5500,
+        "arr": 0,
+        "score": 41.2206838479154,
+        "ci_low": 35.917334139967494,
+        "ci_high": 45.92388981230292,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7474331130428118,
+          "commercialization": 0.42915511970919207,
+          "open_source": 0.07732540992504155,
+          "compute_efficiency": 0.5407542168125825,
+          "embodiment": 0.17974428931842112
+        },
+        "tier": "观察梯队"
+      },
+      {
+        "id": "facewall",
+        "name": "面壁智能",
+        "camp": "中国",
+        "sector": "端侧小模型",
+        "listed": false,
+        "valuation": 15,
+        "arr": 0.1,
+        "score": 37.199847246480275,
+        "ci_low": 32.13102641594453,
+        "ci_high": 41.7702985572169,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.45696404700677395,
+          "commercialization": 0.24399148603990373,
+          "open_source": 0.5282457824839306,
+          "compute_efficiency": 0.6939441925169254,
+          "embodiment": 0.1297329047947906
+        },
+        "tier": "观察梯队"
+      },
+      {
+        "id": "kuaishou",
+        "name": "快手(可灵)",
+        "camp": "中国",
+        "sector": "视频生成",
+        "listed": true,
+        "valuation": 380,
+        "arr": 5,
+        "score": 33.99557429066589,
+        "ci_low": 29.16062880441581,
+        "ci_high": 38.41314756929422,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.47082655853040456,
+          "commercialization": 0.43775573736848017,
+          "open_source": 0.052320692234473665,
+          "compute_efficiency": 0.5778442849254926,
+          "embodiment": 0.25903704830195085
+        },
+        "tier": "观察梯队"
+      },
+      {
+        "id": "kimi",
+        "name": "月之暗面 Kimi",
+        "camp": "中国",
+        "sector": "C端/Agent",
+        "listed": false,
+        "valuation": 330,
+        "arr": 1.5,
+        "score": 32.37011957671456,
+        "ci_low": 27.66944017675264,
+        "ci_high": 36.69389632784063,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.8218221660264866,
+          "commercialization": 0.15576440764217447,
+          "open_source": 0.08550433139361324,
+          "compute_efficiency": 0.5400864053986201,
+          "embodiment": 0.07972045919096682
+        },
+        "tier": "观察梯队"
+      },
+      {
+        "id": "minimax",
+        "name": "MiniMax",
+        "camp": "中国",
+        "sector": "多模态/出海",
+        "listed": true,
+        "valuation": 300,
+        "arr": 3,
+        "score": 31.4503195344572,
+        "ci_low": 26.830220213409806,
+        "ci_high": 35.71611983068926,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.613541722217184,
+          "commercialization": 0.26088597375290323,
+          "open_source": 0.06906988309238948,
+          "compute_efficiency": 0.5491240486255555,
+          "embodiment": 0.2089967793563634
+        },
+        "tier": "观察梯队"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "alibaba",
+      "name": "阿里巴巴",
+      "camp": "中国",
+      "sector": "云/通义",
+      "listed": true,
+      "valuation": 2800,
+      "arr": 0,
+      "score": 58.089396640332716,
+      "ci_low": 52.556275959083955,
+      "ci_high": 62.66535656348207,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7840580282247949,
+        "commercialization": 0.4201705462035028,
+        "open_source": 0.7034293022455846,
+        "compute_efficiency": 0.5824316265342757,
+        "embodiment": 0.2089967793563634
+      },
+      "tier": "跟进梯队"
+    },
+    {
+      "id": "google",
+      "name": "谷歌 Alphabet",
+      "camp": "海外",
+      "sector": "全栈四位一体",
+      "listed": true,
+      "valuation": 25000,
+      "arr": 0,
+      "score": 57.554603151673795,
+      "ci_low": 52.00920816834669,
+      "ci_high": 62.150908404778036,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.9646088741742651,
+        "commercialization": 0.4380360036185622,
+        "open_source": 0.12531603815608672,
+        "compute_efficiency": 0.6371384594584495,
+        "embodiment": 0.35910860555020263
+      },
+      "tier": "跟进梯队"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "camp": "海外",
+      "sector": "通用大模型",
+      "listed": false,
+      "valuation": 9650,
+      "arr": 47,
+      "score": 51.24234266421557,
+      "ci_low": 45.651015355482954,
+      "ci_high": 55.99962277619261,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.9061433817457507,
+        "commercialization": 0.7170401372357957,
+        "open_source": 0.13307398666227988,
+        "compute_efficiency": 0.3309561512632986,
+        "embodiment": 0.10890520975288731
+      },
+      "tier": "潜力梯队"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "camp": "中国",
+      "sector": "开源基座",
+      "listed": false,
+      "valuation": 500,
+      "arr": 2,
+      "score": 50.65005828593034,
+      "ci_low": 45.063627343757126,
+      "ci_high": 55.41484612572548,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7020889821350007,
+        "commercialization": 0.25640092908384027,
+        "open_source": 0.8089247038512779,
+        "compute_efficiency": 0.6570735692335403,
+        "embodiment": 0.07972045919096682
+      },
+      "tier": "潜力梯队"
+    },
+    {
+      "id": "microsoft",
+      "name": "微软",
+      "camp": "海外",
+      "sector": "云/AI投资",
+      "listed": true,
+      "valuation": 30000,
+      "arr": 0,
+      "score": 48.17490257041281,
+      "ci_low": 42.62566929771561,
+      "ci_high": 52.956708011517975,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.8304350578785482,
+        "commercialization": 0.4468161827303303,
+        "open_source": 0.10164015669058113,
+        "compute_efficiency": 0.5345365536473652,
+        "embodiment": 0.30907420809354824
+      },
+      "tier": "潜力梯队"
+    },
+    {
+      "id": "zhipu",
+      "name": "智谱 AI",
+      "camp": "中国",
+      "sector": "通用/开源",
+      "listed": true,
+      "valuation": 300,
+      "arr": 0.7,
+      "score": 43.763857967880725,
+      "ci_low": 38.346769323519624,
+      "ci_high": 48.517721568650394,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7578124618019486,
+        "commercialization": 0.1320403116480786,
+        "open_source": 0.6361042921017166,
+        "compute_efficiency": 0.5824316265342757,
+        "embodiment": 0.15895299381457906
+      },
+      "tier": "观察梯队"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "camp": "海外",
+      "sector": "通用大模型",
+      "listed": false,
+      "valuation": 8520,
+      "arr": 50,
+      "score": 43.336070604747576,
+      "ci_low": 37.93621302861198,
+      "ci_high": 48.083197343273,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.8451381435987146,
+        "commercialization": 0.47107141480009473,
+        "open_source": 0.14839821495347438,
+        "compute_efficiency": 0.40076421639925086,
+        "embodiment": 0.15895299381457906
+      },
+      "tier": "观察梯队"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "camp": "中国",
+      "sector": "生态/混元",
+      "listed": true,
+      "valuation": 5500,
+      "arr": 0,
+      "score": 41.2206838479154,
+      "ci_low": 35.917334139967494,
+      "ci_high": 45.92388981230292,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7474331130428118,
+        "commercialization": 0.42915511970919207,
+        "open_source": 0.07732540992504155,
+        "compute_efficiency": 0.5407542168125825,
+        "embodiment": 0.17974428931842112
+      },
+      "tier": "观察梯队"
+    },
+    {
+      "id": "facewall",
+      "name": "面壁智能",
+      "camp": "中国",
+      "sector": "端侧小模型",
+      "listed": false,
+      "valuation": 15,
+      "arr": 0.1,
+      "score": 37.199847246480275,
+      "ci_low": 32.13102641594453,
+      "ci_high": 41.7702985572169,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.45696404700677395,
+        "commercialization": 0.24399148603990373,
+        "open_source": 0.5282457824839306,
+        "compute_efficiency": 0.6939441925169254,
+        "embodiment": 0.1297329047947906
+      },
+      "tier": "观察梯队"
+    },
+    {
+      "id": "kuaishou",
+      "name": "快手(可灵)",
+      "camp": "中国",
+      "sector": "视频生成",
+      "listed": true,
+      "valuation": 380,
+      "arr": 5,
+      "score": 33.99557429066589,
+      "ci_low": 29.16062880441581,
+      "ci_high": 38.41314756929422,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.47082655853040456,
+        "commercialization": 0.43775573736848017,
+        "open_source": 0.052320692234473665,
+        "compute_efficiency": 0.5778442849254926,
+        "embodiment": 0.25903704830195085
+      },
+      "tier": "观察梯队"
+    },
+    {
+      "id": "kimi",
+      "name": "月之暗面 Kimi",
+      "camp": "中国",
+      "sector": "C端/Agent",
+      "listed": false,
+      "valuation": 330,
+      "arr": 1.5,
+      "score": 32.37011957671456,
+      "ci_low": 27.66944017675264,
+      "ci_high": 36.69389632784063,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.8218221660264866,
+        "commercialization": 0.15576440764217447,
+        "open_source": 0.08550433139361324,
+        "compute_efficiency": 0.5400864053986201,
+        "embodiment": 0.07972045919096682
+      },
+      "tier": "观察梯队"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "camp": "中国",
+      "sector": "多模态/出海",
+      "listed": true,
+      "valuation": 300,
+      "arr": 3,
+      "score": 31.4503195344572,
+      "ci_low": 26.830220213409806,
+      "ci_high": 35.71611983068926,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.613541722217184,
+        "commercialization": 0.26088597375290323,
+        "open_source": 0.06906988309238948,
+        "compute_efficiency": 0.5491240486255555,
+        "embodiment": 0.2089967793563634
+      },
+      "tier": "观察梯队"
+    }
+  ],
+  "recommend": {
+    "core": [
+      {
+        "id": "alibaba",
+        "name": "阿里巴巴",
+        "score": 58.1
+      },
+      {
+        "id": "google",
+        "name": "谷歌 Alphabet",
+        "score": 57.6
+      },
+      {
+        "id": "microsoft",
+        "name": "微软",
+        "score": 48.2
+      },
+      {
+        "id": "zhipu",
+        "name": "智谱 AI",
+        "score": 43.8
+      },
+      {
+        "id": "tencent",
+        "name": "腾讯",
+        "score": 41.2
+      }
+    ],
+    "option": [
+      {
+        "id": "anthropic",
+        "name": "Anthropic",
+        "score": 51.2
+      },
+      {
+        "id": "deepseek",
+        "name": "DeepSeek",
+        "score": 50.7
+      },
+      {
+        "id": "openai",
+        "name": "OpenAI",
+        "score": 43.3
+      },
+      {
+        "id": "facewall",
+        "name": "面壁智能",
+        "score": 37.2
+      }
+    ]
+  }
+}

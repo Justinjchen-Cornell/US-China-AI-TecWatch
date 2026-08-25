@@ -1,0 +1,18 @@
+{
+  "period": "2026Q2",
+  "source_note": "指标原始值近似（基于公开报道/研究报告整理，仅供趋势分析，非精确财务数据）",
+  "indicators": {
+    "openai":    {"mmlu_score":86,"long_context":128,"multimodal":1,"agent_capability":0.85,"arr":50,"profitability":-1.22,"p_arr_multiple":170,"open_source_flag":0,"open_rank_share":0.18,"inference_cost":3.0,"compute_self_supply":0.1,"embodiment_progress":0.2,"robotics_data":0.1},
+    "anthropic": {"mmlu_score":87,"long_context":200,"multimodal":0.8,"agent_capability":0.9,"arr":47,"profitability":0.05,"p_arr_multiple":205,"open_source_flag":0,"open_rank_share":0.16,"inference_cost":4.5,"compute_self_supply":0.1,"embodiment_progress":0.15,"robotics_data":0.05},
+    "deepseek":  {"mmlu_score":84,"long_context":128,"multimodal":0.6,"agent_capability":0.7,"arr":2,"profitability":0.0,"p_arr_multiple":250,"open_source_flag":1,"open_rank_share":0.30,"inference_cost":0.5,"compute_self_supply":0.35,"embodiment_progress":0.1,"robotics_data":0.05},
+    "kimi":      {"mmlu_score":82,"long_context":200,"multimodal":0.7,"agent_capability":0.8,"arr":1.5,"profitability":-0.6,"p_arr_multiple":220,"open_source_flag":0,"open_rank_share":0.10,"inference_cost":1.2,"compute_self_supply":0.2,"embodiment_progress":0.1,"robotics_data":0.05},
+    "minimax":   {"mmlu_score":80,"long_context":32,"multimodal":1.0,"agent_capability":0.65,"arr":3,"profitability":-0.5,"p_arr_multiple":100,"open_source_flag":0,"open_rank_share":0.08,"inference_cost":1.0,"compute_self_supply":0.2,"embodiment_progress":0.25,"robotics_data":0.15},
+    "zhipu":     {"mmlu_score":83,"long_context":128,"multimodal":0.85,"agent_capability":0.7,"arr":0.7,"profitability":-0.4,"p_arr_multiple":430,"open_source_flag":1,"open_rank_share":0.14,"inference_cost":1.5,"compute_self_supply":0.3,"embodiment_progress":0.2,"robotics_data":0.1},
+    "kuaishou":  {"mmlu_score":70,"long_context":8,"multimodal":1.0,"agent_capability":0.5,"arr":5,"profitability":0.2,"p_arr_multiple":76,"open_source_flag":0,"open_rank_share":0.06,"inference_cost":1.0,"compute_self_supply":0.25,"embodiment_progress":0.3,"robotics_data":0.2},
+    "microsoft": {"mmlu_score":84,"long_context":128,"multimodal":1.0,"agent_capability":0.85,"arr":0,"profitability":0.4,"p_arr_multiple":0,"open_source_flag":0,"open_rank_share":0.12,"inference_cost":2.5,"compute_self_supply":0.3,"embodiment_progress":0.35,"robotics_data":0.25},
+    "google":    {"mmlu_score":88,"long_context":200,"multimodal":1.0,"agent_capability":0.9,"arr":0,"profitability":0.35,"p_arr_multiple":0,"open_source_flag":0,"open_rank_share":0.15,"inference_cost":2.0,"compute_self_supply":0.45,"embodiment_progress":0.4,"robotics_data":0.3},
+    "tencent":   {"mmlu_score":80,"long_context":128,"multimodal":0.9,"agent_capability":0.7,"arr":0,"profitability":0.3,"p_arr_multiple":0,"open_source_flag":0,"open_rank_share":0.09,"inference_cost":1.8,"compute_self_supply":0.25,"embodiment_progress":0.2,"robotics_data":0.15},
+    "alibaba":   {"mmlu_score":82,"long_context":128,"multimodal":0.95,"agent_capability":0.75,"arr":0,"profitability":0.25,"p_arr_multiple":0,"open_source_flag":1,"open_rank_share":0.20,"inference_cost":1.5,"compute_self_supply":0.3,"embodiment_progress":0.25,"robotics_data":0.15},
+    "facewall":  {"mmlu_score":76,"long_context":32,"multimodal":0.5,"agent_capability":0.55,"arr":0.1,"profitability":-0.3,"p_arr_multiple":150,"open_source_flag":1,"open_rank_share":0.05,"inference_cost":0.3,"compute_self_supply":0.4,"embodiment_progress":0.15,"robotics_data":0.1}
+  }
+}

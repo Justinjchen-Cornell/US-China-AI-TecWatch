@@ -1,0 +1,18 @@
+[project]
+name = "ai-model-invest-system"
+version = "1.0.0"
+description = "AI 大模型生态投资跟踪与分析体系"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "jinja2>=3.1",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
+packages = ["engine", "config"]
