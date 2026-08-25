@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "industry": "semiconductor",
+  "industry_cn": "半导体",
+  "as_of": "2026-06-30",
+  "verdict": {
+    "phase": "制裁博弈深化期：先进制程封锁 vs 国产替代加速的双螺旋",
+    "china_position": "成熟制程与封装领先 · 先进制程/设备/EDA 尖端差距大",
+    "key_inflection": "先进制程节点突破（7nm 良率爬坡）与设备国产化率斜率",
+    "investment_theme": "设备/材料国产替代（卖铲人）确定性最高；HBM 是差距最大但弹性最大的环节；AI 芯片看国产算力生态"
+  },
+  "technology_routes": [
+    {
+      "name": "先进制程（逻辑）",
+      "maturity": "封锁博弈",
+      "cn_players": [
+        "中芯国际",
+        "华虹"
+      ],
+      "us_players": [
+        "台积电",
+        "英特尔",
+        "三星"
+      ],
+      "convergence_signal": "DUV 多重曝光 7nm 良率"
+    },
+    {
+      "name": "存储（DRAM/HBM）",
+      "maturity": "差距最大环节",
+      "cn_players": [
+        "长鑫存储",
+        "长江存储"
+      ],
+      "us_players": [
+        "三星",
+        "SK海力士",
+        "美光"
+      ],
+      "convergence_signal": "HBM 世代差距"
+    },
+    {
+      "name": "设备",
+      "maturity": "国产替代爬坡",
+      "cn_players": [
+        "北方华创",
+        "中微",
+        "拓荆",
+        "盛美"
+      ],
+      "us_players": [
+        "AMAT",
+        "泛林",
+        "KLA",
+        "ASML",
+        "TEL"
+      ],
+      "convergence_signal": "28nm 以下设备国产化率"
+    },
+    {
+      "name": "AI 芯片",
+      "maturity": "生态追赶",
+      "cn_players": [
+        "寒武纪",
+        "海光",
+        "华为昇腾"
+      ],
+      "us_players": [
+        "英伟达",
+        "AMD",
+        "博通"
+      ],
+      "convergence_signal": "国产算力生态成熟度"
+    }
+  ],
+  "value_chain": [
+    {
+      "segment": "设备/材料（卖铲人）",
+      "value_concentration": "最高",
+      "logic": "国产替代确定性最强，北方华创/中微订单可见度最高"
+    },
+    {
+      "segment": "先进封装（HBM/CoWoS）",
+      "value_concentration": "高",
+      "logic": "制程封锁下的差异化突围路径，长电/通富承接"
+    },
+    {
+      "segment": "存储",
+      "value_concentration": "中高（弹性）",
+      "logic": "HBM 缺口=最大痛点，突破即估值重估"
+    },
+    {
+      "segment": "AI 芯片设计",
+      "value_concentration": "中",
+      "logic": "生态成熟度决定，寒武纪/海光国产替代逻辑"
+    }
+  ],
+  "competitive_map": {
+    "cn_strength": [
+      "成熟制程产能与成本",
+      "先进封装/OSAT 全球份额",
+      "设备国产替代加速",
+      "存储产能扩张"
+    ],
+    "us_strength": [
+      "尖端制程（台积电 N2）",
+      "设备垄断（EUV）",
+      "HBM 领先",
+      "AI 芯片生态（CUDA）"
+    ],
+    "structural_gaps": [
+      "EUV 光刻与先进制程",
+      "HBM 世代",
+      "EDA 工具",
+      "高端设备零部件"
+    ],
+    "asymmetry": "中国'成熟制程+封装+存储产能'打底，'设备国产化+先进制程'是主战场——制裁越紧国产替代斜率越陡，尖端差距缩短以年计"
+  },
+  "inflections_6_18m": [
+    {
+      "event": "中芯国际 5nm 进展（DUV 多重曝光）",
+      "impact": "先进制程封锁是否破局",
+      "probability": "低中"
+    },
+    {
+      "event": "设备国产化率季报验证",
+      "impact": "卖铲人逻辑兑现斜率",
+      "probability": "中"
+    },
+    {
+      "event": "HBM 国产突破（长鑫 HBM3）",
+      "impact": "存储估值重估",
+      "probability": "中"
+    },
+    {
+      "event": "新制裁清单与出口管制升级",
+      "impact": "博弈变量（短期冲击/长期加速替代）",
+      "probability": "高"
+    }
+  ]
+}

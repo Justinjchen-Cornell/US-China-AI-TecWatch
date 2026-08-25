@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "industry": "embodied",
+  "industry_cn": "具身智能",
+  "as_of": "2026Q2",
+  "verdict": {
+    "phase": "量产元年兑现期：从'实验室炫技'到'万台产线'的生死考",
+    "china_position": "供应链与出货领先（整机 60% 份额）· VLA 模型尖端追赶",
+    "key_inflection": "万台量产里程碑兑现 + VLA 泛化能力（Sim2Real）",
+    "investment_theme": "价值向'脑'与'手'集中：VLA 模型与灵巧手是价值密度最高环节；整机组装厂化趋势下卖铲人（减速器/丝杠/传感）确定性最高"
+  },
+  "technology_routes": [
+    {
+      "name": "VLA 模型/世界模型（大脑）",
+      "maturity": "快速迭代期",
+      "cn_players": [
+        "智元 AgiBot",
+        "宇树",
+        "银河通用"
+      ],
+      "us_players": [
+        "Google Gemini Robotics",
+        "Figure Helix",
+        "Physical Intelligence"
+      ],
+      "convergence_signal": "Sim2Real 泛化与长任务成功率"
+    },
+    {
+      "name": "灵巧手（手）",
+      "maturity": "量产爬坡（占整机 BOM ~17%）",
+      "cn_players": [
+        "因时/兆威",
+        "帕西尼",
+        "智元灵巧手"
+      ],
+      "us_players": [
+        "Shadow",
+        "Tesla Optimus 手",
+        "Sanctuary"
+      ],
+      "convergence_signal": "成本曲线与力控精度"
+    },
+    {
+      "name": "整机（人形机器人）",
+      "maturity": "量产元年（万台门槛）",
+      "cn_players": [
+        "宇树 G1",
+        "优必选 Walker",
+        "智元",
+        "傅利叶"
+      ],
+      "us_players": [
+        "Tesla Optimus",
+        "Figure 02",
+        "Boston Dynamics Atlas"
+      ],
+      "convergence_signal": "出货量/成本/产线良率"
+    },
+    {
+      "name": "核心部件（减速器/丝杠/传感/电机）",
+      "maturity": "成熟供应链",
+      "cn_players": [
+        "绿的谐波",
+        "鸣志电器",
+        "柯力传感"
+      ],
+      "us_players": [
+        "Harmonic",
+        "Maxon"
+      ],
+      "convergence_signal": "国产替代率与成本"
+    }
+  ],
+  "value_chain": [
+    {
+      "segment": "大脑（VLA/世界模型）",
+      "value_concentration": "最高",
+      "logic": "通用性决定天花板，价值随泛化能力集中（美国领先、中国追赶）"
+    },
+    {
+      "segment": "手（灵巧手）",
+      "value_concentration": "高",
+      "logic": "17% BOM 占比+技术壁垒，量产规模中国领先"
+    },
+    {
+      "segment": "核心部件（卖铲人）",
+      "value_concentration": "中高",
+      "logic": "行业扩产确定性受益，中国供应链完整度全球第一"
+    },
+    {
+      "segment": "整机组装",
+      "value_concentration": "低（富士康化）",
+      "logic": "标准化+降价压缩利润，除非有模型/数据闭环"
+    }
+  ],
+  "competitive_map": {
+    "cn_strength": [
+      "整机出货 60% 份额（宇树/优必选/智元）",
+      "供应链完整（减速器/丝杠/传感国产化）",
+      "成本优势（整机 ~1/3 美国）",
+      "量产场景（工厂/物流）丰富"
+    ],
+    "us_strength": [
+      "VLA 模型领先（Gemini Robotics/Figure）",
+      "Tesla 量产计划与自动驾驶数据协同",
+      "波士顿动力技术深度"
+    ],
+    "structural_gaps": [
+      "VLA 泛化能力（长任务/陌生场景）",
+      "高端力控传感",
+      "软件生态标准"
+    ],
+    "asymmetry": "中国'硬件+供应链+量产'领先，美国'模型+软件'领先——若 VLA 差距收窄，中国将复刻新能源车路径；若拉大，硬件优势将被软件锁死"
+  },
+  "inflections_6_18m": [
+    {
+      "event": "万台量产里程碑兑现（宇树/优必选/智元交付数据）",
+      "impact": "'量产元年'真伪验证",
+      "probability": "中高"
+    },
+    {
+      "event": "Gemini Robotics 3 / Figure 新 VLA vs 中国模型迭代",
+      "impact": "软件差距走向",
+      "probability": "高"
+    },
+    {
+      "event": "灵巧手成本跌破万元（BOM 重构）",
+      "impact": "渗透率拐点",
+      "probability": "中"
+    },
+    {
+      "event": "特斯拉 Optimus 量产节奏（2026-2027 目标）",
+      "impact": "全球竞争格局参照系",
+      "probability": "中"
+    }
+  ]
+}

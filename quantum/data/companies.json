@@ -1,26 +1,701 @@
 [
-  {"name":"Quantinuum","country":"海外","route":"离子阱","role":"整机/系统","market":"上市(QNT)","valuation":"~157亿美元","indicators":{"tech_maturity":92,"commercial":35,"capital":88,"route_certainty":85,"supply_chain":30,"policy_strategic":10}},
-  {"name":"IonQ","country":"海外","route":"离子阱","role":"整机/系统","market":"上市(IONQ)","valuation":"~85亿美元","indicators":{"tech_maturity":78,"commercial":55,"capital":70,"route_certainty":72,"supply_chain":28,"policy_strategic":10}},
-  {"name":"PsiQuantum","country":"海外","route":"光量子","role":"整机/系统","market":"未上市","valuation":"~105亿美元","indicators":{"tech_maturity":74,"commercial":15,"capital":82,"route_certainty":68,"supply_chain":22,"policy_strategic":12}},
-  {"name":"Atom Computing","country":"海外","route":"中性原子","role":"整机/系统","market":"未上市(微软合作)","valuation":"未披露","indicators":{"tech_maturity":76,"commercial":20,"capital":60,"route_certainty":70,"supply_chain":24,"policy_strategic":10}},
-  {"name":"QuEra","country":"海外","route":"中性原子","role":"整机/系统","market":"未上市","valuation":"未披露","indicators":{"tech_maturity":72,"commercial":18,"capital":55,"route_certainty":66,"supply_chain":22,"policy_strategic":10}},
-  {"name":"IQM","country":"海外","route":"超导","role":"整机/系统","market":"Pre-IPO(SPAC)","valuation":"~68亿美元","indicators":{"tech_maturity":66,"commercial":40,"capital":58,"route_certainty":62,"supply_chain":30,"policy_strategic":12}},
-  {"name":"Rigetti","country":"海外","route":"超导","role":"整机/系统","market":"上市","valuation":"~25亿美元","indicators":{"tech_maturity":48,"commercial":22,"capital":35,"route_certainty":40,"supply_chain":26,"policy_strategic":12}},
-  {"name":"IBM","country":"海外","route":"超导","role":"整机/系统","market":"上市","valuation":"~2000亿美元(集团)","indicators":{"tech_maturity":82,"commercial":60,"capital":65,"route_certainty":78,"supply_chain":40,"policy_strategic":10}},
-  {"name":"本源量子","country":"中国","route":"超导","role":"整机/系统","market":"Pre-IPO","valuation":"~210亿元","indicators":{"tech_maturity":62,"commercial":30,"capital":72,"route_certainty":58,"supply_chain":55,"policy_strategic":82}},
-  {"name":"图灵量子","country":"中国","route":"光量子","role":"整机/系统","market":"Pre-IPO","valuation":"~70亿元","indicators":{"tech_maturity":54,"commercial":22,"capital":58,"route_certainty":52,"supply_chain":48,"policy_strategic":78}},
-  {"name":"玻色量子","country":"中国","route":"光量子(专用)","role":"整机/系统","market":"B轮/辅导","valuation":"~数十亿元","indicators":{"tech_maturity":50,"commercial":34,"capital":52,"route_certainty":48,"supply_chain":46,"policy_strategic":76}},
-  {"name":"华翊量子","country":"中国","route":"离子阱","role":"整机/系统","market":"A轮","valuation":"未披露","indicators":{"tech_maturity":44,"commercial":14,"capital":42,"route_certainty":46,"supply_chain":42,"policy_strategic":72}},
-  {"name":"中科酷原","country":"中国","route":"中性原子","role":"整机/系统","market":"成长/A轮","valuation":"未披露","indicators":{"tech_maturity":46,"commercial":16,"capital":44,"route_certainty":50,"supply_chain":44,"policy_strategic":74}},
-  {"name":"太一量生","country":"中国","route":"中性原子","role":"整机/系统","market":"早期","valuation":"未披露","indicators":{"tech_maturity":40,"commercial":12,"capital":38,"route_certainty":46,"supply_chain":40,"policy_strategic":72}},
-  {"name":"国盾量子","country":"中国","route":"量子通信/测控","role":"核心部件/通信","market":"上市(688027)","valuation":"~700亿元","indicators":{"tech_maturity":58,"commercial":56,"capital":62,"route_certainty":60,"supply_chain":92,"policy_strategic":96}},
-  {"name":"国仪量子","country":"中国","route":"测控/仪器","role":"核心部件","market":"上市(688628)","valuation":"发行前窗口","indicators":{"tech_maturity":56,"commercial":60,"capital":58,"route_certainty":58,"supply_chain":90,"policy_strategic":94}},
-  {"name":"频准激光","country":"中国","route":"量子激光器","role":"核心部件","market":"上市(688626)","valuation":"IPO获批","indicators":{"tech_maturity":54,"commercial":58,"capital":54,"route_certainty":56,"supply_chain":88,"policy_strategic":92}},
-  {"name":"量旋科技","country":"中国","route":"超导控制","role":"核心部件","market":"成长","valuation":"未披露","indicators":{"tech_maturity":42,"commercial":24,"capital":36,"route_certainty":44,"supply_chain":72,"policy_strategic":70}},
-  {"name":"SandboxAQ","country":"海外","route":"量子AI/软件","role":"软件/算法","market":"未上市","valuation":"~50亿美元","indicators":{"tech_maturity":50,"commercial":26,"capital":60,"route_certainty":48,"supply_chain":20,"policy_strategic":10}},
-  {"name":"Riverlane","country":"海外","route":"量子纠错软件","role":"软件/算法","market":"未上市","valuation":"未披露","indicators":{"tech_maturity":52,"commercial":18,"capital":40,"route_certainty":54,"supply_chain":22,"policy_strategic":10}},
-  {"name":"Q-CTRL","country":"海外","route":"量子控制软件","role":"软件/算法","market":"未上市","valuation":"未披露","indicators":{"tech_maturity":50,"commercial":24,"capital":42,"route_certainty":52,"supply_chain":24,"policy_strategic":10}},
-  {"name":"Google Quantum(Willow)","country":"海外","route":"超导","role":"整机/系统","market":"未上市(Alphabet)","valuation":"集团支撑","indicators":{"tech_maturity":90,"commercial":28,"capital":58,"route_certainty":80,"supply_chain":34,"policy_strategic":10}},
-  {"name":"微软(中性原子)","country":"海外","route":"中性原子","role":"整机/系统","market":"上市(MSFT)","valuation":"集团支撑","indicators":{"tech_maturity":72,"commercial":22,"capital":52,"route_certainty":66,"supply_chain":30,"policy_strategic":10}},
-  {"name":"Diraq","country":"海外","route":"硅自旋/超导","role":"整机/系统","market":"未上市","valuation":"未披露","indicators":{"tech_maturity":46,"commercial":14,"capital":40,"route_certainty":48,"supply_chain":26,"policy_strategic":10}}
+  {
+    "name": "Quantinuum",
+    "country": "海外",
+    "route": "离子阱",
+    "role": "整机/系统",
+    "market": "上市(QNT)",
+    "valuation": "~157亿美元",
+    "indicators": {
+      "tech_maturity": 92,
+      "commercial": 35,
+      "capital": 88,
+      "route_certainty": 85,
+      "supply_chain": 30,
+      "policy_strategic": 10
+    },
+    "thesis": "离子阱全球旗舰（H系列），逻辑比特先行者",
+    "moat": "离子阱保真度+逻辑比特演示领先（与微软合作）",
+    "risks": [
+      "规模化速度",
+      "母公司整合"
+    ],
+    "catalysts": [
+      "H3/H4 迭代",
+      "逻辑比特里程碑"
+    ],
+    "track_points": [
+      "逻辑比特数与保真度",
+      "企业客户"
+    ]
+  },
+  {
+    "name": "IonQ",
+    "country": "海外",
+    "route": "离子阱",
+    "role": "整机/系统",
+    "market": "上市(IONQ)",
+    "valuation": "~85亿美元",
+    "indicators": {
+      "tech_maturity": 78,
+      "commercial": 55,
+      "capital": 70,
+      "route_certainty": 72,
+      "supply_chain": 28,
+      "policy_strategic": 10
+    },
+    "thesis": "上市离子阱整机（并购+路线扩张），资本运作激进",
+    "moat": "上市地位+技术路线并购（超导/中性原子）",
+    "risks": [
+      "烧钱与估值",
+      "技术兑现"
+    ],
+    "catalysts": [
+      "新一代系统",
+      "并购整合"
+    ],
+    "track_points": [
+      "系统性能",
+      "订单与亏损"
+    ]
+  },
+  {
+    "name": "PsiQuantum",
+    "country": "海外",
+    "route": "光量子",
+    "role": "整机/系统",
+    "market": "未上市",
+    "valuation": "~105亿美元",
+    "indicators": {
+      "tech_maturity": 74,
+      "commercial": 15,
+      "capital": 82,
+      "route_certainty": 68,
+      "supply_chain": 22,
+      "policy_strategic": 12
+    },
+    "thesis": "光量子（容错融合路线）融资巨头，目标商用容错机",
+    "moat": "光子制造工厂（与 GlobalFoundries 合作）",
+    "risks": [
+      "路线验证远",
+      "烧钱巨大"
+    ],
+    "catalysts": [
+      "光子芯片流片",
+      "里程碑"
+    ],
+    "track_points": [
+      "制造进度",
+      "融资"
+    ]
+  },
+  {
+    "name": "Atom Computing",
+    "country": "海外",
+    "route": "中性原子",
+    "role": "整机/系统",
+    "market": "未上市(微软合作)",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 76,
+      "commercial": 20,
+      "capital": 60,
+      "route_certainty": 70,
+      "supply_chain": 24,
+      "policy_strategic": 10
+    },
+    "thesis": "中性原子纪录保持者（1,225 比特），IBM 合作",
+    "moat": "原子阵列规模纪录+IBM 云接入",
+    "risks": [
+      "纠错尚早"
+    ],
+    "catalysts": [
+      "与 IBM 联合演示"
+    ],
+    "track_points": [
+      "比特数纪录",
+      "保真度"
+    ]
+  },
+  {
+    "name": "QuEra",
+    "country": "海外",
+    "route": "中性原子",
+    "role": "整机/系统",
+    "market": "未上市",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 72,
+      "commercial": 18,
+      "capital": 55,
+      "route_certainty": 66,
+      "supply_chain": 22,
+      "policy_strategic": 10
+    },
+    "thesis": "中性原子+纠错路线（逻辑量子比特演示者之一）",
+    "moat": "Harvard 系学术背书+纠错演示",
+    "risks": [
+      "规模化"
+    ],
+    "catalysts": [
+      "纠错里程碑"
+    ],
+    "track_points": [
+      "逻辑比特数",
+      "合作"
+    ]
+  },
+  {
+    "name": "IQM",
+    "country": "海外",
+    "route": "超导",
+    "role": "整机/系统",
+    "market": "Pre-IPO(SPAC)",
+    "valuation": "~68亿美元",
+    "indicators": {
+      "tech_maturity": 66,
+      "commercial": 40,
+      "capital": 58,
+      "route_certainty": 62,
+      "supply_chain": 30,
+      "policy_strategic": 12
+    },
+    "thesis": "欧洲超导整机代表（芬兰），政府订单驱动",
+    "moat": "欧洲供应链与政府项目",
+    "risks": [
+      "规模小",
+      "美国巨头竞争"
+    ],
+    "catalysts": [
+      "欧洲量子算力中心"
+    ],
+    "track_points": [
+      "整机交付",
+      "订单"
+    ]
+  },
+  {
+    "name": "Rigetti",
+    "country": "海外",
+    "route": "超导",
+    "role": "整机/系统",
+    "market": "上市",
+    "valuation": "~25亿美元",
+    "indicators": {
+      "tech_maturity": 48,
+      "commercial": 22,
+      "capital": 35,
+      "route_certainty": 40,
+      "supply_chain": 26,
+      "policy_strategic": 12
+    },
+    "thesis": "老牌超导整机（已上市），多路线探索",
+    "moat": "超导整机+专利组合",
+    "risks": [
+      "落后头部",
+      "财务状况"
+    ],
+    "catalysts": [
+      "新一代芯片",
+      "政府合同"
+    ],
+    "track_points": [
+      "芯片性能",
+      "现金状况"
+    ]
+  },
+  {
+    "name": "IBM",
+    "country": "海外",
+    "route": "超导",
+    "role": "整机/系统",
+    "market": "上市",
+    "valuation": "~2000亿美元(集团)",
+    "indicators": {
+      "tech_maturity": 82,
+      "commercial": 60,
+      "capital": 65,
+      "route_certainty": 78,
+      "supply_chain": 40,
+      "policy_strategic": 10
+    },
+    "thesis": "超导路线行业定义者（Condor/Heron/Starling 路线图）",
+    "moat": "企业量子云生态+路线图执行力",
+    "risks": [
+      "路线图延宕",
+      "Google 竞争"
+    ],
+    "catalysts": [
+      "逻辑比特路线图兑现",
+      "企业客户"
+    ],
+    "track_points": [
+      "路线图里程碑",
+      "QPU 性能"
+    ]
+  },
+  {
+    "name": "本源量子",
+    "country": "中国",
+    "route": "超导",
+    "role": "整机/系统",
+    "market": "Pre-IPO",
+    "valuation": "~210亿元",
+    "indicators": {
+      "tech_maturity": 62,
+      "commercial": 30,
+      "capital": 72,
+      "route_certainty": 58,
+      "supply_chain": 55,
+      "policy_strategic": 82
+    },
+    "thesis": "中国超导整机旗舰（悟空系），全栈布局",
+    "moat": "超导整机先发+中国量子云生态",
+    "risks": [
+      "逻辑比特落后",
+      "商用尚早"
+    ],
+    "catalysts": [
+      "下一代悟空发布",
+      "纠错演示"
+    ],
+    "track_points": [
+      "量子比特数与保真度",
+      "云用户数"
+    ]
+  },
+  {
+    "name": "图灵量子",
+    "country": "中国",
+    "route": "光量子",
+    "role": "整机/系统",
+    "market": "Pre-IPO",
+    "valuation": "~70亿元",
+    "indicators": {
+      "tech_maturity": 54,
+      "commercial": 22,
+      "capital": 58,
+      "route_certainty": 52,
+      "supply_chain": 48,
+      "policy_strategic": 78
+    },
+    "thesis": "光量子路线中国代表（光子芯片+离子阱并进）",
+    "moat": "光子芯片制造与集成技术",
+    "risks": [
+      "光量子纠错路径不确定"
+    ],
+    "catalysts": [
+      "光子芯片流片进展",
+      "融资"
+    ],
+    "track_points": [
+      "芯片集成度",
+      "演示成果"
+    ]
+  },
+  {
+    "name": "玻色量子",
+    "country": "中国",
+    "route": "光量子(专用)",
+    "role": "整机/系统",
+    "market": "B轮/辅导",
+    "valuation": "~数十亿元",
+    "indicators": {
+      "tech_maturity": 50,
+      "commercial": 34,
+      "capital": 52,
+      "route_certainty": 48,
+      "supply_chain": 46,
+      "policy_strategic": 76
+    },
+    "thesis": "光量子（相干伊辛机）专用机先行者",
+    "moat": "专用机细分（组合优化）",
+    "risks": [
+      "专用机通用性受限"
+    ],
+    "catalysts": [
+      "优化场景落地（金融）"
+    ],
+    "track_points": [
+      "客户案例",
+      "新机发布"
+    ]
+  },
+  {
+    "name": "华翊量子",
+    "country": "中国",
+    "route": "离子阱",
+    "role": "整机/系统",
+    "market": "A轮",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 44,
+      "commercial": 14,
+      "capital": 42,
+      "route_certainty": 46,
+      "supply_chain": 42,
+      "policy_strategic": 72
+    },
+    "thesis": "离子阱路线中国代表（高保真优势）",
+    "moat": "离子阱控制技术",
+    "risks": [
+      "规模化速度慢"
+    ],
+    "catalysts": [
+      "逻辑比特演示"
+    ],
+    "track_points": [
+      "保真度指标",
+      "融资进展"
+    ]
+  },
+  {
+    "name": "中科酷原",
+    "country": "中国",
+    "route": "中性原子",
+    "role": "整机/系统",
+    "market": "成长/A轮",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 46,
+      "commercial": 16,
+      "capital": 44,
+      "route_certainty": 50,
+      "supply_chain": 44,
+      "policy_strategic": 74
+    },
+    "thesis": "中性原子路线中国代表（可扩展性潜力）",
+    "moat": "中性原子阵列技术",
+    "risks": [
+      "路线未验证规模化"
+    ],
+    "catalysts": [
+      "阵列规模提升"
+    ],
+    "track_points": [
+      "原子阵列规模",
+      "演示"
+    ]
+  },
+  {
+    "name": "太一量生",
+    "country": "中国",
+    "route": "中性原子",
+    "role": "整机/系统",
+    "market": "早期",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 40,
+      "commercial": 12,
+      "capital": 38,
+      "route_certainty": 46,
+      "supply_chain": 40,
+      "policy_strategic": 72
+    },
+    "thesis": "中性原子路线早期参与者",
+    "moat": "冷原子技术积累",
+    "risks": [
+      "早期路线风险"
+    ],
+    "catalysts": [
+      "融资/原型机"
+    ],
+    "track_points": [
+      "原型机进展"
+    ]
+  },
+  {
+    "name": "国盾量子",
+    "country": "中国",
+    "route": "量子通信/测控",
+    "role": "核心部件/通信",
+    "market": "上市(688027)",
+    "valuation": "~700亿元",
+    "indicators": {
+      "tech_maturity": 58,
+      "commercial": 56,
+      "capital": 62,
+      "route_certainty": 60,
+      "supply_chain": 92,
+      "policy_strategic": 96
+    },
+    "thesis": "量子通信+量子计算核心部件双主线，中国量子产业'国家队'卖铲人",
+    "moat": "量子保密通信网络资质+测控系统独家地位",
+    "risks": [
+      "量子通信商业化天花板",
+      "估值高企"
+    ],
+    "catalysts": [
+      "量子城域网扩容",
+      "测控系统订单"
+    ],
+    "track_points": [
+      "测控/超导产品收入",
+      "新订单披露"
+    ]
+  },
+  {
+    "name": "国仪量子",
+    "country": "中国",
+    "route": "测控/仪器",
+    "role": "核心部件",
+    "market": "上市(688628)",
+    "valuation": "发行前窗口",
+    "indicators": {
+      "tech_maturity": 56,
+      "commercial": 60,
+      "capital": 58,
+      "route_certainty": 58,
+      "supply_chain": 90,
+      "policy_strategic": 94
+    },
+    "thesis": "量子精密测量（钻石 NV/扫描）产业化龙头",
+    "moat": "量子测量仪器技术+科研市场渠道",
+    "risks": [
+      "市场小",
+      "周期波动"
+    ],
+    "catalysts": [
+      "新品（量子磁力计）",
+      "工业检测渗透"
+    ],
+    "track_points": [
+      "仪器收入增速",
+      "海外拓展"
+    ]
+  },
+  {
+    "name": "频准激光",
+    "country": "中国",
+    "route": "量子激光器",
+    "role": "核心部件",
+    "market": "上市(688626)",
+    "valuation": "IPO获批",
+    "indicators": {
+      "tech_maturity": 54,
+      "commercial": 58,
+      "capital": 54,
+      "route_certainty": 56,
+      "supply_chain": 88,
+      "policy_strategic": 92
+    },
+    "thesis": "量子精密激光器核心部件商（窄线宽激光）——量子+光刻双赛道卖铲人",
+    "moat": "窄线宽激光技术（量子测控关键部件）",
+    "risks": [
+      "单一部件市场小",
+      "周期"
+    ],
+    "catalysts": [
+      "量子测控系统放量",
+      "光刻光源国产化"
+    ],
+    "track_points": [
+      "激光器订单",
+      "技术指标"
+    ]
+  },
+  {
+    "name": "量旋科技",
+    "country": "中国",
+    "route": "超导控制",
+    "role": "核心部件",
+    "market": "成长",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 42,
+      "commercial": 24,
+      "capital": 36,
+      "route_certainty": 44,
+      "supply_chain": 72,
+      "policy_strategic": 70
+    },
+    "thesis": "桌面级量子计算机（教育+科研）差异化卖铲人",
+    "moat": "小型化整机技术（3比特桌面机）",
+    "risks": [
+      "市场天花板低",
+      "大厂竞争"
+    ],
+    "catalysts": [
+      "教育/科普市场放量",
+      "海外订单"
+    ],
+    "track_points": [
+      "出货量",
+      "新品迭代"
+    ]
+  },
+  {
+    "name": "SandboxAQ",
+    "country": "海外",
+    "route": "量子AI/软件",
+    "role": "软件/算法",
+    "market": "未上市",
+    "valuation": "~50亿美元",
+    "indicators": {
+      "tech_maturity": 50,
+      "commercial": 26,
+      "capital": 60,
+      "route_certainty": 48,
+      "supply_chain": 20,
+      "policy_strategic": 10
+    },
+    "thesis": "量子+AI 软件中间层（AQ 平台），企业级量子就绪",
+    "moat": "量子软件生态+Google 系背景+企业客户",
+    "risks": [
+      "软件变现节奏"
+    ],
+    "catalysts": [
+      "企业部署",
+      "融资"
+    ],
+    "track_points": [
+      "客户数与 ARR"
+    ]
+  },
+  {
+    "name": "Riverlane",
+    "country": "海外",
+    "route": "量子纠错软件",
+    "role": "软件/算法",
+    "market": "未上市",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 52,
+      "commercial": 18,
+      "capital": 40,
+      "route_certainty": 54,
+      "supply_chain": 22,
+      "policy_strategic": 10
+    },
+    "thesis": "纠错软件栈（Deltaflow）核心卖铲人，路线中立",
+    "moat": "纠错中间层技术+全路线客户",
+    "risks": [
+      "纠错软件商业化时点"
+    ],
+    "catalysts": [
+      "纠错里程碑合作",
+      "融资"
+    ],
+    "track_points": [
+      "合作客户",
+      "融资轮次"
+    ]
+  },
+  {
+    "name": "Q-CTRL",
+    "country": "海外",
+    "route": "量子控制软件",
+    "role": "软件/算法",
+    "market": "未上市",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 50,
+      "commercial": 24,
+      "capital": 42,
+      "route_certainty": 52,
+      "supply_chain": 24,
+      "policy_strategic": 10
+    },
+    "thesis": "量子控制软件（错误缓解）全球领先，路线中立卖铲人",
+    "moat": "控制/缓解软件技术+全路线部署",
+    "risks": [
+      "市场教育慢"
+    ],
+    "catalysts": [
+      "国防/工业订单",
+      "新版本"
+    ],
+    "track_points": [
+      "订单",
+      "产品迭代"
+    ]
+  },
+  {
+    "name": "Google Quantum(Willow)",
+    "country": "海外",
+    "route": "超导",
+    "role": "整机/系统",
+    "market": "未上市(Alphabet)",
+    "valuation": "集团支撑",
+    "indicators": {
+      "tech_maturity": 90,
+      "commercial": 28,
+      "capital": 58,
+      "route_certainty": 80,
+      "supply_chain": 34,
+      "policy_strategic": 10
+    },
+    "thesis": "Willow 后纠错领跑者：表面码逻辑比特 + qLDPC 探索，定义'纠错竞赛'节奏",
+    "moat": "纠错算法 + 芯片工程（Willow 低于阈值）",
+    "risks": [
+      "纠错规模化速度",
+      "芯片良率"
+    ],
+    "catalysts": [
+      "qLDPC 演示",
+      "逻辑比特扩展"
+    ],
+    "track_points": [
+      "纠错里程碑",
+      "Willow 后继芯片"
+    ]
+  },
+  {
+    "name": "微软(中性原子)",
+    "country": "海外",
+    "route": "中性原子",
+    "role": "整机/系统",
+    "market": "上市(MSFT)",
+    "valuation": "集团支撑",
+    "indicators": {
+      "tech_maturity": 72,
+      "commercial": 22,
+      "capital": 52,
+      "route_certainty": 66,
+      "supply_chain": 30,
+      "policy_strategic": 10
+    },
+    "thesis": "微软量子中性原子路线（与 Atom Computing/QuEra 生态绑定），云上量子差异化",
+    "moat": "Azure Quantum 云生态 + 拓扑比特长期储备",
+    "risks": [
+      "中性原子商业化依赖伙伴",
+      "拓扑验证不确定"
+    ],
+    "catalysts": [
+      "Azure Quantum 里程碑",
+      "逻辑比特演示"
+    ],
+    "track_points": [
+      "云量子用户",
+      "与 Atom/QuEra 合作进展"
+    ]
+  },
+  {
+    "name": "Diraq",
+    "country": "海外",
+    "route": "硅自旋/超导",
+    "role": "整机/系统",
+    "market": "未上市",
+    "valuation": "未披露",
+    "indicators": {
+      "tech_maturity": 46,
+      "commercial": 14,
+      "capital": 40,
+      "route_certainty": 48,
+      "supply_chain": 26,
+      "policy_strategic": 10
+    },
+    "thesis": "硅自旋量子比特路线（CMOS 兼容，可制造性优势）",
+    "moat": "硅自旋+CMOS 制造兼容",
+    "risks": [
+      "路线验证远"
+    ],
+    "catalysts": [
+      "CMOS 流片演示"
+    ],
+    "track_points": [
+      "流片里程碑",
+      "融资"
+    ]
+  }
 ]

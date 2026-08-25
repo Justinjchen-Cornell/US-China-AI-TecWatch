@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "industry": "fusion",
+  "industry_cn": "可控核聚变",
+  "as_of": "2026-06-30",
+  "verdict": {
+    "phase": "工程化爬坡期：从'点着火'（Q>1 已证）转向'稳定燃烧+装置耐久'",
+    "china_position": "稳态运行纪录领先（EAST 1066s）· 点火里程碑落后（NIF Q>1）",
+    "key_inflection": "BEST 装置 2027 建成与第一等离子体——中国工程化关键节点",
+    "investment_theme": "别赌哪家先点亮灯泡——买高温超导磁体/带材/真空室等'卖铲人'，整机厂作期权仓"
+  },
+  "technology_routes": [
+    {
+      "name": "托卡马克（磁约束主流）",
+      "maturity": "最成熟（ITER/EAST/CFS SPARC）",
+      "cn_players": [
+        "中科院等离子体所EAST",
+        "BEST工程",
+        "新奥/能量奇点"
+      ],
+      "us_players": [
+        "MIT/CFS",
+        "Princeton PPPL"
+      ],
+      "convergence_signal": "稳态时间 × 磁场强度组合"
+    },
+    {
+      "name": "惯性约束（激光点火）",
+      "maturity": "点火已证（NIF Q=1.5+）但能量增益工程化远",
+      "cn_players": [
+        "神光III装置"
+      ],
+      "us_players": [
+        "NIF/LLNL"
+      ],
+      "convergence_signal": "重复点火频率与增益倍数"
+    },
+    {
+      "name": "磁惯性/其他路线（Z-pinch等）",
+      "maturity": "探索期",
+      "cn_players": [
+        "中物院相关"
+      ],
+      "us_players": [
+        "General Fusion",
+        "Zap Energy"
+      ],
+      "convergence_signal": "等离子体参数稳定性"
+    },
+    {
+      "name": "高温超导磁体技术（跨路线关键）",
+      "maturity": "工程突破期（20T+）",
+      "cn_players": [
+        "BEST用磁体",
+        "聚变新能"
+      ],
+      "us_players": [
+        "CFS（20T 已演示）"
+      ],
+      "convergence_signal": "场强×成本曲线"
+    }
+  ],
+  "value_chain": [
+    {
+      "segment": "高温超导磁体/带材",
+      "value_concentration": "高（卖铲人核心）",
+      "logic": "无论哪条路线都要用，CFS 已带动 REBCO 带材需求爆发"
+    },
+    {
+      "segment": "真空室/第一壁/特种材料",
+      "value_concentration": "中高",
+      "logic": "中子辐照与热负荷材料的验证周期长，先发者锁定"
+    },
+    {
+      "segment": "整机/装置建设",
+      "value_concentration": "中（期权）",
+      "logic": "高赔率低胜率，适合小仓位"
+    },
+    {
+      "segment": "诊断/控制/电源系统",
+      "value_concentration": "中",
+      "logic": "随装置数量增长而受益"
+    }
+  ],
+  "competitive_map": {
+    "cn_strength": [
+      "EAST 稳态纪录（1066s，全球最长）",
+      "BEST 国家工程（2027 节点）",
+      "完整供应链与制造能力",
+      "政府投入连续（含 ITER 配套）"
+    ],
+    "us_strength": [
+      "私营资本领先（CFS 数十亿美元/微软购电协议）",
+      "点火里程碑（NIF）",
+      "高温超导磁体（CFS 20T）",
+      "SPARC 装置进度"
+    ],
+    "structural_gaps": [
+      "点火/能量增益验证",
+      "高温超导磁体工程化（CFS 领先）",
+      "私营资本规模"
+    ],
+    "asymmetry": "美国'私营+点火'领先尖端，中国'国家工程+稳态运行+供应链'领先工程化——聚变最终看'装置耐久与发电成本'，中国的稳态运行纪录是更接近商业化的指标"
+  },
+  "inflections_6_18m": [
+    {
+      "event": "BEST 装置建设进度与第一等离子体（2027）",
+      "impact": "中国工程化兑现与否",
+      "probability": "高（按计划）"
+    },
+    {
+      "event": "CFS SPARC 首次等离子体与 Q 目标",
+      "impact": "私营路线商业化验证",
+      "probability": "中"
+    },
+    {
+      "event": "高温超导带材产能与价格（REBCO）",
+      "impact": "磁体成本曲线，卖铲人逻辑兑现",
+      "probability": "中"
+    },
+    {
+      "event": "中国聚变专项新预算/政策",
+      "impact": "国家投入斜率",
+      "probability": "中"
+    }
+  ]
+}

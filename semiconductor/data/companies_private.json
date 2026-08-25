@@ -1,33 +1,288 @@
 {
-  "schema_version": 1,
-  "updated": "2026-08-24",
-  "note": "一级市场未上市标的，融资/估值来自公开报道，仅供趋势研究，不构成投资建议。",
   "china": [
-    { "name": "长江存储", "track": "3D NAND存储", "latest_round": "大基金+湖北国资(1600亿级)", "valuation_cn": "约3000亿+", "backers": ["国家大基金","湖北国资","国投集团"], "route": "国产存储备份" },
-    { "name": "长鑫科技", "track": "DRAM/HBM", "latest_round": "多轮战略融资", "valuation_cn": "约1500亿+", "backers": ["国家大基金","安徽国资"], "route": "DRAM/HBM国产突破" },
-    { "name": "昆仑芯科技", "track": "AI推理芯片(百度系)", "latest_round": "多轮战略融资", "valuation_cn": "约300亿+", "backers": ["百度","国新基金","中信产业基金"], "route": "软硬一体/低成本推理" },
-    { "name": "摩尔线程", "track": "GPU", "latest_round": "股改/辅导推进", "valuation_cn": "约300亿+", "backers": ["红杉","招商局资本","奥飞数据"], "route": "国产全功能GPU" },
-    { "name": "沐曦集成", "track": "GPU", "latest_round": "Pre-IPO轮", "valuation_cn": "约200亿+", "backers": ["国调基金","中网投","浦东科创"], "route": "国产高性能GPU" },
-    { "name": "燧原科技", "track": "AI训练/推理芯片", "latest_round": "F轮(数十亿元)", "valuation_cn": "约200亿+", "backers": ["腾讯","武岳峰","中信证券投资"], "route": "云端AI算力国产替代" },
-    { "name": "行云集成电路", "track": "低成本大模型推理", "latest_round": "Pre-A/Pre-A+(超4亿元)", "valuation_cn": "约20亿+", "backers": ["五源资本","赛富","春华"], "route": "去HBM化/LPDDR推理" },
-    { "name": "九天睿芯", "track": "存算一体PIM", "latest_round": "B+轮(元禾璞华领投)", "valuation_cn": "约20亿+", "backers": ["元禾璞华","中芯聚源","深创投"], "route": "存算一体/消灭存储墙" },
-    { "name": "奇异摩尔", "track": "Chiplet互联/IP", "latest_round": "B轮(数亿元)", "valuation_cn": "约30亿+", "backers": ["国开科创","中芯聚源","武岳峰"], "route": "Chiplet标准/系统级互联" },
-    { "name": "纵慧芯光", "track": "VCSEL/光互连", "latest_round": "战略融资", "valuation_cn": "约30亿+", "backers": ["华为哈勃","小米"], "route": "光电融合/光芯片" },
-    { "name": "中科卓尔", "track": "空白掩模版/精密光学", "latest_round": "B轮(数亿元)", "valuation_cn": "约25亿+", "backers": ["中银国际投资"], "route": "上游核心材料国产备份" },
-    { "name": "昉擎科技", "track": "分离式AI架构", "latest_round": "早期融资", "valuation_cn": "约10亿+", "backers": ["产业资本"], "route": "系统架构重构/分离式计算" }
+    {
+      "id": "cxmt",
+      "name": "长鑫存储",
+      "track": "DRAM",
+      "latest_round": "Pre-IPO",
+      "valuation_cn": "~2000亿+",
+      "backers": [
+        "大基金",
+        "安徽国资"
+      ],
+      "route": "DRAM/HBM",
+      "thesis": "国产 DRAM 唯一大厂，HBM 突破是最大期权",
+      "moat": "DRAM 产能+国产替代",
+      "risks": [
+        "HBM 差距",
+        "制裁"
+      ],
+      "catalysts": [
+        "HBM 量产",
+        "IPO"
+      ],
+      "track_points": [
+        "HBM 进度"
+      ]
+    },
+    {
+      "id": "ymtc",
+      "name": "长江存储",
+      "track": "NAND",
+      "latest_round": "Pre-IPO",
+      "valuation_cn": "~1500亿+",
+      "backers": [
+        "大基金",
+        "湖北国资"
+      ],
+      "route": "NAND",
+      "thesis": "国产 NAND 龙头，232 层追赶",
+      "moat": "NAND 产能",
+      "risks": [
+        "制裁",
+        "竞争"
+      ],
+      "catalysts": [
+        "产能扩张",
+        "IPO"
+      ],
+      "track_points": [
+        "层数迭代"
+      ]
+    },
+    {
+      "id": "birentech",
+      "name": "壁仞科技",
+      "track": "AI芯片",
+      "latest_round": "D轮",
+      "valuation_cn": "~300亿",
+      "backers": [
+        "启明",
+        "高瓴"
+      ],
+      "route": "GPU",
+      "thesis": "国产 GPGPU 新锐（BR100 系列），信创+AI 双逻辑",
+      "moat": "GPGPU 架构",
+      "risks": [
+        "生态差距",
+        "烧钱"
+      ],
+      "catalysts": [
+        "新品",
+        "融资"
+      ],
+      "track_points": [
+        "客户订单"
+      ]
+    },
+    {
+      "id": "moore",
+      "name": "摩尔线程",
+      "track": "AI芯片",
+      "latest_round": "D轮",
+      "valuation_cn": "~250亿",
+      "backers": [
+        "中移",
+        "深创投"
+      ],
+      "route": "GPU",
+      "thesis": "全功能 GPU 国产代表（MTT 系列）",
+      "moat": "全功能 GPU",
+      "risks": [
+        "生态",
+        "烧钱"
+      ],
+      "catalysts": [
+        "新品",
+        "信创"
+      ],
+      "track_points": [
+        "出货"
+      ]
+    },
+    {
+      "id": "suanlu",
+      "name": "燧原科技",
+      "track": "AI芯片",
+      "latest_round": "D轮",
+      "valuation_cn": "~200亿",
+      "backers": [
+        "腾讯",
+        "大基金"
+      ],
+      "route": "AI训练芯片",
+      "thesis": "腾讯系 AI 训练芯片（云燧系列）",
+      "moat": "训练芯片+腾讯场景",
+      "risks": [
+        "生态"
+      ],
+      "catalysts": [
+        "新品",
+        "腾讯部署"
+      ],
+      "track_points": [
+        "部署规模"
+      ]
+    },
+    {
+      "id": "muxi",
+      "name": "沐曦",
+      "track": "AI芯片",
+      "latest_round": "D轮",
+      "valuation_cn": "~200亿",
+      "backers": [
+        "大基金",
+        "红杉"
+      ],
+      "route": "GPGPU",
+      "thesis": "GPGPU 新锐（曦云系列），国产替代",
+      "moat": "GPGPU 架构",
+      "risks": [
+        "生态"
+      ],
+      "catalysts": [
+        "新品",
+        "订单"
+      ],
+      "track_points": [
+        "出货"
+      ]
+    },
+    {
+      "id": "hanbo",
+      "name": "瀚博半导体",
+      "track": "AI芯片",
+      "latest_round": "C轮",
+      "valuation_cn": "~100亿",
+      "backers": [
+        "红点",
+        "腾讯"
+      ],
+      "route": "AI推理芯片",
+      "thesis": "推理侧 AI 芯片（SV 系列）",
+      "moat": "推理芯片",
+      "risks": [
+        "推理市场分散"
+      ],
+      "catalysts": [
+        "新品"
+      ],
+      "track_points": [
+        "客户"
+      ]
+    },
+    {
+      "id": "silian",
+      "name": "思朗科技",
+      "track": "AI芯片",
+      "latest_round": "C轮",
+      "valuation_cn": "~80亿",
+      "backers": [
+        "中科院系"
+      ],
+      "route": "AI芯片",
+      "thesis": "中科院系 AI 芯片",
+      "moat": "中科院背景",
+      "risks": [
+        "商业化"
+      ],
+      "catalysts": [
+        "融资",
+        "订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "timetech",
+      "name": "太初元碁",
+      "track": "AI芯片",
+      "latest_round": "B轮",
+      "valuation_cn": "~60亿",
+      "backers": [
+        "无锡国资"
+      ],
+      "route": "AI芯片",
+      "thesis": "国产 AI 芯片（太湖之光系）",
+      "moat": "超算背景",
+      "risks": [
+        "商业化"
+      ],
+      "catalysts": [
+        "融资"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "sifive-cn",
+      "name": "芯来科技",
+      "track": "RISC-V IP",
+      "latest_round": "C轮",
+      "valuation_cn": "~50亿",
+      "backers": [
+        "大基金",
+        "小米"
+      ],
+      "route": "RISC-V",
+      "thesis": "RISC-V 生态 IP 卖铲人，架构国产化",
+      "moat": "RISC-V IP",
+      "risks": [
+        "生态竞争"
+      ],
+      "catalysts": [
+        "RISC-V 放量"
+      ],
+      "track_points": [
+        "授权收入"
+      ]
+    },
+    {
+      "id": "simbeyond",
+      "name": "芯盟科技",
+      "track": "Chiplet",
+      "latest_round": "B轮",
+      "valuation_cn": "~40亿",
+      "backers": [
+        "大基金"
+      ],
+      "route": "Chiplet",
+      "thesis": "Chiplet 互联技术，先进封装协同",
+      "moat": "Chiplet IP",
+      "risks": [
+        "标准竞争"
+      ],
+      "catalysts": [
+        "Chiplet 落地"
+      ],
+      "track_points": [
+        "合作"
+      ]
+    },
+    {
+      "id": "yestech",
+      "name": "异格技术",
+      "track": "FPGA",
+      "latest_round": "B轮",
+      "valuation_cn": "~30亿",
+      "backers": [
+        "深创投"
+      ],
+      "route": "FPGA",
+      "thesis": "国产 FPGA 新锐，替代 Xilinx 逻辑",
+      "moat": "FPGA 技术",
+      "risks": [
+        "FPGA 垄断竞争"
+      ],
+      "catalysts": [
+        "新品"
+      ],
+      "track_points": [
+        "客户"
+      ]
+    }
   ],
-  "overseas": [
-    { "name": "Groq", "track": "LPU/AI推理芯片", "latest_round": "C轮(~6.4亿美元)", "valuation_cn": "约60亿美元", "backers": ["BlackRock","Neo","Tiger Global"], "route": "Transformer专用推理" },
-    { "name": "Lightmatter", "track": "光计算", "latest_round": "C轮(~4亿美元)", "valuation_cn": "约40亿美元", "backers": ["Google Ventures","Spark Capital","HPE"], "route": "光子计算替代电子" },
-    { "name": "Ayar Labs", "track": "光I/O(光互联)", "latest_round": "C轮(~1.55亿美元)", "valuation_cn": "约10亿美元+", "backers": ["Intel Capital","Board Capital","NVIDIA"], "route": "用光互联替代电I/O" },
-    { "name": "Celestial AI", "track": "光互连/存算", "latest_round": "C轮(~2.5亿美元)", "valuation_cn": "约15亿美元", "backers": ["AMD Ventures","Koch Disruptive"], "route": "光子结构光互连" },
-    { "name": "Tenstorrent", "track": "RISC-V AI芯片", "latest_round": "战略融资(~3亿美元)", "valuation_cn": "约26亿美元", "backers": ["现代汽车","三星","JFBR"], "route": "开源RISC-V挑战ARM/x86" },
-    { "name": "SambaNova", "track": "AI训练/推理系统", "latest_round": "D轮(~6.76亿美元)", "valuation_cn": "约50亿美元", "backers": ["Intel Capital","Google Ventures","SoftBank"], "route": "可重构数据流架构" },
-    { "name": "Etched", "track": "Transformer ASIC", "latest_round": "A轮(~1.2亿美元)", "valuation_cn": "约12亿美元", "backers": ["Primary Venture","Foundation Capital"], "route": "只为Transformer设计的ASIC" },
-    { "name": "d-Matrix", "track": "存算一体(数字PIM)", "latest_round": "B轮(~1.1亿美元)", "valuation_cn": "约11亿美元", "backers": ["Microsoft M12","Marvell","NVIDIA"], "route": "数字存算一体推理" },
-    { "name": "Rebellions", "track": "AI推理芯片", "latest_round": "B轮(~1.24亿美元)", "valuation_cn": "约7亿美元", "backers": ["KT Corp","Korea Development Bank"], "route": "韩国国产AI芯片" },
-    { "name": "Rapidus", "track": "先进制程备份(2nm)", "latest_round": "日本政府+产业注资", "valuation_cn": "国资主导", "backers": ["日本政府","丰田","索尼","NTT"], "route": "美日同盟先进制程备胎" },
-    { "name": "Together AI", "track": "GPU云/推理服务", "latest_round": "B轮(~3.2亿美元)", "valuation_cn": "约33亿美元", "backers": ["Prosperity7","Kleiner Perkins"], "route": "开源模型+GPU算力服务" },
-    { "name": "Fireworks AI", "track": "AI推理平台", "latest_round": "B轮(~3.7亿美元)", "valuation_cn": "约20亿美元", "backers": ["Sequoia","NVIDIA","AMD"], "route": "高性能模型推理API" }
-  ]
+  "overseas": []
 }

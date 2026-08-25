@@ -47,6 +47,9 @@ def score_all(asof=None):
             "valuation": c.get("valuation"), "arr": c.get("arr"),
             "score": r["score"], "ci_low": r["ci_low"], "ci_high": r["ci_high"],
             "confidence": r["confidence"], "dim_scores": r["dim_scores"],
+            "thesis": c.get("thesis"), "moat": c.get("moat"),
+            "risks": c.get("risks"), "catalysts": c.get("catalysts"),
+            "track_points": c.get("track_points"),
         })
     out.sort(key=lambda x: x["score"], reverse=True)
     return {"period": period, "items": out}

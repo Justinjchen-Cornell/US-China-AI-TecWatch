@@ -49,6 +49,9 @@ def analyze_companies(companies):
             "dim_norm": s.get("dim_norm", {}),
             "tier": tier_of(s["composite"]),
             "tags": allocation_tags(c, s["composite"]),
+            "thesis": c.get("thesis"), "moat": c.get("moat"),
+            "risks": c.get("risks"), "catalysts": c.get("catalysts"),
+            "track_points": c.get("track_points"),
         }
         rows.append(row)
     rows.sort(key=lambda r: r["score"], reverse=True)

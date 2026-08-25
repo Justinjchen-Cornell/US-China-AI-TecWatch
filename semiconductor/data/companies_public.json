@@ -1,28 +1,712 @@
 {
-  "schema_version": 1,
-  "updated": "2026-08-24",
-  "note": "市值/估值为公开资料趋势性参考，不构成投资建议。",
   "china": [
-    { "name": "北方华创", "ticker": "002371.SZ", "sector": "设备", "market_cap_cn": "约1800亿", "role": "国产半导体设备龙头", "substitution": "成熟制程设备国产化主力" },
-    { "name": "中微公司", "ticker": "688012.SH", "sector": "设备", "market_cap_cn": "约900亿", "role": "刻蚀/薄膜设备突破者", "substitution": "先进制程刻蚀设备国产替代" },
-    { "name": "中芯国际", "ticker": "688981.SH", "sector": "晶圆代工", "market_cap_cn": "约4000亿", "role": "大陆晶圆代工龙头", "substitution": "成熟制程扩产，先进制程受限" },
-    { "name": "华虹半导体", "ticker": "688709.SH", "sector": "晶圆代工", "market_cap_cn": "约700亿", "role": "特色工艺/功率代工", "substitution": "功率/模拟等特色工艺产能补充" },
-    { "name": "长电科技", "ticker": "600584.SH", "sector": "先进封装", "market_cap_cn": "约600亿", "role": "全球OSAT龙头之一", "substitution": "先进封装国产主力" },
-    { "name": "通富微电", "ticker": "002156.SZ", "sector": "先进封装", "market_cap_cn": "约400亿", "role": "AMD核心封测伙伴", "substitution": "高端封测国产替代" },
-    { "name": "寒武纪", "ticker": "688256.SH", "sector": "AI芯片", "market_cap_cn": "约2000亿", "role": "国产AI算力核心标的", "substitution": "架构创新攻坚期，尚未稳定盈利" },
-    { "name": "海光信息", "ticker": "688041.SH", "sector": "CPU/AI芯片", "market_cap_cn": "约2500亿", "role": "国产x86 CPU+DCU", "substitution": "信创/服务器国产替代主力" },
-    { "name": "龙芯中科", "ticker": "688047.SH", "sector": "CPU", "market_cap_cn": "约500亿", "role": "自主指令集LoongArch", "substitution": "信创桌面/嵌入式CPU" },
-    { "name": "中际旭创", "ticker": "300308.SZ", "sector": "光模块/CPO", "market_cap_cn": "约1500亿", "role": "800G/1.6T光模块全球领先", "substitution": "光电融合路径已兑现业绩" },
-    { "name": "新易盛", "ticker": "300502.SZ", "sector": "光模块/CPO", "market_cap_cn": "约900亿", "role": "高速光模块核心供应商", "substitution": "1.6T光模块放量" }
+    {
+      "id": "smic",
+      "name": "中芯国际",
+      "ticker": "688981",
+      "camp": "中国",
+      "sector": "晶圆代工",
+      "market_cap_cn": "~4800亿",
+      "role": "先进制程主攻手",
+      "note": "国产先进制程唯一可投标的，7nm 良率爬坡是核心叙事",
+      "thesis": "国产先进制程唯一可投标的，7nm 良率爬坡是核心叙事",
+      "moat": "成熟制程产能+DUV 多重曝光积累",
+      "risks": [
+        "制裁升级",
+        "设备供应"
+      ],
+      "catalysts": [
+        "5nm 进展",
+        "产能利用率回升"
+      ],
+      "track_points": [
+        "制程节点",
+        "资本开支"
+      ]
+    },
+    {
+      "id": "huahong",
+      "name": "华虹半导体",
+      "ticker": "688347",
+      "camp": "中国",
+      "sector": "晶圆代工",
+      "market_cap_cn": "~800亿",
+      "role": "特色工艺代工",
+      "note": "功率/模拟特色工艺龙头，成熟制程现金牛",
+      "thesis": "功率/模拟特色工艺龙头，成熟制程现金牛",
+      "moat": "特色工艺（BCD/IGBT）",
+      "risks": [
+        "周期",
+        "价格战"
+      ],
+      "catalysts": [
+        "特色工艺需求",
+        "产能扩张"
+      ],
+      "track_points": [
+        "产能利用率",
+        "ASP"
+      ]
+    },
+    {
+      "id": "cjte",
+      "name": "长电科技",
+      "ticker": "600584",
+      "camp": "中国",
+      "sector": "封装测试",
+      "market_cap_cn": "~700亿",
+      "role": "封测全球第三",
+      "note": "先进封装（XDFOI）承接制程封锁下的差异化需求",
+      "thesis": "先进封装（XDFOI）承接制程封锁下的差异化需求",
+      "moat": "封测规模+先进封装布局",
+      "risks": [
+        "竞争",
+        "客户集中"
+      ],
+      "catalysts": [
+        "XDFOI 订单",
+        "HBM 封装"
+      ],
+      "track_points": [
+        "先进封装收入占比"
+      ]
+    },
+    {
+      "id": "tfme",
+      "name": "通富微电",
+      "ticker": "002156",
+      "camp": "中国",
+      "sector": "封装测试",
+      "market_cap_cn": "~500亿",
+      "role": "AMD 封测伙伴",
+      "note": "AMD 深度绑定+先进封装放量",
+      "thesis": "AMD 深度绑定+先进封装放量",
+      "moat": "AMD 订单绑定",
+      "risks": [
+        "AMD 波动"
+      ],
+      "catalysts": [
+        "AMD 订单",
+        "先进封装"
+      ],
+      "track_points": [
+        "AMD 收入占比"
+      ]
+    },
+    {
+      "id": "nauratech",
+      "name": "北方华创",
+      "ticker": "002371",
+      "camp": "中国",
+      "sector": "设备",
+      "market_cap_cn": "~3800亿",
+      "role": "设备平台龙头",
+      "note": "国产设备卖铲人旗舰（刻蚀/薄膜/清洗全平台）",
+      "thesis": "国产设备卖铲人旗舰（刻蚀/薄膜/清洗全平台）",
+      "moat": "平台化设备+客户绑定",
+      "risks": [
+        "估值高"
+      ],
+      "catalysts": [
+        "订单增长",
+        "新品放量"
+      ],
+      "track_points": [
+        "订单额",
+        "国产化率"
+      ]
+    },
+    {
+      "id": "amec",
+      "name": "中微公司",
+      "ticker": "688012",
+      "camp": "中国",
+      "sector": "设备",
+      "market_cap_cn": "~1700亿",
+      "role": "刻蚀设备龙头",
+      "note": "刻蚀设备国产化核心（5nm 验证中）",
+      "thesis": "刻蚀设备国产化核心（5nm 验证中）",
+      "moat": "刻蚀技术+客户验证",
+      "risks": [
+        "竞争"
+      ],
+      "catalysts": [
+        "5nm 验证",
+        "MOCVD"
+      ],
+      "track_points": [
+        "刻蚀订单"
+      ]
+    },
+    {
+      "id": "piotech",
+      "name": "拓荆科技",
+      "ticker": "688072",
+      "camp": "中国",
+      "sector": "设备",
+      "market_cap_cn": "~600亿",
+      "role": "薄膜沉积",
+      "note": "PECVD/ALD 国产替代受益者",
+      "thesis": "PECVD/ALD 国产替代受益者",
+      "moat": "薄膜设备技术",
+      "risks": [
+        "客户集中"
+      ],
+      "catalysts": [
+        "订单",
+        "新品"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "shengmei",
+      "name": "盛美上海",
+      "ticker": "688082",
+      "camp": "中国",
+      "sector": "设备",
+      "market_cap_cn": "~500亿",
+      "role": "清洗设备",
+      "note": "清洗设备国产+出海双轮",
+      "thesis": "清洗设备国产+出海双轮",
+      "moat": "清洗设备+海外客户",
+      "risks": [
+        "竞争"
+      ],
+      "catalysts": [
+        "海外订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "hwahai",
+      "name": "华海清科",
+      "ticker": "688120",
+      "camp": "中国",
+      "sector": "设备",
+      "market_cap_cn": "~400亿",
+      "role": "CMP 设备",
+      "note": "CMP（抛光）设备国产唯一龙头",
+      "thesis": "CMP（抛光）设备国产唯一龙头",
+      "moat": "CMP 技术",
+      "risks": [
+        "市场小"
+      ],
+      "catalysts": [
+        "CMP 放量"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "nsig",
+      "name": "沪硅产业",
+      "ticker": "688126",
+      "camp": "中国",
+      "sector": "材料",
+      "market_cap_cn": "~600亿",
+      "role": "大硅片",
+      "note": "12 英寸大硅片国产化标的",
+      "thesis": "12 英寸大硅片国产化标的",
+      "moat": "硅片产能",
+      "risks": [
+        "价格周期"
+      ],
+      "catalysts": [
+        "硅片需求",
+        "扩产"
+      ],
+      "track_points": [
+        "产能利用率"
+      ]
+    },
+    {
+      "id": "zhonghuan",
+      "name": "TCL中环",
+      "ticker": "002129",
+      "camp": "中国",
+      "sector": "材料",
+      "market_cap_cn": "~800亿",
+      "role": "硅片+光伏",
+      "note": "半导体硅片+光伏双主业，半导体占比提升中",
+      "thesis": "半导体硅片+光伏双主业，半导体占比提升中",
+      "moat": "硅片产能",
+      "risks": [
+        "光伏亏损"
+      ],
+      "catalysts": [
+        "半导体硅片放量"
+      ],
+      "track_points": [
+        "半导体收入占比"
+      ]
+    },
+    {
+      "id": "cambricon",
+      "name": "寒武纪",
+      "ticker": "688256",
+      "camp": "中国",
+      "sector": "AI芯片",
+      "market_cap_cn": "~5500亿",
+      "role": "AI 芯片第一股",
+      "note": "国产 AI 芯片稀缺标的（训练/推理），生态追赶英伟达",
+      "thesis": "国产 AI 芯片稀缺标的（训练/推理），生态追赶英伟达",
+      "moat": "思元系列+国产替代",
+      "risks": [
+        "估值极高",
+        "生态差距"
+      ],
+      "catalysts": [
+        "大客户订单",
+        "新品"
+      ],
+      "track_points": [
+        "订单",
+        "生态"
+      ]
+    },
+    {
+      "id": "hygon",
+      "name": "海光信息",
+      "ticker": "688041",
+      "camp": "中国",
+      "sector": "CPU/DCU",
+      "market_cap_cn": "~3500亿",
+      "role": "CPU+DCU 双线",
+      "note": "国产 x86 CPU+AI DCU 双线，信创+AI 双逻辑",
+      "thesis": "国产 x86 CPU+AI DCU 双线，信创+AI 双逻辑",
+      "moat": "x86 授权+DCU 生态",
+      "risks": [
+        "授权风险"
+      ],
+      "catalysts": [
+        "信创订单",
+        "DCU 放量"
+      ],
+      "track_points": [
+        "收入增速"
+      ]
+    },
+    {
+      "id": "jmw",
+      "name": "景嘉微",
+      "ticker": "300474",
+      "camp": "中国",
+      "sector": "GPU",
+      "market_cap_cn": "~600亿",
+      "role": "国产 GPU",
+      "note": "国产 GPU 老牌（军用+信创延伸）",
+      "thesis": "国产 GPU 老牌（军用+信创延伸）",
+      "moat": "GPU 自研",
+      "risks": [
+        "性能差距"
+      ],
+      "catalysts": [
+        "信创 GPU 订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "montage",
+      "name": "澜起科技",
+      "ticker": "688008",
+      "camp": "中国",
+      "sector": "接口芯片",
+      "market_cap_cn": "~900亿",
+      "role": "内存接口全球龙头",
+      "note": "内存接口芯片全球双寡头之一，DDR5/HBM 配套",
+      "thesis": "内存接口芯片全球双寡头之一，DDR5/HBM 配套",
+      "moat": "内存接口技术+客户",
+      "risks": [
+        "DDR 周期"
+      ],
+      "catalysts": [
+        "DDR5 渗透",
+        "MRCD"
+      ],
+      "track_points": [
+        "份额"
+      ]
+    },
+    {
+      "id": "will",
+      "name": "韦尔股份",
+      "ticker": "603501",
+      "camp": "中国",
+      "sector": "CIS",
+      "market_cap_cn": "~1500亿",
+      "role": "图像传感器龙头",
+      "note": "CIS 全球前三，汽车+手机双轮",
+      "thesis": "CIS 全球前三，汽车+手机双轮",
+      "moat": "CIS 技术+客户",
+      "risks": [
+        "手机周期"
+      ],
+      "catalysts": [
+        "汽车 CIS",
+        "库存周期反转"
+      ],
+      "track_points": [
+        "CIS 收入"
+      ]
+    },
+    {
+      "id": "gigadevice",
+      "name": "兆易创新",
+      "ticker": "603986",
+      "camp": "中国",
+      "sector": "存储/MCU",
+      "market_cap_cn": "~900亿",
+      "role": "NOR Flash+MCU",
+      "note": "利基存储（NOR）+MCU 国产龙头",
+      "thesis": "利基存储（NOR）+MCU 国产龙头",
+      "moat": "NOR 份额+MCU 生态",
+      "risks": [
+        "价格周期"
+      ],
+      "catalysts": [
+        "存储涨价",
+        "MCU 复苏"
+      ],
+      "track_points": [
+        "NOR 价格"
+      ]
+    }
   ],
-  "overseas": [
-    { "name": "英伟达 NVIDIA", "ticker": "NVDA.US", "sector": "AI芯片", "market_cap_cn": "约22万亿", "role": "AI训练GPU绝对霸主", "note": "CUDA生态+集群互联构筑护城河" },
-    { "name": "博通 Broadcom", "ticker": "AVGO.US", "sector": "ASIC/网络", "market_cap_cn": "约12万亿", "role": "推理ASIC+交换芯片", "note": "定制芯片与交换机双轮驱动" },
-    { "name": "台积电 TSMC", "ticker": "TSM.US", "sector": "晶圆代工", "market_cap_cn": "约10万亿", "role": "先进制程代工垄断者", "note": "2nm GAA量产领先" },
-    { "name": "ASML", "ticker": "ASML.US", "sector": "光刻设备", "market_cap_cn": "约3万亿", "role": "EUV/High-NA EUV唯一供应商", "note": "先进制程物理极限守门员" },
-    { "name": "应用材料 AMAT", "ticker": "AMAT.US", "sector": "半导体设备", "market_cap_cn": "约1.6万亿", "role": "薄膜/刻蚀/量检测全栈", "note": "设备国产化对标对象" },
-    { "name": "SK海力士", "ticker": "000660.KS", "sector": "存储/HBM", "market_cap_cn": "约1.4万亿", "role": "HBM3E量产领先", "note": "英伟达HBM御用供应商" },
-    { "name": "三星电子", "ticker": "005930.KS", "sector": "存储/代工", "market_cap_cn": "约2.4万亿", "role": "DRAM/NAND+代工追赶", "note": "HBM与2nm SF2追赶中" },
-    { "name": "美光 Micron", "ticker": "MU.US", "sector": "存储/HBM", "market_cap_cn": "约1.2万亿", "role": "美国本土存储龙头", "note": "受益CHIPS法案，HBM追赶" }
+  "foreign": [
+    {
+      "id": "tsmc",
+      "name": "台积电",
+      "ticker": "TSM",
+      "camp": "海外",
+      "sector": "晶圆代工",
+      "market_cap_cn": "~1.1万亿美元",
+      "role": "全球代工绝对龙头",
+      "note": "尖端制程定义者（N2/A16），先进封装+CoWoS 关键",
+      "thesis": "尖端制程定义者（N2/A16），先进封装+CoWoS 关键",
+      "moat": "制程技术+客户生态",
+      "risks": [
+        "地缘",
+        "定价"
+      ],
+      "catalysts": [
+        "N2 量产",
+        "CoWoS 扩产"
+      ],
+      "track_points": [
+        "制程节点",
+        "毛利率"
+      ]
+    },
+    {
+      "id": "intel",
+      "name": "英特尔",
+      "ticker": "INTC",
+      "camp": "海外",
+      "sector": "IDM",
+      "market_cap_cn": "~2000亿美元",
+      "role": "IDM 转型代工",
+      "note": "18A 制程+代工业务（IFS）的绝地反击",
+      "thesis": "18A 制程+代工业务（IFS）的绝地反击",
+      "moat": "制造资产+政府补贴",
+      "risks": [
+        "执行风险"
+      ],
+      "catalysts": [
+        "18A 量产",
+        "代工客户"
+      ],
+      "track_points": [
+        "18A 进度"
+      ]
+    },
+    {
+      "id": "amd",
+      "name": "AMD",
+      "ticker": "AMD",
+      "camp": "海外",
+      "sector": "CPU/GPU",
+      "market_cap_cn": "~4000亿美元",
+      "role": "MI 系列挑战英伟达",
+      "note": "MI 系列在 AI 加速器追赶英伟达",
+      "thesis": "MI 系列在 AI 加速器追赶英伟达",
+      "moat": "CPU 份额+MI 系列",
+      "risks": [
+        "软件生态"
+      ],
+      "catalysts": [
+        "MI 收入",
+        "份额"
+      ],
+      "track_points": [
+        "MI 出货"
+      ]
+    },
+    {
+      "id": "nvda",
+      "name": "英伟达",
+      "ticker": "NVDA",
+      "camp": "海外",
+      "sector": "AI芯片",
+      "market_cap_cn": "~5万亿美元",
+      "role": "AI 算力定义者",
+      "note": "CUDA 生态+Blackwell/Rubin 迭代，AI 芯片绝对龙头",
+      "thesis": "CUDA 生态+Blackwell/Rubin 迭代，AI 芯片绝对龙头",
+      "moat": "CUDA+迭代速度",
+      "risks": [
+        "估值",
+        "地缘出口"
+      ],
+      "catalysts": [
+        "Rubin 发布",
+        "客户资本开支"
+      ],
+      "track_points": [
+        "数据中心收入"
+      ]
+    },
+    {
+      "id": "avgo",
+      "name": "博通",
+      "ticker": "AVGO",
+      "camp": "海外",
+      "sector": "ASIC",
+      "market_cap_cn": "~1.3万亿美元",
+      "role": "定制 ASIC+网络",
+      "note": "谷歌 TPU 等定制芯片+网络芯片，AI 第二极",
+      "thesis": "谷歌 TPU 等定制芯片+网络芯片，AI 第二极",
+      "moat": "ASIC 定制+网络垄断",
+      "risks": [
+        "客户集中"
+      ],
+      "catalysts": [
+        "AI 收入",
+        "ASIC 订单"
+      ],
+      "track_points": [
+        "AI 收入占比"
+      ]
+    },
+    {
+      "id": "amat",
+      "name": "应用材料",
+      "ticker": "AMAT",
+      "camp": "海外",
+      "sector": "设备",
+      "market_cap_cn": "~2500亿美元",
+      "role": "设备平台龙头",
+      "note": "刻蚀/薄膜/沉积全平台，全球设备最大",
+      "thesis": "刻蚀/薄膜/沉积全平台，全球设备最大",
+      "moat": "平台+客户",
+      "risks": [
+        "中国限制"
+      ],
+      "catalysts": [
+        "中国订单",
+        "新品"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "lrcx",
+      "name": "泛林",
+      "ticker": "LRCX",
+      "camp": "海外",
+      "sector": "设备",
+      "market_cap_cn": "~1500亿美元",
+      "role": "刻蚀设备",
+      "note": "刻蚀/沉积设备，存储客户占比高",
+      "thesis": "刻蚀/沉积设备，存储客户占比高",
+      "moat": "刻蚀技术",
+      "risks": [
+        "中国限制"
+      ],
+      "catalysts": [
+        "存储资本开支"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "kla",
+      "name": "KLA",
+      "ticker": "KLA",
+      "camp": "海外",
+      "sector": "设备",
+      "market_cap_cn": "~1200亿美元",
+      "role": "量检测设备",
+      "note": "量检测设备垄断（良率控制）",
+      "thesis": "量检测设备垄断（良率控制）",
+      "moat": "量检测技术",
+      "risks": [
+        "中国限制"
+      ],
+      "catalysts": [
+        "先进制程扩产"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "asml",
+      "name": "ASML",
+      "ticker": "ASML",
+      "camp": "海外",
+      "sector": "设备",
+      "market_cap_cn": "~4000亿美元",
+      "role": "EUV 垄断",
+      "note": "EUV 光刻全球垄断，先进制程咽喉",
+      "thesis": "EUV 光刻全球垄断，先进制程咽喉",
+      "moat": "EUV 独家",
+      "risks": [
+        "中国禁令",
+        "地缘"
+      ],
+      "catalysts": [
+        "High-NA 出货"
+      ],
+      "track_points": [
+        "EUV 出货量"
+      ]
+    },
+    {
+      "id": "tel",
+      "name": "东京电子",
+      "ticker": "TEL",
+      "camp": "海外",
+      "sector": "设备",
+      "market_cap_cn": "~1000亿美元",
+      "role": "涂胶显影",
+      "note": "涂胶/刻蚀/薄膜多品类，日本设备龙头",
+      "thesis": "涂胶/刻蚀/薄膜多品类，日本设备龙头",
+      "moat": "多品类设备",
+      "risks": [
+        "中国限制"
+      ],
+      "catalysts": [
+        "订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "skhynix",
+      "name": "SK海力士",
+      "ticker": "000660",
+      "camp": "海外",
+      "sector": "存储",
+      "market_cap_cn": "~1800亿美元",
+      "role": "HBM 全球第一",
+      "note": "HBM4 领先英伟达供应链，存储 AI 受益最大",
+      "thesis": "HBM4 领先英伟达供应链，存储 AI 受益最大",
+      "moat": "HBM 技术+英伟达绑定",
+      "risks": [
+        "存储周期"
+      ],
+      "catalysts": [
+        "HBM4",
+        "HBM 出货"
+      ],
+      "track_points": [
+        "HBM 收入"
+      ]
+    },
+    {
+      "id": "micron",
+      "name": "美光",
+      "ticker": "MU",
+      "camp": "海外",
+      "sector": "存储",
+      "market_cap_cn": "~2000亿美元",
+      "role": "HBM 追赶者",
+      "note": "HBM 第三极+存储周期反转",
+      "thesis": "HBM 第三极+存储周期反转",
+      "moat": "DRAM/NAND+HBM",
+      "risks": [
+        "周期"
+      ],
+      "catalysts": [
+        "HBM 放量",
+        "涨价"
+      ],
+      "track_points": [
+        "HBM 收入"
+      ]
+    },
+    {
+      "id": "samsung",
+      "name": "三星电子",
+      "ticker": "005930",
+      "camp": "海外",
+      "sector": "IDM",
+      "market_cap_cn": "~4500亿美元",
+      "role": "存储+代工+手机",
+      "note": "HBM 追赶+代工+GAA 路线",
+      "thesis": "HBM 追赶+代工+GAA 路线",
+      "moat": "全产业链",
+      "risks": [
+        "代工份额流失"
+      ],
+      "catalysts": [
+        "HBM4",
+        "2nm 代工"
+      ],
+      "track_points": [
+        "HBM 良率"
+      ]
+    },
+    {
+      "id": "globalfoundries",
+      "name": "格芯",
+      "ticker": "GFS",
+      "camp": "海外",
+      "sector": "晶圆代工",
+      "market_cap_cn": "~300亿美元",
+      "role": "成熟制程代工",
+      "note": "成熟制程/特色工艺代工（汽车/射频）",
+      "thesis": "成熟制程/特色工艺代工（汽车/射频）",
+      "moat": "成熟制程产能",
+      "risks": [
+        "竞争"
+      ],
+      "catalysts": [
+        "汽车芯片需求"
+      ],
+      "track_points": [
+        "产能利用率"
+      ]
+    },
+    {
+      "id": "umc",
+      "name": "联电",
+      "ticker": "UMC",
+      "camp": "海外",
+      "sector": "晶圆代工",
+      "market_cap_cn": "~200亿美元",
+      "role": "成熟制程代工",
+      "note": "成熟制程代工，中国台湾第二",
+      "thesis": "成熟制程代工，中国台湾第二",
+      "moat": "成熟产能",
+      "risks": [
+        "竞争"
+      ],
+      "catalysts": [
+        "需求"
+      ],
+      "track_points": [
+        "产能利用率"
+      ]
+    }
   ]
 }

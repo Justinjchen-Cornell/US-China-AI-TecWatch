@@ -59,7 +59,36 @@ _s0 = _ind_cfg.get("series", [{}])[0].get("values", {})
 _inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind_cfg["indicators"]]
 report["trend"] = _trend(_ind_cfg["indicators"], _inds_first, series, watch=_ind_cfg.get("watch"))
 report["frontier"] = _ind_cfg.get("frontier", [])
+report["intelligence"] = json.load(open(ROOT / "data" / "industry_intelligence.json", encoding="utf-8"))
 (OUT / "latest.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+# 行业研判 HTML 区块
+try:
+    _intel = report["intelligence"]
+    _v = _intel.get("verdict", {})
+    _vc = _intel.get("value_chain", [])
+    _inf = _intel.get("inflections_6_18m", [])
+    intel_html = "<div class='card' style='border-left:4px solid #06b6d4'>"
+    intel_html += "<div style='font-size:12px;color:#7a8699'>行业研判 · 非评分 · 作者观点</div>"
+    intel_html += "<h2 style='font-size:17px;margin:8px 0 10px'>" + _v.get('phase', '') + "</h2>"
+    intel_html += "<table><tbody>"
+    intel_html += "<tr><th style='text-align:left;width:130px'>中国位置</th><td>" + _v.get('china_position', '') + "</td></tr>"
+    intel_html += "<tr><th style='text-align:left'>关键拐点</th><td>" + _v.get('key_inflection', '') + "</td></tr>"
+    intel_html += "<tr><th style='text-align:left'>投资主题</th><td>" + _v.get('investment_theme', '') + "</td></tr>"
+    intel_html += "</tbody></table>"
+    if _vc:
+        intel_html += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+        for seg in _vc[:3]:
+            intel_html += "<li><b>" + seg.get('segment', '') + "</b>（" + seg.get('value_concentration', '') + "）：" + seg.get('logic', '') + "</li>"
+        intel_html += "</ul>"
+    if _inf:
+        intel_html += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+        for inf in _inf:
+            intel_html += "<li><b>" + inf.get('event', '') + "</b>（概率 " + inf.get('probability', '') + "）：" + inf.get('impact', '') + "</li>"
+        intel_html += "</ul>"
+    intel_html += "</div>"
+except Exception:
+    intel_html = ""
 
 # ---- 生成 index.html ----
 def tier_rows(tier_list):
@@ -127,6 +156,7 @@ canvas{{max-height:360px}}
 <body>
 <h1>量子计算产业投资跟踪与分析体系</h1>
 <div class='note'>数据基线来自公开研究与行业报告，指标原始值为近似整理，仅供趋势研究与学术探讨，不构成任何投资建议。数值会随公开数据持续修订。</div>
+{intel_html}
 <div class='card metric'>
   <div><div class='num'>{report['composite']}</div><div class='sub'>QuantumCompete Index（综合得分，0-100）</div></div>
   <div><div class='num' style='font-size:1.3em;color:#3a7'>{report['ci_low']}–{report['ci_high']}</div><div class='sub'>95% 置信区间（蒙特卡洛 N={2000} ±1σ）</div></div>

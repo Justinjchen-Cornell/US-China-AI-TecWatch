@@ -18,7 +18,12 @@ os.makedirs(os.path.join(SITE_DIR, "api"), exist_ok=True)
 
 # ---- latest.json ----
 def ser(s):
-    return {k: s[k] for k in ["id","name","country","route","role","tier","config","market","score","lo","hi"]}
+    out = {k: s.get(k) for k in ["id","name","country","route","role","tier","config","market","score","lo","hi"]}
+    orig = next((x for x in DATA if x.get("id") == s.get("id")), {})
+    for k in ["thesis","moat","risks","catalysts","track_points"]:
+        out[k] = orig.get(k)
+    return out
+
 _sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from industry_index import compute as _obj_compute
 _obj = _obj_compute(json.load(open(os.path.join(ROOT, "data/industry_indicators.json"), encoding="utf-8"))["indicators"])
@@ -56,7 +61,35 @@ _s0 = _ind_cfg.get("series", [{}])[0].get("values", {})
 _inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind_cfg["indicators"]]
 latest["trend"] = _trend(_ind_cfg["indicators"], _inds_first, series, watch=_ind_cfg.get("watch"))
 latest["frontier"] = _ind_cfg.get("frontier", [])
+latest["intelligence"] = json.load(open(os.path.join(ROOT, "data/industry_intelligence.json"), encoding="utf-8"))
 json.dump(latest, open(os.path.join(SITE_DIR, "api/latest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+# 行业研判 HTML 区块
+try:
+    _v = latest["intelligence"].get("verdict", {})
+    _vc = latest["intelligence"].get("value_chain", [])
+    _inf = latest["intelligence"].get("inflections_6_18m", [])
+    intel_html = "<div class='card' style='border-left:4px solid #f59e0b'>"
+    intel_html += "<div style='font-size:12px;color:#7a8699'>行业研判 · 非评分 · 作者观点</div>"
+    intel_html += "<h2 style='font-size:17px;margin:8px 0 10px'>" + _v.get('phase', '') + "</h2>"
+    intel_html += "<table><tbody>"
+    intel_html += "<tr><th style='text-align:left;width:130px'>中国位置</th><td>" + _v.get('china_position', '') + "</td></tr>"
+    intel_html += "<tr><th style='text-align:left'>关键拐点</th><td>" + _v.get('key_inflection', '') + "</td></tr>"
+    intel_html += "<tr><th style='text-align:left'>投资主题</th><td>" + _v.get('investment_theme', '') + "</td></tr>"
+    intel_html += "</tbody></table>"
+    if _vc:
+        intel_html += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+        for seg in _vc[:3]:
+            intel_html += "<li><b>" + seg.get('segment', '') + "</b>（" + seg.get('value_concentration', '') + "）：" + seg.get('logic', '') + "</li>"
+        intel_html += "</ul>"
+    if _inf:
+        intel_html += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+        for inf in _inf:
+            intel_html += "<li><b>" + inf.get('event', '') + "</b>（概率 " + inf.get('probability', '') + "）：" + inf.get('impact', '') + "</li>"
+        intel_html += "</ul>"
+    intel_html += "</div>"
+except Exception:
+    intel_html = ""
 
 # ---- Markdown 报告 ----
 lines = []
@@ -87,7 +120,7 @@ open(os.path.join(ROOT, "REPORT.md"), "w", encoding="utf-8").write("\n".join(lin
 html = """<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>可控核聚变产业投资 Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>body{font-family:-apple-system,"Segoe UI","PingFang SC",sans-serif;max-width:1100px;margin:24px auto;padding:0 16px;color:#1a1a2e;background:#f5f7fb}h1{color:#0f3460}h2{color:#16213e;border-left:4px solid #0f3460;padding-left:10px;margin-top:32px}.cards{display:flex;gap:16px;flex-wrap:wrap}.card{background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 2px 10px #0001;flex:1;min-width:200px}.card b{font-size:24px;color:#0f3460}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:800px){.grid{grid-template-columns:1fr}}table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px #0001}th{background:#0f3460;color:#fff;padding:8px;text-align:left}td{padding:7px 8px;border-bottom:1px solid #eee;font-size:14px}tr:nth-child(even){background:#f0f3fa}.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;color:#fff}.领跑{background:#2e7d32}.跟进{background:#1565c0}.潜力{background:#ef6c00}.观察{background:#9e9e9e}.核心仓\\(卖铲人\\){background:#0f3460}.整机期权仓{background:#c2185b}.路线\\/观察仓{background:#546e7a}.note{font-size:12px;color:#666;margin-top:24px}</style></head>
-<body><h1>可控核聚变产业投资 Dashboard</h1><div class="cards">
+<body><h1>可控核聚变产业投资 Dashboard</h1>__INTEL__<div class="cards">
 <div class="card"><b id="idx">–</b><div>FusionCompete Index (六维均值)</div></div>
 <div class="card"><b id="n">–</b><div>跟踪标的</div></div>
 <div class="card"><b id="top">–</b><div>领跑/跟进合计</div></div></div>
@@ -97,7 +130,7 @@ html = """<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>可�
 <p class="note">数据快照：__ASOF__ · 指标原始值为公开信息近似整理，仅供趋势研究与学术探讨，不构成任何投资建议。市场有风险，投资需谨慎。</p>
 <script>fetch("api/latest.json").then(r=>r.json()).then(d=>{document.getElementById("idx").textContent=d.fusion_index;document.getElementById("n").textContent=d.n;const lead=d.companies.filter(c=>c.tier==="领跑"||c.tier==="跟进").length;document.getElementById("top").textContent=lead;const dims={science:"科学可行性",engineering:"工程进度",capital:"资本热度",supply:"供应链地位",policy:"政策支持",ai:"AI赋能"};const dimOrder=["science","engineering","capital","supply","policy","ai"];const dimAvg=dimOrder.map(k=>{const vals=d.companies.map(c=>c.dims?c.dims[k]:null).filter(v=>typeof v==="number");return vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length*10)/10:0});new Chart(document.getElementById("dimChart"),{type:"bar",data:{labels:dimOrder.map(k=>dims[k]),datasets:[{label:"均值",data:dimAvg,backgroundColor:"#0f3460"}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{suggestedMin:30,suggestedMax:80}}}});const top=d.companies.slice(0,12);new Chart(document.getElementById("rankChart"),{type:"bar",data:{labels:top.map(c=>c.name),datasets:[{label:"综合得分",data:top.map(c=>c.score),backgroundColor:"#1565c0"}]},options:{indexAxis:"y",responsive:true,plugins:{legend:{display:false}}}});const tb=document.getElementById("tbody");d.companies.forEach((c,i)=>{const tr=document.createElement("tr");tr.innerHTML=`<td>${i+1}</td><td>${c.name}</td><td>${c.country||""}</td><td>${c.route||""}</td><td>${c.role||""}</td><td>${c.score}</td><td>${c.lo}~${c.hi}</td><td><span class="tag ${c.tier}">${c.tier}</span></td><td><span class="tag ${cssEscape(c.config)}">${c.config}</span></td>`;tb.appendChild(tr);});});function cssEscape(s){return (s||"").replace(/[()]/g,"\\\\$&")}</script></body></html>"""
 # 注入快照日期
-html = html.replace("__ASOF__", SNAP["as_of"])
+html = html.replace("__ASOF__", SNAP["as_of"]).replace("__INTEL__", intel_html)
 open(os.path.join(SITE_DIR, "index.html"), "w", encoding="utf-8").write(html)
 print("built:", os.path.join(SITE_DIR, "index.html"))
 print("fusion_index =", latest["fusion_index"], "| companies =", latest["n"])

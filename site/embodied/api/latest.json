@@ -1,55 +1,564 @@
 {
+  "generated_at": "2026-08-25T16:07:49.585323Z",
+  "as_of": "2026Q2",
+  "composite": 53.6,
   "index": 53.6,
-  "index_low": 52.9,
-  "index_high": 54.1,
+  "ci_low": 52.9,
+  "ci_high": 54.1,
   "confidence": 0.61,
-  "n_indicators": 5,
-  "industry_score01": 0.6399,
-  "indicators": [
+  "index_note": "国家层客观指标(出货/灵巧手/成本/专利/VLA差距)",
+  "pool_avg": 65.0,
+  "index_scale": "objective 0-100; pool_avg = 10x of internal 0-10 composite",
+  "dim_means": {
+    "mass": 6.0,
+    "comm": 6.36,
+    "tech": 7.52,
+    "cap": 6.44,
+    "supply": 6.56,
+    "policy": 5.8
+  },
+  "tiers": {
+    "领跑": [
+      "tsla",
+      "nvda",
+      "ldhb"
+    ],
+    "跟进": [
+      "yy",
+      "sfzk",
+      "dpkj",
+      "jyz",
+      "hs",
+      "figure",
+      "qnkj",
+      "tptz"
+    ],
+    "潜力": [
+      "xlqs",
+      "dzdq",
+      "mcdq",
+      "sdrj",
+      "jzg",
+      "dg",
+      "ybj",
+      "wj",
+      "ys",
+      "yj",
+      "lszn",
+      "yhty",
+      "pi",
+      "skild"
+    ]
+  },
+  "ranking": [
     {
-      "id": "humanoid_shipment_share",
-      "name": "人形机器人出货全球占比（中国）",
-      "value": 60,
-      "norm": 0.6,
-      "direction": 1,
-      "source": "行业统计近似（宇树/优必选/智元等2026量产）",
-      "source_reliability": 0.65
+      "rank": 1,
+      "id": "tsla",
+      "name": "特斯拉 Optimus",
+      "score": 8.0,
+      "role": "整机/场景方",
+      "country": "海外",
+      "thesis": "特斯拉 Optimus：量产叙事标杆（2026-27 目标），自动驾驶数据协同",
+      "moat": "FSD 数据+超级工厂+机器人生态",
+      "risks": [
+        "量产延宕",
+        "执行器供应"
+      ],
+      "catalysts": [
+        "Optimus 量产节奏",
+        "新硬件迭代"
+      ],
+      "track_points": [
+        "交付数据",
+        "产线进度"
+      ]
     },
     {
-      "id": "dexterous_hand_share",
-      "name": "灵巧手/核心零部件供应链份额（中国）",
-      "value": 65,
-      "norm": 0.65,
-      "direction": 1,
-      "source": "行业调研近似",
-      "source_reliability": 0.6
+      "rank": 2,
+      "id": "nvda",
+      "name": "英伟达 GR00T",
+      "score": 7.9,
+      "role": "算力/平台",
+      "country": "海外",
+      "thesis": "英伟达 GR00T/Jetson：具身算力平台卖铲人，生态定义者",
+      "moat": "算力+生态（GR00T/Isaac）",
+      "risks": [
+        "生态 vs 自研分化"
+      ],
+      "catalysts": [
+        "GR00T 迭代",
+        "Jetson Thor"
+      ],
+      "track_points": [
+        "生态客户",
+        "芯片迭代"
+      ]
     },
     {
-      "id": "unit_cost_ratio",
-      "name": "整机成本比（中国/美国）",
-      "value": 0.3,
-      "norm": 0.7,
-      "direction": -1,
-      "source": "公开报价近似（中国整机约10万级 vs 美国约30-100万美元）",
-      "source_reliability": 0.6
+      "rank": 3,
+      "id": "ldhb",
+      "name": "绿的谐波",
+      "score": 7.7,
+      "role": "核心部件",
+      "country": "中国",
+      "thesis": "绿的谐波：谐波减速器国产龙头，人形放量最受益卖铲人",
+      "moat": "谐波减速器技术+客户",
+      "risks": [
+        "竞争（双环等）",
+        "人形节奏"
+      ],
+      "catalysts": [
+        "人形订单",
+        "扩产"
+      ],
+      "track_points": [
+        "订单/产能利用率"
+      ]
     },
     {
-      "id": "patent_share",
-      "name": "人形机器人专利全球占比（中国）",
-      "value": 60,
-      "norm": 0.6,
-      "direction": 1,
-      "source": "专利库统计近似",
-      "source_reliability": 0.65
+      "rank": 4,
+      "id": "yy",
+      "name": "宇树科技",
+      "score": 7.4,
+      "role": "整机",
+      "country": "中国",
+      "thesis": "宇树科技：四足/人形双线全球出货王（G1 低成本），量产标杆",
+      "moat": "成本控制+供应链+全球渠道",
+      "risks": [
+        "毛利压力",
+        "海外政策"
+      ],
+      "catalysts": [
+        "G1 放量",
+        "新整机"
+      ],
+      "track_points": [
+        "出货量",
+        "毛利率"
+      ]
     },
     {
-      "id": "vla_model_gap",
-      "name": "VLA/世界模型尖端差距（中国水平/美国%）",
-      "value": 65,
-      "norm": 0.65,
-      "direction": 1,
-      "source": "公开评测近似（Gemini Robotics/Figure Helix vs 中国VLA）",
-      "source_reliability": 0.55
+      "rank": 5,
+      "id": "sfzk",
+      "name": "三花智控",
+      "score": 7.4,
+      "role": "核心部件",
+      "country": "中国",
+      "thesis": "三花智控：执行器/Tier1（机电一体化），特斯拉链核心",
+      "moat": "机电执行器+大客户（特斯拉/宇树）",
+      "risks": [
+        "客户集中"
+      ],
+      "catalysts": [
+        "执行器订单",
+        "机器人业务分拆"
+      ],
+      "track_points": [
+        "执行器订单"
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "dpkj",
+      "name": "地平线机器人",
+      "score": 7.3,
+      "role": "算力底座",
+      "country": "中国",
+      "thesis": "地平线：机器人芯片（征程6）算力底座，车载+机器人双轮",
+      "moat": "征程芯片+生态",
+      "risks": [
+        "机器人芯片竞争（英伟达）"
+      ],
+      "catalysts": [
+        "征程6 机器人版",
+        "客户"
+      ],
+      "track_points": [
+        "芯片出货"
+      ]
+    },
+    {
+      "rank": 7,
+      "id": "jyz",
+      "name": "智元机器人",
+      "score": 7.2,
+      "role": "整机/生态",
+      "country": "中国",
+      "thesis": "智元机器人（AgiBot）：华为系背景+灵犀生态，整机+大脑双线",
+      "moat": "AgiBot World 数据+生态（灵犀）",
+      "risks": [
+        "量产爬坡",
+        "VLA 差距"
+      ],
+      "catalysts": [
+        "灵犀放量",
+        "AgiBot World 扩展"
+      ],
+      "track_points": [
+        "出货",
+        "VLA 迭代"
+      ]
+    },
+    {
+      "rank": 8,
+      "id": "hs",
+      "name": "禾赛科技",
+      "score": 7.1,
+      "role": "感知",
+      "country": "中国",
+      "thesis": "禾赛科技：激光雷达全球龙头，机器人感知卖铲人",
+      "moat": "激光雷达技术+车/机器人双场景",
+      "risks": [
+        "价格战"
+      ],
+      "catalysts": [
+        "机器人雷达放量"
+      ],
+      "track_points": [
+        "出货量"
+      ]
+    },
+    {
+      "rank": 9,
+      "id": "figure",
+      "name": "Figure AI",
+      "score": 6.6,
+      "role": "整机/大脑",
+      "country": "海外",
+      "thesis": "Figure 02/Helix：VLA 集成整机代表（OpenAI 系背景+宝马合作）",
+      "moat": "Helix VLA+整机集成",
+      "risks": [
+        "商业化早期",
+        "烧钱"
+      ],
+      "catalysts": [
+        "Helix 泛化演示",
+        "客户部署"
+      ],
+      "track_points": [
+        "部署案例",
+        "VLA 迭代"
+      ]
+    },
+    {
+      "rank": 10,
+      "id": "qnkj",
+      "name": "强脑科技",
+      "score": 6.5,
+      "role": "灵巧手/脑机",
+      "country": "中国",
+      "thesis": "强脑科技：非侵入脑机+灵巧手（消费+康复），跨界",
+      "moat": "非侵入电极+消费产品",
+      "risks": [
+        "具身渗透慢"
+      ],
+      "catalysts": [
+        "灵巧手/康复放量"
+      ],
+      "track_points": [
+        "产品收入"
+      ]
+    },
+    {
+      "rank": 11,
+      "id": "tptz",
+      "name": "拓普集团",
+      "score": 6.5,
+      "role": "核心部件",
+      "country": "中国",
+      "thesis": "拓普集团：执行器/结构件（特斯拉链），轻量化",
+      "moat": "精密制造+特斯拉关系",
+      "risks": [
+        "客户集中"
+      ],
+      "catalysts": [
+        "机器人业务",
+        "订单"
+      ],
+      "track_points": [
+        "机器人收入"
+      ]
+    },
+    {
+      "rank": 12,
+      "id": "xlqs",
+      "name": "灵心巧手",
+      "score": 6.4,
+      "role": "灵巧手",
+      "country": "中国",
+      "thesis": "灵心巧手：三路线平台（腱绳/齿轮/磁驱）灵巧手，卖铲人",
+      "moat": "多路线灵巧手技术",
+      "risks": [
+        "量产规模"
+      ],
+      "catalysts": [
+        "灵巧手放量",
+        "大客户"
+      ],
+      "track_points": [
+        "出货量"
+      ]
+    },
+    {
+      "rank": 13,
+      "id": "dzdq",
+      "name": "兆威机电",
+      "score": 6.4,
+      "role": "核心部件",
+      "country": "中国",
+      "thesis": "兆威机电：微型传动（灵巧手齿轮箱），小部件大弹性",
+      "moat": "微型传动技术",
+      "risks": [
+        "单一环节",
+        "竞争"
+      ],
+      "catalysts": [
+        "灵巧手订单",
+        "机器人客户"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "rank": 14,
+      "id": "mcdq",
+      "name": "鸣志电器",
+      "score": 6.4,
+      "role": "核心部件",
+      "country": "中国",
+      "thesis": "鸣志电器：运动控制（步进/伺服），灵巧手驱动",
+      "moat": "运动控制+海外渠道",
+      "risks": [
+        "人形放量慢"
+      ],
+      "catalysts": [
+        "机器人电机订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "rank": 15,
+      "id": "sdrj",
+      "name": "速腾聚创",
+      "score": 6.4,
+      "role": "感知",
+      "country": "中国",
+      "thesis": "速腾聚创：激光雷达第二极，人形感知配套",
+      "moat": "雷达成本曲线",
+      "risks": [
+        "禾赛竞争"
+      ],
+      "catalysts": [
+        "机器人订单"
+      ],
+      "track_points": [
+        "出货"
+      ]
+    },
+    {
+      "rank": 16,
+      "id": "jzg",
+      "name": "极智嘉",
+      "score": 6.3,
+      "role": "应用集成",
+      "country": "中国",
+      "thesis": "极智嘉：仓储机器人应用集成（AMR），场景落地先行者",
+      "moat": "仓储场景+全球客户",
+      "risks": [
+        "毛利压力"
+      ],
+      "catalysts": [
+        "全球订单",
+        "出海"
+      ],
+      "track_points": [
+        "订单额"
+      ]
+    },
+    {
+      "rank": 17,
+      "id": "dg",
+      "name": "地瓜机器人",
+      "score": 6.2,
+      "role": "算力底座",
+      "country": "中国",
+      "thesis": "地瓜机器人：通用算力平台（RDK），国产机器人芯片新锐",
+      "moat": "RDK 生态",
+      "risks": [
+        "生态规模"
+      ],
+      "catalysts": [
+        "RDK 生态客户",
+        "芯片迭代"
+      ],
+      "track_points": [
+        "生态开发者"
+      ]
+    },
+    {
+      "rank": 18,
+      "id": "ybj",
+      "name": "优必选",
+      "score": 6.1,
+      "role": "整机",
+      "country": "中国",
+      "thesis": "优必选 Walker：港股人形第一股，商业化（教育/工厂）先发",
+      "moat": "品牌+商业化渠道",
+      "risks": [
+        "亏损",
+        "量产效率"
+      ],
+      "catalysts": [
+        "Walker S 工厂部署",
+        "订单"
+      ],
+      "track_points": [
+        "订单额",
+        "量产"
+      ]
+    },
+    {
+      "rank": 19,
+      "id": "wj",
+      "name": "舞肌科技",
+      "score": 6.1,
+      "role": "灵巧手",
+      "country": "中国",
+      "thesis": "舞肌科技：全直驱灵巧手（高动态），差异化路线",
+      "moat": "直驱电机灵巧手",
+      "risks": [
+        "成本高"
+      ],
+      "catalysts": [
+        "直驱灵巧手迭代"
+      ],
+      "track_points": [
+        "技术指标"
+      ]
+    },
+    {
+      "rank": 20,
+      "id": "ys",
+      "name": "因时机器人",
+      "score": 5.8,
+      "role": "灵巧手",
+      "country": "中国",
+      "thesis": "因时机器人：微型灵巧手（五指）成熟产品，卖铲人",
+      "moat": "微型伺服灵巧手量产",
+      "risks": [
+        "市场容量"
+      ],
+      "catalysts": [
+        "灵巧手订单",
+        "新品"
+      ],
+      "track_points": [
+        "出货"
+      ]
+    },
+    {
+      "rank": 21,
+      "id": "yj",
+      "name": "越疆",
+      "score": 5.7,
+      "role": "整机",
+      "country": "中国",
+      "thesis": "越疆：协作机器人+人形延伸，出海渠道",
+      "moat": "协作机器人渠道+成本",
+      "risks": [
+        "人形贡献小"
+      ],
+      "catalysts": [
+        "出海放量",
+        "人形新品"
+      ],
+      "track_points": [
+        "出海收入"
+      ]
+    },
+    {
+      "rank": 22,
+      "id": "lszn",
+      "name": "雷赛智能",
+      "score": 5.7,
+      "role": "核心部件",
+      "country": "中国",
+      "thesis": "雷赛智能：运控+灵巧手模组",
+      "moat": "运动控制技术",
+      "risks": [
+        "竞争"
+      ],
+      "catalysts": [
+        "灵巧手模组订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "rank": 23,
+      "id": "yhty",
+      "name": "银河通用",
+      "score": 5.5,
+      "role": "整机/大脑",
+      "country": "中国",
+      "thesis": "银河通用：纯仿真派（合成数据路线）整机+大脑",
+      "moat": "仿真数据闭环（GraspVLA）",
+      "risks": [
+        "Sim2Real 差距"
+      ],
+      "catalysts": [
+        "仿真数据规模",
+        "整机部署"
+      ],
+      "track_points": [
+        "部署案例"
+      ]
+    },
+    {
+      "rank": 24,
+      "id": "pi",
+      "name": "Physical Intelligence",
+      "score": 4.7,
+      "role": "具身大脑",
+      "country": "海外",
+      "thesis": "Physical Intelligence π 系列：具身大脑纯软件路线领跑者",
+      "moat": "通用 VLA 模型（π0/π1）",
+      "risks": [
+        "变现模式",
+        "巨头竞争"
+      ],
+      "catalysts": [
+        "π 新版本",
+        "合作整机"
+      ],
+      "track_points": [
+        "模型里程碑",
+        "客户"
+      ]
+    },
+    {
+      "rank": 25,
+      "id": "skild",
+      "name": "Skild AI",
+      "score": 4.4,
+      "role": "具身大脑",
+      "country": "海外",
+      "thesis": "Skild AI：通用具身大脑（数据规模路线）",
+      "moat": "多样化数据+通用模型",
+      "risks": [
+        "数据成本"
+      ],
+      "catalysts": [
+        "模型发布",
+        "融资"
+      ],
+      "track_points": [
+        "模型进展"
+      ]
     }
   ],
   "trend": {
@@ -96,7 +605,141 @@
     "灵巧手高性价比量产（BOM 成本曲线，17% 物料占比是否被颠覆）",
     "具身数据闭环（真实遥操数据规模 vs 合成数据）"
   ],
-  "ci_low": 52.9,
-  "ci_high": 54.1,
-  "index_note": "国家层客观指标(出货/灵巧手/成本/专利/VLA差距)"
+  "intelligence": {
+    "schema_version": 1,
+    "industry": "embodied",
+    "industry_cn": "具身智能",
+    "as_of": "2026Q2",
+    "verdict": {
+      "phase": "量产元年兑现期：从'实验室炫技'到'万台产线'的生死考",
+      "china_position": "供应链与出货领先（整机 60% 份额）· VLA 模型尖端追赶",
+      "key_inflection": "万台量产里程碑兑现 + VLA 泛化能力（Sim2Real）",
+      "investment_theme": "价值向'脑'与'手'集中：VLA 模型与灵巧手是价值密度最高环节；整机组装厂化趋势下卖铲人（减速器/丝杠/传感）确定性最高"
+    },
+    "technology_routes": [
+      {
+        "name": "VLA 模型/世界模型（大脑）",
+        "maturity": "快速迭代期",
+        "cn_players": [
+          "智元 AgiBot",
+          "宇树",
+          "银河通用"
+        ],
+        "us_players": [
+          "Google Gemini Robotics",
+          "Figure Helix",
+          "Physical Intelligence"
+        ],
+        "convergence_signal": "Sim2Real 泛化与长任务成功率"
+      },
+      {
+        "name": "灵巧手（手）",
+        "maturity": "量产爬坡（占整机 BOM ~17%）",
+        "cn_players": [
+          "因时/兆威",
+          "帕西尼",
+          "智元灵巧手"
+        ],
+        "us_players": [
+          "Shadow",
+          "Tesla Optimus 手",
+          "Sanctuary"
+        ],
+        "convergence_signal": "成本曲线与力控精度"
+      },
+      {
+        "name": "整机（人形机器人）",
+        "maturity": "量产元年（万台门槛）",
+        "cn_players": [
+          "宇树 G1",
+          "优必选 Walker",
+          "智元",
+          "傅利叶"
+        ],
+        "us_players": [
+          "Tesla Optimus",
+          "Figure 02",
+          "Boston Dynamics Atlas"
+        ],
+        "convergence_signal": "出货量/成本/产线良率"
+      },
+      {
+        "name": "核心部件（减速器/丝杠/传感/电机）",
+        "maturity": "成熟供应链",
+        "cn_players": [
+          "绿的谐波",
+          "鸣志电器",
+          "柯力传感"
+        ],
+        "us_players": [
+          "Harmonic",
+          "Maxon"
+        ],
+        "convergence_signal": "国产替代率与成本"
+      }
+    ],
+    "value_chain": [
+      {
+        "segment": "大脑（VLA/世界模型）",
+        "value_concentration": "最高",
+        "logic": "通用性决定天花板，价值随泛化能力集中（美国领先、中国追赶）"
+      },
+      {
+        "segment": "手（灵巧手）",
+        "value_concentration": "高",
+        "logic": "17% BOM 占比+技术壁垒，量产规模中国领先"
+      },
+      {
+        "segment": "核心部件（卖铲人）",
+        "value_concentration": "中高",
+        "logic": "行业扩产确定性受益，中国供应链完整度全球第一"
+      },
+      {
+        "segment": "整机组装",
+        "value_concentration": "低（富士康化）",
+        "logic": "标准化+降价压缩利润，除非有模型/数据闭环"
+      }
+    ],
+    "competitive_map": {
+      "cn_strength": [
+        "整机出货 60% 份额（宇树/优必选/智元）",
+        "供应链完整（减速器/丝杠/传感国产化）",
+        "成本优势（整机 ~1/3 美国）",
+        "量产场景（工厂/物流）丰富"
+      ],
+      "us_strength": [
+        "VLA 模型领先（Gemini Robotics/Figure）",
+        "Tesla 量产计划与自动驾驶数据协同",
+        "波士顿动力技术深度"
+      ],
+      "structural_gaps": [
+        "VLA 泛化能力（长任务/陌生场景）",
+        "高端力控传感",
+        "软件生态标准"
+      ],
+      "asymmetry": "中国'硬件+供应链+量产'领先，美国'模型+软件'领先——若 VLA 差距收窄，中国将复刻新能源车路径；若拉大，硬件优势将被软件锁死"
+    },
+    "inflections_6_18m": [
+      {
+        "event": "万台量产里程碑兑现（宇树/优必选/智元交付数据）",
+        "impact": "'量产元年'真伪验证",
+        "probability": "中高"
+      },
+      {
+        "event": "Gemini Robotics 3 / Figure 新 VLA vs 中国模型迭代",
+        "impact": "软件差距走向",
+        "probability": "高"
+      },
+      {
+        "event": "灵巧手成本跌破万元（BOM 重构）",
+        "impact": "渗透率拐点",
+        "probability": "中"
+      },
+      {
+        "event": "特斯拉 Optimus 量产节奏（2026-2027 目标）",
+        "impact": "全球竞争格局参照系",
+        "probability": "中"
+      }
+    ]
+  }
 }

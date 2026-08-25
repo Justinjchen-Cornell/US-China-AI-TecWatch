@@ -29,14 +29,15 @@ _sys.path.insert(0, os.path.join(_HERE, "..", "scripts"))
 from industry_index import compute as _obj_compute
 _ind = _json.load(open(os.path.join(_HERE, "data/industry_indicators.json"), encoding="utf-8"))
 _obj = _obj_compute(_ind["indicators"])
-_json.dump({"generated_at":datetime.datetime.utcnow().isoformat()+"Z","as_of":"2026Q2",
+_latest = {"generated_at":datetime.datetime.utcnow().isoformat()+"Z","as_of":"2026Q2",
   "composite":_obj["index"],"index":_obj["index"],
   "ci_low":_obj["index_low"],"ci_high":_obj["index_high"],"confidence":_obj["confidence"],
   "index_note":"国家层客观指标(出货/灵巧手/成本/专利/VLA差距)",
   "pool_avg":round(composite*10,1),
   "index_scale":"objective 0-100; pool_avg = 10x of internal 0-10 composite","dim_means":MEANS,
   "tiers":{"领跑":[c["id"] for c in lead],"跟进":[c["id"] for c in follow],"潜力":[c["id"] for c in pot]},
-  "ranking":[{"rank":i+1,"id":c["id"],"name":c["name"],"score":c["score"],"role":c["role"],"country":c["country"]} for i,c in enumerate(comps_sorted)]},
+  "ranking":[{"rank":i+1,"id":c["id"],"name":c["name"],"score":c["score"],"role":c["role"],"country":c["country"],"thesis":c.get("thesis"),"moat":c.get("moat"),"risks":c.get("risks"),"catalysts":c.get("catalysts"),"track_points":c.get("track_points")} for i,c in enumerate(comps_sorted)]}
+_json.dump(_latest,
   open(os.path.join(SITE_DIR, "api/latest.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=2)
 _obj_series = []
 for _pt in _ind.get("series", []):
@@ -54,12 +55,10 @@ _json.dump(_obj_series,
 from trend_analysis import analyze as _trend
 _s0 = _ind.get("series", [{}])[0].get("values", {})
 _inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind["indicators"]]
-_obj["trend"] = _trend(_ind["indicators"], _inds_first, _obj_series, watch=_ind.get("watch"))
-_obj["frontier"] = _ind.get("frontier", [])
-_obj["ci_low"] = _obj.get("index_low")
-_obj["ci_high"] = _obj.get("index_high")
-_obj["index_note"] = "国家层客观指标(出货/灵巧手/成本/专利/VLA差距)"
-_json.dump(_obj, open(os.path.join(SITE_DIR, "api/latest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+_latest["trend"] = _trend(_ind["indicators"], _inds_first, _obj_series, watch=_ind.get("watch"))
+_latest["frontier"] = _ind.get("frontier", [])
+_latest["intelligence"] = _json.load(open(os.path.join(_HERE, "data/industry_intelligence.json"), encoding="utf-8"))
+_json.dump(_latest, open(os.path.join(SITE_DIR, "api/latest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 def tr(c):
     return "<tr><td>"+c['name']+"</td><td>"+(c.get('ticker') or '—')+"</td><td>"+c['country']+"</td><td>"+c['role']+"</td><td>"+c['sub']+"</td><td>"+str(c['score'])+"</td><td>"+str(c['market'])+c['unit']+"</td><td>"+c['note']+"</td></tr>"
@@ -70,10 +69,41 @@ def _tier_json(clist):
     return _json.dumps([{"n":c["name"],"t":c["ticker"] or "—","r":c["role"],"s":c["score"],"m":str(c["market"])+c["unit"],"note":c["note"]} for c in clist])
 _TIER_JSON=_json.dumps({"lead":_tier_json(lead),"follow":_tier_json(follow),"pot":_tier_json(pot)})
 
+
+def _intel_html(intel_path):
+    try:
+        import json as _j
+        intel = _j.load(open(intel_path, encoding="utf-8"))
+        v = intel.get("verdict", {})
+        vc = intel.get("value_chain", [])
+        inf = intel.get("inflections_6_18m", [])
+        h = "<div class='card' style='border-left:4px solid #10b981'>"
+        h += "<div style='font-size:12px;color:#7a8699'>行业研判 · 非评分 · 作者观点</div>"
+        h += "<h2 style='font-size:17px;margin:8px 0 10px'>" + v.get('phase', '') + "</h2>"
+        h += "<table><tbody>"
+        h += "<tr><th style='text-align:left;width:130px'>中国位置</th><td>" + v.get('china_position', '') + "</td></tr>"
+        h += "<tr><th style='text-align:left'>关键拐点</th><td>" + v.get('key_inflection', '') + "</td></tr>"
+        h += "<tr><th style='text-align:left'>投资主题</th><td>" + v.get('investment_theme', '') + "</td></tr>"
+        h += "</tbody></table>"
+        if vc:
+            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+            for seg in vc[:3]:
+                h += "<li><b>" + seg.get('segment', '') + "</b>（" + seg.get('value_concentration', '') + "）：" + seg.get('logic', '') + "</li>"
+            h += "</ul>"
+        if inf:
+            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+            for x in inf:
+                h += "<li><b>" + x.get('event', '') + "</b>（概率 " + x.get('probability', '') + "）：" + x.get('impact', '') + "</li>"
+            h += "</ul>"
+        h += "</div>"
+        return h
+    except Exception:
+        return ""
+
 HTML='''<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><title>具身智能产业投资跟踪</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;max-width:1180px;margin:0 auto;padding:24px;color:#1a2233;background:#f7f9fc}h1{font-size:26px;margin:0 0 6px}h2{font-size:18px;margin:28px 0 10px;color:#0d3b8a;border-left:4px solid #2f6bff;padding-left:10px}.meta{color:#7a8699;font-size:13px}.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;color:#fff;background:#2f6bff;margin-left:6px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.06)}.card h3{margin:0 0 6px;font-size:15px}.card .num{font-size:24px;font-weight:700;color:#2f6bff}.tabs{display:flex;gap:8px;margin:10px 0 4px}button{border:1px solid #d5dbe5;background:#fff;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px}button.on{background:#2f6bff;color:#fff;border-color:#2f6bff}table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05)}th{background:#0d3b8a;color:#fff;padding:9px;text-align:left}td{padding:8px 9px;border-bottom:1px solid #eef1f6}.tier-l{color:#c0392b;font-weight:700}.tier-f{color:#d48806;font-weight:700}.tier-p{color:#7a8699}canvas{max-height:340px}</style></head>
-<body><h1>🤖 具身智能 / 物理AI 产业投资跟踪 <span class="badge">GitHub Pages</span></h1>
+<body><h1>🤖 具身智能 / 物理AI 产业投资跟踪 <span class="badge">GitHub Pages</span></h1>__INTEL__
 <div class="meta">EmbodiedCompete Index · 数据基线为公开信息近似整理（2026Q2 快照）· 仅供研究探讨，不构成投资建议</div>
 <div class="grid"><div class="card"><h3>综合指数</h3><div class="num">__COMPOSITE__</div><div class="meta">25家标的六维加权平均（0-10）</div></div>
 <div class="card"><h3>领跑 / 跟进 / 潜力</h3><div class="num">__LEADN__ / __FOLLOWN__ / __POTN__</div><div class="meta">按六维总分划分梯队</div></div>
@@ -92,7 +122,7 @@ show('lead',document.querySelector('.tabs button'));</script></body></html>'''
 HTML=(HTML.replace("__COMPOSITE__",str(composite)).replace("__LEADN__",str(len(lead)))
          .replace("__FOLLOWN__",str(len(follow))).replace("__POTN__",str(len(pot)))
          .replace("__TBODY__",''.join(tr(c) for c in comps_sorted))
-         .replace("__DIMS__",_DIMS_JSON).replace("__TOP__",_TOP_JSON).replace("__TIERS__",_TIER_JSON))
+         .replace("__DIMS__",_DIMS_JSON).replace("__TOP__",_TOP_JSON).replace("__TIERS__",_TIER_JSON).replace("__INTEL__",_intel_html(os.path.join(_HERE, "data/industry_intelligence.json"))))
 open(os.path.join(SITE_DIR, "index.html"),"w",encoding="utf-8").write(HTML)
 
 def _fmt(clist): return " · ".join(f"{c['name']}({c['score']})" for c in clist)

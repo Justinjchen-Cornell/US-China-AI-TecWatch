@@ -18,7 +18,12 @@ os.makedirs(os.path.join(SITE_DIR, "api"), exist_ok=True)
 
 # ---- latest.json ----
 def ser(s):
-    return {k: s[k] for k in ["id","name","country","track","role","market","tier","config","score","lo","hi","dims"]}
+    out = {k: s.get(k) for k in ["id","name","country","track","role","market","tier","config","score","lo","hi","dims"]}
+    orig = next((x for x in DATA if x.get("id") == s.get("id")), {})
+    for k in ["thesis","moat","risks","catalysts","track_points"]:
+        out[k] = orig.get(k)
+    return out
+
 _sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from industry_index import compute as _obj_compute
 _obj = _obj_compute(json.load(open(os.path.join(ROOT, "data/industry_indicators.json"), encoding="utf-8"))["indicators"])
@@ -56,6 +61,7 @@ _s0 = _ind_cfg.get("series", [{}])[0].get("values", {})
 _inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind_cfg["indicators"]]
 latest["trend"] = _trend(_ind_cfg["indicators"], _inds_first, series, watch=_ind_cfg.get("watch"))
 latest["frontier"] = _ind_cfg.get("frontier", [])
+latest["intelligence"] = json.load(open(os.path.join(ROOT, "data/industry_intelligence.json"), encoding="utf-8"))
 json.dump(latest, open(os.path.join(SITE_DIR, "api/latest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 # ---- Markdown 报告 ----
@@ -87,10 +93,41 @@ open(os.path.join(ROOT, "REPORT.md"), "w", encoding="utf-8").write("\n".join(lin
 # ---- index.html Dashboard ----
 dimOrder = ["clinical","pipeline","platform","tech","capital","policy"]
 dimLabels = [dims_cn[k] for k in dimOrder]
+
+def _intel_html(intel_path):
+    try:
+        import json as _j
+        intel = _j.load(open(intel_path, encoding="utf-8"))
+        v = intel.get("verdict", {})
+        vc = intel.get("value_chain", [])
+        inf = intel.get("inflections_6_18m", [])
+        h = "<div class='card' style='border-left:4px solid #10b981'>"
+        h += "<div style='font-size:12px;color:#7a8699'>行业研判 · 非评分 · 作者观点</div>"
+        h += "<h2 style='font-size:17px;margin:8px 0 10px'>" + v.get('phase', '') + "</h2>"
+        h += "<table><tbody>"
+        h += "<tr><th style='text-align:left;width:130px'>中国位置</th><td>" + v.get('china_position', '') + "</td></tr>"
+        h += "<tr><th style='text-align:left'>关键拐点</th><td>" + v.get('key_inflection', '') + "</td></tr>"
+        h += "<tr><th style='text-align:left'>投资主题</th><td>" + v.get('investment_theme', '') + "</td></tr>"
+        h += "</tbody></table>"
+        if vc:
+            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+            for seg in vc[:3]:
+                h += "<li><b>" + seg.get('segment', '') + "</b>（" + seg.get('value_concentration', '') + "）：" + seg.get('logic', '') + "</li>"
+            h += "</ul>"
+        if inf:
+            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+            for x in inf:
+                h += "<li><b>" + x.get('event', '') + "</b>（概率 " + x.get('probability', '') + "）：" + x.get('impact', '') + "</li>"
+            h += "</ul>"
+        h += "</div>"
+        return h
+    except Exception:
+        return ""
+
 html = """<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>AI生命科学产业投资 Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>body{font-family:-apple-system,"Segoe UI","PingFang SC",sans-serif;max-width:1120px;margin:24px auto;padding:0 16px;color:#1a1a2e;background:#f5f7fb}h1{color:#0f3460}h2{color:#16213e;border-left:4px solid #0f3460;padding-left:10px;margin-top:30px}.cards{display:flex;gap:16px;flex-wrap:wrap}.card{background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 2px 10px #0001;flex:1;min-width:200px}.card b{font-size:24px;color:#0f3460}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:800px){.grid{grid-template-columns:1fr}}table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px #0001}th{background:#0f3460;color:#fff;padding:8px;text-align:left}td{padding:7px 8px;border-bottom:1px solid #eee;font-size:13px}tr:nth-child(even){background:#f0f3fa}.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;color:#fff}.领跑{background:#2e7d32}.跟进{background:#1565c0}.潜力{background:#ef6c00}.观察{background:#9e9e9e}.核心仓\\(卖铲人\\/平台\\){background:#0f3460}.核心仓\\(脑机落地\\){background:#00695c}.管线期权仓\\(高赔率\\){background:#c2185b}.信仰仓\\(远期\\){background:#4a148c}.路线\\/观察仓{background:#546e7a}.note{font-size:12px;color:#666;margin-top:24px}</style></head>
-<body><h1>AI生命科学产业投资 Dashboard</h1><div class="cards">
+<body><h1>AI生命科学产业投资 Dashboard</h1>__INTEL__<div class="cards">
 <div class="card"><b id="idx">–</b><div>LifeCompete Index (六维均值)</div></div>
 <div class="card"><b id="n">–</b><div>跟踪标的</div></div>
 <div class="card"><b id="top">–</b><div>领跑/跟进合计</div></div></div>
@@ -99,7 +136,7 @@ html = """<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>AI�
 <h2>全标的明细（按综合得分降序）</h2><table><thead><tr><th>#</th><th>公司</th><th>国别</th><th>赛道</th><th>角色</th><th>得分</th><th>区间</th><th>梯队</th><th>配置</th></tr></thead><tbody id="tbody"></tbody></table>
 <p class="note">数据快照：__ASOF__ · 指标原始值为公开信息近似整理，仅供趋势研究与学术探讨，不构成任何投资建议。市场有风险，投资需谨慎。</p>
 <script>fetch("api/latest.json").then(r=>r.json()).then(d=>{document.getElementById("idx").textContent=d.life_index;document.getElementById("n").textContent=d.n;document.getElementById("top").textContent=d.companies.filter(c=>c.tier==="领跑"||c.tier==="跟进").length;const dimAvg=__DIMORD__.map(k=>{const vals=d.companies.map(c=>c.dims?c.dims[k]:null).filter(v=>typeof v==="number");return vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length*10)/10:0});new Chart(document.getElementById("dimChart"),{type:"bar",data:{labels:__DIMLABEL__,datasets:[{label:"均值",data:dimAvg,backgroundColor:"#0f3460"}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{suggestedMin:20,suggestedMax:75}}}});const top=d.companies.slice(0,12);new Chart(document.getElementById("rankChart"),{type:"bar",data:{labels:top.map(c=>c.name),datasets:[{label:"综合得分",data:top.map(c=>c.score),backgroundColor:"#1565c0"}]},options:{indexAxis:"y",responsive:true,plugins:{legend:{display:false}}}});const tb=document.getElementById("tbody");d.companies.forEach((c,i)=>{const tr=document.createElement("tr");tr.innerHTML=`<td>${i+1}</td><td>${c.name}</td><td>${c.country||""}</td><td>${c.track||""}</td><td>${c.role||""}</td><td>${c.score}</td><td>${c.lo}~${c.hi}</td><td><span class="tag ${c.tier}">${c.tier}</span></td><td><span class="tag ${cssEscape(c.config)}">${c.config}</span></td>`;tb.appendChild(tr);});});function cssEscape(s){return (s||"").replace(/[()]/g,"\\\\$&")}</script></body></html>"""
-html = html.replace("__ASOF__", SNAP["as_of"]).replace("__DIMORD__", json.dumps(dimOrder)).replace("__DIMLABEL__", json.dumps(dimLabels))
+html = html.replace("__ASOF__", SNAP["as_of"]).replace("__DIMORD__", json.dumps(dimOrder)).replace("__DIMLABEL__", json.dumps(dimLabels)).replace("__INTEL__", _intel_html(os.path.join(ROOT, "data/industry_intelligence.json")))
 open(os.path.join(SITE_DIR, "index.html"), "w", encoding="utf-8").write(html)
 print("built:", os.path.join(SITE_DIR, "index.html"))
 print("life_index =", latest["life_index"], "| companies =", latest["n"])

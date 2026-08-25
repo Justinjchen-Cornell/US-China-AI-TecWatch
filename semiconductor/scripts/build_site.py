@@ -42,6 +42,7 @@ latest = {
     "n_indicators": res["n_indicators"],
     "dimensions": res["dimensions"],
     "dark_lines": res["dark_lines"],
+    "intelligence": json.load(open(os.path.join(BASE, "data/industry_intelligence.json"), encoding="utf-8")),
     "public_companies": public,
     "private_companies": private,
 }
@@ -87,6 +88,36 @@ def prv_rows(companies):
 
 idx_class = "up" if res["index"] >= 55 else ("mid" if res["index"] >= 45 else "down")
 
+# 行业研判区块
+def _intel_html():
+    try:
+        intel = json.load(open(os.path.join(BASE, "data/industry_intelligence.json"), encoding="utf-8"))
+        v = intel.get("verdict", {})
+        vc = intel.get("value_chain", [])
+        inf = intel.get("inflections_6_18m", [])
+        h = "<div class='card' style='border-left:4px solid #3b82f6'>"
+        h += "<div style='font-size:12px;color:var(--sub)'>行业研判 · 非评分 · 作者观点</div>"
+        h += "<h2 style='font-size:17px;margin:8px 0 10px'>" + v.get('phase', '') + "</h2>"
+        h += "<table><tbody>"
+        h += "<tr><th style='text-align:left;width:130px'>中国位置</th><td>" + v.get('china_position', '') + "</td></tr>"
+        h += "<tr><th style='text-align:left'>关键拐点</th><td>" + v.get('key_inflection', '') + "</td></tr>"
+        h += "<tr><th style='text-align:left'>投资主题</th><td>" + v.get('investment_theme', '') + "</td></tr>"
+        h += "</tbody></table>"
+        if vc:
+            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+            for seg in vc[:3]:
+                h += "<li><b>" + seg.get('segment', '') + "</b>（" + seg.get('value_concentration', '') + "）：" + seg.get('logic', '') + "</li>"
+            h += "</ul>"
+        if inf:
+            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
+            for x in inf:
+                h += "<li><b>" + x.get('event', '') + "</b>（概率 " + x.get('probability', '') + "）：" + x.get('impact', '') + "</li>"
+            h += "</ul>"
+        h += "</div>"
+        return h
+    except Exception:
+        return ""
+
 HTML = r"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -125,6 +156,7 @@ footer{text-align:center;color:var(--sub);font-size:.8rem;margin-top:40px;paddin
   <p>半导体产业竞争力仪表盘 · 基于六维耦合 + 暗线修正的 SemiCompete Composite Index</p>
   <p class="note">数据基线 __UPDATED__ · 指标 __NIND__ 项 · 数据置信度 __CONF__% · 仅供趋势研究，不构成投资建议</p>
 </header>
+__INTEL__
 <div class="wrap">
   <div class="grid cards">
     <div class="card"><h3>半导体综合指数</h3><div class="num __IDXCLASS__">__INDEX__</div><div class="sub">0-100，&gt;50 偏中国有利</div></div>
@@ -183,6 +215,7 @@ replacements = {
     "__MCSTD__": f'{res["mc_std"]:.2f}',
     "__DIMROWS__": dim_rows(),
     "__DLROWS__": dl_rows(),
+    "__INTEL__": _intel_html(),
     "__PUBCN__": pub_rows(public.get("china", []), "china"),
     "__PUBOV__": pub_rows(public.get("overseas", []), "overseas"),
     "__PRVCN__": prv_rows(private.get("china", [])),

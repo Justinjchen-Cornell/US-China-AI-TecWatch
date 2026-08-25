@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "industry": "bio",
+  "industry_cn": "AI生命科学",
+  "as_of": "2026-06-30",
+  "verdict": {
+    "phase": "临床验证期：AI 设计→临床数据的'死亡之谷'正在被穿越",
+    "china_position": "管线追赶（INS018_055 全球三期）· 平台/测序供应链有优势",
+    "key_inflection": "首个 AI 设计药物是否获批上市（FDA/NMPA）——行业'第一次'里程碑",
+    "investment_theme": "平台型/卖铲人（晶泰/Schrödinger/华大智造）确定性高，管线型（英矽/Recursion）高赔率，侵入式脑机是信仰仓"
+  },
+  "technology_routes": [
+    {
+      "name": "AI 蛋白结构预测与设计",
+      "maturity": "成熟（AlphaFold 系）",
+      "cn_players": [
+        "Uni-Fold/OpenComplex",
+        "华为盘古分子"
+      ],
+      "us_players": [
+        "AlphaFold3/Isomorphic",
+        "Baker Lab"
+      ],
+      "convergence_signal": "设计→实验闭环成功率"
+    },
+    {
+      "name": "AI 制药（靶点/分子生成/临床优化）",
+      "maturity": "临床验证期",
+      "cn_players": [
+        "英矽智能",
+        "晶泰科技",
+        "深势科技"
+      ],
+      "us_players": [
+        "Recursion",
+        "Insilico Medicine(美)",
+        "Schrödinger"
+      ],
+      "convergence_signal": "三期数据读出与获批"
+    },
+    {
+      "name": "测序与多组学数据基础设施",
+      "maturity": "成熟（成本曲线陡降）",
+      "cn_players": [
+        "华大智造",
+        "华大基因"
+      ],
+      "us_players": [
+        "Illumina",
+        "Pacific Biosciences"
+      ],
+      "convergence_signal": "测序成本与装机份额"
+    },
+    {
+      "name": "脑机接口（侵入式/半侵入）",
+      "maturity": "临床早期",
+      "cn_players": [
+        "脑虎科技",
+        "阶梯医疗"
+      ],
+      "us_players": [
+        "Neuralink",
+        "Synchron"
+      ],
+      "convergence_signal": "临床入组规模与监管批准"
+    }
+  ],
+  "value_chain": [
+    {
+      "segment": "平台型卖铲人（计算+自动化实验）",
+      "value_concentration": "高",
+      "logic": "收入模式确定（服务+里程碑），晶泰/Schrödinger 已验证"
+    },
+    {
+      "segment": "管线型 AI 药企",
+      "value_concentration": "中（高赔率）",
+      "logic": "成败看临床数据，INS018_055 是风向标"
+    },
+    {
+      "segment": "测序/多组学设备",
+      "value_concentration": "中高",
+      "logic": "数据是 AI 燃料，华大智造成本优势"
+    },
+    {
+      "segment": "CRO 数据服务",
+      "value_concentration": "中",
+      "logic": "AI 临床数据生成的增量市场"
+    }
+  ],
+  "competitive_map": {
+    "cn_strength": [
+      "测序供应链（华大智造全球前三）",
+      "AI 制药管线数量追赶（INS018_055 三期）",
+      "临床资源与患者规模",
+      "政策支持（AI+医疗）"
+    ],
+    "us_strength": [
+      "前沿模型（AlphaFold3 蛋白设计闭环）",
+      "大药企 AI 合作生态成熟",
+      "FDA 监管路径清晰",
+      "脑机接口临床领先（Neuralink）"
+    ],
+    "structural_gaps": [
+      "FDA 级获批验证",
+      "蛋白设计尖端模型",
+      "脑机接口临床阶段"
+    ],
+    "asymmetry": "中国在'数据规模+测序成本+临床资源'占优，美国在'前沿模型+监管先例'占优——AI 药第一次获批（不论中美）将重塑估值锚"
+  },
+  "inflections_6_18m": [
+    {
+      "event": "INS018_055 全球三期中期数据",
+      "impact": "AI 药从'概念'到'证据'的分水岭",
+      "probability": "中高"
+    },
+    {
+      "event": "FDA/NMPA 首个 AI 设计药物获批",
+      "impact": "行业估值锚重置",
+      "probability": "中"
+    },
+    {
+      "event": "华大智造 T 系列海外放量 vs Illumina 反击",
+      "impact": "测序成本与份额走向",
+      "probability": "中"
+    },
+    {
+      "event": "脑机接口临床入组与医保定价试点",
+      "impact": "信仰仓估值兑现节奏",
+      "probability": "低中"
+    }
+  ]
+}

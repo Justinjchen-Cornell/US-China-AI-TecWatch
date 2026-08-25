@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "industry": "quantum",
+  "industry_cn": "量子计算",
+  "as_of": "2026-06-30",
+  "verdict": {
+    "phase": "纠错过渡期：从'物理比特军备'转向'逻辑比特工程化'",
+    "china_position": "尖端落后（逻辑比特差距大）· 工程与产业政策追赶",
+    "key_inflection": "逻辑量子比特规模化（表面码→qLDPC）是否突破千逻辑比特",
+    "investment_theme": "先投'卖跑道和钉鞋'的部件商（激光/制冷/测控），整机厂作期权"
+  },
+  "technology_routes": [
+    {
+      "name": "超导",
+      "maturity": "最成熟（IBM/Google/本源）",
+      "cn_players": [
+        "本源量子",
+        "中科大祖冲之"
+      ],
+      "us_players": [
+        "IBM Condor/Heron",
+        "Google Willow"
+      ],
+      "convergence_signal": "逻辑比特数量与保真度阈值"
+    },
+    {
+      "name": "离子阱",
+      "maturity": "高保真但慢（Quantinuum/IonQ/华翊）",
+      "cn_players": [
+        "华翊量子"
+      ],
+      "us_players": [
+        "Quantinuum",
+        "IonQ"
+      ],
+      "convergence_signal": "逻辑比特速度提升（CC 门速率）"
+    },
+    {
+      "name": "中性原子",
+      "maturity": "快速上升（Atom Computing/QuEra/中科酷原）",
+      "cn_players": [
+        "中科酷原",
+        "太一量生"
+      ],
+      "us_players": [
+        "Atom Computing",
+        "QuEra",
+        "Pasqal"
+      ],
+      "convergence_signal": "可扩展性与纠缠门保真度"
+    },
+    {
+      "name": "光量子",
+      "maturity": "独特路径（PsiQuantum/图灵量子）",
+      "cn_players": [
+        "图灵量子",
+        "玻色量子"
+      ],
+      "us_players": [
+        "PsiQuantum",
+        "Xanadu"
+      ],
+      "convergence_signal": "融合式光子制造良率与纠错方案"
+    }
+  ],
+  "value_chain": [
+    {
+      "segment": "核心部件（激光器/制冷机/测控）",
+      "value_concentration": "高（卖铲人）",
+      "logic": "无论哪条路线胜出都要采购，确定性最高"
+    },
+    {
+      "segment": "整机/系统集成",
+      "value_concentration": "中（期权）",
+      "logic": "路线未收敛，整机厂胜率低赔率高"
+    },
+    {
+      "segment": "量子软件/算法/纠错中间层",
+      "value_concentration": "中",
+      "logic": "错误缓解与编译工具链是软件价值落点"
+    },
+    {
+      "segment": "量子云服务（QaaS）",
+      "value_concentration": "低→中",
+      "logic": "尚早，随逻辑比特成熟而放大"
+    }
+  ],
+  "competitive_map": {
+    "cn_strength": [
+      "产业政策与政府投入（约1.5倍美NQI）",
+      "专利/论文高增长（近五年全球前列）",
+      "光量子+超导双路线并行",
+      "完整部件供应链（国盾/国仪）"
+    ],
+    "us_strength": [
+      "逻辑比特领先（Google/IBM 纠错演示先行）",
+      "私营资本（IonQ/Quantinuum 上市融资）",
+      "生态与云平台（AWS/Azure 量子）"
+    ],
+    "structural_gaps": [
+      "逻辑比特数（中国仍以物理比特为主）",
+      "纠错保真度阈值跨越",
+      "商业云生态"
+    ],
+    "asymmetry": "美国在'实验室尖端'领先，中国在'工程化部件+政策投入'追赶——若逻辑比特差距在 2027-2029 收窄，中国供应链优势将放大"
+  },
+  "inflections_6_18m": [
+    {
+      "event": "Google/IBM 下一代纠错演示 vs 祖冲之三号迭代",
+      "impact": "逻辑比特差距走向（收窄 or 拉大）",
+      "probability": "高"
+    },
+    {
+      "event": "qLDPC 码实用化（纠错开销大幅下降）",
+      "impact": "改变'纠错成本'竞争维度",
+      "probability": "中"
+    },
+    {
+      "event": "中国量子专项新一期预算/产业化政策",
+      "impact": "工程化投入斜率",
+      "probability": "中"
+    },
+    {
+      "event": "量子云商业订单（金融/制药试点）",
+      "impact": "商业化兑现节奏",
+      "probability": "中"
+    }
+  ]
+}
