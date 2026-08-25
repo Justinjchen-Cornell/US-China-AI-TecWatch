@@ -15,17 +15,19 @@ def main():
         raise SystemExit("未找到快照，请先运行 update_snapshot.py")
     latest = files[-1]
     weights_cfg = load_json(os.path.join(ROOT,"config","weights.json"))
+    defs = load_json(os.path.join(ROOT,"data","indicators.json"))
+    defs_by_id = {i["id"]: i for i in defs["indicators"]}
 
     # 计算最新
     snap = load_json(latest)
-    res = compute(snap, weights_cfg)
+    res = compute(snap, weights_cfg, defs_by_id)
     res["snapshot_date"] = snap.get("date") or snap.get("updated") or ""
 
     # 历史序列 (每个快照一个指数点)
     series = []
     for f in files:
         s = load_json(f)
-        r = compute(s, weights_cfg)
+        r = compute(s, weights_cfg, defs_by_id)
         series.append({"date": s.get("date") or s.get("updated") or "",
                        "index": r["index"], "low": r["index_low"], "high": r["index_high"]})
 
@@ -46,6 +48,8 @@ def main():
 def render_html(res, series, weights_cfg):
     dims = weights_cfg["dimensions"]
     dim_labels = json.dumps([dims[d]["label"] for d in dims], ensure_ascii=False)
+    dim_label_map = dict((d, dims[d]["label"]) for d in dims)
+    dim_label_map["talent"] = "人才流向(暗线)"
     dim_scores = [round(res["dimension_scores"].get(d) if res["dimension_scores"].get(d) is not None else 0,3) for d in dims]
     dim_colors = json.dumps([dims[d]["color"] for d in dims])
     sdates = json.dumps([p["date"] for p in series])
@@ -57,11 +61,22 @@ def render_html(res, series, weights_cfg):
         norm = ind.get("norm"); norm_s = f"{norm:.2f}" if norm is not None else "—"
         direction = "正向" if ind.get("direction",1)==1 else "反向"
         indicator_rows += (
-            "<tr><td>" + ind['name'] + "</td><td>" + ind.get('dim','') + "</td>"
+            "<tr><td>" + ind['name'] + "</td><td>" + dim_label_map.get(ind.get('dim',''), ind.get('dim','')) + "</td>"
             "<td class='num'>" + str(ind.get('value')) + "</td><td>" + ind.get('unit','') + "</td>"
             "<td class='num'>" + norm_s + "</td><td>" + direction + "</td>"
             "<td class='num'>" + str(ind.get('source_reliability',0.7)) + "</td>"
             "<td class='src'>" + ind.get('source','') + "</td></tr>")
+    lat_cfg = weights_cfg.get("latent_factors", {})
+    lat_scores = res.get("latent_scores", {})
+    lat_rel = res.get("latent_reliability", {})
+    lat_rows = ""
+    for k, cfg in lat_cfg.items():
+        sc = lat_scores.get(k)
+        rel = lat_rel.get(k, 0.7)
+        lat_rows += ("<tr><td>" + cfg['label'] + "</td>"
+                     "<td class='num'>" + str(round(sc,3) if sc is not None else '—') + "</td>"
+                     "<td class='num'>" + str(cfg['weight']) + "</td>"
+                     "<td class='num'>" + str(round(rel*100)) + "%</td></tr>")
     dim_rows = ""
     for d in dims:
         sc = res["dimension_scores"].get(d)
@@ -109,6 +124,9 @@ td.src{color:var(--muted);font-size:12px}.dot{display:inline-block;width:9px;hei
   <canvas id="trendChart"></canvas></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">六维得分 (归一化几何平均，0-1)</div>
   <canvas id="dimChart"></canvas></div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">五条暗线信号 (数据驱动/配置回退)</div>
+  <table><thead><tr><th>暗线</th><th style="text-align:right">信号(0-1)</th><th style="text-align:right">权重</th><th style="text-align:right">可靠度</th></tr></thead>
+  <tbody>$lat_rows</tbody></table></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">维度分明细</div>
   <table><thead><tr><th>维度</th><th style="text-align:right">得分</th><th style="text-align:right">权重</th></tr></thead>
   <tbody>$dim_rows</tbody></table></div>
@@ -131,7 +149,7 @@ new Chart(document.getElementById('trendChart'),{type:'line',data:{labels:sdates
         snapshot_date=res.get('snapshot_date',''),
         index=res['index'], index_low=res['index_low'], index_high=res['index_high'],
         conf_pct=int(res['confidence']*100), n_ind=len(res['indicators']),
-        dim_rows=dim_rows, indicator_rows=indicator_rows,
+        dim_rows=dim_rows, lat_rows=lat_rows, indicator_rows=indicator_rows,
         dim_labels=dim_labels, dim_scores_json=json.dumps(dim_scores), dim_colors=dim_colors,
         sdates=sdates, sidx=sidx, slow=slow, shigh=shigh)
 
