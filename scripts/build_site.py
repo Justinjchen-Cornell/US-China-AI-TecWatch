@@ -58,11 +58,12 @@ def main():
         if os.path.exists(pj):
             try:
                 d = load_json(pj)
-                rec["index"] = d.get("index")
+                rec["index"] = d.get("index") if d.get("index") is not None else d.get("composite")
                 rec["ci"] = d.get("ci_low")
                 rec["ci2"] = d.get("ci_high")
                 rec["conf"] = d.get("data_confidence")
-                rec["date"] = d.get("updated") or d.get("snapshot_date") or d.get("period")
+                rec["date"] = (d.get("updated") or d.get("snapshot_date")
+                               or d.get("period") or d.get("date"))
             except Exception:
                 pass
         industries.append(rec)

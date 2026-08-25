@@ -26,6 +26,7 @@ jobs:
       - name: Install sub-project dependencies
         run: |
           pip install -e ai-models   # numpy/pandas/jinja2 来自 pyproject
+          pip install numpy
 
       - name: Build main index
         run: |
@@ -40,6 +41,10 @@ jobs:
       - name: Build ai-models sub-project
         run: |
           python ai-models/build_report.py --site-dir ../site/ai-models
+
+      - name: Build quantum sub-project
+        run: |
+          python quantum/build_report.py --site-dir ../site/quantum
 
       - name: Rebuild main site (refresh industry cards)
         run: python scripts/build_site.py

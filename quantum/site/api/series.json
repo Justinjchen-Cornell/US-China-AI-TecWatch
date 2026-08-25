@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-06-30",
+    "composite": 55.52,
+    "ci_low": 53.46,
+    "ci_high": 57.58,
+    "dim_average": {
+      "tech_maturity": 60.0,
+      "commercial": 38.0,
+      "capital": 62.0,
+      "route_certainty": 56.0,
+      "supply_chain": 58.0,
+      "policy_strategic": 62.0
+    }
+  }
+]

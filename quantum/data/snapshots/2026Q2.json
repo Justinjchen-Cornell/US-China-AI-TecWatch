@@ -1,0 +1,12 @@
+{
+  "name": "QuantumCompete Index",
+  "date": "2026-06-30",
+  "indicators": {
+    "tech_maturity":   [{"value": 60, "desc": "全球龙头逻辑比特进展(Willow/Helios)拉高均值；整机厂技术分化明显"}],
+    "commercial":      [{"value": 38, "desc": "卖铲人(国仪/频准)已兑现营收；整机厂多靠政府/科研采购，纯商业化仍弱"}],
+    "capital":         [{"value": 62, "desc": "海外IPO(Quantinuum)与一级融资活跃；中国独角兽集中Pre-IPO"}],
+    "route_certainty": [{"value": 56, "desc": "离子阱/超导成熟，中性原子/光量子为黑马；四路线仍未收敛"}],
+    "supply_chain":    [{"value": 58, "desc": "激光器/制冷机/测控仪器等卖铲人部件商确定性最高，率先兑现现金流"}],
+    "policy_strategic":[{"value": 62, "desc": "量子安全/通信上升为国家战略；中国在光量子、精密测量具优势"}]
+  }
+}

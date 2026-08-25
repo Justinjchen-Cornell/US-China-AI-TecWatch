@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>量子计算产业投资跟踪体系</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+body{font-family:"WenQuanYi Micro Hei","PingFang SC",sans-serif;max-width:1120px;margin:24px auto;padding:0 16px;color:#1a2233;background:#f7f9fc}
+h1{font-size:1.6em;color:#0d3b66}h2{color:#0d3b66;border-left:5px solid #0d3b66;padding-left:10px;margin-top:30px}
+.card{background:#fff;border-radius:10px;padding:18px 20px;box-shadow:0 2px 10px #0001;margin:14px 0}
+.metric{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}
+.metric .num{font-size:2.4em;font-weight:800;color:#0d3b66}
+.metric .sub{color:#666;font-size:.95em}
+canvas{max-height:360px}
+.tbl{width:100%;border-collapse:collapse;font-size:.88em;margin-top:8px}
+.tbl th{background:#0d3b66;color:#fff;padding:8px}.tbl td{border-bottom:1px solid #e3e8ef;padding:7px}
+.tbl tr:nth-child(even){background:#f2f5fa}
+.note{font-size:.85em;color:#7a7a7a;margin-top:6px}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:800px){.charts{grid-template-columns:1fr}}
+</style></head>
+<body>
+<h1>量子计算产业投资跟踪与分析体系</h1>
+<div class='note'>数据基线来自公开研究与行业报告，指标原始值为近似整理，仅供趋势研究与学术探讨，不构成任何投资建议。数值会随公开数据持续修订。</div>
+<div class='card metric'>
+  <div><div class='num'>55.52</div><div class='sub'>QuantumCompete Index（综合得分，0-100）</div></div>
+  <div><div class='num' style='font-size:1.3em;color:#3a7'>53.46–57.58</div><div class='sub'>95% 置信区间（蒙特卡洛 N=2000 ±1σ）</div></div>
+  <div><div class='num' style='font-size:1.3em;color:#c0392b'>2026-06-30</div><div class='sub'>快照日期</div></div>
+</div>
+<div class='charts'>
+<div class='card'><h2>六维平均得分</h2><table class='tbl'><thead><tr><th>维度</th><th>平均分(0-100)</th></tr></thead><tbody><tr><td>技术成熟度</td><td>60.0</td></tr><tr><td>商业化进度</td><td>38.0</td></tr><tr><td>资本热度</td><td>62.0</td></tr><tr><td>路线确定性</td><td>56.0</td></tr><tr><td>供应链(卖铲人)地位</td><td>58.0</td></tr><tr><td>政策/战略价值</td><td>62.0</td></tr></tbody></table>
+<canvas id='radar' style='margin-top:10px'></canvas></div>
+<div class='card'><h2>综合趋势（历史序列）</h2><canvas id='trend'></canvas><div class='note'>当前仅含 2026Q2 一期基线；后续新增快照后自动扩展。</div>
+<h2 style='margin-top:18px'>Top 12 横向排名</h2><canvas id='barrank'></canvas></div>
+</div>
+<div class='card'><h2>公司综合得分排名（Top 15）</h2><table class='tbl'><thead><tr><th>#</th><th>公司</th><th>国别</th><th>路线</th><th>环节</th><th>得分</th></tr></thead><tbody><tr><td>1</td><td>国盾量子</td><td>中国</td><td>量子通信/测控</td><td>核心部件/通信</td><td><b>70.67</b></td></tr><tr><td>2</td><td>国仪量子</td><td>中国</td><td>测控/仪器</td><td>核心部件</td><td><b>69.33</b></td></tr><tr><td>3</td><td>频准激光</td><td>中国</td><td>量子激光器</td><td>核心部件</td><td><b>67.0</b></td></tr><tr><td>4</td><td>本源量子</td><td>中国</td><td>超导</td><td>整机/系统</td><td><b>59.83</b></td></tr><tr><td>5</td><td>Quantinuum</td><td>海外</td><td>离子阱</td><td>整机/系统</td><td><b>56.67</b></td></tr><tr><td>6</td><td>IBM</td><td>海外</td><td>超导</td><td>整机/系统</td><td><b>55.83</b></td></tr><tr><td>7</td><td>IonQ</td><td>海外</td><td>离子阱</td><td>整机/系统</td><td><b>52.17</b></td></tr><tr><td>8</td><td>图灵量子</td><td>中国</td><td>光量子</td><td>整机/系统</td><td><b>52.0</b></td></tr><tr><td>9</td><td>玻色量子</td><td>中国</td><td>光量子(专用)</td><td>整机/系统</td><td><b>51.0</b></td></tr><tr><td>10</td><td>Google Quantum(Willow)</td><td>海外</td><td>超导</td><td>整机/系统</td><td><b>50.0</b></td></tr><tr><td>11</td><td>量旋科技</td><td>中国</td><td>超导控制</td><td>核心部件</td><td><b>48.0</b></td></tr><tr><td>12</td><td>中科酷原</td><td>中国</td><td>中性原子</td><td>整机/系统</td><td><b>45.67</b></td></tr><tr><td>13</td><td>PsiQuantum</td><td>海外</td><td>光量子</td><td>整机/系统</td><td><b>45.5</b></td></tr><tr><td>14</td><td>IQM</td><td>海外</td><td>超导</td><td>整机/系统</td><td><b>44.67</b></td></tr><tr><td>15</td><td>Atom Computing</td><td>海外</td><td>中性原子</td><td>整机/系统</td><td><b>43.33</b></td></tr></tbody></table></div>
+<div class='card'><h2>梯队明细与配置建议</h2>
+<div class='note'>配置：核心仓 = ；期权仓 = </div>
+<h3>领跑（6）</h3><table class='tbl'><thead><tr><th>公司</th><th>国别</th><th>路线</th><th>环节</th><th>市场</th><th>估值/市值</th><th>得分(95%CI)</th><th>配置标签</th></tr></thead><tbody><tr><td>国盾量子</td><td>中国</td><td>量子通信/测控</td><td>核心部件/通信</td><td>上市(688027)</td><td>~700亿元</td><td><b>70.67</b><br><small>67.86-71.88</small></td><td>确定性核心(已上市/流动性好) / 卖铲人/部件(确定性较高)</td></tr>
+<tr><td>国仪量子</td><td>中国</td><td>测控/仪器</td><td>核心部件</td><td>上市(688628)</td><td>发行前窗口</td><td><b>69.33</b><br><small>66.65-70.72</small></td><td>确定性核心(已上市/流动性好) / 卖铲人/部件(确定性较高)</td></tr>
+<tr><td>频准激光</td><td>中国</td><td>量子激光器</td><td>核心部件</td><td>上市(688626)</td><td>IPO获批</td><td><b>67.0</b><br><small>64.35-68.45</small></td><td>确定性核心(已上市/流动性好) / 卖铲人/部件(确定性较高)</td></tr>
+<tr><td>本源量子</td><td>中国</td><td>超导</td><td>整机/系统</td><td>Pre-IPO</td><td>~210亿元</td><td><b>59.83</b><br><small>56.43-60.55</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>Quantinuum</td><td>海外</td><td>离子阱</td><td>整机/系统</td><td>上市(QNT)</td><td>~157亿美元</td><td><b>56.67</b><br><small>55.31-59.39</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>IBM</td><td>海外</td><td>超导</td><td>整机/系统</td><td>上市</td><td>~2000亿美元(集团)</td><td><b>55.83</b><br><small>55.29-59.4</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr></tbody></table><h3>跟进（11）</h3><table class='tbl'><thead><tr><th>公司</th><th>国别</th><th>路线</th><th>环节</th><th>市场</th><th>估值/市值</th><th>得分(95%CI)</th><th>配置标签</th></tr></thead><tbody><tr><td>IonQ</td><td>海外</td><td>离子阱</td><td>整机/系统</td><td>上市(IONQ)</td><td>~85亿美元</td><td><b>52.17</b><br><small>51.21-55.32</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>图灵量子</td><td>中国</td><td>光量子</td><td>整机/系统</td><td>Pre-IPO</td><td>~70亿元</td><td><b>52.0</b><br><small>48.66-52.78</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>玻色量子</td><td>中国</td><td>光量子(专用)</td><td>整机/系统</td><td>B轮/辅导</td><td>~数十亿元</td><td><b>51.0</b><br><small>47.94-52.06</small></td><td>高弹性期权(一级市场/Pre-IPO) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>Google Quantum(Willow)</td><td>海外</td><td>超导</td><td>整机/系统</td><td>未上市(Alphabet)</td><td>集团支撑</td><td><b>50.0</b><br><small>49.25-53.35</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>量旋科技</td><td>中国</td><td>超导控制</td><td>核心部件</td><td>成长</td><td>未披露</td><td><b>48.0</b><br><small>45.34-49.46</small></td><td>高弹性期权(一级市场/Pre-IPO) / 卖铲人/部件(确定性较高)</td></tr>
+<tr><td>中科酷原</td><td>中国</td><td>中性原子</td><td>整机/系统</td><td>成长/A轮</td><td>未披露</td><td><b>45.67</b><br><small>42.44-46.56</small></td><td>高弹性期权(一级市场/Pre-IPO) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>PsiQuantum</td><td>海外</td><td>光量子</td><td>整机/系统</td><td>未上市</td><td>~105亿美元</td><td><b>45.5</b><br><small>43.38-47.49</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>IQM</td><td>海外</td><td>超导</td><td>整机/系统</td><td>Pre-IPO(SPAC)</td><td>~68亿美元</td><td><b>44.67</b><br><small>43.42-47.54</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>Atom Computing</td><td>海外</td><td>中性原子</td><td>整机/系统</td><td>未上市(微软合作)</td><td>未披露</td><td><b>43.33</b><br><small>41.96-46.07</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>华翊量子</td><td>中国</td><td>离子阱</td><td>整机/系统</td><td>A轮</td><td>未披露</td><td><b>43.33</b><br><small>40.11-44.23</small></td><td>高弹性期权(一级市场/Pre-IPO) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>微软(中性原子)</td><td>海外</td><td>中性原子</td><td>整机/系统</td><td>上市(MSFT)</td><td>集团支撑</td><td><b>42.0</b><br><small>40.81-44.92</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr></tbody></table><h3>潜力（7）</h3><table class='tbl'><thead><tr><th>公司</th><th>国别</th><th>路线</th><th>环节</th><th>市场</th><th>估值/市值</th><th>得分(95%CI)</th><th>配置标签</th></tr></thead><tbody><tr><td>太一量生</td><td>中国</td><td>中性原子</td><td>整机/系统</td><td>早期</td><td>未披露</td><td><b>41.33</b><br><small>38.06-42.17</small></td><td>高弹性期权(一级市场/Pre-IPO) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>QuEra</td><td>海外</td><td>中性原子</td><td>整机/系统</td><td>未上市</td><td>未披露</td><td><b>40.5</b><br><small>39.1-43.21</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>SandboxAQ</td><td>海外</td><td>量子AI/软件</td><td>软件/算法</td><td>未上市</td><td>~50亿美元</td><td><b>35.67</b><br><small>33.71-37.82</small></td><td>确定性核心(已上市/流动性好) / 卖铲人/部件(确定性较高)</td></tr>
+<tr><td>Q-CTRL</td><td>海外</td><td>量子控制软件</td><td>软件/算法</td><td>未上市</td><td>未披露</td><td><b>33.67</b><br><small>32.16-36.27</small></td><td>确定性核心(已上市/流动性好) / 卖铲人/部件(确定性较高)</td></tr>
+<tr><td>Riverlane</td><td>海外</td><td>量子纠错软件</td><td>软件/算法</td><td>未上市</td><td>未披露</td><td><b>32.67</b><br><small>31.14-35.26</small></td><td>确定性核心(已上市/流动性好) / 卖铲人/部件(确定性较高)</td></tr>
+<tr><td>Diraq</td><td>海外</td><td>硅自旋/超导</td><td>整机/系统</td><td>未上市</td><td>未披露</td><td><b>30.67</b><br><small>28.96-33.07</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr>
+<tr><td>Rigetti</td><td>海外</td><td>超导</td><td>整机/系统</td><td>上市</td><td>~25亿美元</td><td><b>30.5</b><br><small>29.05-33.17</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr></tbody></table>
+</div>
+<script>
+const series=[{"date": "2026-06-30", "composite": 55.52, "ci_low": 53.46, "ci_high": 57.58, "dim_average": {"tech_maturity": 60.0, "commercial": 38.0, "capital": 62.0, "route_certainty": 56.0, "supply_chain": 58.0, "policy_strategic": 62.0}}];
+const ctx=document.getElementById('trend').getContext('2d');
+new Chart(ctx,{type:'line',data:{labels:series.map(s=>s.date),datasets:[
+{label:'综合指数',data:series.map(s=>s.composite),borderColor:'#0d3b66',fill:false,tension:.3},
+{label:'CI上界',data:series.map(s=>s.ci_high),borderColor:'#3a7',borderDash:[4,4],fill:false},
+{label:'CI下界',data:series.map(s=>s.ci_low),borderColor:'#c0392b',borderDash:[4,4],fill:false}
+]},options:{scales:{y:{min:0,max:100}}}});
+new Chart(document.getElementById('radar').getContext('2d'),{type:'radar',data:{labels:["\u6280\u672f\u6210\u719f\u5ea6", "\u5546\u4e1a\u5316\u8fdb\u5ea6", "\u8d44\u672c\u70ed\u5ea6", "\u8def\u7ebf\u786e\u5b9a\u6027", "\u4f9b\u5e94\u94fe(\u5356\u94f2\u4eba)\u5730\u4f4d", "\u653f\u7b56/\u6218\u7565\u4ef7\u503c"],datasets:[{label:'六维均值',data:[60.0, 38.0, 62.0, 56.0, 58.0, 62.0],backgroundColor:'rgba(13,59,102,.25)',borderColor:'#0d3b66',pointBackgroundColor:'#0d3b66'}]},options:{scales:{r:{min:0,max:100}}}}});
+new Chart(document.getElementById('barrank').getContext('2d'),{type:'bar',data:{labels:["\u56fd\u76fe\u91cf\u5b50", "\u56fd\u4eea\u91cf\u5b50", "\u9891\u51c6\u6fc0\u5149", "\u672c\u6e90\u91cf\u5b50", "Quantinuum", "IBM", "IonQ", "\u56fe\u7075\u91cf\u5b50", "\u73bb\u8272\u91cf\u5b50", "Google Quantum(Willow)", "\u91cf\u65cb\u79d1\u6280", "\u4e2d\u79d1\u9177\u539f"],datasets:[{label:'综合得分',data:[70.67, 69.33, 67.0, 59.83, 56.67, 55.83, 52.17, 52.0, 51.0, 50.0, 48.0, 45.67],backgroundColor:'#0d3b66'}]},options:{indexAxis:'y',scales:{x:{min:0,max:100}}}}});
+</script>
+</body></html>

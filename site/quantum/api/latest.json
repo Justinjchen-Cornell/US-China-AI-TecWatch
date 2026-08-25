@@ -1,0 +1,854 @@
+{
+  "name": "QuantumCompete Index",
+  "date": "2026-06-30",
+  "composite": 55.52,
+  "ci_low": 53.46,
+  "ci_high": 57.58,
+  "dim_average": {
+    "tech_maturity": 60.0,
+    "commercial": 38.0,
+    "capital": 62.0,
+    "route_certainty": 56.0,
+    "supply_chain": 58.0,
+    "policy_strategic": 62.0
+  },
+  "dim_label": {
+    "tech_maturity": "技术成熟度",
+    "commercial": "商业化进度",
+    "capital": "资本热度",
+    "route_certainty": "路线确定性",
+    "supply_chain": "供应链(卖铲人)地位",
+    "policy_strategic": "政策/战略价值"
+  },
+  "companies": [
+    {
+      "name": "国盾量子",
+      "country": "中国",
+      "route": "量子通信/测控",
+      "role": "核心部件/通信",
+      "market": "上市(688027)",
+      "valuation": "~700亿元",
+      "score": 70.67,
+      "ci_low": 67.86,
+      "ci_high": 71.88,
+      "dim_norm": {},
+      "tier": "领跑",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "卖铲人/部件(确定性较高)"
+      ]
+    },
+    {
+      "name": "国仪量子",
+      "country": "中国",
+      "route": "测控/仪器",
+      "role": "核心部件",
+      "market": "上市(688628)",
+      "valuation": "发行前窗口",
+      "score": 69.33,
+      "ci_low": 66.65,
+      "ci_high": 70.72,
+      "dim_norm": {},
+      "tier": "领跑",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "卖铲人/部件(确定性较高)"
+      ]
+    },
+    {
+      "name": "频准激光",
+      "country": "中国",
+      "route": "量子激光器",
+      "role": "核心部件",
+      "market": "上市(688626)",
+      "valuation": "IPO获批",
+      "score": 67.0,
+      "ci_low": 64.35,
+      "ci_high": 68.45,
+      "dim_norm": {},
+      "tier": "领跑",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "卖铲人/部件(确定性较高)"
+      ]
+    },
+    {
+      "name": "本源量子",
+      "country": "中国",
+      "route": "超导",
+      "role": "整机/系统",
+      "market": "Pre-IPO",
+      "valuation": "~210亿元",
+      "score": 59.83,
+      "ci_low": 56.43,
+      "ci_high": 60.55,
+      "dim_norm": {},
+      "tier": "领跑",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "Quantinuum",
+      "country": "海外",
+      "route": "离子阱",
+      "role": "整机/系统",
+      "market": "上市(QNT)",
+      "valuation": "~157亿美元",
+      "score": 56.67,
+      "ci_low": 55.31,
+      "ci_high": 59.39,
+      "dim_norm": {},
+      "tier": "领跑",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "IBM",
+      "country": "海外",
+      "route": "超导",
+      "role": "整机/系统",
+      "market": "上市",
+      "valuation": "~2000亿美元(集团)",
+      "score": 55.83,
+      "ci_low": 55.29,
+      "ci_high": 59.4,
+      "dim_norm": {},
+      "tier": "领跑",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "IonQ",
+      "country": "海外",
+      "route": "离子阱",
+      "role": "整机/系统",
+      "market": "上市(IONQ)",
+      "valuation": "~85亿美元",
+      "score": 52.17,
+      "ci_low": 51.21,
+      "ci_high": 55.32,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "图灵量子",
+      "country": "中国",
+      "route": "光量子",
+      "role": "整机/系统",
+      "market": "Pre-IPO",
+      "valuation": "~70亿元",
+      "score": 52.0,
+      "ci_low": 48.66,
+      "ci_high": 52.78,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "玻色量子",
+      "country": "中国",
+      "route": "光量子(专用)",
+      "role": "整机/系统",
+      "market": "B轮/辅导",
+      "valuation": "~数十亿元",
+      "score": 51.0,
+      "ci_low": 47.94,
+      "ci_high": 52.06,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "高弹性期权(一级市场/Pre-IPO)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "Google Quantum(Willow)",
+      "country": "海外",
+      "route": "超导",
+      "role": "整机/系统",
+      "market": "未上市(Alphabet)",
+      "valuation": "集团支撑",
+      "score": 50.0,
+      "ci_low": 49.25,
+      "ci_high": 53.35,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "量旋科技",
+      "country": "中国",
+      "route": "超导控制",
+      "role": "核心部件",
+      "market": "成长",
+      "valuation": "未披露",
+      "score": 48.0,
+      "ci_low": 45.34,
+      "ci_high": 49.46,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "高弹性期权(一级市场/Pre-IPO)",
+        "卖铲人/部件(确定性较高)"
+      ]
+    },
+    {
+      "name": "中科酷原",
+      "country": "中国",
+      "route": "中性原子",
+      "role": "整机/系统",
+      "market": "成长/A轮",
+      "valuation": "未披露",
+      "score": 45.67,
+      "ci_low": 42.44,
+      "ci_high": 46.56,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "高弹性期权(一级市场/Pre-IPO)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "PsiQuantum",
+      "country": "海外",
+      "route": "光量子",
+      "role": "整机/系统",
+      "market": "未上市",
+      "valuation": "~105亿美元",
+      "score": 45.5,
+      "ci_low": 43.38,
+      "ci_high": 47.49,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "IQM",
+      "country": "海外",
+      "route": "超导",
+      "role": "整机/系统",
+      "market": "Pre-IPO(SPAC)",
+      "valuation": "~68亿美元",
+      "score": 44.67,
+      "ci_low": 43.42,
+      "ci_high": 47.54,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "Atom Computing",
+      "country": "海外",
+      "route": "中性原子",
+      "role": "整机/系统",
+      "market": "未上市(微软合作)",
+      "valuation": "未披露",
+      "score": 43.33,
+      "ci_low": 41.96,
+      "ci_high": 46.07,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "华翊量子",
+      "country": "中国",
+      "route": "离子阱",
+      "role": "整机/系统",
+      "market": "A轮",
+      "valuation": "未披露",
+      "score": 43.33,
+      "ci_low": 40.11,
+      "ci_high": 44.23,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "高弹性期权(一级市场/Pre-IPO)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "微软(中性原子)",
+      "country": "海外",
+      "route": "中性原子",
+      "role": "整机/系统",
+      "market": "上市(MSFT)",
+      "valuation": "集团支撑",
+      "score": 42.0,
+      "ci_low": 40.81,
+      "ci_high": 44.92,
+      "dim_norm": {},
+      "tier": "跟进",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "太一量生",
+      "country": "中国",
+      "route": "中性原子",
+      "role": "整机/系统",
+      "market": "早期",
+      "valuation": "未披露",
+      "score": 41.33,
+      "ci_low": 38.06,
+      "ci_high": 42.17,
+      "dim_norm": {},
+      "tier": "潜力",
+      "tags": [
+        "高弹性期权(一级市场/Pre-IPO)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "QuEra",
+      "country": "海外",
+      "route": "中性原子",
+      "role": "整机/系统",
+      "market": "未上市",
+      "valuation": "未披露",
+      "score": 40.5,
+      "ci_low": 39.1,
+      "ci_high": 43.21,
+      "dim_norm": {},
+      "tier": "潜力",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "SandboxAQ",
+      "country": "海外",
+      "route": "量子AI/软件",
+      "role": "软件/算法",
+      "market": "未上市",
+      "valuation": "~50亿美元",
+      "score": 35.67,
+      "ci_low": 33.71,
+      "ci_high": 37.82,
+      "dim_norm": {},
+      "tier": "潜力",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "卖铲人/部件(确定性较高)"
+      ]
+    },
+    {
+      "name": "Q-CTRL",
+      "country": "海外",
+      "route": "量子控制软件",
+      "role": "软件/算法",
+      "market": "未上市",
+      "valuation": "未披露",
+      "score": 33.67,
+      "ci_low": 32.16,
+      "ci_high": 36.27,
+      "dim_norm": {},
+      "tier": "潜力",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "卖铲人/部件(确定性较高)"
+      ]
+    },
+    {
+      "name": "Riverlane",
+      "country": "海外",
+      "route": "量子纠错软件",
+      "role": "软件/算法",
+      "market": "未上市",
+      "valuation": "未披露",
+      "score": 32.67,
+      "ci_low": 31.14,
+      "ci_high": 35.26,
+      "dim_norm": {},
+      "tier": "潜力",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "卖铲人/部件(确定性较高)"
+      ]
+    },
+    {
+      "name": "Diraq",
+      "country": "海外",
+      "route": "硅自旋/超导",
+      "role": "整机/系统",
+      "market": "未上市",
+      "valuation": "未披露",
+      "score": 30.67,
+      "ci_low": 28.96,
+      "ci_high": 33.07,
+      "dim_norm": {},
+      "tier": "潜力",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    },
+    {
+      "name": "Rigetti",
+      "country": "海外",
+      "route": "超导",
+      "role": "整机/系统",
+      "market": "上市",
+      "valuation": "~25亿美元",
+      "score": 30.5,
+      "ci_low": 29.05,
+      "ci_high": 33.17,
+      "dim_norm": {},
+      "tier": "潜力",
+      "tags": [
+        "确定性核心(已上市/流动性好)",
+        "整机赛道(技术路线博弈)"
+      ]
+    }
+  ],
+  "tiers": {
+    "领跑": [
+      {
+        "name": "国盾量子",
+        "country": "中国",
+        "route": "量子通信/测控",
+        "role": "核心部件/通信",
+        "market": "上市(688027)",
+        "valuation": "~700亿元",
+        "score": 70.67,
+        "ci_low": 67.86,
+        "ci_high": 71.88,
+        "dim_norm": {},
+        "tier": "领跑",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "卖铲人/部件(确定性较高)"
+        ]
+      },
+      {
+        "name": "国仪量子",
+        "country": "中国",
+        "route": "测控/仪器",
+        "role": "核心部件",
+        "market": "上市(688628)",
+        "valuation": "发行前窗口",
+        "score": 69.33,
+        "ci_low": 66.65,
+        "ci_high": 70.72,
+        "dim_norm": {},
+        "tier": "领跑",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "卖铲人/部件(确定性较高)"
+        ]
+      },
+      {
+        "name": "频准激光",
+        "country": "中国",
+        "route": "量子激光器",
+        "role": "核心部件",
+        "market": "上市(688626)",
+        "valuation": "IPO获批",
+        "score": 67.0,
+        "ci_low": 64.35,
+        "ci_high": 68.45,
+        "dim_norm": {},
+        "tier": "领跑",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "卖铲人/部件(确定性较高)"
+        ]
+      },
+      {
+        "name": "本源量子",
+        "country": "中国",
+        "route": "超导",
+        "role": "整机/系统",
+        "market": "Pre-IPO",
+        "valuation": "~210亿元",
+        "score": 59.83,
+        "ci_low": 56.43,
+        "ci_high": 60.55,
+        "dim_norm": {},
+        "tier": "领跑",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "Quantinuum",
+        "country": "海外",
+        "route": "离子阱",
+        "role": "整机/系统",
+        "market": "上市(QNT)",
+        "valuation": "~157亿美元",
+        "score": 56.67,
+        "ci_low": 55.31,
+        "ci_high": 59.39,
+        "dim_norm": {},
+        "tier": "领跑",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "IBM",
+        "country": "海外",
+        "route": "超导",
+        "role": "整机/系统",
+        "market": "上市",
+        "valuation": "~2000亿美元(集团)",
+        "score": 55.83,
+        "ci_low": 55.29,
+        "ci_high": 59.4,
+        "dim_norm": {},
+        "tier": "领跑",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      }
+    ],
+    "跟进": [
+      {
+        "name": "IonQ",
+        "country": "海外",
+        "route": "离子阱",
+        "role": "整机/系统",
+        "market": "上市(IONQ)",
+        "valuation": "~85亿美元",
+        "score": 52.17,
+        "ci_low": 51.21,
+        "ci_high": 55.32,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "图灵量子",
+        "country": "中国",
+        "route": "光量子",
+        "role": "整机/系统",
+        "market": "Pre-IPO",
+        "valuation": "~70亿元",
+        "score": 52.0,
+        "ci_low": 48.66,
+        "ci_high": 52.78,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "玻色量子",
+        "country": "中国",
+        "route": "光量子(专用)",
+        "role": "整机/系统",
+        "market": "B轮/辅导",
+        "valuation": "~数十亿元",
+        "score": 51.0,
+        "ci_low": 47.94,
+        "ci_high": 52.06,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "高弹性期权(一级市场/Pre-IPO)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "Google Quantum(Willow)",
+        "country": "海外",
+        "route": "超导",
+        "role": "整机/系统",
+        "market": "未上市(Alphabet)",
+        "valuation": "集团支撑",
+        "score": 50.0,
+        "ci_low": 49.25,
+        "ci_high": 53.35,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "量旋科技",
+        "country": "中国",
+        "route": "超导控制",
+        "role": "核心部件",
+        "market": "成长",
+        "valuation": "未披露",
+        "score": 48.0,
+        "ci_low": 45.34,
+        "ci_high": 49.46,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "高弹性期权(一级市场/Pre-IPO)",
+          "卖铲人/部件(确定性较高)"
+        ]
+      },
+      {
+        "name": "中科酷原",
+        "country": "中国",
+        "route": "中性原子",
+        "role": "整机/系统",
+        "market": "成长/A轮",
+        "valuation": "未披露",
+        "score": 45.67,
+        "ci_low": 42.44,
+        "ci_high": 46.56,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "高弹性期权(一级市场/Pre-IPO)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "PsiQuantum",
+        "country": "海外",
+        "route": "光量子",
+        "role": "整机/系统",
+        "market": "未上市",
+        "valuation": "~105亿美元",
+        "score": 45.5,
+        "ci_low": 43.38,
+        "ci_high": 47.49,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "IQM",
+        "country": "海外",
+        "route": "超导",
+        "role": "整机/系统",
+        "market": "Pre-IPO(SPAC)",
+        "valuation": "~68亿美元",
+        "score": 44.67,
+        "ci_low": 43.42,
+        "ci_high": 47.54,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "Atom Computing",
+        "country": "海外",
+        "route": "中性原子",
+        "role": "整机/系统",
+        "market": "未上市(微软合作)",
+        "valuation": "未披露",
+        "score": 43.33,
+        "ci_low": 41.96,
+        "ci_high": 46.07,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "华翊量子",
+        "country": "中国",
+        "route": "离子阱",
+        "role": "整机/系统",
+        "market": "A轮",
+        "valuation": "未披露",
+        "score": 43.33,
+        "ci_low": 40.11,
+        "ci_high": 44.23,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "高弹性期权(一级市场/Pre-IPO)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "微软(中性原子)",
+        "country": "海外",
+        "route": "中性原子",
+        "role": "整机/系统",
+        "market": "上市(MSFT)",
+        "valuation": "集团支撑",
+        "score": 42.0,
+        "ci_low": 40.81,
+        "ci_high": 44.92,
+        "dim_norm": {},
+        "tier": "跟进",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      }
+    ],
+    "潜力": [
+      {
+        "name": "太一量生",
+        "country": "中国",
+        "route": "中性原子",
+        "role": "整机/系统",
+        "market": "早期",
+        "valuation": "未披露",
+        "score": 41.33,
+        "ci_low": 38.06,
+        "ci_high": 42.17,
+        "dim_norm": {},
+        "tier": "潜力",
+        "tags": [
+          "高弹性期权(一级市场/Pre-IPO)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "QuEra",
+        "country": "海外",
+        "route": "中性原子",
+        "role": "整机/系统",
+        "market": "未上市",
+        "valuation": "未披露",
+        "score": 40.5,
+        "ci_low": 39.1,
+        "ci_high": 43.21,
+        "dim_norm": {},
+        "tier": "潜力",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "SandboxAQ",
+        "country": "海外",
+        "route": "量子AI/软件",
+        "role": "软件/算法",
+        "market": "未上市",
+        "valuation": "~50亿美元",
+        "score": 35.67,
+        "ci_low": 33.71,
+        "ci_high": 37.82,
+        "dim_norm": {},
+        "tier": "潜力",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "卖铲人/部件(确定性较高)"
+        ]
+      },
+      {
+        "name": "Q-CTRL",
+        "country": "海外",
+        "route": "量子控制软件",
+        "role": "软件/算法",
+        "market": "未上市",
+        "valuation": "未披露",
+        "score": 33.67,
+        "ci_low": 32.16,
+        "ci_high": 36.27,
+        "dim_norm": {},
+        "tier": "潜力",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "卖铲人/部件(确定性较高)"
+        ]
+      },
+      {
+        "name": "Riverlane",
+        "country": "海外",
+        "route": "量子纠错软件",
+        "role": "软件/算法",
+        "market": "未上市",
+        "valuation": "未披露",
+        "score": 32.67,
+        "ci_low": 31.14,
+        "ci_high": 35.26,
+        "dim_norm": {},
+        "tier": "潜力",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "卖铲人/部件(确定性较高)"
+        ]
+      },
+      {
+        "name": "Diraq",
+        "country": "海外",
+        "route": "硅自旋/超导",
+        "role": "整机/系统",
+        "market": "未上市",
+        "valuation": "未披露",
+        "score": 30.67,
+        "ci_low": 28.96,
+        "ci_high": 33.07,
+        "dim_norm": {},
+        "tier": "潜力",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      },
+      {
+        "name": "Rigetti",
+        "country": "海外",
+        "route": "超导",
+        "role": "整机/系统",
+        "market": "上市",
+        "valuation": "~25亿美元",
+        "score": 30.5,
+        "ci_low": 29.05,
+        "ci_high": 33.17,
+        "dim_norm": {},
+        "tier": "潜力",
+        "tags": [
+          "确定性核心(已上市/流动性好)",
+          "整机赛道(技术路线博弈)"
+        ]
+      }
+    ],
+    "观察": []
+  },
+  "allocation": {
+    "核心仓(已上市/卖铲人)": [],
+    "期权仓(一级/整机前沿)": []
+  }
+}
