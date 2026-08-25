@@ -1,0 +1,247 @@
+{
+  "generated_at": "2026-08-25T06:36:00.942962Z",
+  "composite": 6.5,
+  "dim_means": {
+    "mass": 6.0,
+    "comm": 6.36,
+    "tech": 7.52,
+    "cap": 6.44,
+    "supply": 6.56,
+    "policy": 5.8
+  },
+  "tiers": {
+    "领跑": [
+      "tsla",
+      "nvda",
+      "ldhb"
+    ],
+    "跟进": [
+      "yy",
+      "sfzk",
+      "dpkj",
+      "jyz",
+      "hs",
+      "figure",
+      "qnkj",
+      "tptz"
+    ],
+    "潜力": [
+      "xlqs",
+      "dzdq",
+      "mcdq",
+      "sdrj",
+      "jzg",
+      "dg",
+      "ybj",
+      "wj",
+      "ys",
+      "yj",
+      "lszn",
+      "yhty",
+      "pi",
+      "skild"
+    ]
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "id": "tsla",
+      "name": "特斯拉 Optimus",
+      "score": 8.0,
+      "role": "整机/场景方",
+      "country": "海外"
+    },
+    {
+      "rank": 2,
+      "id": "nvda",
+      "name": "英伟达 GR00T",
+      "score": 7.9,
+      "role": "算力/平台",
+      "country": "海外"
+    },
+    {
+      "rank": 3,
+      "id": "ldhb",
+      "name": "绿的谐波",
+      "score": 7.7,
+      "role": "核心部件",
+      "country": "中国"
+    },
+    {
+      "rank": 4,
+      "id": "yy",
+      "name": "宇树科技",
+      "score": 7.4,
+      "role": "整机",
+      "country": "中国"
+    },
+    {
+      "rank": 5,
+      "id": "sfzk",
+      "name": "三花智控",
+      "score": 7.4,
+      "role": "核心部件",
+      "country": "中国"
+    },
+    {
+      "rank": 6,
+      "id": "dpkj",
+      "name": "地平线机器人",
+      "score": 7.3,
+      "role": "算力底座",
+      "country": "中国"
+    },
+    {
+      "rank": 7,
+      "id": "jyz",
+      "name": "智元机器人",
+      "score": 7.2,
+      "role": "整机/生态",
+      "country": "中国"
+    },
+    {
+      "rank": 8,
+      "id": "hs",
+      "name": "禾赛科技",
+      "score": 7.1,
+      "role": "感知",
+      "country": "中国"
+    },
+    {
+      "rank": 9,
+      "id": "figure",
+      "name": "Figure AI",
+      "score": 6.6,
+      "role": "整机/大脑",
+      "country": "海外"
+    },
+    {
+      "rank": 10,
+      "id": "qnkj",
+      "name": "强脑科技",
+      "score": 6.5,
+      "role": "灵巧手/脑机",
+      "country": "中国"
+    },
+    {
+      "rank": 11,
+      "id": "tptz",
+      "name": "拓普集团",
+      "score": 6.5,
+      "role": "核心部件",
+      "country": "中国"
+    },
+    {
+      "rank": 12,
+      "id": "xlqs",
+      "name": "灵心巧手",
+      "score": 6.4,
+      "role": "灵巧手",
+      "country": "中国"
+    },
+    {
+      "rank": 13,
+      "id": "dzdq",
+      "name": "兆威机电",
+      "score": 6.4,
+      "role": "核心部件",
+      "country": "中国"
+    },
+    {
+      "rank": 14,
+      "id": "mcdq",
+      "name": "鸣志电器",
+      "score": 6.4,
+      "role": "核心部件",
+      "country": "中国"
+    },
+    {
+      "rank": 15,
+      "id": "sdrj",
+      "name": "速腾聚创",
+      "score": 6.4,
+      "role": "感知",
+      "country": "中国"
+    },
+    {
+      "rank": 16,
+      "id": "jzg",
+      "name": "极智嘉",
+      "score": 6.3,
+      "role": "应用集成",
+      "country": "中国"
+    },
+    {
+      "rank": 17,
+      "id": "dg",
+      "name": "地瓜机器人",
+      "score": 6.2,
+      "role": "算力底座",
+      "country": "中国"
+    },
+    {
+      "rank": 18,
+      "id": "ybj",
+      "name": "优必选",
+      "score": 6.1,
+      "role": "整机",
+      "country": "中国"
+    },
+    {
+      "rank": 19,
+      "id": "wj",
+      "name": "舞肌科技",
+      "score": 6.1,
+      "role": "灵巧手",
+      "country": "中国"
+    },
+    {
+      "rank": 20,
+      "id": "ys",
+      "name": "因时机器人",
+      "score": 5.8,
+      "role": "灵巧手",
+      "country": "中国"
+    },
+    {
+      "rank": 21,
+      "id": "yj",
+      "name": "越疆",
+      "score": 5.7,
+      "role": "整机",
+      "country": "中国"
+    },
+    {
+      "rank": 22,
+      "id": "lszn",
+      "name": "雷赛智能",
+      "score": 5.7,
+      "role": "核心部件",
+      "country": "中国"
+    },
+    {
+      "rank": 23,
+      "id": "yhty",
+      "name": "银河通用",
+      "score": 5.5,
+      "role": "整机/大脑",
+      "country": "中国"
+    },
+    {
+      "rank": 24,
+      "id": "pi",
+      "name": "Physical Intelligence",
+      "score": 4.7,
+      "role": "具身大脑",
+      "country": "海外"
+    },
+    {
+      "rank": 25,
+      "id": "skild",
+      "name": "Skild AI",
+      "score": 4.4,
+      "role": "具身大脑",
+      "country": "海外"
+    }
+  ]
+}

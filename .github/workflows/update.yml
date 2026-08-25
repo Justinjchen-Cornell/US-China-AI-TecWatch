@@ -54,6 +54,10 @@ jobs:
         run: |
           python bio/build_report.py --site-dir ../site/bio
 
+      - name: Build embodied sub-project
+        run: |
+          python embodied/build_report.py --site-dir ../site/embodied
+
       - name: Rebuild main site (refresh industry cards)
         run: python scripts/build_site.py
 

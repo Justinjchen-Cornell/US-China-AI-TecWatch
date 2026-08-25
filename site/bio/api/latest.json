@@ -13,9 +13,9 @@
       "market": "港股(2228)",
       "tier": "领跑",
       "config": "核心仓(卖铲人/平台)",
-      "score": 65.1,
+      "score": 65.2,
       "lo": 63.1,
-      "hi": 67.1,
+      "hi": 67.2,
       "dims": {
         "clinical": 40.0,
         "pipeline": 62.0,
@@ -57,7 +57,7 @@
       "config": "核心仓(卖铲人/平台)",
       "score": 62.5,
       "lo": 60.5,
-      "hi": 64.4,
+      "hi": 64.5,
       "dims": {
         "clinical": 72.0,
         "pipeline": 80.0,
@@ -76,7 +76,7 @@
       "market": "一级(拟IPO)",
       "tier": "跟进",
       "config": "核心仓(卖铲人/平台)",
-      "score": 59.4,
+      "score": 59.3,
       "lo": 57.3,
       "hi": 61.4,
       "dims": {
@@ -98,7 +98,7 @@
       "tier": "跟进",
       "config": "核心仓(卖铲人/平台)",
       "score": 55.8,
-      "lo": 53.9,
+      "lo": 53.7,
       "hi": 57.8,
       "dims": {
         "clinical": 34.0,
@@ -118,9 +118,9 @@
       "market": "一级",
       "tier": "跟进",
       "config": "信仰仓(远期)",
-      "score": 54.5,
-      "lo": 52.5,
-      "hi": 56.5,
+      "score": 54.4,
+      "lo": 52.4,
+      "hi": 56.4,
       "dims": {
         "clinical": 20.0,
         "pipeline": 66.0,
@@ -140,7 +140,7 @@
       "tier": "跟进",
       "config": "管线期权仓(高赔率)",
       "score": 54.3,
-      "lo": 52.3,
+      "lo": 52.2,
       "hi": 56.3,
       "dims": {
         "clinical": 46.0,
@@ -161,8 +161,8 @@
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
       "score": 53.9,
-      "lo": 52.0,
-      "hi": 55.9,
+      "lo": 51.9,
+      "hi": 55.8,
       "dims": {
         "clinical": 36.0,
         "pipeline": 54.0,
@@ -182,8 +182,8 @@
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
       "score": 53.9,
-      "lo": 51.8,
-      "hi": 55.9,
+      "lo": 51.9,
+      "hi": 56.0,
       "dims": {
         "clinical": 30.0,
         "pipeline": 44.0,
@@ -204,7 +204,7 @@
       "config": "核心仓(卖铲人/平台)",
       "score": 53.1,
       "lo": 51.1,
-      "hi": 55.0,
+      "hi": 55.1,
       "dims": {
         "clinical": 40.0,
         "pipeline": 50.0,
@@ -223,9 +223,9 @@
       "market": "港股",
       "tier": "潜力",
       "config": "路线/观察仓",
-      "score": 52.5,
-      "lo": 50.6,
-      "hi": 54.5,
+      "score": 52.4,
+      "lo": 50.4,
+      "hi": 54.4,
       "dims": {
         "clinical": 36.0,
         "pipeline": 58.0,
@@ -244,9 +244,9 @@
       "market": "美股",
       "tier": "潜力",
       "config": "路线/观察仓",
-      "score": 51.7,
+      "score": 51.8,
       "lo": 49.8,
-      "hi": 53.7,
+      "hi": 53.8,
       "dims": {
         "clinical": 28.0,
         "pipeline": 40.0,
@@ -265,8 +265,8 @@
       "market": "A股",
       "tier": "潜力",
       "config": "路线/观察仓",
-      "score": 50.7,
-      "lo": 48.7,
+      "score": 50.8,
+      "lo": 48.8,
       "hi": 52.8,
       "dims": {
         "clinical": 34.0,
@@ -278,6 +278,27 @@
       }
     },
     {
+      "id": "synchron",
+      "name": "Synchron",
+      "country": "澳大利亚",
+      "track": "脑机接口-微创/血管介入",
+      "role": "微创路线(血管介入)",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 50.0,
+      "lo": 48.0,
+      "hi": 52.0,
+      "dims": {
+        "clinical": 40.0,
+        "pipeline": 50.0,
+        "platform": 28.0,
+        "tech": 68.0,
+        "capital": 58.0,
+        "policy": 46.0
+      }
+    },
+    {
       "id": "mjkl",
       "name": "镁伽科技",
       "country": "中国",
@@ -286,9 +307,9 @@
       "market": "一级",
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
-      "score": 50.1,
+      "score": 50.0,
       "lo": 48.1,
-      "hi": 52.1,
+      "hi": 52.0,
       "dims": {
         "clinical": 18.0,
         "pipeline": 40.0,
@@ -320,27 +341,6 @@
       }
     },
     {
-      "id": "synchron",
-      "name": "Synchron",
-      "country": "澳大利亚",
-      "track": "脑机接口-微创/血管介入",
-      "role": "微创路线(血管介入)",
-      "market": "一级",
-      "tier": "潜力",
-      "config": "路线/观察仓",
-      "score": 49.8,
-      "lo": 47.8,
-      "hi": 51.9,
-      "dims": {
-        "clinical": 40.0,
-        "pipeline": 50.0,
-        "platform": 28.0,
-        "tech": 68.0,
-        "capital": 58.0,
-        "policy": 46.0
-      }
-    },
-    {
       "id": "xaira",
       "name": "Xaira Therapeutics",
       "country": "美国",
@@ -349,9 +349,9 @@
       "market": "一级",
       "tier": "潜力",
       "config": "信仰仓(远期)",
-      "score": 48.4,
+      "score": 48.3,
       "lo": 46.3,
-      "hi": 50.4,
+      "hi": 50.3,
       "dims": {
         "clinical": 14.0,
         "pipeline": 58.0,
@@ -391,8 +391,8 @@
       "market": "一级",
       "tier": "潜力",
       "config": "路线/观察仓",
-      "score": 47.2,
-      "lo": 45.2,
+      "score": 47.1,
+      "lo": 45.1,
       "hi": 49.1,
       "dims": {
         "clinical": 30.0,
@@ -414,7 +414,7 @@
       "config": "核心仓(卖铲人/平台)",
       "score": 46.0,
       "lo": 44.0,
-      "hi": 48.1,
+      "hi": 47.9,
       "dims": {
         "clinical": 10.0,
         "pipeline": 44.0,
@@ -433,8 +433,8 @@
       "market": "A股",
       "tier": "观察",
       "config": "核心仓(卖铲人/平台)",
-      "score": 45.0,
-      "lo": 43.0,
+      "score": 45.1,
+      "lo": 43.1,
       "hi": 47.1,
       "dims": {
         "clinical": 22.0,
@@ -454,8 +454,8 @@
       "market": "一级",
       "tier": "观察",
       "config": "核心仓(卖铲人/平台)",
-      "score": 44.4,
-      "lo": 42.4,
+      "score": 44.5,
+      "lo": 42.5,
       "hi": 46.4,
       "dims": {
         "clinical": 10.0,
@@ -475,7 +475,7 @@
       "market": "一级",
       "tier": "观察",
       "config": "路线/观察仓",
-      "score": 43.6,
+      "score": 43.5,
       "lo": 41.6,
       "hi": 45.5,
       "dims": {
@@ -497,8 +497,8 @@
       "tier": "观察",
       "config": "路线/观察仓",
       "score": 43.0,
-      "lo": 40.9,
-      "hi": 45.1,
+      "lo": 41.1,
+      "hi": 45.0,
       "dims": {
         "clinical": 28.0,
         "pipeline": 46.0,
@@ -517,9 +517,9 @@
       "market": "A股",
       "tier": "观察",
       "config": "路线/观察仓",
-      "score": 40.6,
+      "score": 40.7,
       "lo": 38.6,
-      "hi": 42.6,
+      "hi": 42.7,
       "dims": {
         "clinical": 24.0,
         "pipeline": 34.0,
