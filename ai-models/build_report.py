@@ -22,13 +22,21 @@ os.makedirs(SITE, exist_ok=True)
 def build():
     a = analyze()
     # latest.json
+    import os as _os, sys as _sys
+    _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "scripts"))
+    from industry_index import compute as _obj_compute
+    _obj = _obj_compute(json.load(open(_os.path.join(BASE, "data/industry_indicators.json"), encoding="utf-8"))["indicators"])
     _all = [it for t in a["tiers"].values() for it in t]
     _cn = [it["score"] for it in _all if it.get("camp") == "中国"]
     _us = [it["score"] for it in _all if it.get("camp") == "海外"]
     payload = {
         "period": a["period"],
-        "index": round(sum(_cn) / len(_cn), 1) if _cn else None,
-        "index_note": "池内均分·中国阵营公司得分均值(非竞争指数)",
+        "index": _obj["index"],
+        "ci_low": _obj["index_low"],
+        "ci_high": _obj["index_high"],
+        "confidence": _obj["confidence"],
+        "index_note": "国家层客观指标(顶尖差距/开源/成本/调用量/人才)",
+        "pool_avg": round(sum(_cn) / len(_cn), 1) if _cn else None,
         "camp_avg": {"中国": round(sum(_cn)/len(_cn), 1) if _cn else None,
                      "海外": round(sum(_us)/len(_us), 1) if _us else None},
         "dim_avg": a["dim_avg"],

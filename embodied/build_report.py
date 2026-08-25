@@ -24,10 +24,16 @@ follow=[c for c in comps_sorted if 6.5<=c["score"]<7.5]
 pot=[c for c in comps_sorted if c["score"]<6.5]
 
 os.makedirs(os.path.join(SITE_DIR, "api"), exist_ok=True)
+import sys as _sys
+_sys.path.insert(0, os.path.join(_HERE, "..", "scripts"))
+from industry_index import compute as _obj_compute
+_obj = _obj_compute(_json.load(open(os.path.join(_HERE, "data/industry_indicators.json"), encoding="utf-8"))["indicators"])
 _json.dump({"generated_at":datetime.datetime.utcnow().isoformat()+"Z","as_of":"2026Q2",
-  "composite":composite,"index":round(composite*10,1),
-  "index_note":"池内均分·全池公司六维加权均值(非竞争指数)",
-  "index_scale":"0-100 (10x of internal 0-10 composite)","dim_means":MEANS,
+  "composite":_obj["index"],"index":_obj["index"],
+  "ci_low":_obj["index_low"],"ci_high":_obj["index_high"],"confidence":_obj["confidence"],
+  "index_note":"国家层客观指标(出货/灵巧手/成本/专利/VLA差距)",
+  "pool_avg":round(composite*10,1),
+  "index_scale":"objective 0-100; pool_avg = 10x of internal 0-10 composite","dim_means":MEANS,
   "tiers":{"领跑":[c["id"] for c in lead],"跟进":[c["id"] for c in follow],"潜力":[c["id"] for c in pot]},
   "ranking":[{"rank":i+1,"id":c["id"],"name":c["name"],"score":c["score"],"role":c["role"],"country":c["country"]} for i,c in enumerate(comps_sorted)]},
   open(os.path.join(SITE_DIR, "api/latest.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=2)

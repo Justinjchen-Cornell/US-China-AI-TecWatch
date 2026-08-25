@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """构建量子计算投资跟踪 Dashboard：生成 API(json) + index.html（六维雷达+梯队）。"""
 import json
-import sys
+import sys as _sys
 import argparse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT))
+_sys.path.insert(0, str(ROOT))
 
 from engine.analysis import build_report
 from engine.scoring import score_snapshot, DIMENSIONS
@@ -28,7 +28,16 @@ companies = json.load(open(DATA / "companies.json", encoding="utf-8"))
 report = build_report(snapshot, companies)
 
 # latest.json
-report["index_note"] = "产业维度快照评估(技术/商业化/资本/路线/供应链/政策)"
+_sys.path.insert(0, str(ROOT.parent / "scripts"))
+from industry_index import compute as _obj_compute
+_obj = _obj_compute(json.load(open(ROOT / "data" / "industry_indicators.json", encoding="utf-8"))["indicators"])
+report["pool_avg"] = report["composite"]
+report["composite"] = _obj["index"]
+report["index"] = _obj["index"]
+report["ci_low"] = _obj["index_low"]
+report["ci_high"] = _obj["index_high"]
+report["confidence"] = _obj["confidence"]
+report["index_note"] = "国家层客观指标(逻辑比特/物理比特/专利/论文/政府投入)"
 (OUT / "latest.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # series.json：跨期趋势（当前仅一期，预留结构）

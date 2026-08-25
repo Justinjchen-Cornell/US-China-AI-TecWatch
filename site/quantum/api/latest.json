@@ -1,9 +1,9 @@
 {
   "name": "QuantumCompete Index",
   "date": "2026-06-30",
-  "composite": 55.52,
-  "ci_low": 53.46,
-  "ci_high": 57.58,
+  "composite": 43.8,
+  "ci_low": 42.8,
+  "ci_high": 44.5,
   "dim_average": {
     "tech_maturity": 60.0,
     "commercial": 38.0,
@@ -851,5 +851,8 @@
     "核心仓(已上市/卖铲人)": [],
     "期权仓(一级/整机前沿)": []
   },
-  "index_note": "产业维度快照评估(技术/商业化/资本/路线/供应链/政策)"
+  "pool_avg": 55.52,
+  "index": 43.8,
+  "confidence": 0.63,
+  "index_note": "国家层客观指标(逻辑比特/物理比特/专利/论文/政府投入)"
 }

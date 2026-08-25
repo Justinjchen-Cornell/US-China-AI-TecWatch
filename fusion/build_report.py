@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """构建核聚变投资分析报告 + Dashboard (index.html)。"""
-import json, os, statistics, argparse
+import json, os, statistics, argparse, sys as _sys
 from engine.analysis import analyze
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -19,10 +19,18 @@ os.makedirs(os.path.join(SITE_DIR, "api"), exist_ok=True)
 # ---- latest.json ----
 def ser(s):
     return {k: s[k] for k in ["id","name","country","route","role","tier","config","market","score","lo","hi"]}
+_sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+from industry_index import compute as _obj_compute
+_obj = _obj_compute(json.load(open(os.path.join(ROOT, "data/industry_indicators.json"), encoding="utf-8"))["indicators"])
 latest = {
     "as_of": SNAP["as_of"], "note": SNAP["note"],
+    "index": _obj["index"],
+    "ci_low": _obj["index_low"],
+    "ci_high": _obj["index_high"],
+    "confidence": _obj["confidence"],
+    "index_note": "国家层客观指标(等离子体维持/磁体/点火/专利/投入)",
+    "pool_avg": round(statistics.mean(s["score"] for s in SCORED), 1),
     "fusion_index": round(statistics.mean(s["score"] for s in SCORED), 1),
-    "index_note": "池内均分·全池公司六维加权均值(非竞争指数)",
     "n": len(SCORED),
     "companies": [ser(s) for s in SCORED],
 }

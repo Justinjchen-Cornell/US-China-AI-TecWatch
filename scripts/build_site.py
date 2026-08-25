@@ -76,6 +76,10 @@ def main():
                 rec["ci"] = d.get("ci_low")
                 rec["ci2"] = d.get("ci_high")
                 rec["conf"] = d.get("data_confidence")
+                if rec["conf"] is None:
+                    rec["conf"] = d.get("confidence")
+                    if isinstance(rec["conf"], float) and rec["conf"] <= 1:
+                        rec["conf"] = round(rec["conf"] * 100, 1)
                 rec["date"] = (d.get("updated") or d.get("snapshot_date")
                                or d.get("period") or d.get("date") or d.get("as_of"))
                 if d.get("index_note"):

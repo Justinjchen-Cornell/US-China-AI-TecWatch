@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "industry": "ai-models",
+  "industry_cn": "AI模型",
+  "as_of": "2026-06-30",
+  "description": "AI大模型行业客观指标（国家层）。与主站智能维度部分指标同源复用。数值为公开资料近似整理，仅供趋势研究。",
+  "indicators": [
+    {
+      "id": "frontier_gap",
+      "name": "顶尖模型性能差距（LMArena Elo分差%）",
+      "value": 2.7,
+      "direction": -1,
+      "ref_min": 0,
+      "ref_max": 20,
+      "unit": "%",
+      "source_reliability": 0.9,
+      "source": "Stanford AI Index 2026",
+      "note": "差距越小越好；2.7%为2026年估算，尖端已接近但未超越"
+    },
+    {
+      "id": "open_source_share",
+      "name": "中国开源模型HuggingFace下载份额",
+      "value": 40,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "%",
+      "source_reliability": 0.8,
+      "source": "ATOM Report",
+      "note": "DeepSeek/Qwen等开源生态全球领先"
+    },
+    {
+      "id": "inference_cost_ratio",
+      "name": "推理成本比（中国/美国）",
+      "value": 0.1,
+      "direction": -1,
+      "ref_min": 0,
+      "ref_max": 1,
+      "unit": "倍",
+      "source_reliability": 0.7,
+      "source": "公开API定价近似（DeepSeek等）",
+      "note": "中国推理成本约为美国1/10，成本越低越有利"
+    },
+    {
+      "id": "token_daily_calls",
+      "name": "中国大模型日调用量（亿次）",
+      "value": 140,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 2000,
+      "log_scale": true,
+      "unit": "亿次/日",
+      "source_reliability": 0.8,
+      "source": "行业公开披露近似",
+      "note": "2025年9月约140亿次/日，2026年持续增长"
+    },
+    {
+      "id": "top_talent_share",
+      "name": "NeurIPS一作占比（中国）",
+      "value": 43,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "%",
+      "source_reliability": 0.8,
+      "source": "论文库统计近似",
+      "note": "顶尖AI研究者人才基础"
+    }
+  ]
+}

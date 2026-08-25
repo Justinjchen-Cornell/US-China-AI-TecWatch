@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "industry": "quantum",
+  "industry_cn": "量子计算",
+  "as_of": "2026-06-30",
+  "description": "量子计算行业客观指标（国家层）。数值为公开资料近似整理，仅供趋势研究，不构成投资建议。direction: 1=越大越利好中国, -1=越小越利好中国。",
+  "indicators": [
+    {
+      "id": "logical_qubit_gap",
+      "name": "逻辑量子比特数差距（中国/美国占比%）",
+      "value": 15,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "%",
+      "source_reliability": 0.6,
+      "source": "公开报道近似（Google/IBM 逻辑比特演示 vs 中国祖冲之/本源）",
+      "note": "美国2025-26已演示数十逻辑比特，中国仍以物理比特为主；反映尖端单点差距"
+    },
+    {
+      "id": "physical_qubit_share",
+      "name": "物理量子比特数全球占比（中国）",
+      "value": 30,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "%",
+      "source_reliability": 0.65,
+      "source": "公开设备披露近似（中科大504/本源72 vs IBM 1121/Google 105等）",
+      "note": "按主要超导/光量子设备量子比特数合计估算"
+    },
+    {
+      "id": "patent_share",
+      "name": "量子计算专利全球占比（中国）",
+      "value": 30,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "%",
+      "source_reliability": 0.65,
+      "source": "WIPO/专利库统计近似",
+      "note": "近五年中国量子专利增长较快"
+    },
+    {
+      "id": "paper_share",
+      "name": "量子计算高被引论文占比（中国）",
+      "value": 35,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "%",
+      "source_reliability": 0.7,
+      "source": "Nature Index/论文库统计近似",
+      "note": "中科大、清华等在量子纠错/光量子方向论文产出领先"
+    },
+    {
+      "id": "funding_ratio",
+      "name": "政府量子投入比（中国/美国倍率）",
+      "value": 1.5,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 5,
+      "unit": "倍",
+      "source_reliability": 0.55,
+      "source": "公开预算近似（中国量子专项 vs 美国NQI）",
+      "note": "中国约150亿人民币/年，美国NQI约10亿美元/年"
+    }
+  ]
+}

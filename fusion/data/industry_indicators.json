@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "industry": "fusion",
+  "industry_cn": "可控核聚变",
+  "as_of": "2026-06-30",
+  "description": "可控核聚变行业客观指标（国家层）。数值为公开资料近似整理，仅供趋势研究，不构成投资建议。",
+  "indicators": [
+    {
+      "id": "plasma_sustain_time",
+      "name": "等离子体维持时间纪录（中国EAST，秒）",
+      "value": 1066,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 1200,
+      "unit": "秒",
+      "source_reliability": 0.75,
+      "source": "中科院EAST官方披露（2025年1066秒H模纪录）",
+      "note": "对比ITER 400秒设计目标；中国在托卡马克长脉冲维持上领先"
+    },
+    {
+      "id": "magnet_field_ratio",
+      "name": "高温超导磁体场强比（中国/美国）",
+      "value": 0.75,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 2,
+      "unit": "倍",
+      "source_reliability": 0.55,
+      "source": "公开披露近似（美国CFS 20T+ vs 中国能量奇点/BEST路线）",
+      "note": "美国私营路线领先，中国BEST国家工程追赶中"
+    },
+    {
+      "id": "ignition_progress",
+      "name": "点火里程碑进度（中国，0-100）",
+      "value": 35,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "分",
+      "source_reliability": 0.55,
+      "source": "公开资料定性评估（美国NIF 2022已点火Q>1）",
+      "note": "中国尚未实现点火；BEST装置建设为2027-2029关键节点"
+    },
+    {
+      "id": "patent_share",
+      "name": "聚变专利全球占比（中国）",
+      "value": 40,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 100,
+      "unit": "%",
+      "source_reliability": 0.6,
+      "source": "专利库统计近似",
+      "note": "近十年中国聚变专利增长快，2025年已居前列"
+    },
+    {
+      "id": "funding_ratio",
+      "name": "政府聚变投入比（中国/美国倍率）",
+      "value": 1.5,
+      "direction": 1,
+      "ref_min": 0,
+      "ref_max": 5,
+      "unit": "倍",
+      "source_reliability": 0.55,
+      "source": "公开预算近似（中国聚变专项+ITER配套 vs 美国DOE FES）",
+      "note": "中国另有BEST等国家工程投资"
+    }
+  ]
+}
