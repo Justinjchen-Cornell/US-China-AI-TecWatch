@@ -1,0 +1,533 @@
+{
+  "as_of": "2026-06-30",
+  "note": "2026Q2 AI生命科学公开信息近似快照，指标原始值为主观近似整理，仅供趋势研究，不构成投资建议。",
+  "life_index": 51.4,
+  "n": 25,
+  "companies": [
+    {
+      "id": "xtpi",
+      "name": "晶泰控股 (XtalPi)",
+      "country": "中国",
+      "track": "AI制药-平台型",
+      "role": "卖铲人(AI+CRO平台+机器人实验室)",
+      "market": "港股(2228)",
+      "tier": "领跑",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 65.1,
+      "lo": 63.1,
+      "hi": 67.2,
+      "dims": {
+        "clinical": 40.0,
+        "pipeline": 62.0,
+        "platform": 82.0,
+        "tech": 78.0,
+        "capital": 72.0,
+        "policy": 60.0
+      }
+    },
+    {
+      "id": "insilico",
+      "name": "英矽智能 (Insilico)",
+      "country": "中国",
+      "track": "AI制药-管线型",
+      "role": "管线型(AI发现+自主管线)",
+      "market": "港股(3696)",
+      "tier": "领跑",
+      "config": "管线期权仓(高赔率)",
+      "score": 62.8,
+      "lo": 60.7,
+      "hi": 64.8,
+      "dims": {
+        "clinical": 58.0,
+        "pipeline": 74.0,
+        "platform": 52.0,
+        "tech": 70.0,
+        "capital": 66.0,
+        "policy": 56.0
+      }
+    },
+    {
+      "id": "hrun",
+      "name": "恒瑞医药 (600276)",
+      "country": "中国",
+      "track": "传统药企AI化",
+      "role": "超级甲方(传统药企AI化)",
+      "market": "A股",
+      "tier": "领跑",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 62.6,
+      "lo": 60.6,
+      "hi": 64.5,
+      "dims": {
+        "clinical": 72.0,
+        "pipeline": 80.0,
+        "platform": 58.0,
+        "tech": 42.0,
+        "capital": 48.0,
+        "policy": 68.0
+      }
+    },
+    {
+      "id": "brainco",
+      "name": "强脑科技 (BrainCo)",
+      "country": "中国",
+      "track": "脑机接口-非侵入",
+      "role": "卖铲人(非侵入+灵巧手+消费)",
+      "market": "一级(拟IPO)",
+      "tier": "跟进",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 59.3,
+      "lo": 57.3,
+      "hi": 61.3,
+      "dims": {
+        "clinical": 42.0,
+        "pipeline": 56.0,
+        "platform": 60.0,
+        "tech": 66.0,
+        "capital": 62.0,
+        "policy": 72.0
+      }
+    },
+    {
+      "id": "sdgr",
+      "name": "Schrödinger (SDGR)",
+      "country": "美国",
+      "track": "AI制药-平台型",
+      "role": "卖铲人(计算化学SaaS)",
+      "market": "美股",
+      "tier": "跟进",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 55.8,
+      "lo": 53.8,
+      "hi": 57.7,
+      "dims": {
+        "clinical": 34.0,
+        "pipeline": 56.0,
+        "platform": 68.0,
+        "tech": 74.0,
+        "capital": 48.0,
+        "policy": 44.0
+      }
+    },
+    {
+      "id": "isomorphic",
+      "name": "Isomorphic Labs",
+      "country": "英国",
+      "track": "AI制药-平台型",
+      "role": "远期信仰仓(DeepMind系)",
+      "market": "一级",
+      "tier": "跟进",
+      "config": "信仰仓(远期)",
+      "score": 54.6,
+      "lo": 52.6,
+      "hi": 56.6,
+      "dims": {
+        "clinical": 20.0,
+        "pipeline": 66.0,
+        "platform": 30.0,
+        "tech": 92.0,
+        "capital": 78.0,
+        "policy": 48.0
+      }
+    },
+    {
+      "id": "rxrx",
+      "name": "Recursion (RXRX)",
+      "country": "美国",
+      "track": "AI制药-管线型",
+      "role": "管线型(高通量成像AI)",
+      "market": "美股",
+      "tier": "跟进",
+      "config": "管线期权仓(高赔率)",
+      "score": 54.2,
+      "lo": 52.2,
+      "hi": 56.2,
+      "dims": {
+        "clinical": 46.0,
+        "pipeline": 66.0,
+        "platform": 38.0,
+        "tech": 68.0,
+        "capital": 56.0,
+        "policy": 42.0
+      }
+    },
+    {
+      "id": "owkin",
+      "name": "Owkin",
+      "country": "法国",
+      "track": "AI制药-平台型",
+      "role": "联邦学习/医院数据平台",
+      "market": "一级",
+      "tier": "跟进",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 54.0,
+      "lo": 52.0,
+      "hi": 56.0,
+      "dims": {
+        "clinical": 36.0,
+        "pipeline": 54.0,
+        "platform": 48.0,
+        "tech": 70.0,
+        "capital": 58.0,
+        "policy": 52.0
+      }
+    },
+    {
+      "id": "bgzz",
+      "name": "华大智造 (688114)",
+      "country": "中国",
+      "track": "测序/数据底座",
+      "role": "卖水人(测序仪)",
+      "market": "A股",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 53.9,
+      "lo": 52.0,
+      "hi": 55.9,
+      "dims": {
+        "clinical": 30.0,
+        "pipeline": 44.0,
+        "platform": 62.0,
+        "tech": 72.0,
+        "capital": 44.0,
+        "policy": 66.0
+      }
+    },
+    {
+      "id": "tem",
+      "name": "Tempus AI (TEM)",
+      "country": "美国",
+      "track": "测序/数据底座",
+      "role": "临床AI+真实世界数据",
+      "market": "美股",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 53.1,
+      "lo": 51.1,
+      "hi": 55.0,
+      "dims": {
+        "clinical": 40.0,
+        "pipeline": 50.0,
+        "platform": 54.0,
+        "tech": 66.0,
+        "capital": 50.0,
+        "policy": 46.0
+      }
+    },
+    {
+      "id": "jtyy",
+      "name": "剂泰医药",
+      "country": "中国",
+      "track": "AI制剂/递送",
+      "role": "AI+递送系统稀缺",
+      "market": "港股",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 52.4,
+      "lo": 50.4,
+      "hi": 54.4,
+      "dims": {
+        "clinical": 36.0,
+        "pipeline": 58.0,
+        "platform": 42.0,
+        "tech": 66.0,
+        "capital": 52.0,
+        "policy": 54.0
+      }
+    },
+    {
+      "id": "ilmn",
+      "name": "Illumina (ILMN)",
+      "country": "美国",
+      "track": "测序/数据底座",
+      "role": "测序仪全球龙头",
+      "market": "美股",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 51.8,
+      "lo": 49.8,
+      "hi": 53.8,
+      "dims": {
+        "clinical": 28.0,
+        "pipeline": 40.0,
+        "platform": 66.0,
+        "tech": 76.0,
+        "capital": 44.0,
+        "policy": 42.0
+      }
+    },
+    {
+      "id": "cdqx",
+      "name": "成都先导 (688222)",
+      "country": "中国",
+      "track": "AI制剂/递送",
+      "role": "DEL筛选+AI+CRO",
+      "market": "A股",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 50.8,
+      "lo": 48.8,
+      "hi": 52.7,
+      "dims": {
+        "clinical": 34.0,
+        "pipeline": 52.0,
+        "platform": 54.0,
+        "tech": 60.0,
+        "capital": 36.0,
+        "policy": 56.0
+      }
+    },
+    {
+      "id": "mjkl",
+      "name": "镁伽科技",
+      "country": "中国",
+      "track": "自动化实验室",
+      "role": "卖铲人(自动化机器人实验室)",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 50.1,
+      "lo": 48.0,
+      "hi": 52.1,
+      "dims": {
+        "clinical": 18.0,
+        "pipeline": 40.0,
+        "platform": 56.0,
+        "tech": 68.0,
+        "capital": 62.0,
+        "policy": 50.0
+      }
+    },
+    {
+      "id": "synchron",
+      "name": "Synchron",
+      "country": "澳大利亚",
+      "track": "脑机接口-微创/血管介入",
+      "role": "微创路线(血管介入)",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 49.9,
+      "lo": 47.9,
+      "hi": 51.8,
+      "dims": {
+        "clinical": 40.0,
+        "pipeline": 50.0,
+        "platform": 28.0,
+        "tech": 68.0,
+        "capital": 58.0,
+        "policy": 46.0
+      }
+    },
+    {
+      "id": "neuralink",
+      "name": "Neuralink",
+      "country": "美国",
+      "track": "脑机接口-侵入式",
+      "role": "信仰定价(侵入式芯片)",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "信仰仓(远期)",
+      "score": 49.8,
+      "lo": 47.8,
+      "hi": 51.8,
+      "dims": {
+        "clinical": 30.0,
+        "pipeline": 48.0,
+        "platform": 18.0,
+        "tech": 86.0,
+        "capital": 80.0,
+        "policy": 34.0
+      }
+    },
+    {
+      "id": "xaira",
+      "name": "Xaira Therapeutics",
+      "country": "美国",
+      "track": "AI制药-平台型",
+      "role": "资本密集型新锐",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "信仰仓(远期)",
+      "score": 48.3,
+      "lo": 46.3,
+      "hi": 50.3,
+      "dims": {
+        "clinical": 14.0,
+        "pipeline": 58.0,
+        "platform": 20.0,
+        "tech": 76.0,
+        "capital": 84.0,
+        "policy": 40.0
+      }
+    },
+    {
+      "id": "xkyy",
+      "name": "翔宇医疗",
+      "country": "中国",
+      "track": "脑机接口-非侵入",
+      "role": "脑机康复联动(康复器械)",
+      "market": "A股",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 47.3,
+      "lo": 45.2,
+      "hi": 49.3,
+      "dims": {
+        "clinical": 38.0,
+        "pipeline": 42.0,
+        "platform": 52.0,
+        "tech": 44.0,
+        "capital": 30.0,
+        "policy": 60.0
+      }
+    },
+    {
+      "id": "wszh",
+      "name": "望石智慧",
+      "country": "中国",
+      "track": "AI制药-管线型",
+      "role": "AI小分子药物发现",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "score": 47.2,
+      "lo": 45.2,
+      "hi": 49.2,
+      "dims": {
+        "clinical": 30.0,
+        "pipeline": 54.0,
+        "platform": 34.0,
+        "tech": 62.0,
+        "capital": 46.0,
+        "policy": 44.0
+      }
+    },
+    {
+      "id": "dskj",
+      "name": "深势科技",
+      "country": "中国",
+      "track": "蛋白质设计/虚拟细胞",
+      "role": "AI for Science平台",
+      "market": "一级",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 46.1,
+      "lo": 44.1,
+      "hi": 48.1,
+      "dims": {
+        "clinical": 10.0,
+        "pipeline": 44.0,
+        "platform": 34.0,
+        "tech": 78.0,
+        "capital": 58.0,
+        "policy": 48.0
+      }
+    },
+    {
+      "id": "nxzy",
+      "name": "诺禾致源 (688315)",
+      "country": "中国",
+      "track": "测序/数据底座",
+      "role": "卖水人(基因数据服务)",
+      "market": "A股",
+      "tier": "观察",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 45.0,
+      "lo": 43.0,
+      "hi": 47.0,
+      "dims": {
+        "clinical": 22.0,
+        "pipeline": 36.0,
+        "platform": 52.0,
+        "tech": 56.0,
+        "capital": 34.0,
+        "policy": 54.0
+      }
+    },
+    {
+      "id": "btss",
+      "name": "百图生科",
+      "country": "中国",
+      "track": "蛋白质设计/虚拟细胞",
+      "role": "生物大模型平台",
+      "market": "一级",
+      "tier": "观察",
+      "config": "核心仓(卖铲人/平台)",
+      "score": 44.4,
+      "lo": 42.4,
+      "hi": 46.4,
+      "dims": {
+        "clinical": 10.0,
+        "pipeline": 46.0,
+        "platform": 30.0,
+        "tech": 74.0,
+        "capital": 54.0,
+        "policy": 46.0
+      }
+    },
+    {
+      "id": "precision",
+      "name": "Precision Neuroscience",
+      "country": "美国",
+      "track": "脑机接口-侵入式",
+      "role": "薄膜阵列侵入式",
+      "market": "一级",
+      "tier": "观察",
+      "config": "路线/观察仓",
+      "score": 43.6,
+      "lo": 41.6,
+      "hi": 45.6,
+      "dims": {
+        "clinical": 26.0,
+        "pipeline": 44.0,
+        "platform": 20.0,
+        "tech": 66.0,
+        "capital": 54.0,
+        "policy": 38.0
+      }
+    },
+    {
+      "id": "sciencecorp",
+      "name": "Science Corp",
+      "country": "美国",
+      "track": "脑机接口-微创/血管介入",
+      "role": "视觉修复(Prima)",
+      "market": "一级",
+      "tier": "观察",
+      "config": "路线/观察仓",
+      "score": 43.0,
+      "lo": 41.0,
+      "hi": 45.0,
+      "dims": {
+        "clinical": 28.0,
+        "pipeline": 46.0,
+        "platform": 18.0,
+        "tech": 62.0,
+        "capital": 50.0,
+        "policy": 40.0
+      }
+    },
+    {
+      "id": "cytx",
+      "name": "诚益通 (300430)",
+      "country": "中国",
+      "track": "脑机接口-非侵入",
+      "role": "脑机康复联动",
+      "market": "A股",
+      "tier": "观察",
+      "config": "路线/观察仓",
+      "score": 40.7,
+      "lo": 38.7,
+      "hi": 42.7,
+      "dims": {
+        "clinical": 24.0,
+        "pipeline": 34.0,
+        "platform": 44.0,
+        "tech": 40.0,
+        "capital": 28.0,
+        "policy": 52.0
+      }
+    }
+  ]
+}

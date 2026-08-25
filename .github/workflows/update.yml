@@ -50,6 +50,10 @@ jobs:
         run: |
           python fusion/build_report.py --site-dir ../site/fusion
 
+      - name: Build bio sub-project
+        run: |
+          python bio/build_report.py --site-dir ../site/bio
+
       - name: Rebuild main site (refresh industry cards)
         run: python scripts/build_site.py
 
