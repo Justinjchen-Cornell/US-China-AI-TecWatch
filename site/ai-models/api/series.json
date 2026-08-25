@@ -1,74 +1,20 @@
 [
   {
-    "period": "2026Q2",
-    "id": "alibaba",
-    "name": "阿里巴巴",
-    "score": 58.089396640332716
+    "date": "2024Q3",
+    "index": 45.1,
+    "ci_low": 43.8,
+    "ci_high": 45.8
   },
   {
-    "period": "2026Q2",
-    "id": "google",
-    "name": "谷歌 Alphabet",
-    "score": 57.554603151673795
+    "date": "2025Q2",
+    "index": 49.5,
+    "ci_low": 48.8,
+    "ci_high": 50.1
   },
   {
-    "period": "2026Q2",
-    "id": "anthropic",
-    "name": "Anthropic",
-    "score": 51.24234266421557
-  },
-  {
-    "period": "2026Q2",
-    "id": "deepseek",
-    "name": "DeepSeek",
-    "score": 50.65005828593034
-  },
-  {
-    "period": "2026Q2",
-    "id": "microsoft",
-    "name": "微软",
-    "score": 48.17490257041281
-  },
-  {
-    "period": "2026Q2",
-    "id": "zhipu",
-    "name": "智谱 AI",
-    "score": 43.763857967880725
-  },
-  {
-    "period": "2026Q2",
-    "id": "openai",
-    "name": "OpenAI",
-    "score": 43.336070604747576
-  },
-  {
-    "period": "2026Q2",
-    "id": "tencent",
-    "name": "腾讯",
-    "score": 41.2206838479154
-  },
-  {
-    "period": "2026Q2",
-    "id": "facewall",
-    "name": "面壁智能",
-    "score": 37.199847246480275
-  },
-  {
-    "period": "2026Q2",
-    "id": "kuaishou",
-    "name": "快手(可灵)",
-    "score": 33.99557429066589
-  },
-  {
-    "period": "2026Q2",
-    "id": "kimi",
-    "name": "月之暗面 Kimi",
-    "score": 32.37011957671456
-  },
-  {
-    "period": "2026Q2",
-    "id": "minimax",
-    "name": "MiniMax",
-    "score": 31.4503195344572
+    "date": "2026-06-30",
+    "index": 52.9,
+    "ci_low": 52.2,
+    "ci_high": 53.5
   }
 ]

@@ -1,15 +1,20 @@
 [
   {
-    "asof": "2026-Q2",
-    "composite": 6.5,
-    "count": 25,
-    "dim_means": {
-      "mass": 6.0,
-      "comm": 6.36,
-      "tech": 7.52,
-      "cap": 6.44,
-      "supply": 6.56,
-      "policy": 5.8
-    }
+    "date": "2024Q3",
+    "index": 46.8,
+    "ci_low": 46.1,
+    "ci_high": 47.3
+  },
+  {
+    "date": "2025Q2",
+    "index": 50.2,
+    "ci_low": 49.6,
+    "ci_high": 50.7
+  },
+  {
+    "date": "2026Q2",
+    "index": 53.6,
+    "ci_low": 53.0,
+    "ci_high": 54.2
   }
 ]

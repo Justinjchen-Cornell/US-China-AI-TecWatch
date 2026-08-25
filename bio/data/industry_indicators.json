@@ -65,5 +65,38 @@
       "source": "公开模型评测近似（AlphaFold3/Isomorphic vs 中国模型）",
       "note": "美国AlphaFold系列领先，中国Uni-Fold/分子设计模型追赶中"
     }
+  ],
+  "series": [
+    {
+      "as_of": "2024Q3",
+      "values": {
+        "ai_drug_pipeline_share": 12,
+        "clinical_trial_share": 8,
+        "sequencing_share": 18,
+        "ai_bio_patent_share": 15,
+        "frontier_model_gap": 40
+      }
+    },
+    {
+      "as_of": "2025Q2",
+      "values": {
+        "ai_drug_pipeline_share": 16,
+        "clinical_trial_share": 12,
+        "sequencing_share": 22,
+        "ai_bio_patent_share": 20,
+        "frontier_model_gap": 50
+      }
+    }
+  ],
+  "watch": [
+    "INS018_055 全球三期临床数据读出",
+    "华大智造测序仪装机量（T20/T30）",
+    "FDA / NMPA 首批 AI 药物获批进展",
+    "大药企 AI 合作订单（平台型公司收入兑现）"
+  ],
+  "frontier": [
+    "蛋白设计 → 制药闭环（AlphaFold 系 vs Uni-Fold，临床验证期）",
+    "AI 生成生物数据（合成临床数据/虚拟筛选规模化）",
+    "脑机接口跨过临床与医保定价门槛（Neuralink vs 中国方案）"
   ]
 }

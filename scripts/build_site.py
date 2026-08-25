@@ -84,6 +84,15 @@ def main():
                                or d.get("period") or d.get("date") or d.get("as_of"))
                 if d.get("index_note"):
                     rec["basis"] = d["index_note"]
+                # 趋势: 读 series.json 首尾变化
+                sj = os.path.join(SITE, sub, "api", "series.json")
+                if os.path.exists(sj):
+                    try:
+                        s = load_json(sj)
+                        if isinstance(s, list) and len(s) >= 2 and s[0].get("index") is not None:
+                            rec["trend_delta"] = round(s[-1]["index"] - s[0]["index"], 1)
+                    except Exception:
+                        pass
             except Exception:
                 pass
         industries.append(rec)
@@ -144,11 +153,22 @@ def render_html(res, series, weights_cfg, industries=None):
             basis_cls = "src"
             if "非竞争指数" in r.get('basis', '') or "池内均分" in r.get('basis', ''):
                 basis_cls = "src bad"
+            td = r.get("trend_delta")
+            if td is not None:
+                if td >= 0.5:
+                    arrow = "<span style='color:var(--good)'>&#9650; +" + str(td) + "</span>"
+                elif td <= -0.5:
+                    arrow = "<span style='color:var(--bad)'>&#9660; " + str(td) + "</span>"
+                else:
+                    arrow = "<span style='color:var(--muted)'>&#9654; 0.0</span>"
+                arrow = "<td class='num'>" + arrow + "</td>"
+            else:
+                arrow = "<td class='num' style='color:var(--muted)'>—</td>"
             ind_rows += (
                 "<tr><td><a href='" + r['sub'] + "/' style='color:var(--accent);text-decoration:none'>"
                 + r['name'] + "</a></td><td>" + r['blurb'] + "</td>"
                 "<td class='num'><b>" + str(r['index']) + "</b></td>"
-                + ci + conf +
+                + arrow + ci + conf +
                 "<td class='src'>" + str(r['date'] or '') + "</td>"
                 "<td class='" + basis_cls + "'>" + str(r.get('basis', '') or '') + "</td></tr>")
         else:
@@ -196,8 +216,8 @@ td.src{color:var(--muted);font-size:12px}td.bad{color:var(--bad);font-size:12px;
   <canvas id="trendChart"></canvas></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">六维得分 (归一化几何平均，0-1)</div>
   <canvas id="dimChart"></canvas></div>
- <div class="card"><div class="legend" style="margin-bottom:8px">行业专项 · 六大硬科技 (点击进入子站) — 口径说明：国家层客观指标 / 产业维度评估 / 池内均分(非竞争指数)</div>
-  <table><thead><tr><th>行业</th><th>指数体系</th><th style="text-align:right">最新指数</th><th style="text-align:right">95% 区间</th><th style="text-align:right">置信度</th><th>数据截至</th><th>指数口径</th></tr></thead>
+ <div class="card"><div class="legend" style="margin-bottom:8px">行业专项 · 六大硬科技 (点击进入子站) — 口径说明：国家层客观指标 / 产业维度评估 / 池内均分(非竞争指数) · 趋势 = 近两年指数变化</div>
+  <table><thead><tr><th>行业</th><th>指数体系</th><th style="text-align:right">最新指数</th><th style="text-align:right">近两年趋势</th><th style="text-align:right">95% 区间</th><th style="text-align:right">置信度</th><th>数据截至</th><th>指数口径</th></tr></thead>
   <tbody>$ind_rows</tbody></table></div>
  <div class="card"><div class="legend" style="margin-bottom:8px">五条暗线信号 (数据驱动/配置回退)</div>
   <table><thead><tr><th>暗线</th><th style="text-align:right">信号(0-1)</th><th style="text-align:right">权重</th><th style="text-align:right">可靠度</th></tr></thead>

@@ -73,9 +73,29 @@ def main():
     ap.add_argument("--out", default=None, help="输出 JSON (默认打印)")
     args = ap.parse_args()
     data = json.load(open(args.indicators, encoding="utf-8"))
+
     res = compute(data["indicators"])
     res["industry"] = data.get("industry", "")
+    res["industry_cn"] = data.get("industry_cn", "")
     res["as_of"] = data.get("as_of", "")
+
+    # 历史序列: 用 series 中的 values 覆盖当前值重算 (支持回溯趋势)
+    series = []
+    for pt in data.get("series", []):
+        inds_hist = []
+        for ind in data["indicators"]:
+            i = dict(ind)
+            if pt.get("values", {}).get(ind["id"]) is not None:
+                i["value"] = pt["values"][ind["id"]]
+            inds_hist.append(i)
+        r = compute(inds_hist)
+        series.append({"as_of": pt["as_of"],
+                       "index": r["index"],
+                       "index_low": r["index_low"],
+                       "index_high": r["index_high"],
+                       "confidence": r["confidence"]})
+    res["series"] = series
+
     payload = json.dumps(res, ensure_ascii=False, indent=2)
     if args.out:
         open(args.out, "w", encoding="utf-8").write(payload)

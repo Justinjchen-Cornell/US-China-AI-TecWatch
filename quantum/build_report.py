@@ -38,13 +38,28 @@ report["ci_low"] = _obj["index_low"]
 report["ci_high"] = _obj["index_high"]
 report["confidence"] = _obj["confidence"]
 report["index_note"] = "国家层客观指标(逻辑比特/物理比特/专利/论文/政府投入)"
-(OUT / "latest.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
-# series.json：跨期趋势（当前仅一期，预留结构）
-series = [{"date": snapshot["date"], "composite": report["composite"],
-           "ci_low": report["ci_low"], "ci_high": report["ci_high"],
-           "dim_average": report["dim_average"]}]
+# series.json：跨期趋势（2024Q3 → 2025Q2 → 当前）
+_ind_cfg = json.load(open(ROOT / "data" / "industry_indicators.json", encoding="utf-8"))
+series = []
+for _pt in _ind_cfg.get("series", []):
+    _inds = [dict(i) | ({"value": _pt["values"][i["id"]]} if _pt["values"].get(i["id"]) is not None else {})
+             for i in _ind_cfg["indicators"]]
+    _r = _obj_compute(_inds)
+    series.append({"date": _pt["as_of"], "index": _r["index"],
+                   "ci_low": _r["index_low"], "ci_high": _r["index_high"]})
+series.append({"date": _ind_cfg["as_of"], "index": report["index"],
+               "ci_low": report["ci_low"], "ci_high": report["ci_high"]})
 (OUT / "series.json").write_text(json.dumps(series, ensure_ascii=False, indent=2), encoding="utf-8")
+
+# 趋势解读（方向/动量/驱动归因/观察清单）
+_sys.path.insert(0, str(ROOT.parent / "scripts"))
+from trend_analysis import analyze as _trend
+_s0 = _ind_cfg.get("series", [{}])[0].get("values", {})
+_inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind_cfg["indicators"]]
+report["trend"] = _trend(_ind_cfg["indicators"], _inds_first, series, watch=_ind_cfg.get("watch"))
+report["frontier"] = _ind_cfg.get("frontier", [])
+(OUT / "latest.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
 # ---- 生成 index.html ----
 def tier_rows(tier_list):
@@ -132,7 +147,7 @@ canvas{{max-height:360px}}
 const series={json.dumps(series)};
 const ctx=document.getElementById('trend').getContext('2d');
 new Chart(ctx,{{type:'line',data:{{labels:series.map(s=>s.date),datasets:[
-{{label:'综合指数',data:series.map(s=>s.composite),borderColor:'#0d3b66',fill:false,tension:.3}},
+{{label:'综合指数',data:series.map(s=>s.index),borderColor:'#0d3b66',fill:false,tension:.3}},
 {{label:'CI上界',data:series.map(s=>s.ci_high),borderColor:'#3a7',borderDash:[4,4],fill:false}},
 {{label:'CI下界',data:series.map(s=>s.ci_low),borderColor:'#c0392b',borderDash:[4,4],fill:false}}
 ]}},options:{{scales:{{y:{{min:0,max:100}}}}}}}});

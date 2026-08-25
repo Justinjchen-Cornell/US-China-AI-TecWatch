@@ -582,5 +582,69 @@
         "score": 37.2
       }
     ]
-  }
+  },
+  "series": [
+    {
+      "date": "2024Q3",
+      "index": 45.1,
+      "ci_low": 43.8,
+      "ci_high": 45.8
+    },
+    {
+      "date": "2025Q2",
+      "index": 49.5,
+      "ci_low": 48.8,
+      "ci_high": 50.1
+    },
+    {
+      "date": "2026-06-30",
+      "index": 52.9,
+      "ci_low": 52.2,
+      "ci_high": 53.5
+    }
+  ],
+  "trend": {
+    "direction": "up",
+    "delta": 7.8,
+    "momentum": "slowing",
+    "vs_parity": "crossed_above",
+    "drivers": [
+      {
+        "id": "frontier_gap",
+        "name": "顶尖模型性能差距（LMArena Elo分差%）",
+        "delta_norm": 0.615
+      },
+      {
+        "id": "token_daily_calls",
+        "name": "中国大模型日调用量（亿次）",
+        "delta_norm": 0.2863
+      },
+      {
+        "id": "open_source_share",
+        "name": "中国开源模型HuggingFace下载份额",
+        "delta_norm": 0.25
+      },
+      {
+        "id": "inference_cost_ratio",
+        "name": "推理成本比（中国/美国）",
+        "delta_norm": 0.2
+      },
+      {
+        "id": "top_talent_share",
+        "name": "NeurIPS一作占比（中国）",
+        "delta_norm": 0.13
+      }
+    ],
+    "watch": [
+      "LMArena 顶尖分差是否继续收窄（DeepSeek / Qwen 新模型）",
+      "开源生态下载份额（HF / OpenRouter）",
+      "推理成本曲线（每百万 token 价格）",
+      "中美云厂商资本开支（下季度财报）"
+    ]
+  },
+  "frontier": [
+    "推理时计算 / RL 强化推理模型（o系列 vs DeepSeek-R1 后续）",
+    "多模态 Agent 从 Demo 到生产（调用量/毛利率兑现）",
+    "开源权重 vs API 商业化的产业分叉（DeepSeek 路径是否持续）"
+  ]
 }

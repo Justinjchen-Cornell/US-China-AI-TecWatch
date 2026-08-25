@@ -65,5 +65,38 @@
       "source": "公开预算近似（中国量子专项 vs 美国NQI）",
       "note": "中国约150亿人民币/年，美国NQI约10亿美元/年"
     }
+  ],
+  "series": [
+    {
+      "as_of": "2024Q3",
+      "values": {
+        "logical_qubit_gap": 5,
+        "physical_qubit_share": 20,
+        "patent_share": 25,
+        "paper_share": 30,
+        "funding_ratio": 1.2
+      }
+    },
+    {
+      "as_of": "2025Q2",
+      "values": {
+        "logical_qubit_gap": 10,
+        "physical_qubit_share": 25,
+        "patent_share": 28,
+        "paper_share": 32,
+        "funding_ratio": 1.3
+      }
+    }
+  ],
+  "watch": [
+    "美国逻辑量子比特规模化进度（Google Willow / IBM 路线图）",
+    "中国纠错演示里程碑（祖冲之三号 / 本源）",
+    "量子创业融资（国盾 / 量旋 / 图灵）",
+    "中美政府量子预算下一轮规划（2027）"
+  ],
+  "frontier": [
+    "逻辑量子比特规模化（表面码 → qLDPC 过渡，能否突破千逻辑比特）",
+    "量子纠错保真度跨越纠错阈值（2D 表面码 vs 光量子融合方案）",
+    "超导 / 光量子 / 中性原子多路线收敛信号（商用机柜化）"
   ]
 }

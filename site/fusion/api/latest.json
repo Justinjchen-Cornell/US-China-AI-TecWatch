@@ -34,7 +34,7 @@
       "market": "A股",
       "score": 66.2,
       "lo": 64.2,
-      "hi": 68.3
+      "hi": 68.2
     },
     {
       "id": "shdq",
@@ -45,9 +45,9 @@
       "tier": "跟进",
       "config": "路线/观察仓",
       "market": "A股",
-      "score": 60.6,
-      "lo": 58.7,
-      "hi": 62.6
+      "score": 60.5,
+      "lo": 58.5,
+      "hi": 62.5
     },
     {
       "id": "lianchuang",
@@ -60,20 +60,7 @@
       "market": "A股",
       "score": 60.2,
       "lo": 58.2,
-      "hi": 62.3
-    },
-    {
-      "id": "dfdq",
-      "name": "东方电气",
-      "country": "中国",
-      "route": "主机总包",
-      "role": "工程总包",
-      "tier": "跟进",
-      "config": "路线/观察仓",
-      "market": "A股",
-      "score": 58.9,
-      "lo": 56.9,
-      "hi": 60.9
+      "hi": 62.2
     },
     {
       "id": "atai",
@@ -85,8 +72,21 @@
       "config": "核心仓(卖铲人)",
       "market": "A股",
       "score": 58.8,
-      "lo": 56.9,
-      "hi": 60.8
+      "lo": 56.8,
+      "hi": 60.9
+    },
+    {
+      "id": "dfdq",
+      "name": "东方电气",
+      "country": "中国",
+      "route": "主机总包",
+      "role": "工程总包",
+      "tier": "跟进",
+      "config": "路线/观察仓",
+      "market": "A股",
+      "score": 58.7,
+      "lo": 56.7,
+      "hi": 60.7
     },
     {
       "id": "tokamakenergy",
@@ -97,9 +97,9 @@
       "tier": "跟进",
       "config": "整机期权仓",
       "market": "一级",
-      "score": 58.4,
-      "lo": 56.4,
-      "hi": 60.4
+      "score": 58.5,
+      "lo": 56.5,
+      "hi": 60.5
     },
     {
       "id": "yxt",
@@ -110,9 +110,9 @@
       "tier": "潜力",
       "config": "核心仓(卖铲人)",
       "market": "一级",
-      "score": 57.7,
-      "lo": 55.7,
-      "hi": 59.7
+      "score": 57.8,
+      "lo": 55.9,
+      "hi": 59.8
     },
     {
       "id": "gdgj",
@@ -124,7 +124,7 @@
       "config": "核心仓(卖铲人)",
       "market": "A股",
       "score": 56.5,
-      "lo": 54.5,
+      "lo": 54.6,
       "hi": 58.5
     },
     {
@@ -136,8 +136,8 @@
       "tier": "潜力",
       "config": "整机期权仓",
       "market": "一级",
-      "score": 56.1,
-      "lo": 54.1,
+      "score": 56.2,
+      "lo": 54.2,
       "hi": 58.1
     },
     {
@@ -149,9 +149,9 @@
       "tier": "潜力",
       "config": "核心仓(卖铲人)",
       "market": "A股",
-      "score": 55.9,
+      "score": 56.0,
       "lo": 54.0,
-      "hi": 57.9
+      "hi": 58.0
     },
     {
       "id": "xhjn",
@@ -163,8 +163,8 @@
       "config": "整机期权仓",
       "market": "一级",
       "score": 55.1,
-      "lo": 53.1,
-      "hi": 57.2
+      "lo": 53.2,
+      "hi": 57.1
     },
     {
       "id": "siemensenergy",
@@ -176,8 +176,8 @@
       "config": "路线/观察仓",
       "market": "德股",
       "score": 55.0,
-      "lo": 52.9,
-      "hi": 57.0
+      "lo": 53.0,
+      "hi": 56.9
     },
     {
       "id": "helion",
@@ -214,7 +214,7 @@
       "tier": "潜力",
       "config": "整机期权仓",
       "market": "一级/SPAC",
-      "score": 51.0,
+      "score": 50.9,
       "lo": 49.0,
       "hi": 52.9
     },
@@ -227,9 +227,9 @@
       "tier": "潜力",
       "config": "整机期权仓",
       "market": "一级",
-      "score": 50.9,
+      "score": 50.8,
       "lo": 48.9,
-      "hi": 52.9
+      "hi": 52.8
     },
     {
       "id": "ceg",
@@ -240,9 +240,9 @@
       "tier": "潜力",
       "config": "路线/观察仓",
       "market": "美股",
-      "score": 50.1,
-      "lo": 48.1,
-      "hi": 52.1
+      "score": 50.2,
+      "lo": 48.3,
+      "hi": 52.2
     },
     {
       "id": "pacificfusion",
@@ -253,9 +253,9 @@
       "tier": "潜力",
       "config": "整机期权仓",
       "market": "一级",
-      "score": 48.8,
+      "score": 48.9,
       "lo": 46.9,
-      "hi": 50.8
+      "hi": 50.9
     },
     {
       "id": "zgdianhe",
@@ -283,5 +283,49 @@
       "lo": 43.4,
       "hi": 47.4
     }
+  ],
+  "trend": {
+    "direction": "up",
+    "delta": 3.8,
+    "momentum": "slowing",
+    "vs_parity": "closing",
+    "drivers": [
+      {
+        "id": "plasma_sustain_time",
+        "name": "等离子体维持时间纪录（中国EAST，秒）",
+        "delta_norm": 0.5525
+      },
+      {
+        "id": "ignition_progress",
+        "name": "点火里程碑进度（中国，0-100）",
+        "delta_norm": 0.1
+      },
+      {
+        "id": "patent_share",
+        "name": "聚变专利全球占比（中国）",
+        "delta_norm": 0.08
+      },
+      {
+        "id": "magnet_field_ratio",
+        "name": "高温超导磁体场强比（中国/美国）",
+        "delta_norm": 0.075
+      },
+      {
+        "id": "funding_ratio",
+        "name": "政府聚变投入比（中国/美国倍率）",
+        "delta_norm": 0.06
+      }
+    ],
+    "watch": [
+      "BEST 装置建设进度（2027 关键节点）",
+      "EAST 长脉冲纪录是否再刷新",
+      "私营聚变融资（美国 CFS / Helion vs 中国能量奇点）",
+      "点火里程碑对比（NIF 迭代 vs 中国装置）"
+    ]
+  },
+  "frontier": [
+    "BEST 装置 2027 建成与第一等离子体（中国工程化关键节点）",
+    "高温超导磁体 20T+ 工程化与成本曲线（CFS vs 中国路线）",
+    "点火 → 自持燃烧 Q>10 路线图（NIF 迭代 vs 托卡马克稳态）"
   ]
 }

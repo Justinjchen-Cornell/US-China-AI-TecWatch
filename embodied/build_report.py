@@ -27,7 +27,8 @@ os.makedirs(os.path.join(SITE_DIR, "api"), exist_ok=True)
 import sys as _sys
 _sys.path.insert(0, os.path.join(_HERE, "..", "scripts"))
 from industry_index import compute as _obj_compute
-_obj = _obj_compute(_json.load(open(os.path.join(_HERE, "data/industry_indicators.json"), encoding="utf-8"))["indicators"])
+_ind = _json.load(open(os.path.join(_HERE, "data/industry_indicators.json"), encoding="utf-8"))
+_obj = _obj_compute(_ind["indicators"])
 _json.dump({"generated_at":datetime.datetime.utcnow().isoformat()+"Z","as_of":"2026Q2",
   "composite":_obj["index"],"index":_obj["index"],
   "ci_low":_obj["index_low"],"ci_high":_obj["index_high"],"confidence":_obj["confidence"],
@@ -37,8 +38,28 @@ _json.dump({"generated_at":datetime.datetime.utcnow().isoformat()+"Z","as_of":"2
   "tiers":{"领跑":[c["id"] for c in lead],"跟进":[c["id"] for c in follow],"潜力":[c["id"] for c in pot]},
   "ranking":[{"rank":i+1,"id":c["id"],"name":c["name"],"score":c["score"],"role":c["role"],"country":c["country"]} for i,c in enumerate(comps_sorted)]},
   open(os.path.join(SITE_DIR, "api/latest.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=2)
-_json.dump([{"asof":"2026-Q2","composite":composite,"count":len(comps),"dim_means":MEANS}],
+_obj_series = []
+for _pt in _ind.get("series", []):
+    _inds = [dict(i) | ({"value": _pt["values"][i["id"]]} if _pt["values"].get(i["id"]) is not None else {})
+             for i in _ind["indicators"]]
+    _r = _obj_compute(_inds)
+    _obj_series.append({"date": _pt["as_of"], "index": _r["index"],
+                        "ci_low": _r["index_low"], "ci_high": _r["index_high"]})
+_obj_series.append({"date": _ind.get("as_of", "2026Q2"), "index": _obj["index"],
+                    "ci_low": _obj["index_low"], "ci_high": _obj["index_high"]})
+_json.dump(_obj_series,
   open(os.path.join(SITE_DIR, "api/series.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=2)
+
+# 趋势解读（方向/动量/驱动归因/观察清单）
+from trend_analysis import analyze as _trend
+_s0 = _ind.get("series", [{}])[0].get("values", {})
+_inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind["indicators"]]
+_obj["trend"] = _trend(_ind["indicators"], _inds_first, _obj_series, watch=_ind.get("watch"))
+_obj["frontier"] = _ind.get("frontier", [])
+_obj["ci_low"] = _obj.get("index_low")
+_obj["ci_high"] = _obj.get("index_high")
+_obj["index_note"] = "国家层客观指标(出货/灵巧手/成本/专利/VLA差距)"
+_json.dump(_obj, open(os.path.join(SITE_DIR, "api/latest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 def tr(c):
     return "<tr><td>"+c['name']+"</td><td>"+(c.get('ticker') or '—')+"</td><td>"+c['country']+"</td><td>"+c['role']+"</td><td>"+c['sub']+"</td><td>"+str(c['score'])+"</td><td>"+str(c['market'])+c['unit']+"</td><td>"+c['note']+"</td></tr>"

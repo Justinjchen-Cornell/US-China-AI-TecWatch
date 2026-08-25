@@ -65,5 +65,38 @@
       "source": "公开预算近似（中国聚变专项+ITER配套 vs 美国DOE FES）",
       "note": "中国另有BEST等国家工程投资"
     }
+  ],
+  "series": [
+    {
+      "as_of": "2024Q3",
+      "values": {
+        "plasma_sustain_time": 403,
+        "magnet_field_ratio": 0.6,
+        "ignition_progress": 25,
+        "patent_share": 32,
+        "funding_ratio": 1.2
+      }
+    },
+    {
+      "as_of": "2025Q2",
+      "values": {
+        "plasma_sustain_time": 1066,
+        "magnet_field_ratio": 0.7,
+        "ignition_progress": 30,
+        "patent_share": 36,
+        "funding_ratio": 1.4
+      }
+    }
+  ],
+  "watch": [
+    "BEST 装置建设进度（2027 关键节点）",
+    "EAST 长脉冲纪录是否再刷新",
+    "私营聚变融资（美国 CFS / Helion vs 中国能量奇点）",
+    "点火里程碑对比（NIF 迭代 vs 中国装置）"
+  ],
+  "frontier": [
+    "BEST 装置 2027 建成与第一等离子体（中国工程化关键节点）",
+    "高温超导磁体 20T+ 工程化与成本曲线（CFS vs 中国路线）",
+    "点火 → 自持燃烧 Q>10 路线图（NIF 迭代 vs 托卡马克稳态）"
   ]
 }

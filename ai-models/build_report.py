@@ -51,10 +51,29 @@ def build():
     }
     with open(os.path.join(SITE, "latest.json"), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
-    # series.json
-    series = build_series()
+    # series.json：客观指数跨期序列 (2024Q3 → 2025Q2 → 当前)
+    _ind_cfg = json.load(open(os.path.join(BASE, "data/industry_indicators.json"), encoding="utf-8"))
+    series = []
+    for _pt in _ind_cfg.get("series", []):
+        _inds = [dict(i) | ({"value": _pt["values"][i["id"]]} if _pt["values"].get(i["id"]) is not None else {})
+                 for i in _ind_cfg["indicators"]]
+        _r = _obj_compute(_inds)
+        series.append({"date": _pt["as_of"], "index": _r["index"],
+                       "ci_low": _r["index_low"], "ci_high": _r["index_high"]})
+    series.append({"date": _ind_cfg.get("as_of", payload["period"]), "index": payload["index"],
+                   "ci_low": payload["ci_low"], "ci_high": payload["ci_high"]})
+    payload["series"] = series
     with open(os.path.join(SITE, "series.json"), "w", encoding="utf-8") as f:
         json.dump(series, f, ensure_ascii=False, indent=2)
+    # 趋势解读（方向/动量/驱动归因/观察清单）
+    _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "scripts"))
+    from trend_analysis import analyze as _trend
+    _s0 = _ind_cfg.get("series", [{}])[0].get("values", {})
+    _inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind_cfg["indicators"]]
+    payload["trend"] = _trend(_ind_cfg["indicators"], _inds_first, series, watch=_ind_cfg.get("watch"))
+    payload["frontier"] = _ind_cfg.get("frontier", [])
+    with open(os.path.join(SITE, "latest.json"), "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
     # HTML
     html = render_html(a)
     with open(os.path.join(os.path.dirname(SITE), "index.html"), "w", encoding="utf-8") as f:

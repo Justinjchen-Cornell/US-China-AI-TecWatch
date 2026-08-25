@@ -66,5 +66,38 @@
       "source": "论文库统计近似",
       "note": "顶尖AI研究者人才基础"
     }
+  ],
+  "series": [
+    {
+      "as_of": "2024Q3",
+      "values": {
+        "frontier_gap": 15,
+        "open_source_share": 15,
+        "inference_cost_ratio": 0.3,
+        "token_daily_calls": 15,
+        "top_talent_share": 30
+      }
+    },
+    {
+      "as_of": "2025Q2",
+      "values": {
+        "frontier_gap": 8,
+        "open_source_share": 25,
+        "inference_cost_ratio": 0.15,
+        "token_daily_calls": 60,
+        "top_talent_share": 37
+      }
+    }
+  ],
+  "watch": [
+    "LMArena 顶尖分差是否继续收窄（DeepSeek / Qwen 新模型）",
+    "开源生态下载份额（HF / OpenRouter）",
+    "推理成本曲线（每百万 token 价格）",
+    "中美云厂商资本开支（下季度财报）"
+  ],
+  "frontier": [
+    "推理时计算 / RL 强化推理模型（o系列 vs DeepSeek-R1 后续）",
+    "多模态 Agent 从 Demo 到生产（调用量/毛利率兑现）",
+    "开源权重 vs API 商业化的产业分叉（DeepSeek 路径是否持续）"
   ]
 }

@@ -2,7 +2,7 @@
   "name": "QuantumCompete Index",
   "date": "2026-06-30",
   "composite": 43.8,
-  "ci_low": 42.8,
+  "ci_low": 42.7,
   "ci_high": 44.5,
   "dim_average": {
     "tech_maturity": 60.0,
@@ -854,5 +854,49 @@
   "pool_avg": 55.52,
   "index": 43.8,
   "confidence": 0.63,
-  "index_note": "国家层客观指标(逻辑比特/物理比特/专利/论文/政府投入)"
+  "index_note": "国家层客观指标(逻辑比特/物理比特/专利/论文/政府投入)",
+  "trend": {
+    "direction": "up",
+    "delta": 3.2,
+    "momentum": "steady",
+    "vs_parity": "closing",
+    "drivers": [
+      {
+        "id": "logical_qubit_gap",
+        "name": "逻辑量子比特数差距（中国/美国占比%）",
+        "delta_norm": 0.1
+      },
+      {
+        "id": "physical_qubit_share",
+        "name": "物理量子比特数全球占比（中国）",
+        "delta_norm": 0.1
+      },
+      {
+        "id": "funding_ratio",
+        "name": "政府量子投入比（中国/美国倍率）",
+        "delta_norm": 0.06
+      },
+      {
+        "id": "patent_share",
+        "name": "量子计算专利全球占比（中国）",
+        "delta_norm": 0.05
+      },
+      {
+        "id": "paper_share",
+        "name": "量子计算高被引论文占比（中国）",
+        "delta_norm": 0.05
+      }
+    ],
+    "watch": [
+      "美国逻辑量子比特规模化进度（Google Willow / IBM 路线图）",
+      "中国纠错演示里程碑（祖冲之三号 / 本源）",
+      "量子创业融资（国盾 / 量旋 / 图灵）",
+      "中美政府量子预算下一轮规划（2027）"
+    ]
+  },
+  "frontier": [
+    "逻辑量子比特规模化（表面码 → qLDPC 过渡，能否突破千逻辑比特）",
+    "量子纠错保真度跨越纠错阈值（2D 表面码 vs 光量子融合方案）",
+    "超导 / 光量子 / 中性原子多路线收敛信号（商用机柜化）"
+  ]
 }

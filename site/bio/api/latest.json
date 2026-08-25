@@ -3,7 +3,7 @@
   "note": "2026Q2 AI生命科学公开信息近似快照，指标原始值为主观近似整理，仅供趋势研究，不构成投资建议。",
   "index": 43.4,
   "ci_low": 42.3,
-  "ci_high": 44.1,
+  "ci_high": 44.2,
   "confidence": 0.63,
   "index_note": "国家层客观指标(管线/临床/测序/专利/模型差距)",
   "pool_avg": 51.4,
@@ -40,9 +40,9 @@
       "market": "港股(3696)",
       "tier": "领跑",
       "config": "管线期权仓(高赔率)",
-      "score": 62.9,
-      "lo": 60.9,
-      "hi": 64.9,
+      "score": 62.8,
+      "lo": 60.7,
+      "hi": 64.8,
       "dims": {
         "clinical": 58.0,
         "pipeline": 74.0,
@@ -61,9 +61,9 @@
       "market": "A股",
       "tier": "领跑",
       "config": "核心仓(卖铲人/平台)",
-      "score": 62.5,
-      "lo": 60.5,
-      "hi": 64.5,
+      "score": 62.6,
+      "lo": 60.6,
+      "hi": 64.6,
       "dims": {
         "clinical": 72.0,
         "pipeline": 80.0,
@@ -82,9 +82,9 @@
       "market": "一级(拟IPO)",
       "tier": "跟进",
       "config": "核心仓(卖铲人/平台)",
-      "score": 59.4,
-      "lo": 57.4,
-      "hi": 61.4,
+      "score": 59.3,
+      "lo": 57.3,
+      "hi": 61.2,
       "dims": {
         "clinical": 42.0,
         "pipeline": 56.0,
@@ -105,7 +105,7 @@
       "config": "核心仓(卖铲人/平台)",
       "score": 55.8,
       "lo": 53.8,
-      "hi": 57.9,
+      "hi": 57.7,
       "dims": {
         "clinical": 34.0,
         "pipeline": 56.0,
@@ -124,9 +124,9 @@
       "market": "一级",
       "tier": "跟进",
       "config": "信仰仓(远期)",
-      "score": 54.5,
-      "lo": 52.5,
-      "hi": 56.5,
+      "score": 54.6,
+      "lo": 52.6,
+      "hi": 56.6,
       "dims": {
         "clinical": 20.0,
         "pipeline": 66.0,
@@ -145,9 +145,9 @@
       "market": "美股",
       "tier": "跟进",
       "config": "管线期权仓(高赔率)",
-      "score": 54.2,
-      "lo": 52.2,
-      "hi": 56.2,
+      "score": 54.3,
+      "lo": 52.3,
+      "hi": 56.3,
       "dims": {
         "clinical": 46.0,
         "pipeline": 66.0,
@@ -187,8 +187,8 @@
       "market": "A股",
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
-      "score": 53.8,
-      "lo": 51.8,
+      "score": 53.9,
+      "lo": 51.9,
       "hi": 55.9,
       "dims": {
         "clinical": 30.0,
@@ -208,9 +208,9 @@
       "market": "美股",
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
-      "score": 53.2,
-      "lo": 51.2,
-      "hi": 55.1,
+      "score": 53.1,
+      "lo": 51.0,
+      "hi": 55.2,
       "dims": {
         "clinical": 40.0,
         "pipeline": 50.0,
@@ -231,7 +231,7 @@
       "config": "路线/观察仓",
       "score": 52.4,
       "lo": 50.4,
-      "hi": 54.4,
+      "hi": 54.5,
       "dims": {
         "clinical": 36.0,
         "pipeline": 58.0,
@@ -250,9 +250,9 @@
       "market": "美股",
       "tier": "潜力",
       "config": "路线/观察仓",
-      "score": 51.8,
-      "lo": 49.8,
-      "hi": 53.8,
+      "score": 51.7,
+      "lo": 49.7,
+      "hi": 53.7,
       "dims": {
         "clinical": 28.0,
         "pipeline": 40.0,
@@ -271,9 +271,9 @@
       "market": "A股",
       "tier": "潜力",
       "config": "路线/观察仓",
-      "score": 50.7,
-      "lo": 48.7,
-      "hi": 52.7,
+      "score": 50.8,
+      "lo": 48.9,
+      "hi": 52.8,
       "dims": {
         "clinical": 34.0,
         "pipeline": 52.0,
@@ -294,7 +294,7 @@
       "config": "核心仓(卖铲人/平台)",
       "score": 50.1,
       "lo": 48.1,
-      "hi": 52.0,
+      "hi": 52.1,
       "dims": {
         "clinical": 18.0,
         "pipeline": 40.0,
@@ -315,7 +315,7 @@
       "config": "信仰仓(远期)",
       "score": 49.9,
       "lo": 47.9,
-      "hi": 52.0,
+      "hi": 51.9,
       "dims": {
         "clinical": 30.0,
         "pipeline": 48.0,
@@ -335,7 +335,7 @@
       "tier": "潜力",
       "config": "路线/观察仓",
       "score": 49.9,
-      "lo": 47.8,
+      "lo": 47.9,
       "hi": 51.9,
       "dims": {
         "clinical": 40.0,
@@ -355,9 +355,9 @@
       "market": "一级",
       "tier": "潜力",
       "config": "信仰仓(远期)",
-      "score": 48.4,
+      "score": 48.3,
       "lo": 46.4,
-      "hi": 50.4,
+      "hi": 50.3,
       "dims": {
         "clinical": 14.0,
         "pipeline": 58.0,
@@ -377,7 +377,7 @@
       "tier": "潜力",
       "config": "路线/观察仓",
       "score": 47.3,
-      "lo": 45.3,
+      "lo": 45.2,
       "hi": 49.3,
       "dims": {
         "clinical": 38.0,
@@ -398,7 +398,7 @@
       "tier": "潜力",
       "config": "路线/观察仓",
       "score": 47.2,
-      "lo": 45.1,
+      "lo": 45.2,
       "hi": 49.2,
       "dims": {
         "clinical": 30.0,
@@ -418,9 +418,9 @@
       "market": "一级",
       "tier": "潜力",
       "config": "核心仓(卖铲人/平台)",
-      "score": 46.1,
-      "lo": 44.0,
-      "hi": 48.1,
+      "score": 46.0,
+      "lo": 44.1,
+      "hi": 47.9,
       "dims": {
         "clinical": 10.0,
         "pipeline": 44.0,
@@ -439,9 +439,9 @@
       "market": "A股",
       "tier": "观察",
       "config": "核心仓(卖铲人/平台)",
-      "score": 45.1,
-      "lo": 43.1,
-      "hi": 47.1,
+      "score": 45.0,
+      "lo": 43.0,
+      "hi": 47.0,
       "dims": {
         "clinical": 22.0,
         "pipeline": 36.0,
@@ -461,8 +461,8 @@
       "tier": "观察",
       "config": "核心仓(卖铲人/平台)",
       "score": 44.5,
-      "lo": 42.4,
-      "hi": 46.6,
+      "lo": 42.5,
+      "hi": 46.5,
       "dims": {
         "clinical": 10.0,
         "pipeline": 46.0,
@@ -481,9 +481,9 @@
       "market": "一级",
       "tier": "观察",
       "config": "路线/观察仓",
-      "score": 43.5,
-      "lo": 41.5,
-      "hi": 45.5,
+      "score": 43.4,
+      "lo": 41.4,
+      "hi": 45.4,
       "dims": {
         "clinical": 26.0,
         "pipeline": 44.0,
@@ -502,9 +502,9 @@
       "market": "一级",
       "tier": "观察",
       "config": "路线/观察仓",
-      "score": 43.0,
+      "score": 43.1,
       "lo": 41.0,
-      "hi": 44.9,
+      "hi": 45.1,
       "dims": {
         "clinical": 28.0,
         "pipeline": 46.0,
@@ -535,5 +535,49 @@
         "policy": 52.0
       }
     }
+  ],
+  "trend": {
+    "direction": "up",
+    "delta": 3.6,
+    "momentum": "slowing",
+    "vs_parity": "closing",
+    "drivers": [
+      {
+        "id": "frontier_model_gap",
+        "name": "蛋白/分子设计模型尖端差距（中国水平/美国%）",
+        "delta_norm": 0.2
+      },
+      {
+        "id": "ai_bio_patent_share",
+        "name": "AI制药专利全球占比（中国）",
+        "delta_norm": 0.1
+      },
+      {
+        "id": "ai_drug_pipeline_share",
+        "name": "中国AI制药管线全球占比",
+        "delta_norm": 0.08
+      },
+      {
+        "id": "clinical_trial_share",
+        "name": "中国AI药物临床试验占比",
+        "delta_norm": 0.07
+      },
+      {
+        "id": "sequencing_share",
+        "name": "基因测序仪全球装机份额（中国）",
+        "delta_norm": 0.07
+      }
+    ],
+    "watch": [
+      "INS018_055 全球三期临床数据读出",
+      "华大智造测序仪装机量（T20/T30）",
+      "FDA / NMPA 首批 AI 药物获批进展",
+      "大药企 AI 合作订单（平台型公司收入兑现）"
+    ]
+  },
+  "frontier": [
+    "蛋白设计 → 制药闭环（AlphaFold 系 vs Uni-Fold，临床验证期）",
+    "AI 生成生物数据（合成临床数据/虚拟筛选规模化）",
+    "脑机接口跨过临床与医保定价门槛（Neuralink vs 中国方案）"
   ]
 }
