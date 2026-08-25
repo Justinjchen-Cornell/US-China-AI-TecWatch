@@ -89,6 +89,8 @@ try:
     intel_html += "</div>"
 except Exception:
     intel_html = ""
+import intel_html as _ih
+intel_html = _ih.render(report["intelligence"], accent="#06b6d4")
 
 # ---- 生成 index.html ----
 def tier_rows(tier_list):

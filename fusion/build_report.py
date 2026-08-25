@@ -90,6 +90,8 @@ try:
     intel_html += "</div>"
 except Exception:
     intel_html = ""
+import intel_html as _ih
+intel_html = _ih.render(latest["intelligence"], accent="#f59e0b")
 
 # ---- Markdown 报告 ----
 lines = []

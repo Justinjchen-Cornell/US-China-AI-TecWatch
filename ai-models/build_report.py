@@ -125,6 +125,10 @@ def render_html(a):
         intel_html += "</section>"
     except Exception:
         intel_html = ""
+    import sys as _s2, json as _j2
+    _s2.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+    import intel_html as _ih
+    intel_html = _ih.render(_j2.load(open(os.path.join(BASE, "data/industry_intelligence.json"), encoding="utf-8")), accent="#8b5cf6")
     rows = ""
     for it in items:
         rows += (f'<tr><td>{it["name"]}</td><td>{it["camp"]}</td>'

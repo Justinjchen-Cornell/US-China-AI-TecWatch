@@ -123,5 +123,14 @@
       "impact": "国家投入斜率",
       "probability": "中"
     }
-  ]
+  ],
+  "core_judgment": "2027 是中美聚变'对表年'（SPARC vs BEST）——Q≥5-10 工程盈亏平衡线是全球整机厂主攻目标；高温超导（HTS）带材/磁体是通吃环节，卖铲人确定性最高。",
+  "track_signals": [
+    "BEST 建设进度与第一等离子体（2027）",
+    "SPARC 首次等离子体与 Q 目标",
+    "HTS 带材产能与价格（REBCO 成本曲线）",
+    "私营融资（CFS/能量奇点/Helion）",
+    "购电协议（Helion×微软 2028）"
+  ],
+  "methodology_ref": "#四可控核聚变2027-对表与卖铲人首选组合"
 }

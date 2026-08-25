@@ -3,7 +3,7 @@
   "date": "2026-06-30",
   "composite": 43.8,
   "ci_low": 42.7,
-  "ci_high": 44.5,
+  "ci_high": 44.6,
   "dim_average": {
     "tech_maturity": 60.0,
     "commercial": 38.0,
@@ -1656,6 +1656,15 @@
         "impact": "商业化兑现节奏",
         "probability": "中"
       }
-    ]
+    ],
+    "core_judgment": "行业正从'物理比特军备'转向'逻辑比特工程化'——逻辑比特规模化（表面码→qLDPC）是下一个分水岭；美国纠错演示领先，中国以工程化部件+政策投入追赶。",
+    "track_signals": [
+      "逻辑比特数与保真度（Google/IBM vs 祖冲之）",
+      "纠错里程碑（qLDPC 实用化）",
+      "量子比特数纪录",
+      "中国量子专项预算",
+      "量子云商业订单（金融/制药试点）"
+    ],
+    "methodology_ref": "#三量子计算纠错过渡期的卖铲人逻辑"
   }
 }

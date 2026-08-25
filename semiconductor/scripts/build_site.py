@@ -90,33 +90,10 @@ idx_class = "up" if res["index"] >= 55 else ("mid" if res["index"] >= 45 else "d
 
 # 行业研判区块
 def _intel_html():
-    try:
-        intel = json.load(open(os.path.join(BASE, "data/industry_intelligence.json"), encoding="utf-8"))
-        v = intel.get("verdict", {})
-        vc = intel.get("value_chain", [])
-        inf = intel.get("inflections_6_18m", [])
-        h = "<div class='card' style='border-left:4px solid #3b82f6'>"
-        h += "<div style='font-size:12px;color:var(--sub)'>行业研判 · 非评分 · 作者观点</div>"
-        h += "<h2 style='font-size:17px;margin:8px 0 10px'>" + v.get('phase', '') + "</h2>"
-        h += "<table><tbody>"
-        h += "<tr><th style='text-align:left;width:130px'>中国位置</th><td>" + v.get('china_position', '') + "</td></tr>"
-        h += "<tr><th style='text-align:left'>关键拐点</th><td>" + v.get('key_inflection', '') + "</td></tr>"
-        h += "<tr><th style='text-align:left'>投资主题</th><td>" + v.get('investment_theme', '') + "</td></tr>"
-        h += "</tbody></table>"
-        if vc:
-            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
-            for seg in vc[:3]:
-                h += "<li><b>" + seg.get('segment', '') + "</b>（" + seg.get('value_concentration', '') + "）：" + seg.get('logic', '') + "</li>"
-            h += "</ul>"
-        if inf:
-            h += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px'>"
-            for x in inf:
-                h += "<li><b>" + x.get('event', '') + "</b>（概率 " + x.get('probability', '') + "）：" + x.get('impact', '') + "</li>"
-            h += "</ul>"
-        h += "</div>"
-        return h
-    except Exception:
-        return ""
+    import sys as _s
+    _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "scripts"))
+    import intel_html as _ih
+    return _ih.render(json.load(open(os.path.join(BASE, "data/industry_intelligence.json"), encoding="utf-8")), accent="#3b82f6")
 
 HTML = r"""<!DOCTYPE html>
 <html lang="zh-CN">

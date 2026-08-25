@@ -128,5 +128,15 @@
       "impact": "信仰仓估值兑现节奏",
       "probability": "低中"
     }
-  ]
+  ],
+  "core_judgment": "AI 生命科学正处'从预测准到药效好'的最后攻关——AlphaFold 已踏平数据获取门槛，真正的分水岭是临床验证：AI 制药迎来'证明自己能治病的十年'，首个 AI 药获批（不论中美）将重置估值锚。",
+  "track_signals": [
+    "INS018_055 全球三期数据读出",
+    "FDA/NMPA 首个 AI 药获批",
+    "测序装机量（华大智造 T 系列 vs Illumina）",
+    "平台公司 ARR/里程碑收入",
+    "License-out 授权交易",
+    "脑机医保定价试点"
+  ],
+  "methodology_ref": "#五ai-生命科学alphafold-三级跳与临床生死线"
 }
