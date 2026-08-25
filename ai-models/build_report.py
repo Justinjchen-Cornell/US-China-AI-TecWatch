@@ -72,6 +72,7 @@ def build():
     _inds_first = [dict(i) | ({"value": _s0.get(i["id"], i["value"])}) for i in _ind_cfg["indicators"]]
     payload["trend"] = _trend(_ind_cfg["indicators"], _inds_first, series, watch=_ind_cfg.get("watch"))
     payload["frontier"] = _ind_cfg.get("frontier", [])
+    payload["intelligence"] = json.load(open(os.path.join(BASE, "data/industry_intelligence.json"), encoding="utf-8"))
     with open(os.path.join(SITE, "latest.json"), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
     # HTML
@@ -97,6 +98,33 @@ def render_html(a):
     scores = json.dumps([round(i["score"],1) for i in items])
     core = ", ".join(f'{i["name"]}({i["score"]:.1f})' for i in a["core"])
     opt = ", ".join(f'{i["name"]}({i["score"]:.1f})' for i in a["option"])
+    # 行业研判区块（verdict + 价值链 + 拐点）
+    try:
+        intel = json.load(open(os.path.join(BASE, "data/industry_intelligence.json"), encoding="utf-8"))
+        v = intel.get("verdict", {})
+        inflections = intel.get("inflections_6_18m", [])
+        vc = intel.get("value_chain", [])
+        intel_html = "<section class='card' style='border-left:4px solid #8b5cf6'>"
+        intel_html += "<div style='font-size:12px;color:#9aa7b8;letter-spacing:.5px'>行业研判 · 非评分 · 作者观点</div>"
+        intel_html += "<h3 style='margin:8px 0 10px'>" + v.get('phase', '') + "</h3>"
+        intel_html += "<table style='font-size:13px'><tbody>"
+        intel_html += "<tr><th style='text-align:left;width:140px'>中国位置</th><td>" + v.get('china_position', '') + "</td></tr>"
+        intel_html += "<tr><th style='text-align:left'>关键拐点</th><td>" + v.get('key_inflection', '') + "</td></tr>"
+        intel_html += "<tr><th style='text-align:left'>投资主题</th><td>" + v.get('investment_theme', '') + "</td></tr>"
+        intel_html += "</tbody></table>"
+        if vc:
+            intel_html += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px;color:#8a97ad'>"
+            for seg in vc[:3]:
+                intel_html += "<li><b>" + seg.get('segment', '') + "</b>（价值集中度 " + seg.get('value_concentration', '') + "）：" + seg.get('logic', '') + "</li>"
+            intel_html += "</ul>"
+        if inflections:
+            intel_html += "<div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px;color:#8a97ad'>"
+            for inf in inflections:
+                intel_html += "<li><b>" + inf.get('event', '') + "</b>（概率 " + inf.get('probability', '') + "）：" + inf.get('impact', '') + "</li>"
+            intel_html += "</ul>"
+        intel_html += "</section>"
+    except Exception:
+        intel_html = ""
     rows = ""
     for it in items:
         rows += (f'<tr><td>{it["name"]}</td><td>{it["camp"]}</td>'
@@ -129,6 +157,7 @@ footer{{text-align:center;color:#5b6677;font-size:11px;padding:16px}}
 <header><h1>AI 大模型生态投资体系 · Dashboard</h1>
 <div class="sub">数据期次：{a['period']}　|　综合评分区间 0-100（越高=生态/投资综合禀赋越强）　|　仅供趋势研究，不构成投资建议</div></header>
 <main>
+  {intel_html}
   <section class="card"><h3>五维生态雷达</h3><canvas id="radar"></canvas></section>
   <section class="card"><h3>公司综合得分排名</h3><canvas id="bar"></canvas></section>
   <section class="card"><h3>梯队排名明细</h3>

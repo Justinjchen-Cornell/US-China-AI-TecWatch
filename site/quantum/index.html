@@ -22,7 +22,7 @@ canvas{max-height:360px}
 <div class='note'>数据基线来自公开研究与行业报告，指标原始值为近似整理，仅供趋势研究与学术探讨，不构成任何投资建议。数值会随公开数据持续修订。</div>
 <div class='card metric'>
   <div><div class='num'>43.8</div><div class='sub'>QuantumCompete Index（综合得分，0-100）</div></div>
-  <div><div class='num' style='font-size:1.3em;color:#3a7'>42.7–44.5</div><div class='sub'>95% 置信区间（蒙特卡洛 N=2000 ±1σ）</div></div>
+  <div><div class='num' style='font-size:1.3em;color:#3a7'>42.8–44.5</div><div class='sub'>95% 置信区间（蒙特卡洛 N=2000 ±1σ）</div></div>
   <div><div class='num' style='font-size:1.3em;color:#c0392b'>2026-06-30</div><div class='sub'>快照日期</div></div>
 </div>
 <div class='charts'>
@@ -58,7 +58,7 @@ canvas{max-height:360px}
 <tr><td>Rigetti</td><td>海外</td><td>超导</td><td>整机/系统</td><td>上市</td><td>~25亿美元</td><td><b>30.5</b><br><small>29.05-33.17</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr></tbody></table>
 </div>
 <script>
-const series=[{"date": "2024Q3", "index": 40.6, "ci_low": 37.5, "ci_high": 42.0}, {"date": "2025Q2", "index": 42.4, "ci_low": 40.4, "ci_high": 43.4}, {"date": "2026-06-30", "index": 43.8, "ci_low": 42.7, "ci_high": 44.5}];
+const series=[{"date": "2024Q3", "index": 40.6, "ci_low": 37.3, "ci_high": 42.0}, {"date": "2025Q2", "index": 42.4, "ci_low": 40.4, "ci_high": 43.5}, {"date": "2026-06-30", "index": 43.8, "ci_low": 42.8, "ci_high": 44.5}];
 const ctx=document.getElementById('trend').getContext('2d');
 new Chart(ctx,{type:'line',data:{labels:series.map(s=>s.date),datasets:[
 {label:'综合指数',data:series.map(s=>s.index),borderColor:'#0d3b66',fill:false,tension:.3},

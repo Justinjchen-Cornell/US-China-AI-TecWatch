@@ -587,7 +587,7 @@
     {
       "date": "2024Q3",
       "index": 45.1,
-      "ci_low": 43.8,
+      "ci_low": 44.0,
       "ci_high": 45.8
     },
     {
@@ -646,5 +646,139 @@
     "推理时计算 / RL 强化推理模型（o系列 vs DeepSeek-R1 后续）",
     "多模态 Agent 从 Demo 到生产（调用量/毛利率兑现）",
     "开源权重 vs API 商业化的产业分叉（DeepSeek 路径是否持续）"
-  ]
+  ],
+  "intelligence": {
+    "schema_version": 1,
+    "industry": "ai-models",
+    "industry_cn": "AI模型",
+    "as_of": "2026-06-30",
+    "verdict": {
+      "phase": "产业成长期中段：推理模型 + Agent 落地兑现期",
+      "china_position": "生态领先 · 尖端接近但未超越",
+      "key_inflection": "旗舰模型代差是否被抹平（OpenAI o系 vs DeepSeek-R 系下一代）",
+      "investment_theme": "通用底座巨头化 → 垂直场景 / 开源低成本 / 推理基础设施是价值落点"
+    },
+    "technology_routes": [
+      {
+        "name": "推理时计算（test-time compute / RL）",
+        "maturity": "前沿",
+        "cn_players": [
+          "DeepSeek",
+          "Kimi",
+          "智谱"
+        ],
+        "us_players": [
+          "OpenAI o系列",
+          "Anthropic",
+          "Google"
+        ],
+        "convergence_signal": "o系 vs R系性能差收窄速度"
+      },
+      {
+        "name": "多模态 Agent（语音-视觉-动作统一）",
+        "maturity": "Demo→生产过渡",
+        "cn_players": [
+          "字节豆包",
+          "腾讯混元",
+          "阿里通义"
+        ],
+        "us_players": [
+          "OpenAI",
+          "Google Gemini",
+          "Anthropic"
+        ],
+        "convergence_signal": "Agent 任务完成率与调用量兑现"
+      },
+      {
+        "name": "开源权重路线",
+        "maturity": "成熟",
+        "cn_players": [
+          "DeepSeek",
+          "Qwen 系",
+          "GLM"
+        ],
+        "us_players": [
+          "Meta Llama"
+        ],
+        "convergence_signal": "HF 下载份额与微调生态"
+      },
+      {
+        "name": "端侧小模型（终端推理）",
+        "maturity": "增长期",
+        "cn_players": [
+          "面壁",
+          "MiniMax 端侧"
+        ],
+        "us_players": [
+          "Apple（传闻）",
+          "Google Gemini Nano"
+        ],
+        "convergence_signal": "端侧算力与能耗曲线"
+      }
+    ],
+    "value_chain": [
+      {
+        "segment": "通用底座模型",
+        "value_concentration": "高（巨头化）",
+        "logic": "资本与算力门槛极高，后发者窗口关闭中"
+      },
+      {
+        "segment": "垂直场景应用（视频/3D/Agent 编程）",
+        "value_concentration": "中→高",
+        "logic": "场景数据 + 分发渠道，垂直龙头可存活"
+      },
+      {
+        "segment": "推理基础设施（算力/推理引擎）",
+        "value_concentration": "中（卖铲人）",
+        "logic": "调用量爆发期的确定性受益者；国产算力是关键变量"
+      },
+      {
+        "segment": "开源社区与微调生态",
+        "value_concentration": "中",
+        "logic": "开源是地缘化竞争的非对称武器"
+      }
+    ],
+    "competitive_map": {
+      "cn_strength": [
+        "开源生态全球第一（HF 下载/微调）",
+        "推理成本 ~1/10（工程效率）",
+        "日调用量 140 亿次的规模化应用",
+        "人才供给（NeurIPS 43%）"
+      ],
+      "us_strength": [
+        "闭源尖端仍领先（o系/Claude）",
+        "资本与算力规模（2859 亿 vs 124 亿美元）",
+        "企业级付费生态成熟（ARR 验证）",
+        "开发者工具链与生态标准"
+      ],
+      "structural_gaps": [
+        "训练算力（高端 GPU 获取受限）",
+        "尖端模型推理质量（Agent 长任务可靠性）",
+        "企业级商业化收入规模"
+      ],
+      "asymmetry": "中国用开源+低成本对冲算力劣势——若尖端差距收窄到 <1%，生态优势将主导；若拉大，开源将被生态封锁抵消"
+    },
+    "inflections_6_18m": [
+      {
+        "event": "中美下一代旗舰发布（差距收窄至 <1% 或重新拉大）",
+        "impact": "决定'生态主导' vs '尖端封锁'路径",
+        "probability": "高（2026H2-2027H1）"
+      },
+      {
+        "event": "推理成本再降一个数量级（价格战第二波）",
+        "impact": "应用层渗透率加速，推理基础设施价值上移",
+        "probability": "高"
+      },
+      {
+        "event": "Agent 商业化兑现（ARR/毛利率验证）",
+        "impact": "区分'真需求'与'Demo'，垂直龙头分化",
+        "probability": "中"
+      },
+      {
+        "event": "国产算力训练效率（昇腾等生态成熟度）",
+        "impact": "决定中国训练成本曲线的斜率",
+        "probability": "中"
+      }
+    ]
+  }
 }

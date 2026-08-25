@@ -1,7 +1,7 @@
 {
   "index": 53.6,
-  "index_low": 53.0,
-  "index_high": 54.2,
+  "index_low": 52.9,
+  "index_high": 54.1,
   "confidence": 0.61,
   "n_indicators": 5,
   "industry_score01": 0.6399,
@@ -96,7 +96,7 @@
     "灵巧手高性价比量产（BOM 成本曲线，17% 物料占比是否被颠覆）",
     "具身数据闭环（真实遥操数据规模 vs 合成数据）"
   ],
-  "ci_low": 53.0,
-  "ci_high": 54.2,
+  "ci_low": 52.9,
+  "ci_high": 54.1,
   "index_note": "国家层客观指标(出货/灵巧手/成本/专利/VLA差距)"
 }
