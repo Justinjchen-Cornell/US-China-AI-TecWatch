@@ -49,12 +49,12 @@ def build():
         json.dump(series, f, ensure_ascii=False, indent=2)
     # HTML
     html = render_html(a)
-    with open(os.path.join(BASE, "site", "index.html"), "w", encoding="utf-8") as f:
+    with open(os.path.join(os.path.dirname(SITE), "index.html"), "w", encoding="utf-8") as f:
         f.write(html)
     print("[build] 报告已生成")
     print("  -", os.path.join(SITE, "latest.json"))
     print("  -", os.path.join(SITE, "series.json"))
-    print("  -", os.path.join(BASE, "site", "index.html"))
+    print("  -", os.path.join(os.path.dirname(SITE), "index.html"))
 
 def render_html(a):
     items = a["items"]

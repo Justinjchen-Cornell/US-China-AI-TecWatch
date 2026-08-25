@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8">
+<title>AI 大模型生态投资体系 · Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:0;background:#0f1626;color:#e8ecf3}
+header{padding:28px 32px 12px;background:linear-gradient(135deg,#18253f,#0f1626);border-bottom:1px solid #243047}
+h1{margin:0 0 6px;font-size:22px;color:#7cc4ff} .sub{color:#8a97ad;font-size:13px}
+main{max-width:1180px;margin:0 auto;padding:20px}
+.card{background:#172234;border:1px solid #243047;border-radius:12px;padding:18px;margin-bottom:20px}
+canvas{max-height:340px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#1f2d44;color:#9fb3d1;text-align:left;padding:8px}
+td{padding:8px;border-top:1px solid #243047}
+tr:hover td{background:#1c2940}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px}
+.领跑梯队{background:#1f6f54;color:#b8f5d8} .跟进梯队{background:#2f4a6f;color:#bcd2f5}
+.潜力梯队{background:#5a4a2a;color:#f5dcae} .观察梯队{background:#4a3030;color:#f5c4c4}
+.rec{font-size:13px;line-height:1.9;color:#c7d2e6}
+footer{text-align:center;color:#5b6677;font-size:11px;padding:16px}
+</style></head>
+<body>
+<header><h1>AI 大模型生态投资体系 · Dashboard</h1>
+<div class="sub">数据期次：2026Q2　|　综合评分区间 0-100（越高=生态/投资综合禀赋越强）　|　仅供趋势研究，不构成投资建议</div></header>
+<main>
+  <section class="card"><h3>五维生态雷达</h3><canvas id="radar"></canvas></section>
+  <section class="card"><h3>公司综合得分排名</h3><canvas id="bar"></canvas></section>
+  <section class="card"><h3>梯队排名明细</h3>
+    <table><thead><tr><th>公司</th><th>阵营</th><th>赛道</th><th>梯队</th><th>得分</th><th>95%CI</th><th>数据置信</th></tr></thead>
+    <tbody><tr><td>阿里巴巴</td><td>中国</td><td>云/通义</td><td>跟进梯队</td><td>58.1</td><td>52.6–62.7</td><td>77%</td></tr><tr><td>谷歌 Alphabet</td><td>海外</td><td>全栈四位一体</td><td>跟进梯队</td><td>57.6</td><td>52.0–62.2</td><td>77%</td></tr><tr><td>Anthropic</td><td>海外</td><td>通用大模型</td><td>潜力梯队</td><td>51.2</td><td>45.7–56.0</td><td>77%</td></tr><tr><td>DeepSeek</td><td>中国</td><td>开源基座</td><td>潜力梯队</td><td>50.7</td><td>45.1–55.4</td><td>77%</td></tr><tr><td>微软</td><td>海外</td><td>云/AI投资</td><td>潜力梯队</td><td>48.2</td><td>42.6–53.0</td><td>77%</td></tr><tr><td>智谱 AI</td><td>中国</td><td>通用/开源</td><td>观察梯队</td><td>43.8</td><td>38.3–48.5</td><td>77%</td></tr><tr><td>OpenAI</td><td>海外</td><td>通用大模型</td><td>观察梯队</td><td>43.3</td><td>37.9–48.1</td><td>77%</td></tr><tr><td>腾讯</td><td>中国</td><td>生态/混元</td><td>观察梯队</td><td>41.2</td><td>35.9–45.9</td><td>77%</td></tr><tr><td>面壁智能</td><td>中国</td><td>端侧小模型</td><td>观察梯队</td><td>37.2</td><td>32.1–41.8</td><td>77%</td></tr><tr><td>快手(可灵)</td><td>中国</td><td>视频生成</td><td>观察梯队</td><td>34.0</td><td>29.2–38.4</td><td>77%</td></tr><tr><td>月之暗面 Kimi</td><td>中国</td><td>C端/Agent</td><td>观察梯队</td><td>32.4</td><td>27.7–36.7</td><td>77%</td></tr><tr><td>MiniMax</td><td>中国</td><td>多模态/出海</td><td>观察梯队</td><td>31.5</td><td>26.8–35.7</td><td>77%</td></tr></tbody></table></section>
+  <section class="card"><h3>配置含义（投资体系观点）</h3>
+    <div class="rec"><b>确定性核心（已上市/有流动性）：</b>阿里巴巴(58.1), 谷歌 Alphabet(57.6), 微软(48.2), 智谱 AI(43.8), 腾讯(41.2)<br>
+    <b>高弹性期权（一级市场/Pre-IPO）：</b>Anthropic(51.2), DeepSeek(50.7), OpenAI(43.3), 面壁智能(37.2)<br>
+    <span style="color:#8a97ad">说明：核心仓买“商业化兑现+生态位确定性”，期权仓买“开源/端侧/视频等非对称赛道的高弹性”。</span></div></section>
+</main>
+<footer>数据基线来自公开研究与报告，指标原始值为近似整理，会随公开数据持续修订。</footer>
+<script>
+const labels=["模型能力", "商业化兑现", "开源生态", "算力成本效率", "具身/物理AI"]; const dimdata=[74.2, 36.7, 28.9, 55.2, 18.7];
+new Chart(document.getElementById('radar'),{type:'radar',data:{labels,datasets:[{label:'五维平均得分',data:dimdata,backgroundColor:'rgba(124,196,255,.25)',borderColor:'#7cc4ff',borderWidth:2,pointBackgroundColor:'#7cc4ff'}]},options:{scales:{r:{min:0,max:100,ticks:{color:'#5b6677'},grid:{color:'#243047'},angleLines:{color:'#243047'},pointLabels:{color:'#9fb3d1'}}},plugins:{legend:{display:false}}} });
+const names=["阿里巴巴", "谷歌 Alphabet", "Anthropic", "DeepSeek", "微软", "智谱 AI", "OpenAI", "腾讯", "面壁智能", "快手(可灵)", "月之暗面 Kimi", "MiniMax"]; const scores=[58.1, 57.6, 51.2, 50.7, 48.2, 43.8, 43.3, 41.2, 37.2, 34.0, 32.4, 31.5];
+new Chart(document.getElementById('bar'),{type:'bar',data:{labels:names,datasets:[{label:'综合得分',data:scores,backgroundColor:names.map(()=>'#4f8fd6')}]},options:{indexAxis:'y',scales:{x:{min:0,max:100,grid:{color:'#243047'},ticks:{color:'#5b6677'}},y:{grid:{color:'#243047'},ticks:{color:'#9fb3d1'}}},plugins:{legend:{display:false}}} });
+</script></body></html>
