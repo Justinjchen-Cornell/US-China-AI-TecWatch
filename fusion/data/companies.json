@@ -1,0 +1,23 @@
+[
+  {"id":"cfs","name":"CFS (Commonwealth Fusion)","country":"美国","route":"紧凑托卡马克(HTS)","role":"整机(托卡马克+HTS)","market":"一级","science":88,"engineering":70,"capital":92,"supply":60,"policy":55,"ai":55},
+  {"id":"helion","name":"Helion","country":"美国","route":"FRC/场反位形","role":"整机(FRC+氘氦3)","market":"一级","science":55,"engineering":45,"capital":80,"supply":35,"policy":45,"ai":60},
+  {"id":"tae","name":"TAE Technologies (DJT)","country":"美国","route":"磁惯性/氢硼","role":"整机(氢硼无中子)","market":"一级/SPAC","science":52,"engineering":40,"capital":72,"supply":30,"policy":48,"ai":58},
+  {"id":"pacificfusion","name":"Pacific Fusion","country":"美国","route":"磁惯性","role":"整机(脉冲功率MTF)","market":"一级","science":50,"engineering":38,"capital":65,"supply":32,"policy":45,"ai":52},
+  {"id":"tokamakenergy","name":"Tokamak Energy","country":"英国","route":"球形托卡马克","role":"整机(球形HTS)","market":"一级","science":68,"engineering":55,"capital":58,"supply":48,"policy":62,"ai":48},
+  {"id":"zapenergy","name":"Zap Energy","country":"美国","route":"Z-pinch","role":"整机(Z-pinch)","market":"一级","science":48,"engineering":36,"capital":55,"supply":28,"policy":40,"ai":50},
+  {"id":"newao","name":"新奥科技","country":"中国","route":"球形环/氢硼","role":"整机(民营)","market":"一级","science":50,"engineering":40,"capital":62,"supply":34,"policy":58,"ai":52},
+  {"id":"xhjn","name":"星环聚能","country":"中国","route":"球形托卡马克","role":"整机(民营)","market":"一级","science":60,"engineering":48,"capital":60,"supply":42,"policy":62,"ai":48},
+  {"id":"nlqd","name":"能量奇点","country":"中国","route":"紧凑托卡马克(HTS)","role":"整机(洪荒70)","market":"一级","science":62,"engineering":50,"capital":58,"supply":46,"policy":60,"ai":50},
+  {"id":"yxt","name":"昱曦科技","country":"中国","route":"供应链(磁体)","role":"卖铲人(HTS磁体)","market":"一级","science":55,"engineering":42,"capital":40,"supply":88,"policy":58,"ai":45},
+  {"id":"lianchuang","name":"联创光电","country":"中国","route":"供应链(磁体)","role":"卖铲人(HTS磁体集成)","market":"A股","science":58,"engineering":48,"capital":45,"supply":86,"policy":65,"ai":42},
+  {"id":"xbsc","name":"西部超导","country":"中国","route":"供应链(超导线材)","role":"卖铲人(ITER线材)","market":"A股","science":72,"engineering":60,"capital":48,"supply":90,"policy":72,"ai":38},
+  {"id":"ydgf","name":"永鼎股份","country":"中国","route":"供应链(HTS带材)","role":"卖铲人(带材)","market":"A股","science":55,"engineering":45,"capital":40,"supply":78,"policy":60,"ai":35},
+  {"id":"shdq","name":"上海电气","country":"中国","route":"主机总包","role":"工程总包(BEST等)","market":"A股","science":62,"engineering":58,"capital":42,"supply":70,"policy":80,"ai":32},
+  {"id":"dfdq","name":"东方电气","country":"中国","route":"主机总包","role":"工程总包","market":"A股","science":60,"engineering":56,"capital":40,"supply":68,"policy":78,"ai":30},
+  {"id":"gdgj","name":"国光电气","country":"中国","route":"核心部件","role":"卖铲人(微波/真空室)","market":"A股","science":56,"engineering":48,"capital":38,"supply":76,"policy":64,"ai":34},
+  {"id":"atai","name":"安泰科技","country":"中国","route":"核心部件","role":"卖铲人(钨/偏滤器)","market":"A股","science":60,"engineering":52,"capital":38,"supply":80,"policy":68,"ai":32},
+  {"id":"hdhd","name":"合锻智能","country":"中国","route":"核心部件","role":"卖铲人(偏滤器/结构件)","market":"A股","science":52,"engineering":46,"capital":35,"supply":70,"policy":62,"ai":30},
+  {"id":"zgdianhe","name":"中国核电","country":"中国","route":"电站运营","role":"远期运营期权","market":"A股","science":40,"engineering":35,"capital":45,"supply":30,"policy":82,"ai":28},
+  {"id":"ceg","name":"Constellation Energy","country":"美国","route":"核电+聚变","role":"传统巨头转型","market":"美股","science":45,"engineering":40,"capital":60,"supply":34,"policy":70,"ai":40},
+  {"id":"siemensenergy","name":"西门子能源","country":"德国","route":"设备/核工程","role":"工程基础设施","market":"德股","science":50,"engineering":48,"capital":52,"supply":60,"policy":66,"ai":36}
+]

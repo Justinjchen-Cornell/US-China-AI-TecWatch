@@ -46,6 +46,10 @@ jobs:
         run: |
           python quantum/build_report.py --site-dir ../site/quantum
 
+      - name: Build fusion sub-project
+        run: |
+          python fusion/build_report.py --site-dir ../site/fusion
+
       - name: Rebuild main site (refresh industry cards)
         run: python scripts/build_site.py
 
