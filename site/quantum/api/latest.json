@@ -3,7 +3,7 @@
   "date": "2026-06-30",
   "composite": 43.8,
   "ci_low": 42.7,
-  "ci_high": 44.6,
+  "ci_high": 44.5,
   "dim_average": {
     "tech_maturity": 60.0,
     "commercial": 38.0,

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-25T16:07:49.585323Z",
+  "generated_at": "2026-08-25T16:29:39.409963Z",
   "as_of": "2026Q2",
   "composite": 53.6,
   "index": 53.6,
   "ci_low": 52.9,
-  "ci_high": 54.1,
+  "ci_high": 54.2,
   "confidence": 0.61,
   "index_note": "国家层客观指标(出货/灵巧手/成本/专利/VLA差距)",
   "pool_avg": 65.0,

@@ -23,7 +23,7 @@ canvas{max-height:360px}
 <div class='card' style='border-left:4px solid #06b6d4'><div style='font-size:12px;color:#7a8699'>行业研判 · 非评分 · 作者观点</div><h2 style='font-size:17px;margin:8px 0 10px'>纠错过渡期：从'物理比特军备'转向'逻辑比特工程化'</h2><table><tbody><tr><th style='text-align:left;width:130px'>中国位置</th><td>尖端落后（逻辑比特差距大）· 工程与产业政策追赶</td></tr><tr><th style='text-align:left'>关键拐点</th><td>逻辑量子比特规模化（表面码→qLDPC）是否突破千逻辑比特</td></tr><tr><th style='text-align:left'>投资主题</th><td>先投'卖跑道和钉鞋'的部件商（激光/制冷/测控），整机厂作期权</td></tr></tbody></table><div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px'><li><b>核心部件（激光器/制冷机/测控）</b>（高（卖铲人））：无论哪条路线胜出都要采购，确定性最高</li><li><b>整机/系统集成</b>（中（期权））：路线未收敛，整机厂胜率低赔率高</li><li><b>量子软件/算法/纠错中间层</b>（中）：错误缓解与编译工具链是软件价值落点</li></ul><div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px'><li><b>Google/IBM 下一代纠错演示 vs 祖冲之三号迭代</b>（概率 高）：逻辑比特差距走向（收窄 or 拉大）</li><li><b>qLDPC 码实用化（纠错开销大幅下降）</b>（概率 中）：改变'纠错成本'竞争维度</li><li><b>中国量子专项新一期预算/产业化政策</b>（概率 中）：工程化投入斜率</li><li><b>量子云商业订单（金融/制药试点）</b>（概率 中）：商业化兑现节奏</li></ul></div>
 <div class='card metric'>
   <div><div class='num'>43.8</div><div class='sub'>QuantumCompete Index（综合得分，0-100）</div></div>
-  <div><div class='num' style='font-size:1.3em;color:#3a7'>42.7–44.6</div><div class='sub'>95% 置信区间（蒙特卡洛 N=2000 ±1σ）</div></div>
+  <div><div class='num' style='font-size:1.3em;color:#3a7'>42.7–44.5</div><div class='sub'>95% 置信区间（蒙特卡洛 N=2000 ±1σ）</div></div>
   <div><div class='num' style='font-size:1.3em;color:#c0392b'>2026-06-30</div><div class='sub'>快照日期</div></div>
 </div>
 <div class='charts'>
@@ -59,14 +59,14 @@ canvas{max-height:360px}
 <tr><td>Rigetti</td><td>海外</td><td>超导</td><td>整机/系统</td><td>上市</td><td>~25亿美元</td><td><b>30.5</b><br><small>29.05-33.17</small></td><td>确定性核心(已上市/流动性好) / 整机赛道(技术路线博弈)</td></tr></tbody></table>
 </div>
 <script>
-const series=[{"date": "2024Q3", "index": 40.6, "ci_low": 37.3, "ci_high": 42.0}, {"date": "2025Q2", "index": 42.4, "ci_low": 40.4, "ci_high": 43.5}, {"date": "2026-06-30", "index": 43.8, "ci_low": 42.7, "ci_high": 44.6}];
+const series=[{"date": "2024Q3", "index": 40.6, "ci_low": 37.3, "ci_high": 42.0}, {"date": "2025Q2", "index": 42.4, "ci_low": 40.5, "ci_high": 43.4}, {"date": "2026-06-30", "index": 43.8, "ci_low": 42.7, "ci_high": 44.5}];
 const ctx=document.getElementById('trend').getContext('2d');
 new Chart(ctx,{type:'line',data:{labels:series.map(s=>s.date),datasets:[
 {label:'综合指数',data:series.map(s=>s.index),borderColor:'#0d3b66',fill:false,tension:.3},
 {label:'CI上界',data:series.map(s=>s.ci_high),borderColor:'#3a7',borderDash:[4,4],fill:false},
 {label:'CI下界',data:series.map(s=>s.ci_low),borderColor:'#c0392b',borderDash:[4,4],fill:false}
 ]},options:{scales:{y:{min:0,max:100}}}});
-new Chart(document.getElementById('radar').getContext('2d'),{type:'radar',data:{labels:["\u6280\u672f\u6210\u719f\u5ea6", "\u5546\u4e1a\u5316\u8fdb\u5ea6", "\u8d44\u672c\u70ed\u5ea6", "\u8def\u7ebf\u786e\u5b9a\u6027", "\u4f9b\u5e94\u94fe(\u5356\u94f2\u4eba)\u5730\u4f4d", "\u653f\u7b56/\u6218\u7565\u4ef7\u503c"],datasets:[{label:'六维均值',data:[60.0, 38.0, 62.0, 56.0, 58.0, 62.0],backgroundColor:'rgba(13,59,102,.25)',borderColor:'#0d3b66',pointBackgroundColor:'#0d3b66'}]},options:{scales:{r:{min:0,max:100}}}}});
-new Chart(document.getElementById('barrank').getContext('2d'),{type:'bar',data:{labels:["\u56fd\u76fe\u91cf\u5b50", "\u56fd\u4eea\u91cf\u5b50", "\u9891\u51c6\u6fc0\u5149", "\u672c\u6e90\u91cf\u5b50", "Quantinuum", "IBM", "IonQ", "\u56fe\u7075\u91cf\u5b50", "\u73bb\u8272\u91cf\u5b50", "Google Quantum(Willow)", "\u91cf\u65cb\u79d1\u6280", "\u4e2d\u79d1\u9177\u539f"],datasets:[{label:'综合得分',data:[70.67, 69.33, 67.0, 59.83, 56.67, 55.83, 52.17, 52.0, 51.0, 50.0, 48.0, 45.67],backgroundColor:'#0d3b66'}]},options:{indexAxis:'y',scales:{x:{min:0,max:100}}}}});
+new Chart(document.getElementById('radar').getContext('2d'),{type:'radar',data:{labels:["\u6280\u672f\u6210\u719f\u5ea6", "\u5546\u4e1a\u5316\u8fdb\u5ea6", "\u8d44\u672c\u70ed\u5ea6", "\u8def\u7ebf\u786e\u5b9a\u6027", "\u4f9b\u5e94\u94fe(\u5356\u94f2\u4eba)\u5730\u4f4d", "\u653f\u7b56/\u6218\u7565\u4ef7\u503c"],datasets:[{label:'六维均值',data:[60.0, 38.0, 62.0, 56.0, 58.0, 62.0],backgroundColor:'rgba(13,59,102,.25)',borderColor:'#0d3b66',pointBackgroundColor:'#0d3b66'}]},options:{scales:{r:{min:0,max:100}}}});
+new Chart(document.getElementById('barrank').getContext('2d'),{type:'bar',data:{labels:["\u56fd\u76fe\u91cf\u5b50", "\u56fd\u4eea\u91cf\u5b50", "\u9891\u51c6\u6fc0\u5149", "\u672c\u6e90\u91cf\u5b50", "Quantinuum", "IBM", "IonQ", "\u56fe\u7075\u91cf\u5b50", "\u73bb\u8272\u91cf\u5b50", "Google Quantum(Willow)", "\u91cf\u65cb\u79d1\u6280", "\u4e2d\u79d1\u9177\u539f"],datasets:[{label:'综合得分',data:[70.67, 69.33, 67.0, 59.83, 56.67, 55.83, 52.17, 52.0, 51.0, 50.0, 48.0, 45.67],backgroundColor:'#0d3b66'}]},options:{indexAxis:'y',scales:{x:{min:0,max:100}}}});
 </script>
 </body></html>

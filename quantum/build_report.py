@@ -181,8 +181,8 @@ new Chart(ctx,{{type:'line',data:{{labels:series.map(s=>s.date),datasets:[
 {{label:'CI上界',data:series.map(s=>s.ci_high),borderColor:'#3a7',borderDash:[4,4],fill:false}},
 {{label:'CI下界',data:series.map(s=>s.ci_low),borderColor:'#c0392b',borderDash:[4,4],fill:false}}
 ]}},options:{{scales:{{y:{{min:0,max:100}}}}}}}});
-new Chart(document.getElementById('radar').getContext('2d'),{{type:'radar',data:{{labels:{json.dumps(dim_labels)},datasets:[{{label:'六维均值',data:{json.dumps(dim_vals)},backgroundColor:'rgba(13,59,102,.25)',borderColor:'#0d3b66',pointBackgroundColor:'#0d3b66'}}]}},options:{{scales:{{r:{{min:0,max:100}}}}}}}}}});
-new Chart(document.getElementById('barrank').getContext('2d'),{{type:'bar',data:{{labels:{json.dumps(top_labels)},datasets:[{{label:'综合得分',data:{json.dumps(top_scores)},backgroundColor:'#0d3b66'}}]}},options:{{indexAxis:'y',scales:{{x:{{min:0,max:100}}}}}}}}}});
+new Chart(document.getElementById('radar').getContext('2d'),{{type:'radar',data:{{labels:{json.dumps(dim_labels)},datasets:[{{label:'六维均值',data:{json.dumps(dim_vals)},backgroundColor:'rgba(13,59,102,.25)',borderColor:'#0d3b66',pointBackgroundColor:'#0d3b66'}}]}},options:{{scales:{{r:{{min:0,max:100}}}}}}}});
+new Chart(document.getElementById('barrank').getContext('2d'),{{type:'bar',data:{{labels:{json.dumps(top_labels)},datasets:[{{label:'综合得分',data:{json.dumps(top_scores)},backgroundColor:'#0d3b66'}}]}},options:{{indexAxis:'y',scales:{{x:{{min:0,max:100}}}}}}}});
 </script>
 </body></html>"""
 

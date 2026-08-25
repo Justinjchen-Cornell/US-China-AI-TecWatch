@@ -8,13 +8,13 @@
   {
     "date": "2025Q2",
     "index": 42.4,
-    "ci_low": 40.4,
-    "ci_high": 43.5
+    "ci_low": 40.5,
+    "ci_high": 43.4
   },
   {
     "date": "2026-06-30",
     "index": 43.8,
     "ci_low": 42.7,
-    "ci_high": 44.6
+    "ci_high": 44.5
   }
 ]
