@@ -1,0 +1,1202 @@
+{
+  "period": "2026Q2",
+  "index": 52.9,
+  "ci_low": 52.2,
+  "ci_high": 53.5,
+  "confidence": 0.8,
+  "index_note": "国家层客观指标(顶尖差距/开源/成本/调用量/人才)",
+  "pool_avg": 41.1,
+  "camp_avg": {
+    "中国": 41.1,
+    "海外": 50.1
+  },
+  "dim_avg": {
+    "model_capability": 74.2,
+    "commercialization": 36.7,
+    "open_source": 28.9,
+    "compute_efficiency": 55.2,
+    "embodiment": 18.7
+  },
+  "tiers": {
+    "领跑梯队": [],
+    "跟进梯队": [
+      {
+        "id": "alibaba",
+        "name": "阿里巴巴",
+        "camp": "中国",
+        "sector": "云/通义",
+        "listed": true,
+        "valuation": 2800,
+        "arr": 0,
+        "score": 58.089396640332716,
+        "ci_low": 52.556275959083955,
+        "ci_high": 62.66535656348207,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7840580282247949,
+          "commercialization": 0.4201705462035028,
+          "open_source": 0.7034293022455846,
+          "compute_efficiency": 0.5824316265342757,
+          "embodiment": 0.2089967793563634
+        },
+        "thesis": "Qwen 开源生态中国第一（全球下载前列）+ 云业务变现闭环",
+        "moat": "开源生态 + 阿里云分发 + 集团现金流",
+        "risks": [
+          "云增速放缓",
+          "开源与商业化平衡",
+          "内部协同效率"
+        ],
+        "catalysts": [
+          "Qwen 新旗舰",
+          "云 AI 收入占比提升",
+          "海外开源落地"
+        ],
+        "track_points": [
+          "Qwen 排名与下载",
+          "阿里云 AI 收入",
+          "开源许可证策略"
+        ],
+        "tier": "跟进梯队"
+      },
+      {
+        "id": "google",
+        "name": "谷歌 Alphabet",
+        "camp": "海外",
+        "sector": "全栈四位一体",
+        "listed": true,
+        "valuation": 25000,
+        "arr": 0,
+        "score": 57.554603151673795,
+        "ci_low": 52.00920816834669,
+        "ci_high": 62.150908404778036,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.9646088741742651,
+          "commercialization": 0.4380360036185622,
+          "open_source": 0.12531603815608672,
+          "compute_efficiency": 0.6371384594584495,
+          "embodiment": 0.35910860555020263
+        },
+        "thesis": "全栈四位一体（模型/芯片/云/搜索分发）的慢热冠军",
+        "moat": "TPU+Gemini+Android/搜索分发+DeepMind 人才",
+        "risks": [
+          "组织惯性/产品化慢",
+          "反垄断",
+          "与 OpenAI 心智差距"
+        ],
+        "catalysts": [
+          "Gemini 旗舰迭代",
+          "TPU 训练效率",
+          "Google Cloud AI 收入"
+        ],
+        "track_points": [
+          "Gemini 基准排名",
+          "TPU 生态",
+          "Cloud AI 增速"
+        ],
+        "tier": "跟进梯队"
+      }
+    ],
+    "潜力梯队": [
+      {
+        "id": "anthropic",
+        "name": "Anthropic",
+        "camp": "海外",
+        "sector": "通用大模型",
+        "listed": false,
+        "valuation": 9650,
+        "arr": 47,
+        "score": 51.24234266421557,
+        "ci_low": 45.651015355482954,
+        "ci_high": 55.99962277619261,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.9061433817457507,
+          "commercialization": 0.7170401372357957,
+          "open_source": 0.13307398666227988,
+          "compute_efficiency": 0.3309561512632986,
+          "embodiment": 0.10890520975288731
+        },
+        "thesis": "企业级安全+长任务 Agent 的差异化冠军（Claude 系）",
+        "moat": "安全/对齐口碑 + 企业合同质量（高管薪酬/深度绑定）",
+        "risks": [
+          "规模与资本远小于 OpenAI",
+          "Agent 可靠性瓶颈",
+          "开源替代"
+        ],
+        "catalysts": [
+          "Claude Opus 下一代",
+          "企业 ARR 超预期",
+          "长任务 benchmark 领先"
+        ],
+        "track_points": [
+          "企业客户留存与扩量",
+          "Agent 任务成功率",
+          "毛利率"
+        ],
+        "tier": "潜力梯队"
+      },
+      {
+        "id": "deepseek",
+        "name": "DeepSeek",
+        "camp": "中国",
+        "sector": "开源基座",
+        "listed": false,
+        "valuation": 500,
+        "arr": 2,
+        "score": 50.65005828593034,
+        "ci_low": 45.063627343757126,
+        "ci_high": 55.41484612572548,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7020889821350007,
+          "commercialization": 0.25640092908384027,
+          "open_source": 0.8089247038512779,
+          "compute_efficiency": 0.6570735692335403,
+          "embodiment": 0.07972045919096682
+        },
+        "thesis": "开源低成本路线的全球旗帜——用工程效率对冲算力劣势，重塑产业成本曲线",
+        "moat": "训练/推理工程极致（成本 ~1/10）+ 开源生态心智（HF 下载第一梯队）",
+        "risks": [
+          "盈利模式未验证（开源让利）",
+          "前沿代差被 OpenAI 拉大",
+          "算力获取限制"
+        ],
+        "catalysts": [
+          "R 系下一代发布",
+          "推理成本再降",
+          "生态商业化（API/企业）"
+        ],
+        "track_points": [
+          "LMArena 分差",
+          "HF 下载/微调份额",
+          "API 定价与调用量"
+        ],
+        "tier": "潜力梯队"
+      },
+      {
+        "id": "microsoft",
+        "name": "微软",
+        "camp": "海外",
+        "sector": "云/AI投资",
+        "listed": true,
+        "valuation": 30000,
+        "arr": 0,
+        "score": 48.17490257041281,
+        "ci_low": 42.62566929771561,
+        "ci_high": 52.956708011517975,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.8304350578785482,
+          "commercialization": 0.4468161827303303,
+          "open_source": 0.10164015669058113,
+          "compute_efficiency": 0.5345365536473652,
+          "embodiment": 0.30907420809354824
+        },
+        "thesis": "OpenAI 同盟 + Copilot 企业分发 = AI 商业化最确定的大厂",
+        "moat": "企业软件分销网络（Office/Windows/Azure）",
+        "risks": [
+          "对 OpenAI 依赖",
+          "Copilot 变现滞后预期",
+          "竞争（Google/亚马逊）"
+        ],
+        "catalysts": [
+          "Copilot 渗透率",
+          "Azure AI 增速",
+          "自研 MAI 模型进展"
+        ],
+        "track_points": [
+          "Copilot 付费席位",
+          "Azure AI 收入",
+          "与 OpenAI 协议演变"
+        ],
+        "tier": "潜力梯队"
+      }
+    ],
+    "观察梯队": [
+      {
+        "id": "zhipu",
+        "name": "智谱 AI",
+        "camp": "中国",
+        "sector": "通用/开源",
+        "listed": true,
+        "valuation": 300,
+        "arr": 0.7,
+        "score": 43.763857967880725,
+        "ci_low": 38.346769323519624,
+        "ci_high": 48.517721568650394,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7578124618019486,
+          "commercialization": 0.1320403116480786,
+          "open_source": 0.6361042921017166,
+          "compute_efficiency": 0.5824316265342757,
+          "embodiment": 0.15895299381457906
+        },
+        "thesis": "中国通用+开源双轨（GLM 系），清华系基因的融资高地",
+        "moat": "学术背书（清华）+ 融资充足 + 全栈布局",
+        "risks": [
+          "商业化兑现慢",
+          "大厂挤压",
+          "开源心智弱于 DeepSeek/Qwen"
+        ],
+        "catalysts": [
+          "GLM 新旗舰",
+          "企业客户放量",
+          "Agent 平台"
+        ],
+        "track_points": [
+          "GLM 排名",
+          "融资与估值",
+          "企业 ARR"
+        ],
+        "tier": "观察梯队"
+      },
+      {
+        "id": "openai",
+        "name": "OpenAI",
+        "camp": "海外",
+        "sector": "通用大模型",
+        "listed": false,
+        "valuation": 8520,
+        "arr": 50,
+        "score": 43.336070604747576,
+        "ci_low": 37.93621302861198,
+        "ci_high": 48.083197343273,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.8451381435987146,
+          "commercialization": 0.47107141480009473,
+          "open_source": 0.14839821495347438,
+          "compute_efficiency": 0.40076421639925086,
+          "embodiment": 0.15895299381457906
+        },
+        "thesis": "闭源前沿+ChatGPT 生态双垄断者，推理模型（o系）定义行业标准",
+        "moat": "品牌+开发者生态+微软算力同盟；前沿论文与人才密度",
+        "risks": [
+          "推理成本高企侵蚀毛利",
+          "企业付费迁移（Claude/Gemini 竞争）",
+          "算力供应链依赖"
+        ],
+        "catalysts": [
+          "下一代 o 系发布",
+          "Agent 商业化 ARR 突破",
+          "模型成本下降曲线"
+        ],
+        "track_points": [
+          "旗舰模型代差 vs DeepSeek-R 系",
+          "ChatGPT 企业版渗透率",
+          "推理成本/百万 token"
+        ],
+        "tier": "观察梯队"
+      },
+      {
+        "id": "tencent",
+        "name": "腾讯",
+        "camp": "中国",
+        "sector": "生态/混元",
+        "listed": true,
+        "valuation": 5500,
+        "arr": 0,
+        "score": 41.2206838479154,
+        "ci_low": 35.917334139967494,
+        "ci_high": 45.92388981230292,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.7474331130428118,
+          "commercialization": 0.42915511970919207,
+          "open_source": 0.07732540992504155,
+          "compute_efficiency": 0.5407542168125825,
+          "embodiment": 0.17974428931842112
+        },
+        "thesis": "混元+微信/游戏分发 = 场景垄断型选手（元宝/广告/游戏 Agent）",
+        "moat": "微信生态分发 + 游戏/广告现金流 + 混元全栈",
+        "risks": [
+          "模型竞争力中游",
+          "保守产品节奏",
+          "监管"
+        ],
+        "catalysts": [
+          "混元新版本",
+          "微信 AI 入口放量",
+          "广告/游戏 AI 提效"
+        ],
+        "track_points": [
+          "混元排名",
+          "元宝/微信 AI 渗透",
+          "AI 对广告效率的贡献"
+        ],
+        "tier": "观察梯队"
+      },
+      {
+        "id": "facewall",
+        "name": "面壁智能",
+        "camp": "中国",
+        "sector": "端侧小模型",
+        "listed": false,
+        "valuation": 15,
+        "arr": 0.1,
+        "score": 37.199847246480275,
+        "ci_low": 32.13102641594453,
+        "ci_high": 41.7702985572169,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.45696404700677395,
+          "commercialization": 0.24399148603990373,
+          "open_source": 0.5282457824839306,
+          "compute_efficiency": 0.6939441925169254,
+          "embodiment": 0.1297329047947906
+        },
+        "thesis": "端侧小模型专家（MiniCPM 系），终端 AI 的潜在赢家",
+        "moat": "端侧压缩技术 + 小模型性能/成本比",
+        "risks": [
+          "端侧市场节奏慢",
+          "大厂端侧挤压",
+          "商业化规模小"
+        ],
+        "catalysts": [
+          "端侧旗舰芯片适配",
+          "OEM 合作",
+          "小模型 benchmark 领先"
+        ],
+        "track_points": [
+          "MiniCPM 排名",
+          "端侧部署案例",
+          "OEM 合同"
+        ],
+        "tier": "观察梯队"
+      },
+      {
+        "id": "kuaishou",
+        "name": "快手(可灵)",
+        "camp": "中国",
+        "sector": "视频生成",
+        "listed": true,
+        "valuation": 380,
+        "arr": 5,
+        "score": 33.99557429066589,
+        "ci_low": 29.16062880441581,
+        "ci_high": 38.41314756929422,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.47082655853040456,
+          "commercialization": 0.43775573736848017,
+          "open_source": 0.052320692234473665,
+          "compute_efficiency": 0.5778442849254926,
+          "embodiment": 0.25903704830195085
+        },
+        "thesis": "视频生成（可灵）全球领跑的垂类黑马，内容生态闭环",
+        "moat": "视频数据+生成质量（可灵排名前列）+ 内容平台分发",
+        "risks": [
+          "垂类天花板",
+          "Sora 系竞争",
+          "算力成本"
+        ],
+        "catalysts": [
+          "可灵新版本",
+          "B 端影视/广告订单",
+          "出海"
+        ],
+        "track_points": [
+          "可灵生成质量排名",
+          "视频生成收入",
+          "B 端订单"
+        ],
+        "tier": "观察梯队"
+      },
+      {
+        "id": "kimi",
+        "name": "月之暗面 Kimi",
+        "camp": "中国",
+        "sector": "C端/Agent",
+        "listed": false,
+        "valuation": 330,
+        "arr": 1.5,
+        "score": 32.37011957671456,
+        "ci_low": 27.66944017675264,
+        "ci_high": 36.69389632784063,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.8218221660264866,
+          "commercialization": 0.15576440764217447,
+          "open_source": 0.08550433139361324,
+          "compute_efficiency": 0.5400864053986201,
+          "embodiment": 0.07972045919096682
+        },
+        "thesis": "C 端长文本/Agent 先锋（月之暗面），产品体验驱动的差异化",
+        "moat": "C 端品牌 + 长文本记忆产品心智",
+        "risks": [
+          "C 端变现难",
+          "巨头免费竞争",
+          "推理成本"
+        ],
+        "catalysts": [
+          "Kimi 新功能",
+          "C 端 MAU",
+          "海外市场"
+        ],
+        "track_points": [
+          "Kimi MAU 与留存",
+          "长文本 benchmark",
+          "商业化进展"
+        ],
+        "tier": "观察梯队"
+      },
+      {
+        "id": "minimax",
+        "name": "MiniMax",
+        "camp": "中国",
+        "sector": "多模态/出海",
+        "listed": true,
+        "valuation": 300,
+        "arr": 3,
+        "score": 31.4503195344572,
+        "ci_low": 26.830220213409806,
+        "ci_high": 35.71611983068926,
+        "confidence": 0.7699999999999999,
+        "dim_scores": {
+          "model_capability": 0.613541722217184,
+          "commercialization": 0.26088597375290323,
+          "open_source": 0.06906988309238948,
+          "compute_efficiency": 0.5491240486255555,
+          "embodiment": 0.2089967793563634
+        },
+        "thesis": "多模态（视频/音乐）+ 出海双引擎，全球化打法独特",
+        "moat": "多模态生成能力 + 海外市场先发（Talkie/Hailuo）",
+        "risks": [
+          "出海监管",
+          "生成式竞争白热化",
+          "盈利模式"
+        ],
+        "catalysts": [
+          "视频生成新版本",
+          "海外用户增长",
+          "B 端合作"
+        ],
+        "track_points": [
+          "海外 MAU/ARR",
+          "视频生成质量排名",
+          "多模态调用量"
+        ],
+        "tier": "观察梯队"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "alibaba",
+      "name": "阿里巴巴",
+      "camp": "中国",
+      "sector": "云/通义",
+      "listed": true,
+      "valuation": 2800,
+      "arr": 0,
+      "score": 58.089396640332716,
+      "ci_low": 52.556275959083955,
+      "ci_high": 62.66535656348207,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7840580282247949,
+        "commercialization": 0.4201705462035028,
+        "open_source": 0.7034293022455846,
+        "compute_efficiency": 0.5824316265342757,
+        "embodiment": 0.2089967793563634
+      },
+      "thesis": "Qwen 开源生态中国第一（全球下载前列）+ 云业务变现闭环",
+      "moat": "开源生态 + 阿里云分发 + 集团现金流",
+      "risks": [
+        "云增速放缓",
+        "开源与商业化平衡",
+        "内部协同效率"
+      ],
+      "catalysts": [
+        "Qwen 新旗舰",
+        "云 AI 收入占比提升",
+        "海外开源落地"
+      ],
+      "track_points": [
+        "Qwen 排名与下载",
+        "阿里云 AI 收入",
+        "开源许可证策略"
+      ],
+      "tier": "跟进梯队"
+    },
+    {
+      "id": "google",
+      "name": "谷歌 Alphabet",
+      "camp": "海外",
+      "sector": "全栈四位一体",
+      "listed": true,
+      "valuation": 25000,
+      "arr": 0,
+      "score": 57.554603151673795,
+      "ci_low": 52.00920816834669,
+      "ci_high": 62.150908404778036,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.9646088741742651,
+        "commercialization": 0.4380360036185622,
+        "open_source": 0.12531603815608672,
+        "compute_efficiency": 0.6371384594584495,
+        "embodiment": 0.35910860555020263
+      },
+      "thesis": "全栈四位一体（模型/芯片/云/搜索分发）的慢热冠军",
+      "moat": "TPU+Gemini+Android/搜索分发+DeepMind 人才",
+      "risks": [
+        "组织惯性/产品化慢",
+        "反垄断",
+        "与 OpenAI 心智差距"
+      ],
+      "catalysts": [
+        "Gemini 旗舰迭代",
+        "TPU 训练效率",
+        "Google Cloud AI 收入"
+      ],
+      "track_points": [
+        "Gemini 基准排名",
+        "TPU 生态",
+        "Cloud AI 增速"
+      ],
+      "tier": "跟进梯队"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "camp": "海外",
+      "sector": "通用大模型",
+      "listed": false,
+      "valuation": 9650,
+      "arr": 47,
+      "score": 51.24234266421557,
+      "ci_low": 45.651015355482954,
+      "ci_high": 55.99962277619261,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.9061433817457507,
+        "commercialization": 0.7170401372357957,
+        "open_source": 0.13307398666227988,
+        "compute_efficiency": 0.3309561512632986,
+        "embodiment": 0.10890520975288731
+      },
+      "thesis": "企业级安全+长任务 Agent 的差异化冠军（Claude 系）",
+      "moat": "安全/对齐口碑 + 企业合同质量（高管薪酬/深度绑定）",
+      "risks": [
+        "规模与资本远小于 OpenAI",
+        "Agent 可靠性瓶颈",
+        "开源替代"
+      ],
+      "catalysts": [
+        "Claude Opus 下一代",
+        "企业 ARR 超预期",
+        "长任务 benchmark 领先"
+      ],
+      "track_points": [
+        "企业客户留存与扩量",
+        "Agent 任务成功率",
+        "毛利率"
+      ],
+      "tier": "潜力梯队"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "camp": "中国",
+      "sector": "开源基座",
+      "listed": false,
+      "valuation": 500,
+      "arr": 2,
+      "score": 50.65005828593034,
+      "ci_low": 45.063627343757126,
+      "ci_high": 55.41484612572548,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7020889821350007,
+        "commercialization": 0.25640092908384027,
+        "open_source": 0.8089247038512779,
+        "compute_efficiency": 0.6570735692335403,
+        "embodiment": 0.07972045919096682
+      },
+      "thesis": "开源低成本路线的全球旗帜——用工程效率对冲算力劣势，重塑产业成本曲线",
+      "moat": "训练/推理工程极致（成本 ~1/10）+ 开源生态心智（HF 下载第一梯队）",
+      "risks": [
+        "盈利模式未验证（开源让利）",
+        "前沿代差被 OpenAI 拉大",
+        "算力获取限制"
+      ],
+      "catalysts": [
+        "R 系下一代发布",
+        "推理成本再降",
+        "生态商业化（API/企业）"
+      ],
+      "track_points": [
+        "LMArena 分差",
+        "HF 下载/微调份额",
+        "API 定价与调用量"
+      ],
+      "tier": "潜力梯队"
+    },
+    {
+      "id": "microsoft",
+      "name": "微软",
+      "camp": "海外",
+      "sector": "云/AI投资",
+      "listed": true,
+      "valuation": 30000,
+      "arr": 0,
+      "score": 48.17490257041281,
+      "ci_low": 42.62566929771561,
+      "ci_high": 52.956708011517975,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.8304350578785482,
+        "commercialization": 0.4468161827303303,
+        "open_source": 0.10164015669058113,
+        "compute_efficiency": 0.5345365536473652,
+        "embodiment": 0.30907420809354824
+      },
+      "thesis": "OpenAI 同盟 + Copilot 企业分发 = AI 商业化最确定的大厂",
+      "moat": "企业软件分销网络（Office/Windows/Azure）",
+      "risks": [
+        "对 OpenAI 依赖",
+        "Copilot 变现滞后预期",
+        "竞争（Google/亚马逊）"
+      ],
+      "catalysts": [
+        "Copilot 渗透率",
+        "Azure AI 增速",
+        "自研 MAI 模型进展"
+      ],
+      "track_points": [
+        "Copilot 付费席位",
+        "Azure AI 收入",
+        "与 OpenAI 协议演变"
+      ],
+      "tier": "潜力梯队"
+    },
+    {
+      "id": "zhipu",
+      "name": "智谱 AI",
+      "camp": "中国",
+      "sector": "通用/开源",
+      "listed": true,
+      "valuation": 300,
+      "arr": 0.7,
+      "score": 43.763857967880725,
+      "ci_low": 38.346769323519624,
+      "ci_high": 48.517721568650394,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7578124618019486,
+        "commercialization": 0.1320403116480786,
+        "open_source": 0.6361042921017166,
+        "compute_efficiency": 0.5824316265342757,
+        "embodiment": 0.15895299381457906
+      },
+      "thesis": "中国通用+开源双轨（GLM 系），清华系基因的融资高地",
+      "moat": "学术背书（清华）+ 融资充足 + 全栈布局",
+      "risks": [
+        "商业化兑现慢",
+        "大厂挤压",
+        "开源心智弱于 DeepSeek/Qwen"
+      ],
+      "catalysts": [
+        "GLM 新旗舰",
+        "企业客户放量",
+        "Agent 平台"
+      ],
+      "track_points": [
+        "GLM 排名",
+        "融资与估值",
+        "企业 ARR"
+      ],
+      "tier": "观察梯队"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "camp": "海外",
+      "sector": "通用大模型",
+      "listed": false,
+      "valuation": 8520,
+      "arr": 50,
+      "score": 43.336070604747576,
+      "ci_low": 37.93621302861198,
+      "ci_high": 48.083197343273,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.8451381435987146,
+        "commercialization": 0.47107141480009473,
+        "open_source": 0.14839821495347438,
+        "compute_efficiency": 0.40076421639925086,
+        "embodiment": 0.15895299381457906
+      },
+      "thesis": "闭源前沿+ChatGPT 生态双垄断者，推理模型（o系）定义行业标准",
+      "moat": "品牌+开发者生态+微软算力同盟；前沿论文与人才密度",
+      "risks": [
+        "推理成本高企侵蚀毛利",
+        "企业付费迁移（Claude/Gemini 竞争）",
+        "算力供应链依赖"
+      ],
+      "catalysts": [
+        "下一代 o 系发布",
+        "Agent 商业化 ARR 突破",
+        "模型成本下降曲线"
+      ],
+      "track_points": [
+        "旗舰模型代差 vs DeepSeek-R 系",
+        "ChatGPT 企业版渗透率",
+        "推理成本/百万 token"
+      ],
+      "tier": "观察梯队"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "camp": "中国",
+      "sector": "生态/混元",
+      "listed": true,
+      "valuation": 5500,
+      "arr": 0,
+      "score": 41.2206838479154,
+      "ci_low": 35.917334139967494,
+      "ci_high": 45.92388981230292,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.7474331130428118,
+        "commercialization": 0.42915511970919207,
+        "open_source": 0.07732540992504155,
+        "compute_efficiency": 0.5407542168125825,
+        "embodiment": 0.17974428931842112
+      },
+      "thesis": "混元+微信/游戏分发 = 场景垄断型选手（元宝/广告/游戏 Agent）",
+      "moat": "微信生态分发 + 游戏/广告现金流 + 混元全栈",
+      "risks": [
+        "模型竞争力中游",
+        "保守产品节奏",
+        "监管"
+      ],
+      "catalysts": [
+        "混元新版本",
+        "微信 AI 入口放量",
+        "广告/游戏 AI 提效"
+      ],
+      "track_points": [
+        "混元排名",
+        "元宝/微信 AI 渗透",
+        "AI 对广告效率的贡献"
+      ],
+      "tier": "观察梯队"
+    },
+    {
+      "id": "facewall",
+      "name": "面壁智能",
+      "camp": "中国",
+      "sector": "端侧小模型",
+      "listed": false,
+      "valuation": 15,
+      "arr": 0.1,
+      "score": 37.199847246480275,
+      "ci_low": 32.13102641594453,
+      "ci_high": 41.7702985572169,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.45696404700677395,
+        "commercialization": 0.24399148603990373,
+        "open_source": 0.5282457824839306,
+        "compute_efficiency": 0.6939441925169254,
+        "embodiment": 0.1297329047947906
+      },
+      "thesis": "端侧小模型专家（MiniCPM 系），终端 AI 的潜在赢家",
+      "moat": "端侧压缩技术 + 小模型性能/成本比",
+      "risks": [
+        "端侧市场节奏慢",
+        "大厂端侧挤压",
+        "商业化规模小"
+      ],
+      "catalysts": [
+        "端侧旗舰芯片适配",
+        "OEM 合作",
+        "小模型 benchmark 领先"
+      ],
+      "track_points": [
+        "MiniCPM 排名",
+        "端侧部署案例",
+        "OEM 合同"
+      ],
+      "tier": "观察梯队"
+    },
+    {
+      "id": "kuaishou",
+      "name": "快手(可灵)",
+      "camp": "中国",
+      "sector": "视频生成",
+      "listed": true,
+      "valuation": 380,
+      "arr": 5,
+      "score": 33.99557429066589,
+      "ci_low": 29.16062880441581,
+      "ci_high": 38.41314756929422,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.47082655853040456,
+        "commercialization": 0.43775573736848017,
+        "open_source": 0.052320692234473665,
+        "compute_efficiency": 0.5778442849254926,
+        "embodiment": 0.25903704830195085
+      },
+      "thesis": "视频生成（可灵）全球领跑的垂类黑马，内容生态闭环",
+      "moat": "视频数据+生成质量（可灵排名前列）+ 内容平台分发",
+      "risks": [
+        "垂类天花板",
+        "Sora 系竞争",
+        "算力成本"
+      ],
+      "catalysts": [
+        "可灵新版本",
+        "B 端影视/广告订单",
+        "出海"
+      ],
+      "track_points": [
+        "可灵生成质量排名",
+        "视频生成收入",
+        "B 端订单"
+      ],
+      "tier": "观察梯队"
+    },
+    {
+      "id": "kimi",
+      "name": "月之暗面 Kimi",
+      "camp": "中国",
+      "sector": "C端/Agent",
+      "listed": false,
+      "valuation": 330,
+      "arr": 1.5,
+      "score": 32.37011957671456,
+      "ci_low": 27.66944017675264,
+      "ci_high": 36.69389632784063,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.8218221660264866,
+        "commercialization": 0.15576440764217447,
+        "open_source": 0.08550433139361324,
+        "compute_efficiency": 0.5400864053986201,
+        "embodiment": 0.07972045919096682
+      },
+      "thesis": "C 端长文本/Agent 先锋（月之暗面），产品体验驱动的差异化",
+      "moat": "C 端品牌 + 长文本记忆产品心智",
+      "risks": [
+        "C 端变现难",
+        "巨头免费竞争",
+        "推理成本"
+      ],
+      "catalysts": [
+        "Kimi 新功能",
+        "C 端 MAU",
+        "海外市场"
+      ],
+      "track_points": [
+        "Kimi MAU 与留存",
+        "长文本 benchmark",
+        "商业化进展"
+      ],
+      "tier": "观察梯队"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "camp": "中国",
+      "sector": "多模态/出海",
+      "listed": true,
+      "valuation": 300,
+      "arr": 3,
+      "score": 31.4503195344572,
+      "ci_low": 26.830220213409806,
+      "ci_high": 35.71611983068926,
+      "confidence": 0.7699999999999999,
+      "dim_scores": {
+        "model_capability": 0.613541722217184,
+        "commercialization": 0.26088597375290323,
+        "open_source": 0.06906988309238948,
+        "compute_efficiency": 0.5491240486255555,
+        "embodiment": 0.2089967793563634
+      },
+      "thesis": "多模态（视频/音乐）+ 出海双引擎，全球化打法独特",
+      "moat": "多模态生成能力 + 海外市场先发（Talkie/Hailuo）",
+      "risks": [
+        "出海监管",
+        "生成式竞争白热化",
+        "盈利模式"
+      ],
+      "catalysts": [
+        "视频生成新版本",
+        "海外用户增长",
+        "B 端合作"
+      ],
+      "track_points": [
+        "海外 MAU/ARR",
+        "视频生成质量排名",
+        "多模态调用量"
+      ],
+      "tier": "观察梯队"
+    }
+  ],
+  "recommend": {
+    "core": [
+      {
+        "id": "alibaba",
+        "name": "阿里巴巴",
+        "score": 58.1
+      },
+      {
+        "id": "google",
+        "name": "谷歌 Alphabet",
+        "score": 57.6
+      },
+      {
+        "id": "microsoft",
+        "name": "微软",
+        "score": 48.2
+      },
+      {
+        "id": "zhipu",
+        "name": "智谱 AI",
+        "score": 43.8
+      },
+      {
+        "id": "tencent",
+        "name": "腾讯",
+        "score": 41.2
+      }
+    ],
+    "option": [
+      {
+        "id": "anthropic",
+        "name": "Anthropic",
+        "score": 51.2
+      },
+      {
+        "id": "deepseek",
+        "name": "DeepSeek",
+        "score": 50.7
+      },
+      {
+        "id": "openai",
+        "name": "OpenAI",
+        "score": 43.3
+      },
+      {
+        "id": "facewall",
+        "name": "面壁智能",
+        "score": 37.2
+      }
+    ]
+  },
+  "series": [
+    {
+      "date": "2024Q3",
+      "index": 45.1,
+      "ci_low": 43.9,
+      "ci_high": 45.8
+    },
+    {
+      "date": "2025Q2",
+      "index": 49.5,
+      "ci_low": 48.8,
+      "ci_high": 50.1
+    },
+    {
+      "date": "2026-06-30",
+      "index": 52.9,
+      "ci_low": 52.2,
+      "ci_high": 53.5
+    }
+  ],
+  "trend": {
+    "direction": "up",
+    "delta": 7.8,
+    "momentum": "slowing",
+    "vs_parity": "crossed_above",
+    "drivers": [
+      {
+        "id": "frontier_gap",
+        "name": "顶尖模型性能差距（LMArena Elo分差%）",
+        "delta_norm": 0.615
+      },
+      {
+        "id": "token_daily_calls",
+        "name": "中国大模型日调用量（亿次）",
+        "delta_norm": 0.2863
+      },
+      {
+        "id": "open_source_share",
+        "name": "中国开源模型HuggingFace下载份额",
+        "delta_norm": 0.25
+      },
+      {
+        "id": "inference_cost_ratio",
+        "name": "推理成本比（中国/美国）",
+        "delta_norm": 0.2
+      },
+      {
+        "id": "top_talent_share",
+        "name": "NeurIPS一作占比（中国）",
+        "delta_norm": 0.13
+      }
+    ],
+    "watch": [
+      "LMArena 顶尖分差是否继续收窄（DeepSeek / Qwen 新模型）",
+      "开源生态下载份额（HF / OpenRouter）",
+      "推理成本曲线（每百万 token 价格）",
+      "中美云厂商资本开支（下季度财报）"
+    ]
+  },
+  "frontier": [
+    "推理时计算 / RL 强化推理模型（o系列 vs DeepSeek-R1 后续）",
+    "多模态 Agent 从 Demo 到生产（调用量/毛利率兑现）",
+    "开源权重 vs API 商业化的产业分叉（DeepSeek 路径是否持续）"
+  ],
+  "intelligence": {
+    "schema_version": 1,
+    "industry": "ai-models",
+    "industry_cn": "AI模型",
+    "as_of": "2026-06-30",
+    "verdict": {
+      "phase": "产业成长期中段：推理模型 + Agent 落地兑现期",
+      "china_position": "生态领先 · 尖端接近但未超越",
+      "key_inflection": "旗舰模型代差是否被抹平（OpenAI o系 vs DeepSeek-R 系下一代）",
+      "investment_theme": "通用底座巨头化 → 垂直场景 / 开源低成本 / 推理基础设施是价值落点"
+    },
+    "technology_routes": [
+      {
+        "name": "推理时计算（test-time compute / RL）",
+        "maturity": "前沿",
+        "cn_players": [
+          "DeepSeek",
+          "Kimi",
+          "智谱"
+        ],
+        "us_players": [
+          "OpenAI o系列",
+          "Anthropic",
+          "Google"
+        ],
+        "convergence_signal": "o系 vs R系性能差收窄速度"
+      },
+      {
+        "name": "多模态 Agent（语音-视觉-动作统一）",
+        "maturity": "Demo→生产过渡",
+        "cn_players": [
+          "字节豆包",
+          "腾讯混元",
+          "阿里通义"
+        ],
+        "us_players": [
+          "OpenAI",
+          "Google Gemini",
+          "Anthropic"
+        ],
+        "convergence_signal": "Agent 任务完成率与调用量兑现"
+      },
+      {
+        "name": "开源权重路线",
+        "maturity": "成熟",
+        "cn_players": [
+          "DeepSeek",
+          "Qwen 系",
+          "GLM"
+        ],
+        "us_players": [
+          "Meta Llama"
+        ],
+        "convergence_signal": "HF 下载份额与微调生态"
+      },
+      {
+        "name": "端侧小模型（终端推理）",
+        "maturity": "增长期",
+        "cn_players": [
+          "面壁",
+          "MiniMax 端侧"
+        ],
+        "us_players": [
+          "Apple（传闻）",
+          "Google Gemini Nano"
+        ],
+        "convergence_signal": "端侧算力与能耗曲线"
+      }
+    ],
+    "value_chain": [
+      {
+        "segment": "通用底座模型",
+        "value_concentration": "高（巨头化）",
+        "logic": "资本与算力门槛极高，后发者窗口关闭中"
+      },
+      {
+        "segment": "垂直场景应用（视频/3D/Agent 编程）",
+        "value_concentration": "中→高",
+        "logic": "场景数据 + 分发渠道，垂直龙头可存活"
+      },
+      {
+        "segment": "推理基础设施（算力/推理引擎）",
+        "value_concentration": "中（卖铲人）",
+        "logic": "调用量爆发期的确定性受益者；国产算力是关键变量"
+      },
+      {
+        "segment": "开源社区与微调生态",
+        "value_concentration": "中",
+        "logic": "开源是地缘化竞争的非对称武器"
+      }
+    ],
+    "competitive_map": {
+      "cn_strength": [
+        "开源生态全球第一（HF 下载/微调）",
+        "推理成本 ~1/10（工程效率）",
+        "日调用量 140 亿次的规模化应用",
+        "人才供给（NeurIPS 43%）"
+      ],
+      "us_strength": [
+        "闭源尖端仍领先（o系/Claude）",
+        "资本与算力规模（2859 亿 vs 124 亿美元）",
+        "企业级付费生态成熟（ARR 验证）",
+        "开发者工具链与生态标准"
+      ],
+      "structural_gaps": [
+        "训练算力（高端 GPU 获取受限）",
+        "尖端模型推理质量（Agent 长任务可靠性）",
+        "企业级商业化收入规模"
+      ],
+      "asymmetry": "中国用开源+低成本对冲算力劣势——若尖端差距收窄到 <1%，生态优势将主导；若拉大，开源将被生态封锁抵消"
+    },
+    "inflections_6_18m": [
+      {
+        "event": "中美下一代旗舰发布（差距收窄至 <1% 或重新拉大）",
+        "impact": "决定'生态主导' vs '尖端封锁'路径",
+        "probability": "高（2026H2-2027H1）"
+      },
+      {
+        "event": "推理成本再降一个数量级（价格战第二波）",
+        "impact": "应用层渗透率加速，推理基础设施价值上移",
+        "probability": "高"
+      },
+      {
+        "event": "Agent 商业化兑现（ARR/毛利率验证）",
+        "impact": "区分'真需求'与'Demo'，垂直龙头分化",
+        "probability": "中"
+      },
+      {
+        "event": "国产算力训练效率（昇腾等生态成熟度）",
+        "impact": "决定中国训练成本曲线的斜率",
+        "probability": "中"
+      }
+    ],
+    "core_judgment": "美国靠资本堆闭源旗舰（o系/Claude），中国靠开源+成本+工程效率对冲算力劣势——顶尖差距已从'代差'收敛到'百分比'，生态优势（HF 下载 40%、推理成本 1/10、日调用 140 亿）正在改写竞争维度。",
+    "track_signals": [
+      "LMArena 顶尖分差（是否收窄至 <1%）",
+      "HF 下载/微调份额",
+      "每百万 token 推理成本",
+      "日调用量与 Agent 任务成功率",
+      "云厂商资本开支",
+      "国产算力（昇腾）训练效率"
+    ],
+    "methodology_ref": "#二ai-模型尖端收敛生态领先的非对称战争"
+  }
+}

@@ -1,0 +1,719 @@
+{
+  "as_of": "2026-06-30",
+  "note": "2026Q2 公开信息近似快照，指标原始值为主观近似整理，仅供趋势研究，不构成投资建议。",
+  "index": 48.2,
+  "ci_low": 47.4,
+  "ci_high": 48.7,
+  "confidence": 0.6,
+  "index_note": "国家层客观指标(等离子体维持/磁体/点火/专利/投入)",
+  "pool_avg": 55.7,
+  "fusion_index": 55.7,
+  "n": 21,
+  "companies": [
+    {
+      "id": "cfs",
+      "name": "CFS (Commonwealth Fusion)",
+      "country": "美国",
+      "route": "紧凑托卡马克(HTS)",
+      "role": "整机(托卡马克+HTS)",
+      "tier": "领跑",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 70.5,
+      "lo": 68.4,
+      "hi": 72.5,
+      "thesis": "美国私营龙头：SPARC 20T 高温超导磁体+微软购电协议，私营路线风向标",
+      "moat": "HTS 磁体工程（20T 已演示）+ 融资规模",
+      "risks": [
+        "SPARC 性能不及预期",
+        "烧钱"
+      ],
+      "catalysts": [
+        "SPARC 首次等离子体",
+        "购电协议落地"
+      ],
+      "track_points": [
+        "装置进度",
+        "HTS 磁体交付"
+      ]
+    },
+    {
+      "id": "xbsc",
+      "name": "西部超导",
+      "country": "中国",
+      "route": "供应链(超导线材)",
+      "role": "卖铲人(ITER线材)",
+      "tier": "跟进",
+      "config": "核心仓(卖铲人)",
+      "market": "A股",
+      "score": 66.2,
+      "lo": 64.3,
+      "hi": 68.2,
+      "thesis": "西部超导（ITER 线材）：超导线材国家供应商，聚变+MRI 双逻辑",
+      "moat": "ITER 线材供应资格 + 低温超导产能",
+      "risks": [
+        "聚变需求节奏"
+      ],
+      "catalysts": [
+        "ITER 交付",
+        "CFETR 需求"
+      ],
+      "track_points": [
+        "线材订单"
+      ]
+    },
+    {
+      "id": "shdq",
+      "name": "上海电气",
+      "country": "中国",
+      "route": "主机总包",
+      "role": "工程总包(BEST等)",
+      "tier": "跟进",
+      "config": "路线/观察仓",
+      "market": "A股",
+      "score": 60.6,
+      "lo": 58.6,
+      "hi": 62.5,
+      "thesis": "上海电气（工程总包）：BEST 装置总包参与，央企工程能力",
+      "moat": "重型装备制造 + 工程总包资质",
+      "risks": [
+        "工程延期",
+        "订单确认"
+      ],
+      "catalysts": [
+        "BEST 总包合同"
+      ],
+      "track_points": [
+        "合同进展"
+      ]
+    },
+    {
+      "id": "lianchuang",
+      "name": "联创光电",
+      "country": "中国",
+      "route": "供应链(磁体)",
+      "role": "卖铲人(HTS磁体集成)",
+      "tier": "跟进",
+      "config": "核心仓(卖铲人)",
+      "market": "A股",
+      "score": 60.3,
+      "lo": 58.3,
+      "hi": 62.2,
+      "thesis": "联创光电（HTS 磁体集成）：上市公司中的 HTS 磁体概念核心",
+      "moat": "HTS 磁体集成 + 上市公司平台",
+      "risks": [
+        "订单兑现",
+        "估值"
+      ],
+      "catalysts": [
+        "磁体订单（BEST/科研）"
+      ],
+      "track_points": [
+        "订单披露"
+      ]
+    },
+    {
+      "id": "dfdq",
+      "name": "东方电气",
+      "country": "中国",
+      "route": "主机总包",
+      "role": "工程总包",
+      "tier": "跟进",
+      "config": "路线/观察仓",
+      "market": "A股",
+      "score": 58.9,
+      "lo": 56.9,
+      "hi": 60.9,
+      "thesis": "东方电气（工程总包）：核电装备央企，聚变工程延伸",
+      "moat": "核电装备制造能力",
+      "risks": [
+        "聚变业务占比小"
+      ],
+      "catalysts": [
+        "聚变装备订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "atai",
+      "name": "安泰科技",
+      "country": "中国",
+      "route": "核心部件",
+      "role": "卖铲人(钨/偏滤器)",
+      "tier": "跟进",
+      "config": "核心仓(卖铲人)",
+      "market": "A股",
+      "score": 58.9,
+      "lo": 56.9,
+      "hi": 60.8,
+      "thesis": "安泰科技（钨/偏滤器）：第一壁与偏滤器材料国家队",
+      "moat": "钨材料技术 + 核材料资质",
+      "risks": [
+        "聚变节奏"
+      ],
+      "catalysts": [
+        "偏滤器订单"
+      ],
+      "track_points": [
+        "材料订单"
+      ]
+    },
+    {
+      "id": "tokamakenergy",
+      "name": "Tokamak Energy",
+      "country": "英国",
+      "route": "球形托卡马克",
+      "role": "整机(球形HTS)",
+      "tier": "跟进",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 58.4,
+      "lo": 56.4,
+      "hi": 60.4,
+      "thesis": "英国球形托卡马克 + HTS：政府资金加持的欧洲代表",
+      "moat": "球形 HTS 技术 + 英国政府支持",
+      "risks": [
+        "规模小"
+      ],
+      "catalysts": [
+        "原型机 ST80-HTS"
+      ],
+      "track_points": [
+        "装置进展"
+      ]
+    },
+    {
+      "id": "yxt",
+      "name": "昱曦科技",
+      "country": "中国",
+      "route": "供应链(磁体)",
+      "role": "卖铲人(HTS磁体)",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人)",
+      "market": "一级",
+      "score": 57.7,
+      "lo": 55.7,
+      "hi": 59.8,
+      "thesis": "昱曦科技（HTS 磁体卖铲人）：聚变磁体核心供应商逻辑",
+      "moat": "HTS 磁体制造",
+      "risks": [
+        "订单集中"
+      ],
+      "catalysts": [
+        "磁体订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "gdgj",
+      "name": "国光电气",
+      "country": "中国",
+      "route": "核心部件",
+      "role": "卖铲人(微波/真空室)",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人)",
+      "market": "A股",
+      "score": 56.5,
+      "lo": 54.5,
+      "hi": 58.5,
+      "thesis": "国光电气（微波/真空室）：聚变装置核心部件（微波加热/真空）",
+      "moat": "微波源 + 真空室部件",
+      "risks": [
+        "单一客户依赖"
+      ],
+      "catalysts": [
+        "BEST/EAST 部件订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "nlqd",
+      "name": "能量奇点",
+      "country": "中国",
+      "route": "紧凑托卡马克(HTS)",
+      "role": "整机(洪荒70)",
+      "tier": "潜力",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 56.2,
+      "lo": 54.2,
+      "hi": 58.2,
+      "thesis": "能量奇点（中国民营）：洪荒70 装置，洪爷领衔的中国 HTS 先锋",
+      "moat": "中科大系团队 + 洪荒70 全超导",
+      "risks": [
+        "资金规模",
+        "装置参数待验证"
+      ],
+      "catalysts": [
+        "洪荒70 运行",
+        "新装置"
+      ],
+      "track_points": [
+        "洪荒70 参数",
+        "融资"
+      ]
+    },
+    {
+      "id": "ydgf",
+      "name": "永鼎股份",
+      "country": "中国",
+      "route": "供应链(HTS带材)",
+      "role": "卖铲人(带材)",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人)",
+      "market": "A股",
+      "score": 56.0,
+      "lo": 54.0,
+      "hi": 58.0,
+      "thesis": "永鼎股份（HTS 带材）：REBCO 带材国产化标的",
+      "moat": "HTS 带材产能",
+      "risks": [
+        "带材成本",
+        "需求节奏"
+      ],
+      "catalysts": [
+        "带材订单",
+        "产能扩产"
+      ],
+      "track_points": [
+        "带材产能利用率"
+      ]
+    },
+    {
+      "id": "xhjn",
+      "name": "星环聚能",
+      "country": "中国",
+      "route": "球形托卡马克",
+      "role": "整机(民营)",
+      "tier": "潜力",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 55.1,
+      "lo": 53.1,
+      "hi": 57.2,
+      "thesis": "星环聚能（中国民营）：球形托卡马克路线，清华系背景",
+      "moat": "清华团队 + 球形装置",
+      "risks": [
+        "资金规模小"
+      ],
+      "catalysts": [
+        "原型机",
+        "融资"
+      ],
+      "track_points": [
+        "原型进展"
+      ]
+    },
+    {
+      "id": "siemensenergy",
+      "name": "西门子能源",
+      "country": "德国",
+      "route": "设备/核工程",
+      "role": "工程基础设施",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "market": "德股",
+      "score": 55.0,
+      "lo": 52.9,
+      "hi": 57.0,
+      "thesis": "西门子能源：聚变工程基础设施（透平/电网）通用受益者",
+      "moat": "电力装备全球地位",
+      "risks": [
+        "聚变占比极小"
+      ],
+      "catalysts": [
+        "聚变工程订单"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "helion",
+      "name": "Helion",
+      "country": "美国",
+      "route": "FRC/场反位形",
+      "role": "整机(FRC+氘氦3)",
+      "tier": "潜力",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 53.9,
+      "lo": 51.9,
+      "hi": 55.9,
+      "thesis": "FRC+氘氦3 激进派：微软 2028 购电协议，商业化最激进的私营公司",
+      "moat": "FRC 技术 + 购电协议先发",
+      "risks": [
+        "技术验证风险高",
+        "时间表激进"
+      ],
+      "catalysts": [
+        "Polaris 演示",
+        "新购电协议"
+      ],
+      "track_points": [
+        "Polaris 进展",
+        "融资"
+      ]
+    },
+    {
+      "id": "hdhd",
+      "name": "合锻智能",
+      "country": "中国",
+      "route": "核心部件",
+      "role": "卖铲人(偏滤器/结构件)",
+      "tier": "潜力",
+      "config": "核心仓(卖铲人)",
+      "market": "A股",
+      "score": 53.5,
+      "lo": 51.5,
+      "hi": 55.4,
+      "thesis": "合锻智能（偏滤器/结构件）：ITER/BEST 结构件供应商",
+      "moat": "重型锻件制造",
+      "risks": [
+        "订单波动"
+      ],
+      "catalysts": [
+        "ITER/BEST 结构件"
+      ],
+      "track_points": [
+        "订单"
+      ]
+    },
+    {
+      "id": "tae",
+      "name": "TAE Technologies (DJT)",
+      "country": "美国",
+      "route": "磁惯性/氢硼",
+      "role": "整机(氢硼无中子)",
+      "tier": "潜力",
+      "config": "整机期权仓",
+      "market": "一级/SPAC",
+      "score": 51.0,
+      "lo": 49.1,
+      "hi": 53.0,
+      "thesis": "氢硼无中子路线（场反位形）：先商用电站（推进器）后聚变",
+      "moat": "FRC 技术 + 商用推进器现金流（Copernicus）",
+      "risks": [
+        "聚变验证远",
+        "氢硼点火难度极高"
+      ],
+      "catalysts": [
+        "推进器订单",
+        "新一代装置"
+      ],
+      "track_points": [
+        "推进器收入",
+        "等离子体参数"
+      ]
+    },
+    {
+      "id": "newao",
+      "name": "新奥科技",
+      "country": "中国",
+      "route": "球形环/氢硼",
+      "role": "整机(民营)",
+      "tier": "潜力",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 50.8,
+      "lo": 48.8,
+      "hi": 52.8,
+      "thesis": "新奥科技（中国民营）：球形/紧凑路线，集团资源+玄龙装置",
+      "moat": "新奥集团资金 + 玄龙装置",
+      "risks": [
+        "路线验证"
+      ],
+      "catalysts": [
+        "玄龙进展"
+      ],
+      "track_points": [
+        "装置参数"
+      ]
+    },
+    {
+      "id": "ceg",
+      "name": "Constellation Energy",
+      "country": "美国",
+      "route": "核电+聚变",
+      "role": "传统巨头转型",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "market": "美股",
+      "score": 50.2,
+      "lo": 48.2,
+      "hi": 52.1,
+      "thesis": "Constellation：美国传统核电巨头转型聚变电力采购/运营",
+      "moat": "电力市场地位 + 购电协议能力",
+      "risks": [
+        "聚变时点"
+      ],
+      "catalysts": [
+        "聚变购电协议"
+      ],
+      "track_points": [
+        "协议进展"
+      ]
+    },
+    {
+      "id": "pacificfusion",
+      "name": "Pacific Fusion",
+      "country": "美国",
+      "route": "磁惯性",
+      "role": "整机(脉冲功率MTF)",
+      "tier": "潜力",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 48.8,
+      "lo": 46.9,
+      "hi": 50.8,
+      "thesis": "脉冲功率磁惯（MTF）路线：美国国防资本背书的新锐",
+      "moat": "国防部资金 + 脉冲功率技术",
+      "risks": [
+        "路线验证远"
+      ],
+      "catalysts": [
+        "原型机",
+        "国防订单"
+      ],
+      "track_points": [
+        "装置进度"
+      ]
+    },
+    {
+      "id": "zgdianhe",
+      "name": "中国核电",
+      "country": "中国",
+      "route": "电站运营",
+      "role": "远期运营期权",
+      "tier": "潜力",
+      "config": "路线/观察仓",
+      "market": "A股",
+      "score": 46.4,
+      "lo": 44.4,
+      "hi": 48.5,
+      "thesis": "中国核电：远期聚变运营期权（国字号运营主体）",
+      "moat": "核电运营牌照 + 集团资源",
+      "risks": [
+        "聚变商业化 2040s",
+        "期权极远"
+      ],
+      "catalysts": [
+        "聚变政策/投资"
+      ],
+      "track_points": [
+        "聚变布局"
+      ]
+    },
+    {
+      "id": "zapenergy",
+      "name": "Zap Energy",
+      "country": "美国",
+      "route": "Z-pinch",
+      "role": "整机(Z-pinch)",
+      "tier": "观察",
+      "config": "整机期权仓",
+      "market": "一级",
+      "score": 45.5,
+      "lo": 43.4,
+      "hi": 47.5,
+      "thesis": "Z-pinch 紧凑路线：成本最低的私营方案之一",
+      "moat": "Z-pinch 工程 + 低造价路线",
+      "risks": [
+        "等离子体稳定性验证"
+      ],
+      "catalysts": [
+        "FUZE 装置参数",
+        "融资"
+      ],
+      "track_points": [
+        "等离子体参数"
+      ]
+    }
+  ],
+  "trend": {
+    "direction": "up",
+    "delta": 3.8,
+    "momentum": "slowing",
+    "vs_parity": "closing",
+    "drivers": [
+      {
+        "id": "plasma_sustain_time",
+        "name": "等离子体维持时间纪录（中国EAST，秒）",
+        "delta_norm": 0.5525
+      },
+      {
+        "id": "ignition_progress",
+        "name": "点火里程碑进度（中国，0-100）",
+        "delta_norm": 0.1
+      },
+      {
+        "id": "patent_share",
+        "name": "聚变专利全球占比（中国）",
+        "delta_norm": 0.08
+      },
+      {
+        "id": "magnet_field_ratio",
+        "name": "高温超导磁体场强比（中国/美国）",
+        "delta_norm": 0.075
+      },
+      {
+        "id": "funding_ratio",
+        "name": "政府聚变投入比（中国/美国倍率）",
+        "delta_norm": 0.06
+      }
+    ],
+    "watch": [
+      "BEST 装置建设进度（2027 关键节点）",
+      "EAST 长脉冲纪录是否再刷新",
+      "私营聚变融资（美国 CFS / Helion vs 中国能量奇点）",
+      "点火里程碑对比（NIF 迭代 vs 中国装置）"
+    ]
+  },
+  "frontier": [
+    "BEST 装置 2027 建成与第一等离子体（中国工程化关键节点）",
+    "高温超导磁体 20T+ 工程化与成本曲线（CFS vs 中国路线）",
+    "点火 → 自持燃烧 Q>10 路线图（NIF 迭代 vs 托卡马克稳态）"
+  ],
+  "intelligence": {
+    "schema_version": 1,
+    "industry": "fusion",
+    "industry_cn": "可控核聚变",
+    "as_of": "2026-06-30",
+    "verdict": {
+      "phase": "工程化爬坡期：从'点着火'（Q>1 已证）转向'稳定燃烧+装置耐久'",
+      "china_position": "稳态运行纪录领先（EAST 1066s）· 点火里程碑落后（NIF Q>1）",
+      "key_inflection": "BEST 装置 2027 建成与第一等离子体——中国工程化关键节点",
+      "investment_theme": "别赌哪家先点亮灯泡——买高温超导磁体/带材/真空室等'卖铲人'，整机厂作期权仓"
+    },
+    "technology_routes": [
+      {
+        "name": "托卡马克（磁约束主流）",
+        "maturity": "最成熟（ITER/EAST/CFS SPARC）",
+        "cn_players": [
+          "中科院等离子体所EAST",
+          "BEST工程",
+          "新奥/能量奇点"
+        ],
+        "us_players": [
+          "MIT/CFS",
+          "Princeton PPPL"
+        ],
+        "convergence_signal": "稳态时间 × 磁场强度组合"
+      },
+      {
+        "name": "惯性约束（激光点火）",
+        "maturity": "点火已证（NIF Q=1.5+）但能量增益工程化远",
+        "cn_players": [
+          "神光III装置"
+        ],
+        "us_players": [
+          "NIF/LLNL"
+        ],
+        "convergence_signal": "重复点火频率与增益倍数"
+      },
+      {
+        "name": "磁惯性/其他路线（Z-pinch等）",
+        "maturity": "探索期",
+        "cn_players": [
+          "中物院相关"
+        ],
+        "us_players": [
+          "General Fusion",
+          "Zap Energy"
+        ],
+        "convergence_signal": "等离子体参数稳定性"
+      },
+      {
+        "name": "高温超导磁体技术（跨路线关键）",
+        "maturity": "工程突破期（20T+）",
+        "cn_players": [
+          "BEST用磁体",
+          "聚变新能"
+        ],
+        "us_players": [
+          "CFS（20T 已演示）"
+        ],
+        "convergence_signal": "场强×成本曲线"
+      }
+    ],
+    "value_chain": [
+      {
+        "segment": "高温超导磁体/带材",
+        "value_concentration": "高（卖铲人核心）",
+        "logic": "无论哪条路线都要用，CFS 已带动 REBCO 带材需求爆发"
+      },
+      {
+        "segment": "真空室/第一壁/特种材料",
+        "value_concentration": "中高",
+        "logic": "中子辐照与热负荷材料的验证周期长，先发者锁定"
+      },
+      {
+        "segment": "整机/装置建设",
+        "value_concentration": "中（期权）",
+        "logic": "高赔率低胜率，适合小仓位"
+      },
+      {
+        "segment": "诊断/控制/电源系统",
+        "value_concentration": "中",
+        "logic": "随装置数量增长而受益"
+      }
+    ],
+    "competitive_map": {
+      "cn_strength": [
+        "EAST 稳态纪录（1066s，全球最长）",
+        "BEST 国家工程（2027 节点）",
+        "完整供应链与制造能力",
+        "政府投入连续（含 ITER 配套）"
+      ],
+      "us_strength": [
+        "私营资本领先（CFS 数十亿美元/微软购电协议）",
+        "点火里程碑（NIF）",
+        "高温超导磁体（CFS 20T）",
+        "SPARC 装置进度"
+      ],
+      "structural_gaps": [
+        "点火/能量增益验证",
+        "高温超导磁体工程化（CFS 领先）",
+        "私营资本规模"
+      ],
+      "asymmetry": "美国'私营+点火'领先尖端，中国'国家工程+稳态运行+供应链'领先工程化——聚变最终看'装置耐久与发电成本'，中国的稳态运行纪录是更接近商业化的指标"
+    },
+    "inflections_6_18m": [
+      {
+        "event": "BEST 装置建设进度与第一等离子体（2027）",
+        "impact": "中国工程化兑现与否",
+        "probability": "高（按计划）"
+      },
+      {
+        "event": "CFS SPARC 首次等离子体与 Q 目标",
+        "impact": "私营路线商业化验证",
+        "probability": "中"
+      },
+      {
+        "event": "高温超导带材产能与价格（REBCO）",
+        "impact": "磁体成本曲线，卖铲人逻辑兑现",
+        "probability": "中"
+      },
+      {
+        "event": "中国聚变专项新预算/政策",
+        "impact": "国家投入斜率",
+        "probability": "中"
+      }
+    ],
+    "core_judgment": "2027 是中美聚变'对表年'（SPARC vs BEST）——Q≥5-10 工程盈亏平衡线是全球整机厂主攻目标；高温超导（HTS）带材/磁体是通吃环节，卖铲人确定性最高。",
+    "track_signals": [
+      "BEST 建设进度与第一等离子体（2027）",
+      "SPARC 首次等离子体与 Q 目标",
+      "HTS 带材产能与价格（REBCO 成本曲线）",
+      "私营融资（CFS/能量奇点/Helion）",
+      "购电协议（Helion×微软 2028）"
+    ],
+    "methodology_ref": "#四可控核聚变2027-对表与卖铲人首选组合"
+  }
+}

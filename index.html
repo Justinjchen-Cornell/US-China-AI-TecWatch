@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中美AI竞争 Tracker · AICompete Index</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1220;--card:#121b2e;--ink:#e6edf6;--muted:#9aa7b8;--accent:#38bdf8;--good:#34d399;--bad:#f87171;--line:#1f2b44;}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);}
+header{padding:28px 24px 14px;max-width:1180px;margin:0 auto;}
+header h1{font-size:26px;margin:0 0 6px;letter-spacing:.3px}header p{color:var(--muted);margin:0;font-size:14px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.metric{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.metric .v{font-size:28px;font-weight:700;color:var(--accent)}.metric .l{font-size:12px;color:var(--muted);margin-top:4px}
+canvas{max-height:340px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card)}td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.src{color:var(--muted);font-size:12px}td.bad{color:var(--bad);font-size:12px;font-weight:600}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
+.legend{font-size:12px;color:var(--muted)}.foot{color:var(--muted);font-size:12px;margin-top:18px;line-height:1.6}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body>
+<header>
+ <h1>中美 AI 全维竞争 Tracker</h1>
+ <p>AICompete Index · 六维耦合 + 五条暗线综合指数 · 数据截至 <b id="dt">2026-08-31</b> · 自动更新</p>
+</header>
+<div class="wrap">
+ <div class="grid">
+  <div class="metric"><div class="v" id="mIdx">49.2</div><div class="l">综合指数 (0-100，越高=中国相对优势越强)</div></div>
+  <div class="metric"><div class="v" id="mLow">49.0–49.3</div><div class="l">95% 置信区间 (蒙特卡洛)</div></div>
+  <div class="metric"><div class="v" id="mConf">77%</div><div class="l">数据置信度 (加权平均来源可靠度)</div></div>
+  <div class="metric"><div class="v" id="mN">19</div><div class="l">监测指标数 (六维+暗线)</div></div>
+ </div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">综合指数历史趋势 (每期快照)</div>
+  <canvas id="trendChart"></canvas></div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">六维得分 (归一化几何平均，0-1)</div>
+  <canvas id="dimChart"></canvas></div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">行业专项 · 六大硬科技 (点击进入子站) — 口径说明：国家层客观指标 / 产业维度评估 / 池内均分(非竞争指数) · 趋势 = 近两年指数变化</div>
+  <table><thead><tr><th>行业</th><th>指数体系</th><th style="text-align:right">最新指数</th><th style="text-align:right">近两年趋势</th><th style="text-align:right">95% 区间</th><th style="text-align:right">置信度</th><th>数据截至</th><th>指数口径</th></tr></thead>
+  <tbody><tr><td><a href='semiconductor/' style='color:var(--accent);text-decoration:none'>半导体</a></td><td>SemiCompete 综合指数</td><td class='num'><b>44.32</b></td><td class='num' style='color:var(--muted)'>—</td><td class='num'>43.81–44.79</td><td class='num'>74.63%</td><td class='src'>2026-08-24</td><td class='src'>国家层客观指标(18项: 制程装备/制造/存储HBM/AI芯片/先进封装/未来范式)</td></tr><tr><td><a href='ai-models/' style='color:var(--accent);text-decoration:none'>AI模型</a></td><td>ModelCompete 综合指数</td><td class='num'><b>52.9</b></td><td class='num'><span style='color:var(--good)'>&#9650; +7.8</span></td><td class='num'>52.2–53.5</td><td class='num'>80.0%</td><td class='src'>2026Q2</td><td class='src'>国家层客观指标(顶尖差距/开源/成本/调用量/人才)</td></tr><tr><td><a href='quantum/' style='color:var(--accent);text-decoration:none'>量子计算</a></td><td>QuantumCompete 综合指数</td><td class='num'><b>43.8</b></td><td class='num'><span style='color:var(--good)'>&#9650; +3.2</span></td><td class='num'>42.8–44.5</td><td class='num'>63.0%</td><td class='src'>2026-06-30</td><td class='src'>国家层客观指标(逻辑比特/物理比特/专利/论文/政府投入)</td></tr><tr><td><a href='fusion/' style='color:var(--accent);text-decoration:none'>可控核聚变</a></td><td>FusionCompete 综合指数</td><td class='num'><b>48.2</b></td><td class='num'><span style='color:var(--good)'>&#9650; +3.8</span></td><td class='num'>47.4–48.7</td><td class='num'>60.0%</td><td class='src'>2026-06-30</td><td class='src'>国家层客观指标(等离子体维持/磁体/点火/专利/投入)</td></tr><tr><td><a href='bio/' style='color:var(--accent);text-decoration:none'>AI生命科学</a></td><td>BioCompete 综合指数</td><td class='num'><b>43.4</b></td><td class='num'><span style='color:var(--good)'>&#9650; +3.6</span></td><td class='num'>42.2–44.2</td><td class='num'>63.0%</td><td class='src'>2026-06-30</td><td class='src'>国家层客观指标(管线/临床/测序/专利/模型差距)</td></tr><tr><td><a href='embodied/' style='color:var(--accent);text-decoration:none'>具身智能</a></td><td>EmbodiedCompete 综合指数</td><td class='num'><b>53.6</b></td><td class='num'><span style='color:var(--good)'>&#9650; +6.8</span></td><td class='num'>52.9–54.1</td><td class='num'>61.0%</td><td class='src'>2026Q2</td><td class='src'>国家层客观指标(出货/灵巧手/成本/专利/VLA差距)</td></tr></tbody></table></div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">五条暗线信号 (数据驱动/配置回退)</div>
+  <table><thead><tr><th>暗线</th><th style="text-align:right">信号(0-1)</th><th style="text-align:right">权重</th><th style="text-align:right">可靠度</th></tr></thead>
+  <tbody><tr><td>能源约束</td><td class='num'>0.55</td><td class='num'>0.15</td><td class='num'>70%</td></tr><tr><td>战场数据</td><td class='num'>0.35</td><td class='num'>0.1</td><td class='num'>70%</td></tr><tr><td>货币分叉</td><td class='num'>0.3</td><td class='num'>0.1</td><td class='num'>70%</td></tr><tr><td>开源地缘化</td><td class='num'>0.62</td><td class='num'>0.15</td><td class='num'>70%</td></tr><tr><td>人才流向逆转</td><td class='num'>0.622</td><td class='num'>0.1</td><td class='num'>80%</td></tr></tbody></table></div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">维度分明细</div>
+  <table><thead><tr><th>维度</th><th style="text-align:right">得分</th><th style="text-align:right">权重</th></tr></thead>
+  <tbody><tr><td><span class='dot' style='background:#f59e0b'></span>能源</td><td class='num'>0.438</td><td class='num'>1.0</td></tr><tr><td><span class='dot' style='background:#3b82f6'></span>算力</td><td class='num'>0.208</td><td class='num'>1.2</td></tr><tr><td><span class='dot' style='background:#8b5cf6'></span>智能</td><td class='num'>0.575</td><td class='num'>1.3</td></tr><tr><td><span class='dot' style='background:#10b981'></span>生命</td><td class='num'>0.693</td><td class='num'>0.9</td></tr><tr><td><span class='dot' style='background:#ef4444'></span>暴力</td><td class='num'>0.701</td><td class='num'>1.0</td></tr><tr><td><span class='dot' style='background:#06b6d4'></span>金融</td><td class='num'>0.321</td><td class='num'>1.1</td></tr></tbody></table></div>
+ <div class="card"><div class="legend" style="margin-bottom:8px">指标明细 (norm=归一化值，direction=对中国有利方向)</div>
+  <div style="max-height:460px;overflow:auto">
+  <table><thead><tr><th>指标</th><th>维度</th><th style="text-align:right">值</th><th>单位</th><th style="text-align:right">norm</th><th>方向</th><th style="text-align:right">可靠度</th><th>来源</th></tr></thead>
+  <tbody><tr><td>顶尖模型性能差距(LMArena Elo分差%)</td><td>智能</td><td class='num'>2.7</td><td>%</td><td class='num'>0.86</td><td>反向</td><td class='num'>0.9</td><td class='src'>Stanford AI Index 2026</td></tr><tr><td>中国开源模型HuggingFace下载份额(%)</td><td>智能</td><td class='num'>40.0</td><td>%</td><td class='num'>0.40</td><td>正向</td><td class='num'>0.8</td><td class='src'>ATOM Report</td></tr><tr><td>OpenRouter中国开源厂商调用份额(%)</td><td>智能</td><td class='num'>48.3</td><td>%</td><td class='num'>0.48</td><td>正向</td><td class='num'>0.8</td><td class='src'>OpenRouter</td></tr><tr><td>中国私人AI投资(亿美元)</td><td>算力</td><td class='num'>124</td><td>亿美元</td><td class='num'>0.57</td><td>正向</td><td class='num'>0.9</td><td class='src'>Stanford AI Index 2026</td></tr><tr><td>美国私人AI投资(亿美元)</td><td>算力</td><td class='num'>2859</td><td>亿美元</td><td class='num'>0.07</td><td>反向</td><td class='num'>0.9</td><td class='src'>Stanford AI Index 2026</td></tr><tr><td>中国高端训练算力占比(%)</td><td>算力</td><td class='num'>15</td><td>%</td><td class='num'>0.15</td><td>正向</td><td class='num'>0.7</td><td class='src'>行业测算</td></tr><tr><td>中国头部云厂商资本开支同比增速(%)</td><td>算力</td><td class='num'>65.6</td><td>%</td><td class='num'>0.33</td><td>正向</td><td class='num'>0.8</td><td class='src'>中金研究</td></tr><tr><td>美国PJM电力市场电价指数(相对基线)</td><td>能源</td><td class='num'>135</td><td>指数</td><td class='num'>0.66</td><td>反向</td><td class='num'>0.7</td><td class='src'>公开电力市场</td></tr><tr><td>中美智算中心电价比(美/中)</td><td>能源</td><td class='num'>3.0</td><td>倍</td><td class='num'>0.30</td><td>正向</td><td class='num'>0.6</td><td class='src'>行业研究</td></tr><tr><td>聚变发电演示进度(0-100)</td><td>能源</td><td class='num'>42</td><td>进度</td><td class='num'>0.42</td><td>正向</td><td class='num'>0.6</td><td class='src'>公开项目进展</td></tr><tr><td>全球美元稳定币市值(亿美元)</td><td>金融</td><td class='num'>3200</td><td>亿美元</td><td class='num'>0.12</td><td>反向</td><td class='num'>0.9</td><td class='src'>CIFER</td></tr><tr><td>数字人民币mBridge累计交易额(亿元)</td><td>金融</td><td class='num'>5000</td><td>亿元</td><td class='num'>0.83</td><td>正向</td><td class='num'>0.9</td><td class='src'>穆长春达沃斯</td></tr><tr><td>移居美国AI学者数量较2017年变化(%)</td><td>人才流向(暗线)</td><td class='num'>-89</td><td>%</td><td class='num'>0.94</td><td>反向</td><td class='num'>0.9</td><td class='src'>Stanford AI Index 2026</td></tr><tr><td>NeurIPS一作论文中国占比(%)</td><td>人才流向(暗线)</td><td class='num'>43.0</td><td>%</td><td class='num'>0.43</td><td>正向</td><td class='num'>0.8</td><td class='src'>行业研究</td></tr><tr><td>海外受训AI博士回国率(%)</td><td>人才流向(暗线)</td><td class='num'>59</td><td>%</td><td class='num'>0.59</td><td>正向</td><td class='num'>0.7</td><td class='src'>WSJ</td></tr><tr><td>中国工业机器人安装量全球占比(%)</td><td>生命</td><td class='num'>54</td><td>%</td><td class='num'>0.54</td><td>正向</td><td class='num'>0.8</td><td class='src'>公开统计</td></tr><tr><td>中国人形机器人出货量全球占比(%)</td><td>生命</td><td class='num'>88.7</td><td>%</td><td class='num'>0.89</td><td>正向</td><td class='num'>0.7</td><td class='src'>行业研究</td></tr><tr><td>中国日均Token调用量(万亿)</td><td>智能</td><td class='num'>140</td><td>万亿</td><td class='num'>0.65</td><td>正向</td><td class='num'>0.8</td><td class='src'>公开披露</td></tr><tr><td>中国无人/蜂群装备制造产能全球占比(%)</td><td>暴力</td><td class='num'>70</td><td>%</td><td class='num'>0.70</td><td>正向</td><td class='num'>0.7</td><td class='src'>行业研究(珠海航展/公开产能)</td></tr></tbody></table></div></div>
+ <div class="card foot">
+  <b>方法说明：</b>每指标按方向 0-1 归一化；每维内几何平均得维度分；六维按权重加权后经 sigmoid 合成综合指数；暗线(能源约束/战场数据/货币分叉/开源地缘化/人才流向)作为修正项参与合成。全部原始值/权重/可靠度随 <code>site/api/latest.json</code> 发布，可复算。<br>
+  <b>免责声明：</b>数据基线来自公开学术报告与权威研究，仅作趋势研究/学术讨论，不构成任何投资建议。数值会随公开数据持续修订。
+ </div>
+</div>
+<script>
+const dimLabels=["能源", "算力", "智能", "生命", "暴力", "金融"], dimScores=[0.438, 0.208, 0.575, 0.693, 0.701, 0.321], dimColors=["#f59e0b", "#3b82f6", "#8b5cf6", "#10b981", "#ef4444", "#06b6d4"];
+new Chart(document.getElementById('dimChart'),{type:'bar',data:{labels:dimLabels,datasets:[{label:'维度得分',data:dimScores,backgroundColor:dimColors,borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,max:1,ticks:{color:'#9aa7b8'}},x:{ticks:{color:'#9aa7b8'}}}}});
+const sdates=["2024-09-30", "2025-06-30", "2026-08-24", "2026-08-31"], sidx=[44.0, 46.6, 49.2, 49.2], slow=[43.8, 46.5, 49.0, 49.0], shigh=[44.2, 46.8, 49.3, 49.3];
+new Chart(document.getElementById('trendChart'),{type:'line',data:{labels:sdates,datasets:[{label:'综合指数',data:sidx,borderColor:'#38bdf8',backgroundColor:'rgba(56,189,248,.18)',fill:true,tension:.3,pointRadius:4},{label:'下界',data:slow,borderColor:'rgba(248,113,113,.7)',borderDash:[4,4],fill:false,pointRadius:2},{label:'上界',data:shigh,borderColor:'rgba(52,211,153,.7)',borderDash:[4,4],fill:false,pointRadius:2}]},options:{responsive:true,plugins:{legend:{labels:{color:'#9aa7b8'}}},scales:{y:{min:0,max:100,ticks:{color:'#9aa7b8'}},x:{ticks:{color:'#9aa7b8'}}}}});
+</script></body></html>

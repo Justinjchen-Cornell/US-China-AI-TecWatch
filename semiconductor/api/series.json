@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2026-08-24",
+    "index": 44.32,
+    "mc_mean": 44.29,
+    "ci_low": 43.81,
+    "ci_high": 44.79,
+    "dimensions": {
+      "process_equip": 22.65,
+      "manufacturing": 68.94,
+      "memory_hbm": 12.93,
+      "ai_chip": 49.24,
+      "advanced_packaging": 38.62,
+      "future_paradigm": 54.1
+    }
+  }
+]
