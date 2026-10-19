@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semiconductor Tracker · 半导体产业竞争力仪表盘</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1220;--card:#121b2e;--line:#1f2c44;--txt:#e6edf6;--sub:#9aa7bd;--accent:#4f8cff;--accent2:#36d7b7;--warn:#f4b740;--danger:#ef5350;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;}
+header{padding:28px 24px 18px;text-align:center;border-bottom:1px solid var(--line);}
+header h1{font-size:1.7rem;letter-spacing:.5px;}header p{color:var(--sub);font-size:.95rem;margin-top:6px;}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 60px;}
+.grid{display:grid;gap:18px;}.cards{grid-template-columns:repeat(4,1fr);}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;}
+.card h3{font-size:.92rem;color:var(--sub);font-weight:600;margin-bottom:8px;}
+.card .num{font-size:1.9rem;font-weight:800;}.card .sub{font-size:.8rem;color:var(--sub);margin-top:4px;}
+.up{color:var(--accent2);}.mid{color:var(--warn);}.down{color:var(--danger);}
+section{margin-top:26px;}section h2{font-size:1.2rem;margin-bottom:12px;padding-left:10px;border-left:4px solid var(--accent);}
+.chart-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;}canvas{width:100%!important;}
+table{width:100%;border-collapse:collapse;font-size:.86rem;}th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);}
+th{color:var(--sub);font-weight:600;background:#0f1830;position:sticky;top:0;}tr:hover td{background:#16213a;}
+code{background:#0f1830;padding:1px 6px;border-radius:5px;font-size:.8rem;color:var(--accent2);}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.tab{background:#16213a;border:1px solid var(--line);color:var(--sub);padding:6px 14px;border-radius:20px;cursor:pointer;font-size:.85rem;}
+.tab.on{background:var(--accent);color:#fff;border-color:var(--accent);}.panel{display:none;}.panel.on{display:block;}
+.note{color:var(--sub);font-size:.82rem;margin-top:8px;}
+footer{text-align:center;color:var(--sub);font-size:.8rem;margin-top:40px;padding-top:18px;border-top:1px solid var(--line);}
+@media(max-width:800px){.cards{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🧭 Semiconductor Tracker</h1>
+  <p>半导体产业竞争力仪表盘 · 基于六维耦合 + 暗线修正的 SemiCompete Composite Index</p>
+  <p class="note">数据基线 2026-08-24 · 指标 18 项 · 数据置信度 74.6% · 仅供趋势研究，不构成投资建议</p>
+</header>
+<div class='card' style='border-left:4px solid #3b82f6;margin-bottom:18px'><div style='font-size:12px;color:#7a8699;letter-spacing:.5px'>行业研判 · 非评分 · 作者观点</div><h2 style='font-size:17px;margin:8px 0 6px'>制裁博弈深化期：先进制程封锁 vs 国产替代加速的双螺旋</h2><div style='font-size:13px;line-height:1.7;margin:6px 0 10px;color:#334155'><b>核心判断：</b>先进制程是博弈最前线，但中国的破局点不在正面硬刚，而在&#x27;绕行路径&#x27;：成熟制程堆叠封装 + 设备国产替代 + 用&#x27;能源洼地&#x27;（电力冗余+特高压+聚变）填平&#x27;芯片高地&#x27;。</div><table style='font-size:13px'><tbody><tr><th style='text-align:left;width:130px'>中国位置</th><td>成熟制程与封装领先 · 先进制程/设备/EDA 尖端差距大</td></tr><tr><th style='text-align:left'>关键拐点</th><td>先进制程节点突破（7nm 良率爬坡）与设备国产化率斜率</td></tr><tr><th style='text-align:left'>投资主题</th><td>设备/材料国产替代（卖铲人）确定性最高；HBM 是差距最大但弹性最大的环节；AI 芯片看国产算力生态</td></tr></tbody></table><div style='font-size:13px;font-weight:600;margin:12px 0 6px'>技术路线全景</div><ul style='margin:0;padding-left:18px;font-size:12.5px;color:#334155'><li><b>先进制程（逻辑）</b>（封锁博弈） · 中: 中芯国际、华虹 / 美: 台积电、英特尔、三星 · 信号: DUV 多重曝光 7nm 良率</li><li><b>存储（DRAM/HBM）</b>（差距最大环节） · 中: 长鑫存储、长江存储 / 美: 三星、SK海力士、美光 · 信号: HBM 世代差距</li><li><b>设备</b>（国产替代爬坡） · 中: 北方华创、中微、拓荆、盛美 / 美: AMAT、泛林、KLA、ASML、TEL · 信号: 28nm 以下设备国产化率</li><li><b>AI 芯片</b>（生态追赶） · 中: 寒武纪、海光、华为昇腾 / 美: 英伟达、AMD、博通 · 信号: 国产算力生态成熟度</li></ul><div style='font-size:13px;font-weight:600;margin:12px 0 6px'>价值链判断</div><ul style='margin:0;padding-left:18px;font-size:12.5px;color:#334155'><li><b>设备/材料（卖铲人）</b>（价值集中度 最高）：国产替代确定性最强，北方华创/中微订单可见度最高</li><li><b>先进封装（HBM/CoWoS）</b>（价值集中度 高）：制程封锁下的差异化突围路径，长电/通富承接</li><li><b>存储</b>（价值集中度 中高（弹性））：HBM 缺口=最大痛点，突破即估值重估</li><li><b>AI 芯片设计</b>（价值集中度 中）：生态成熟度决定，寒武纪/海光国产替代逻辑</li></ul><div style='font-size:13px;font-weight:600;margin:12px 0 6px'>跟踪信号（定期验证）</div><ul style='margin:0;padding-left:18px;font-size:12.5px;color:#334155'><li>中芯 5nm 进展（DUV 多重曝光良率）</li><li>设备国产化率（28nm 以下）季报</li><li>HBM 世代差距（长鑫 vs 海力士）</li><li>晶圆厂资本开支</li><li>新制裁清单动态</li></ul><div style='font-size:13px;font-weight:600;margin:12px 0 6px'>未来 6-18 个月拐点</div><ul style='margin:0;padding-left:18px;font-size:12.5px;color:#334155'><li><b>中芯国际 5nm 进展（DUV 多重曝光）</b>（概率 低中）：先进制程封锁是否破局</li><li><b>设备国产化率季报验证</b>（概率 中）：卖铲人逻辑兑现斜率</li><li><b>HBM 国产突破（长鑫 HBM3）</b>（概率 中）：存储估值重估</li><li><b>新制裁清单与出口管制升级</b>（概率 高）：博弈变量（短期冲击/长期加速替代）</li></ul><div style='font-size:12px;margin-top:10px'><a href='https://github.com/Justinjchen-Cornell/US-China-AI-TecWatch/blob/main/docs/methodology.md#一半导体2nm-三国杀与绕行战略' style='color:#4f8cff;text-decoration:none'>📘 方法论底稿#一半导体2nm-三国杀与绕行战略 →</a></div></div>
+<div class="wrap">
+  <div class="grid cards">
+    <div class="card"><h3>半导体综合指数</h3><div class="num down">44.3</div><div class="sub">0-100，&gt;50 偏中国有利</div></div>
+    <div class="card"><h3>95% 置信区间</h3><div class="num">43.8–44.8</div><div class="sub">蒙特卡洛 N=2000 ±1σ</div></div>
+    <div class="card"><h3>MC 均值 ± 标准差</h3><div class="num">44.3±0.49</div><div class="sub">含指标来源可靠度扰动</div></div>
+    <div class="card"><h3>数据置信度</h3><div class="num">74.6%</div><div class="sub">各指标 source_reliability 几何平均</div></div>
+  </div>
+  <section><h2>📈 指数趋势（历史快照）</h2><div class="chart-box"><canvas id="trendChart" height="90"></canvas></div>
+    <p class="note">横轴为快照日期；蓝色为综合指数，阴影带为 95% CI。更新 data/indicators.json 后重跑 update_snapshot.py 即可追加新一期。</p></section>
+  <section><h2>🎯 六维竞争力雷达</h2><div class="chart-box"><canvas id="radarChart" height="100"></canvas></div></section>
+  <section><h2>📊 维度得分明细</h2><div class="chart-box"><canvas id="dimBar" height="90"></canvas></div>
+    <table style="margin-top:14px;"><thead><tr><th>维度</th><th>得分(0-100)</th><th>权重</th><th>指标数</th></tr></thead><tbody><tr><td>制程装备</td><td>22.6</td><td>1.2</td><td>3</td></tr><tr><td>制造代工</td><td>68.9</td><td>1.1</td><td>3</td></tr><tr><td>存储/HBM</td><td>12.9</td><td>1.2</td><td>3</td></tr><tr><td>AI芯片设计</td><td>49.2</td><td>1.3</td><td>3</td></tr><tr><td>先进封装</td><td>38.6</td><td>1.1</td><td>3</td></tr><tr><td>未来范式</td><td>54.1</td><td>1.1</td><td>3</td></tr></tbody></table>
+    <details class="note"><summary>暗线修正项（点击展开）</summary><table style="margin-top:8px;"><thead><tr><th>暗线</th><th>数值</th><th>权重</th></tr></thead><tbody><tr><td>能源/电力冗余(制造底座)</td><td>68</td><td>0.5</td></tr><tr><td>人才流向(海外受训回流)</td><td>48</td><td>0.4</td></tr><tr><td>开源生态地缘化(架构绕行)</td><td>55</td><td>0.5</td></tr><tr><td>产业资本下场度</td><td>52</td><td>0.4</td></tr><tr><td>地缘政治(出口管制约束反噬)</td><td>60</td><td>0.6</td></tr></tbody></table></details></section>
+  <section><h2>🏢 企业图谱</h2>
+    <div class="tabs" id="compTabs"><div class="tab on" data-t="pub_cn">中国·上市公司</div><div class="tab" data-t="pub_ov">海外·上市公司</div><div class="tab" data-t="prv_cn">中国·一级市场</div><div class="tab" data-t="prv_ov">海外·一级市场</div></div>
+    <div class="chart-box">
+      <div class="panel on" id="pub_cn"><table><thead><tr><th>公司</th><th>代码</th><th>环节</th><th>市值</th><th>定位</th></tr></thead><tbody><tr><td>中芯国际</td><td><code>688981</code></td><td>晶圆代工</td><td>~4800亿</td><td>先进制程主攻手</td></tr><tr><td>华虹半导体</td><td><code>688347</code></td><td>晶圆代工</td><td>~800亿</td><td>特色工艺代工</td></tr><tr><td>长电科技</td><td><code>600584</code></td><td>封装测试</td><td>~700亿</td><td>封测全球第三</td></tr><tr><td>通富微电</td><td><code>002156</code></td><td>封装测试</td><td>~500亿</td><td>AMD 封测伙伴</td></tr><tr><td>北方华创</td><td><code>002371</code></td><td>设备</td><td>~3800亿</td><td>设备平台龙头</td></tr><tr><td>中微公司</td><td><code>688012</code></td><td>设备</td><td>~1700亿</td><td>刻蚀设备龙头</td></tr><tr><td>拓荆科技</td><td><code>688072</code></td><td>设备</td><td>~600亿</td><td>薄膜沉积</td></tr><tr><td>盛美上海</td><td><code>688082</code></td><td>设备</td><td>~500亿</td><td>清洗设备</td></tr><tr><td>华海清科</td><td><code>688120</code></td><td>设备</td><td>~400亿</td><td>CMP 设备</td></tr><tr><td>沪硅产业</td><td><code>688126</code></td><td>材料</td><td>~600亿</td><td>大硅片</td></tr><tr><td>TCL中环</td><td><code>002129</code></td><td>材料</td><td>~800亿</td><td>硅片+光伏</td></tr><tr><td>寒武纪</td><td><code>688256</code></td><td>AI芯片</td><td>~5500亿</td><td>AI 芯片第一股</td></tr><tr><td>海光信息</td><td><code>688041</code></td><td>CPU/DCU</td><td>~3500亿</td><td>CPU+DCU 双线</td></tr><tr><td>景嘉微</td><td><code>300474</code></td><td>GPU</td><td>~600亿</td><td>国产 GPU</td></tr><tr><td>澜起科技</td><td><code>688008</code></td><td>接口芯片</td><td>~900亿</td><td>内存接口全球龙头</td></tr><tr><td>韦尔股份</td><td><code>603501</code></td><td>CIS</td><td>~1500亿</td><td>图像传感器龙头</td></tr><tr><td>兆易创新</td><td><code>603986</code></td><td>存储/MCU</td><td>~900亿</td><td>NOR Flash+MCU</td></tr></tbody></table></div>
+      <div class="panel" id="pub_ov"><table><thead><tr><th>公司</th><th>代码</th><th>环节</th><th>市值</th><th>说明</th></tr></thead><tbody></tbody></table></div>
+      <div class="panel" id="prv_cn"><table><thead><tr><th>公司</th><th>赛道</th><th>最新融资</th><th>估值</th><th>主要投资方</th><th>绕行路径</th></tr></thead><tbody><tr><td>长鑫存储</td><td>DRAM</td><td>Pre-IPO</td><td>~2000亿+</td><td>大基金、安徽国资</td><td>DRAM/HBM</td></tr><tr><td>长江存储</td><td>NAND</td><td>Pre-IPO</td><td>~1500亿+</td><td>大基金、湖北国资</td><td>NAND</td></tr><tr><td>壁仞科技</td><td>AI芯片</td><td>D轮</td><td>~300亿</td><td>启明、高瓴</td><td>GPU</td></tr><tr><td>摩尔线程</td><td>AI芯片</td><td>D轮</td><td>~250亿</td><td>中移、深创投</td><td>GPU</td></tr><tr><td>燧原科技</td><td>AI芯片</td><td>D轮</td><td>~200亿</td><td>腾讯、大基金</td><td>AI训练芯片</td></tr><tr><td>沐曦</td><td>AI芯片</td><td>D轮</td><td>~200亿</td><td>大基金、红杉</td><td>GPGPU</td></tr><tr><td>瀚博半导体</td><td>AI芯片</td><td>C轮</td><td>~100亿</td><td>红点、腾讯</td><td>AI推理芯片</td></tr><tr><td>思朗科技</td><td>AI芯片</td><td>C轮</td><td>~80亿</td><td>中科院系</td><td>AI芯片</td></tr><tr><td>太初元碁</td><td>AI芯片</td><td>B轮</td><td>~60亿</td><td>无锡国资</td><td>AI芯片</td></tr><tr><td>芯来科技</td><td>RISC-V IP</td><td>C轮</td><td>~50亿</td><td>大基金、小米</td><td>RISC-V</td></tr><tr><td>芯盟科技</td><td>Chiplet</td><td>B轮</td><td>~40亿</td><td>大基金</td><td>Chiplet</td></tr><tr><td>异格技术</td><td>FPGA</td><td>B轮</td><td>~30亿</td><td>深创投</td><td>FPGA</td></tr></tbody></table></div>
+      <div class="panel" id="prv_ov"><table><thead><tr><th>公司</th><th>赛道</th><th>最新融资</th><th>估值</th><th>主要投资方</th><th>绕行路径</th></tr></thead><tbody></tbody></table></div>
+    </div><p class="note">市值/估值为公开资料趋势性参考，融资信息来自公开报道，可能滞后，请以公司官方披露为准。</p></section>
+  <section><h2>🧮 指数计算方法</h2><div class="chart-box note" style="font-size:.88rem;">
+    <p><b>① 归一化</b>：每项指标按「对中国是否有利」方向做 0–1 归一化；</p>
+    <p><b>② 维度分</b>：每维内指标取几何平均（Laplace 平滑），避免极端值主导；</p>
+    <p><b>③ 加权合成</b>：六维按权重 [制程装备1.2 / 制造代工1.1 / 存储HBM1.2 / AI芯片1.3 / 先进封装1.1 / 未来范式1.1] 累加，并加五条暗线修正项；</p>
+    <p><b>④ Sigmoid 映射</b>：Index = 100·sigmoid(z·4)，稳定落在 (0,100)，&gt;50 偏中国有利；</p>
+    <p><b>⑤ 不确定性</b>：每项指标按 source_reliability 加高斯扰动，蒙特卡洛 N=2000 给出 ±1σ 区间。</p>
+    <p>权重与数据完全分离（config/weights.json），可用 site/api/latest.json 复算。</p></div></section>
+</div>
+<footer>Semiconductor Tracker · 数据由公开产业资料整理 · 内容由 AI 辅助生成，不构成任何投资建议 · MIT License</footer>
+<script>
+const dimLabels=["制程装备", "制造代工", "存储/HBM", "AI芯片设计", "先进封装", "未来范式"];
+const dimScores=[22.65, 68.94, 12.93, 49.24, 38.62, 54.1];
+const hLabels=["2026-08-24"];
+const hIdx=[44.32];
+const hLo=[43.81];
+const hHi=[44.79];
+const accent='#4f8cff',accent2='#36d7b7';
+Chart.defaults.color='#9aa7bd';Chart.defaults.borderColor='#1f2c44';
+new Chart(document.getElementById('radarChart'),{type:'radar',data:{labels:dimLabels,datasets:[{label:'维度得分',data:dimScores,backgroundColor:'rgba(79,140,255,.25)',borderColor:accent,pointBackgroundColor:accent2,borderWidth:2}]},options:{scales:{r:{min:0,max:100,ticks:{stepSize:20,color:'#9aa7bd'},grid:{color:'#1f2c44'},angleLines:{color:'#1f2c44'},pointLabels:{color:'#e6edf6',font:{size:12}}}}},plugins:{legend:{display:false}}});
+new Chart(document.getElementById('dimBar'),{type:'bar',data:{labels:dimLabels,datasets:[{label:'维度得分',data:dimScores,backgroundColor:accent,borderRadius:6}]},options:{indexAxis:'y',scales:{x:{min:0,max:100,grid:{color:'#1f2c44'}},y:{grid:{color:'#1f2c44'}}},plugins:{legend:{display:false}}}});
+const ymin=Math.max(0,Math.min.apply(null,hLo.concat([40]))-5),ymax=Math.min(100,Math.max.apply(null,hHi.concat([60]))+5);
+new Chart(document.getElementById('trendChart'),{type:'line',data:{labels:hLabels,datasets:[{label:'综合指数',data:hIdx,borderColor:accent,backgroundColor:'rgba(79,140,255,.15)',fill:true,borderWidth:2,tension:.3,pointRadius:3},{label:'CI下限',data:hLo,borderColor:'rgba(79,140,255,.35)',borderDash:[4,4],fill:false,pointRadius:0,borderWidth:1},{label:'CI上限',data:hHi,borderColor:'rgba(79,140,255,.35)',borderDash:[4,4],fill:'+1',backgroundColor:'rgba(79,140,255,.08)',pointRadius:0,borderWidth:1}]},options:{scales:{y:{min:ymin,max:ymax,grid:{color:'#1f2c44'}},x:{grid:{color:'#1f2c44'}}},plugins:{legend:{labels:{filter:i=>i.text==='综合指数'}}}}} );
+document.querySelectorAll('#compTabs .tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('#compTabs .tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));document.getElementById(t.dataset.t).classList.add('on');});
+</script></body></html>
